@@ -1,13 +1,272 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Changa:wght@200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Gugi&family=Magra:wght@400;700&family=Manuale:ital,wght@0,300..800;1,300..800&family=Metamorphous&family=Nova+Round&family=Prosto+One&family=Redressed&family=Stick+No+Bills:wght@200..800&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ============== DOWNLOADED FONTS ==============*/
+@font-face {
+    font-family: 'safiro';
+    src: url('./assets/fonts/safiro-medium-webfont.ttf') format('truetype');
+    
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'doumbar';
+    src:  url('./assets/fonts/doumbar-medium-webfont.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
 }
+
+
+.title-font {
+  font-family: 'doumbar';
+  
+}
+
+.fontTitle {
+  font-family: 'safiro';
+}
+
+
+
+/* ============= SCROLL BAR CUSTOMIZATION ============== */
+/* This will style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* This will style the actual scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* This will change the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* This styles the overall scrollbar (width, height) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+/* =========== GRAINY BG ============ */
+
+.custom-bg {
+  width: 460px;
+  height: 500px;
+  background: linear-gradient(to left, #18181b, rgba(0, 0, 0, 0)), 
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(120%) brightness(90%);
+  background-size: cover;
+  background-position: center;
+}
+
+.container-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #18181b, rgba(0, 0, 0, 0)), 
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(180%) brightness(100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-effect {
+  background-color: #2d3234;
+  background-image: url(https://lh3.googleusercontent.com/_oZpTIImMpQFiKTS4i_-dFaYLELX8v4y7-pYbZmOLjlaFHzMmho9I46KpALrF1RVhYuEZzAOj94zmmlxbyzrJhlVam_G1qqGw09npr4ksMbE6iB0lZVkwUsLGtJ7E6ZWiVAAnIyhF7IyQ-zTf0jYQxTZw6z7NtKBtg3DDaMnnkdbP9ClxFmYvKiRv7qZ0dL8ounAxnaK1YKtq6lU5MiiRAzVWHSiJUqYLuihDTsdkhK_smj5qkMm4dqvcTbs-EGLr4vJFhDUcrJZspo9MgooVJGJcShhMKD1cGcbfr_Y0bA_bqNns7S3_hWXK9CzjYUwUDGrWB14GYgo3V0HrpeYx_WlmV7DlrUdGjE0PK-2Y3cDQEkbGEi9yZNG-BpZI8CxPWM90s4Yo-_D6N_48ZYU4_SOJvmc3K_3Vauig3KPNDPXxN4Xqs58DXH-bAWWUSf7KTdzUnB27hm_mSI9qwz6K8tdzxR_ahtdczraeCgZDo-GyQ9kKfioFa8xapdYCyg1Xw6pr_T5x1pIkfJ2Me5QbHZ9tik4MhhNyCftOgzzcR6IAut4RiiRwbhDJ2hY6e1DFXTGt02XPslw0AdGWh00ryVpVuXDIfWfft9xT9i4-T3Gp6CCPOMfO0Y-hOEXooror0Lox789Q7HW9_9lp_gZrjCdtw1N7ClEQyNU_xi1CA=w264-h36-no);
+  background-size: 10%;
+}
+ 
+
+/*=========== MOTION TEXT ===========*/
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating-icon {
+  animation: rotateIcon 3s linear infinite;
+}
+
+
+.motion-text {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    animation: slideLeft 30s linear infinite;
+}
+
+.motion-text2 {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    animation: slideRight 30s linear infinite;
+}
+
+/* =============== ROTATING TEXT ================ */
+.rotating-text-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #d4d4d8;
+}
+
+.rotating-text-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+}
+
+
+/* ========== SLIDING TEXT FROM LEFT & RIGHT ==========*/
+@keyframes slideInTextFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTextFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.textSlidingLeft {
+  animation: slideInTextFromLeft 1s ease-out forwards;
+}
+
+.textSlidingRight {
+  animation: slideInTextFromRight 1s ease-out forwards;
+}
+
+
+
+@layer base {
+    body {
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-900
+    }
+
+    a {
+      cursor: pointer;
+    }
+}
+
+@layer utilities {
+
+  /* ============== NAVBAR LINKS ANIMATION =============== */
+  .nav-link {
+        @apply relative tracking-[1px] hover:text-zinc-200 font-[500]
+    }
+
+    .active-link {
+      @apply text-zinc-200;
+    }
+    .active-link::after {
+        @apply content-[''] bg-zinc-950 h-[2px] w-[0%] left-0 top-[50%] -rotate-[6deg] rounded-xl absolute duration-500
+    }
+
+    .active-link::after {
+        @apply w-[100%] 
+    }
+
+    /* ============================= */
+    .about-title {                             
+      @apply w-full font-ibm uppercase text-[4rem]  font-[400] mb-12
+    }
+
+    .about-text {                             
+      @apply w-[60%] font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider leading-tight
+    }
+
+    .services-list {
+      @apply flex font-ibm text-zinc-400 text-6xl capitalize font-[500] tracking-tighter
+    }
+    
+    .custom-link {
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+
+}
+
+
+
+
+
+/*
+pink: rgb(252, 194, 204)
+tiffany blue: rgb(192, 250, 248)
+green: rgb(220, 252, 229)
+yellow: rgb(252, 240, 220)
+*/
+
