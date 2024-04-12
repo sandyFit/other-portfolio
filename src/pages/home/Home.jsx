@@ -5,11 +5,15 @@ import Contact from '../contact/Contact';
 
 const Home = () => {
     return (
-        <section>
-            <Hero />
-            <Contact />
+        <div>
 
-        </section>
+            <section id='hero'>
+                <Hero />
+            </section>
+            <section id='contact'>
+                <Contact/>   
+            </section>
+        </div>
     )
 }
 
