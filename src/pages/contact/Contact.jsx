@@ -25,13 +25,13 @@ const Contact = () => {
    
     return (
         <section id="contact"
-            className='w-full min-h-screen overflow-hidden bg-hotpink-400'>
+            className='w-full min-h-screen overflow-hidden bg-violet-500'>
             <div className="w-full h-full flex mt-40 ml-8 flex-col justify-between relative">
                 <p className='text-[6rem] fontTitle text-zinc-950 font-[600] leading-[90px] uppercase'>
                     you made it here,  good move!<br />
                     feel free to
 
-                    <a href='mailto:sandy07r@gmail.com' role="link" className="relative text-zinc-200 after:absolute 
+                    <a href='mailto:sandy07r@gmail.com' className="relative text-zinc-200 after:absolute 
                     after:bottom-0 after:left-0 after:right-0 after:h-[8px] after:w-full after:origin-bottom 
                     after:scale-x-0 after:bg-zinc-200 after:transition-transform after:duration-300
                     after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100 ml-5">
@@ -40,10 +40,10 @@ const Contact = () => {
                     <BsEmojiWink className='text-zinc-200 absolute text-[5rem] top-[5.7rem] left-[76rem]'/>
                 </p>
 
-                <div className="flex flex-col w-full justify-between items-start ml-[22rem] mt-20 gap-16">
-                    <div className="flex text-xl fontTitle justify-between gap-48">
+                <div className="flex flex-col w-full justify-between items-start ml-[22rem] mt-20 gap-12">
+                    <div className="flex text-xl fontTitle justify-between gap-[9.7rem]">
                         <p className='uppercase '>
-                            email
+                            [ contact ]
                         </p>
                         <button  className=''
                             onClick={handleCopiedText}>
@@ -63,18 +63,19 @@ const Contact = () => {
 
                     <div className="flex text-xl fontTitle justify-between gap-[10.4rem]">
                         <p className='uppercase'>
-                            socials
+                            [ socials ]
                         </p>
                         <ul>
                             <li className="hover:text-zinc-200 uppercase"><a href='#'>linkedin</a></li>
                             <li className="hover:text-zinc-200 uppercase"><a href='#'>github</a></li>
                             <li className="hover:text-zinc-200 uppercase"><a href='#'>instagram</a></li>
+                            <li className="hover:text-zinc-200 uppercase"><a href='#'>behance</a></li>
                         </ul>
                     </div>
 
-                    <div className="flex text-xl fontTitle uppercase justify-between gap-[8.5rem]">
+                    <div className="flex text-xl fontTitle uppercase justify-between gap-[8.2rem]">
                         <p className=''>
-                            crafted by
+                           [ crafted by ]
                         </p>
                         <p>trully yours</p>
                     </div>

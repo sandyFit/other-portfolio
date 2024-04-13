@@ -109,8 +109,9 @@ export default {
         magra: ["Pragati Narrow", 'sans-serif'],
         spaceGrotesk: ["Space Grotesk", 'sans-serif'],
         ibm: ['IBM Plex Mono', 'monospace'],
-        marckScript: ["Marck Script", 'cursive']
-        
+        marckScript: ["Marck Script", 'cursive'],
+        tangerine: ["Tangerine", 'cursive'],
+        allura: ["Allura",' cursive']
       },
 
       backgroundImage: {
