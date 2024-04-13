@@ -9,7 +9,7 @@ const TimeZone = () => {
         const options = {
             hour: '2-digit',
             minute: '2-digit',
-            second: '2-digit',
+            // second: '2-digit',
             hour12: true, // Ensure we get AM/PM
         };
         // Bogotá is in the GMT-5 timezone. Adjust if necessary for daylight saving time elsewhere.
@@ -43,7 +43,7 @@ const TimeZone = () => {
             
             <div className='w-full text-zinc-200 fontTitle uppercase font-ibm text-xl font-[500] '
                 id='currentTime'>
-                <span className='tracking-wider mr-2'>{currentTime}</span>gmt-5 
+                <span className='tracking-wider mr-3'>timezone: {currentTime}</span>gmt-5 
             </div>
         </article>
     )

@@ -13,13 +13,13 @@ const Footer = () => {
                     <p className='text-zinc-950 fontTitle text-xl font-[500] uppercase'>
                         open to full-time roles & gigs
                     </p>
-                    <div className="flex flex-col items-end">
+                    <div className="flex mr-[2.75rem]">
                         <TimeZone/>
                     </div>
                 </div>
 
                 <div className="flex text-[5rem] fontTitle uppercase ">
-                    <AiOutlineCopyright className='text-[5rem] mt-3'/>
+                    <AiOutlineCopyright className='text-[4.8rem] mt-4'/>
                     {date.getFullYear()}
                     <span className='ml-6'>trish ramos</span>
                 </div>
