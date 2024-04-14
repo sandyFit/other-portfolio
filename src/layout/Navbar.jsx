@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
 
             
-            <div className="flex w-full h-[60px] justify-between items-center ">
+            <div className="flex w-full h-[60px] justify-between items-center">
                 <div className="flex w-full">
                     <div className='flex w-full mt-20'>           
                         <ul className='w-full flex flex-col justify-between items-end bg-transparent gap-2 pr-8'>

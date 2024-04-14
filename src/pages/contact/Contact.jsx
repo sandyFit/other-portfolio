@@ -25,22 +25,39 @@ const Contact = () => {
    
     return (
         <section id="contact"
-            className='w-full min-h-screen overflow-hidden bg-violet-500'>
-            <div className="w-full h-full flex mt-40 ml-8 flex-col justify-between relative">
-                <p className='text-[6rem] fontTitle text-zinc-950 font-[600] leading-[90px] uppercase'>
-                    you made it here,  good move!<br />
-                    feel free to
+            className='w-full min-h-screen '>
+             <article className="w-full flex flex-col relative pt-36 px-36 ">
+                <div className="w-[96%] flex justify-between relative">
+                    <p className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
+                        [ get in toch ]
+                    </p>
+                    <p className='pr-8 about-text-mayus'>                       
+                           you made it here,
+                    </p>
+                </div>
 
-                    <a href='mailto:sandy07r@gmail.com' className="relative text-zinc-200 after:absolute 
+                <div className="w-[96%] flex ml-8 flex-col px-12 about-text-mayus">                 
+                    <p className=''>
+                        good move! feel free to
+                    </p> 
+
+                    <a href='mailto:sandy07r@gmail.com' className="w-[37.9%] relative hover:text-zinc-200 after:absolute 
                     after:bottom-0 after:left-0 after:right-0 after:h-[8px] after:w-full after:origin-bottom 
                     after:scale-x-0 after:bg-zinc-200 after:transition-transform after:duration-300
-                    after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100 ml-5">
+                    after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100 ">
                         reach out 
                     </a>
-                    <BsEmojiWink className='text-zinc-200 absolute text-[5rem] top-[5.7rem] left-[76rem]'/>
-                </p>
+                    
+                </div>
 
-                <div className="flex flex-col w-full justify-between items-start ml-[22rem] mt-20 gap-12">
+                <div className="relative">                   
+                    <BsEmojiWink className='text-zinc-950 absolute text-[4.8rem] bottom-3 left-[41rem]'/>
+                </div>                              
+            </article>
+
+            <article className="w-[98%] flex flex-col relative">
+               
+                <div className="flex flex-col w-[30%] justify-between items-start ml-[48rem] mt-10 gap-10">
                     <div className="flex text-xl fontTitle justify-between gap-[9.7rem]">
                         <p className='uppercase '>
                             [ contact ]
@@ -61,7 +78,7 @@ const Contact = () => {
                         </button>
                     </div>
 
-                    <div className="flex text-xl fontTitle justify-between gap-[10.4rem]">
+                    <div className="flex text-xl fontTitle justify-between gap-[10.4rem] ">
                         <p className='uppercase'>
                             [ socials ]
                         </p>
@@ -85,14 +102,14 @@ const Contact = () => {
                     <Link to='hero'
                         smooth={true}
                         duration={500}
-                        className='absolute left-[111rem] top-20 hover:text-zinc-200'>
-                        [top]
+                        className='absolute left-[110.6rem] top-24 hover:text-zinc-200'>
+                        [go top]
                     </Link>
                 </div>
-            </div>
+            </article>
 
 
-            <div className="w-full h-full flex flex-col pt-[6rem] mt-8">                        
+            <div className="w-full h-full flex flex-col mt-40">                        
                 <Footer/>
             </div>
             
@@ -100,4 +117,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact;
