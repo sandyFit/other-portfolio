@@ -26,9 +26,9 @@ const About = () => {
                 <div className="flex flex-col w-[58%] gap-8 pb-28 ml-[40rem]">                   
                     <p className="text-3xl text-zinc-950">
                         
-                        After a diploma in graphic design and driven by my passion for all things digital, I embarked on
-                        a self-taught journey to broaden my expertise into web development, specializing in frontend
-                        and motion.
+                        I went to school for graphic design, and, driven by my passion for all things digital,
+                        embarked on a self-taught journey to broaden my expertise into web development, specializing
+                        in frontend and motion graphics.
                     </p>
                     <p className="text-3xl text-zinc-950">
                         I'm currently on the lookout for full-time roles or freelance gigs that challenge my skills and

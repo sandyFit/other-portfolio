@@ -6,29 +6,26 @@ const Footer = () => {
     const date = new Date();
 
     return (
-        <section id='contact' className='w-[99%] h-[80px] flex absolute bottom-0'>        
-            <div className="flex w-full h-full justify-between items-center ml-12 mr-5">
-
+        <section id='contact' className='w-full h-20 flex justify-center items-center px-12 py-4'>        
+            <div className="flex w-full h-full justify-between items-center">
+                <div className="flex text-[5rem] fontTitle uppercase">
+                    <AiOutlineCopyright className='text-[4.8rem] mt-4'/>
+                    {date.getFullYear()}
+                    <span className='h-20 ml-6'>trish ramos</span>
+                </div> 
+                
                 <div className="flex flex-col justify-center items-end">
                     <p className='text-zinc-950 fontTitle text-xl font-[500] uppercase'>
                         open to full-time roles & gigs
                     </p>
-                    <div className="flex mr-[2.75rem]">
+                    <div className="flex ml-auto">
                         <TimeZone/>
                     </div>
                 </div>
 
-                <div className="flex text-[5rem] fontTitle uppercase">
-                    <AiOutlineCopyright className='text-[4.8rem] mt-4'/>
-                    {date.getFullYear()}
-                    <span className='ml-6'>trish ramos</span>
-                </div>
-
-                   
-                
             </div>
         </section>
     )
 }
 
-export default Footer
+export default Footer;

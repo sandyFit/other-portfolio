@@ -223,6 +223,22 @@
   transition: opacity .5s ease-in-out; /* Delay hiding until after fade */
 }
 
+/* ======== CURSOR ANIMATION ======= */
+
+.title  {
+  z-index: 1;
+}
+
+.cursor {
+  background-color:  #111;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
 
 
 

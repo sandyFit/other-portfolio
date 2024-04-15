@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiArrowDownLeft } from "react-icons/hi2";
-import Cursor from '../../components/ui/Cursor';
+import MouseFollower from 'mouse-follower';
 
-const Hero = () => {
+const Test = () => {
 
     const [isActive, setIsActive] = useState(false);
 
     return (
         <section id="hero"
             className='w-full min-h-screen'>
-            <Cursor isActive={ isActive } />
+            
             <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-zinc-950 leading-[120px]
                 uppercase justify-center ml-20 pt-80 tracking-tighter relative z-10">
-                <h1 onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                <h1 
                     className='title'>frontend </h1><br />
-                <span onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }} 
+                <span  
                     className='w-[60%] ml-[33rem] mt-[-6.1rem] text-zinc-200 title'>developer</span><br/>
-                <span onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }} 
+                <span  
                     className='w-[60%]  ml-[33rem] mt-[-6.1rem] title'>with an </span>
-                <span onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }} 
+                <span  
                     className='w-[20%] absolute bottom-[11.1rem] text-zinc-200 left-[76.2rem] font-tangerine lowercase 
                     text-[20rem] font-[100] title'>
                     eye</span>
-                <span onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }} 
+                <span  
                     className='w-[86%] ml-[48.08rem] mt-5 title'>for design_</span>                
             </article>
 
-            <div onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}                   
+            <div                    
                 className="flex relative">               
                 <p className='text-zinc-900 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
                     absolute left-[38.5rem] -bottom-8 '>
@@ -47,4 +47,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default Test;
