@@ -111,7 +111,8 @@ export default {
         ibm: ['IBM Plex Mono', 'monospace'],
         marckScript: ["Marck Script", 'cursive'],
         tangerine: ["Tangerine", 'cursive'],
-        allura: ["Allura",' cursive']
+        allura: ["Allura", ' cursive'],
+        playfair: ["Playfair Display", 'serif']
       },
 
       backgroundImage: {

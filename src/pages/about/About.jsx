@@ -1,13 +1,17 @@
-import React from 'react'
-import { BsArrowUpRight } from 'react-icons/bs'
-import { Link } from 'react-scroll'
-import FeatureParagraph from '../../components/featured/FeatureParagraph';
+import React, { useState } from 'react'
+import Cursor from '../../components/ui/Cursor';
+import { BsArrowUpRight } from 'react-icons/bs';
+import { Link } from 'react-scroll';
 
 
 const About = () => {
+
+    const [isActive, setIsActive] = useState(false);
+
     return (
-        <section id="about"
+        <section data-cursor-color='#7c3aed' id="about"
             className='w-full min-h-screen relative bg-pink-300'>
+            <Cursor isActive={ isActive }/>
             <article className="w-full h-screen flex flex-col justify-start items-start relative pt-40 px-36 ">
                 <div className="w-[96%] flex justify-between relative">
                     <p className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
@@ -30,11 +34,18 @@ const About = () => {
                         embarked on a self-taught journey to broaden my expertise into web development, specializing
                         in frontend and motion graphics.
                     </p>
-                    <p className="text-3xl text-zinc-950">
+                    <div className="text-3xl text-zinc-950 relative">
                         I'm currently on the lookout for full-time roles or freelance gigs that challenge my skills and
-                        stoke my passion for design and development. 
-                        
-                    </p>
+                        stoke my passion for design and development. <br/>
+                        For questions or opportunities contact me 
+                        <Link to='projects'
+                            onMouseEnter={() => setIsActive(true)}
+                            onMouseLeave={() => setIsActive(false)}
+                            className='hover:text-zinc-200'>
+                            <span className='ml-2'>here</span>
+                            <BsArrowUpRight className='absolute top-[6.8rem] left-[42.4rem]' />
+                        </Link>
+                    </div>
                 </div>
             </article>
 
@@ -56,17 +67,24 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col w-[58%] gap-8 pb-28 ml-[35rem]">                   
+                <div className="flex flex-col w-[58%] gap-8 pb-28 ml-[35rem] ">                   
                     <p className="text-3xl text-zinc-950">
                         I enjoy creating fluid animations, engaging transitions and tackling complex layouts using SCSS.
                         
                     </p>
-                    <p className="text-3xl text-zinc-950">
+                    <div className="text-3xl text-zinc-950 relative">
                         My toolkit includes JavaScript, React and Webflow, complemented by AWS, DatoCMS,
                         GSAP, After Effects, Framer-Motion, Vite, and Webpack.<br/> <br/>
                         Additionally, I leverage no-code platforms such as Webflow and Framer.
+                        Check out my work
+                        <Link to='projects'
+                            onMouseEnter={() => setIsActive(true)}
+                            onMouseLeave={() => setIsActive(false)}
+                            className='hover:text-zinc-200'>
+                            <span className='ml-2'>here</span> <BsArrowUpRight className='absolute top-[11.3rem] left-[29.2rem]' />
+                        </Link>
                         
-                    </p>
+                    </div>
                 </div>
             </article>
             

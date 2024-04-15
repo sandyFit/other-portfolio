@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-const Cursor = ({isActive}) => {
+const Cursor = ({ isActive }) => {
     const circle = useRef(null);
-    const delayedMouse = useRef({x: 0, y: 0});
+    const delayedMouse = useRef({ x: 0, y: 0 });
     const rafId = useRef();
-    const size = isActive ? 200 : 30;
+    const [cursorColor, setCursorColor] = useState('#f9a8d4'); // Default color
 
     const lerp = (x, y, a) => x * (1 - a) + y * a;
 
@@ -15,6 +15,13 @@ const Cursor = ({isActive}) => {
             x: clientX,
             y: clientY
         };
+
+        // Change cursor color based on the section it is over
+        const elements = document.elementsFromPoint(clientX, clientY);
+        const hoveredSection = elements.find(el => el.dataset.cursorColor);
+        if (hoveredSection) {
+            setCursorColor(hoveredSection.dataset.cursorColor);
+        }
     };
 
     const moveCircle = () => {
@@ -51,14 +58,13 @@ const Cursor = ({isActive}) => {
             <div 
                 ref={circle}
                 style={{
-                    width: size,
-                    height: size,
-                    backgroundColor: "#f9a8d4",
+                    width: isActive ? 200 : 30,
+                    height: isActive ? 200 : 30,
+                    backgroundColor: cursorColor,
                     position: 'absolute', 
                     borderRadius: '50%',
-
                     filter: `opacity(${isActive ? 0.5 : 1}`,
-                    transition: `height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out`
+                    transition: 'height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out, background-color 0.3s ease'
                 }}
                 className='top-0 left-0 fixed rounded-full mix-blend-difference pointer-events-none -z-10 opacity-65' 
             />
