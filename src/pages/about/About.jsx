@@ -1,17 +1,70 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Cursor from '../../components/ui/Cursor';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+import Menu from '../../layout/Menu';
 
 
 const About = () => {
 
     const [isActive, setIsActive] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const [showFloatingBtn, setShowFloatingBtn] = useState(false);
+
+    const handleClick = e => {
+        e.preventDefault();
+        console.log('Toggling menu state from:', isMenuOpen, 'to:', !isMenuOpen);
+        setIsMenuOpen(!isMenuOpen);
+    }
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+
+        // Adjust the scroll threshold based on your layout
+        const scrollThreshold = 800;
+
+        if (scrollPosition > scrollThreshold) {
+        setShowFloatingBtn(true);
+        } else {
+        setShowFloatingBtn(false);
+        }
+    };
+
+
+    useEffect(() => {
+        // Add event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove event listener when the component unmounts
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     return (
-        <section data-cursor-color='#7c3aed' id="about"
+        <section data-cursor-color='#8b5cf6' id="about"
             className='w-full min-h-screen relative bg-pink-300'>
-            <Cursor isActive={ isActive }/>
+            <Cursor isActive={isActive} />
+            <button
+                onMouseEnter={() => setIsActive(true)}
+                onMouseLeave={() => setIsActive(false)}
+                onClick={handleClick}
+                className={`fixed left-[106rem] top-16 z-10 ${showFloatingBtn ? '' : 'invisible'}`}
+            >
+                    <span 
+                        className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20 nav-link'>
+                        [ menu ]
+                    </span>
+            </button>
+            {isMenuOpen && (
+                <Menu
+                    isOpen={isMenuOpen}
+                    onClose={() => setIsMenuOpen(false)}
+                />
+            )}
+           
             <article className="w-full h-screen flex flex-col justify-start items-start relative pt-40 px-36 ">
                 <div className="w-[96%] flex justify-between relative">
                     <p className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
@@ -38,7 +91,7 @@ const About = () => {
                         I'm currently on the lookout for full-time roles or freelance gigs that challenge my skills and
                         stoke my passion for design and development. <br/>
                         For questions or opportunities contact me 
-                        <Link to='projects'
+                        <Link to='contact'
                             onMouseEnter={() => setIsActive(true)}
                             onMouseLeave={() => setIsActive(false)}
                             className='hover:text-zinc-200'>
@@ -49,7 +102,8 @@ const About = () => {
                 </div>
             </article>
 
-            <article className="w-full h-screen flex flex-col items-center bg-hotpink-400 pt-40 mx-auto px-36">
+            <article 
+                className="w-full h-screen flex flex-col items-center bg-hotpink-400 pt-40 mx-auto px-36">
                 <div className="w-[96%] flex justify-between ">
                     <p className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
                         [ what i do ]

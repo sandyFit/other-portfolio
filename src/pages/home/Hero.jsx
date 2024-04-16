@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { HiArrowDownLeft } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
 
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <section data-cursor-color='#f9a8d4' id="hero"
+        <section data-cursor-color='#f9a8d4' id="home"
             className='w-full min-h-screen'>
             <Cursor isActive={ isActive } />
             <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-zinc-950 leading-[120px]
@@ -23,11 +24,12 @@ const Hero = () => {
             </article>
 
             <div className="flex relative">               
-                <p onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
+                <Link to='about'
+                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                     className='text-zinc-900 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
-                    absolute left-[38.5rem] -bottom-8 '>
+                    absolute left-[38.5rem] -bottom-8 hover:text-zinc-200'>
                     [scroll] 
-                </p>
+                </Link>
                  <HiArrowDownLeft className='text-[8rem] text-zinc-200 mb-2 absolute -bottom-7 left-[44.5rem] '/>
             </div>
 

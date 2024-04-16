@@ -58,8 +58,8 @@ const Cursor = ({ isActive }) => {
             <div 
                 ref={circle}
                 style={{
-                    width: isActive ? 200 : 30,
-                    height: isActive ? 200 : 30,
+                    width: isActive ? 200 : 25,
+                    height: isActive ? 200 : 25,
                     backgroundColor: cursorColor,
                     position: 'absolute', 
                     borderRadius: '50%',

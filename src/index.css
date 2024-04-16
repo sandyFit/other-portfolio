@@ -260,11 +260,11 @@
     .active-link {
       @apply text-zinc-200;
     }
-    .active-link::after {
+    .active-link::before {
         @apply content-[''] bg-zinc-950 h-[2px] w-[0%] left-0 top-[50%] -rotate-[6deg] rounded-xl absolute duration-500
     }
 
-    .active-link::after {
+    .active-link::before {
         @apply w-[100%] 
     }
 
