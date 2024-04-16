@@ -3,6 +3,7 @@ import Cursor from '../../components/ui/Cursor';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import Menu from '../../layout/Menu';
+import gsap from 'gsap';
 
 
 const About = () => {
@@ -30,6 +31,26 @@ const About = () => {
         setShowFloatingBtn(false);
         }
     };
+
+    useEffect(() => {
+        // Define the animation
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power3.out", // This easing creates a more natural movement
+                duration: 1.2
+            }
+        });
+
+        // Animating title1 and title2 with stagger
+        tl.fromTo(".title", 
+            { transformOrigin: "bottom", rotateX: 90, opacity: 0 },
+            { rotateX: 0, opacity: 1, stagger: 0.3 }
+        );
+        
+
+        // Return a function to kill the timeline to prevent memory leaks
+        return () => tl.kill();
+    }, []);
 
 
     useEffect(() => {
@@ -71,13 +92,16 @@ const About = () => {
                         [ who i am ]
                     </p>
 
-                    <p className='pr-8 about-text-mayus'>                       
+                    <p className='pr-8 about-text-mayus title'>                       
                            a graphic 
                     </p>
                 </div>
                     
-                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus">                 
-                    designer and self-taught frontend developer.        
+                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus title">                 
+                    designer and self-taught        
+                </p>
+                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus mt-[-3rem] title">                 
+                    frontend developer.        
                 </p>
 
                 <div className="flex flex-col w-[58%] gap-8 pb-28 ml-[40rem]">                   
@@ -109,15 +133,18 @@ const About = () => {
                         [ what i do ]
                     </p>
 
-                    <p className='about-text-mayus pr-12'>
+                    <p className='about-text-mayus pr-12 title'>
                         I thrive 
                     </p>
 
                 </div>
 
                 <div className="w-[96%] h-full flex ml-8 flex-col px-12">
-                    <p className='about-text-mayus'>
-                        on crafting pixel-perfect digital products.
+                    <p className='about-text-mayus title'>
+                        on crafting pixel-perfect 
+                    </p>
+                    <p className='about-text-mayus title'>
+                        digital products.
                     </p>
                 </div>
 
