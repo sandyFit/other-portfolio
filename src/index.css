@@ -48,7 +48,7 @@
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
 /* This will style the scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: #606060;
 }
 
 /* This will style the actual scrollbar thumb */
@@ -58,7 +58,7 @@
 
 /* This will change the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #141313;
+  background-color: #000;
 }
 
 /* This styles the overall scrollbar (width, height) */
@@ -242,7 +242,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-violet-500 fontTitle
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-violet-400 fontTitle overflow-x-hidden
     }
 
     a {
@@ -254,11 +254,11 @@
 
   /* ============== NAVBAR LINKS ANIMATION =============== */
   .nav-link {
-        @apply relative tracking-[1px] hover:text-zinc-200 font-[500]
+        @apply relative tracking-[1px] hover:text-zinc-50 font-[500]
     }
 
     .active-link {
-      @apply text-zinc-200;
+      @apply text-zinc-50;
     }
     .active-link::before {
         @apply content-[''] bg-zinc-950 h-[2px] w-[0%] left-0 top-[50%] -rotate-[6deg] rounded-xl absolute duration-500
@@ -274,7 +274,7 @@
     }
 
     .about-text-mayus {                             
-      @apply text-[6rem] fontTitle text-zinc-950 font-[600] leading-[90px] uppercase
+      @apply text-[6rem] fontTitle font-[600] leading-[90px] uppercase
     }
 
     .services-list {

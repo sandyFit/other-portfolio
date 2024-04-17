@@ -27,20 +27,20 @@ const Contact = () => {
    
     return (
         <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-screen'>
+            className='w-full h-screen bg-violet-400'>
             <Cursor isActive={ isActive }/>
              <article className="w-full flex flex-col relative pt-36 px-36">
                 <div className="w-[96%] flex justify-between relative">
-                    <p className='text-zinc-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
+                    <p className='text-violet-950 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
                         [ get in touch ]
                     </p>
-                    <p className='pr-8 about-text-mayus'>                       
+                    <p className='pr-8 text-violet-950 about-text-mayus'>                       
                            you made it here,
                     </p>
                 </div>
 
                 <div className="w-[96%] flex ml-8 flex-col px-12 about-text-mayus">                 
-                    <p className=''>
+                    <p className='text-violet-950'>
                         good move :) feel free to
                     </p> 
 
@@ -57,8 +57,9 @@ const Contact = () => {
 
             <article className="w-[98%] flex flex-col relative">
                
-                <div className="flex flex-col w-[30%] justify-between items-start ml-[48rem] mb-32 gap-10">
-                    <div className="flex text-xl fontTitle justify-between mt-10 gap-[9.7rem]">
+                <div className="flex flex-col w-[30%] justify-between items-start text-violet-950 text-xl
+                    ml-[48rem] mb-32 gap-10">
+                    <div className="flex fontTitle justify-between mt-10 gap-[9.7rem]">
                         <p className='uppercase'>
                             [ contact ]
                         </p>
@@ -70,16 +71,16 @@ const Contact = () => {
                                 hello@trishramos.com
                             </p>
                             {showCopiedText && (
-                                <h3 className={`flex font-ibm text-lg font-[400] text-zinc-800 tracking-widest gap-1 
+                                <h3 className={`flex text-lg font-[400] tracking-widest gap-1 
                                     absolute
                                     ${showCopiedText ? 'copiedTextVisible' : 'copiedTextHidden'}`}>
-                                    Copied <BsCheck style={{fontSize: '2rem', color: '#d4d4d8', marginTop: '-5px'}}/>
+                                    Copied <BsCheck style={{fontSize: '2rem', color: '#fff', marginTop: '-5px'}}/>
                                 </h3>
                             )}
                         </button>
                     </div>
 
-                    <div className="flex text-xl fontTitle justify-between gap-[10.4rem]">
+                    <div className="flex fontTitle justify-between gap-[10.4rem]">
                         <p className='uppercase'>
                             [ socials ]
                         </p>
@@ -92,7 +93,7 @@ const Contact = () => {
                         </ul>
                     </div>
 
-                    <div className="flex text-xl fontTitle uppercase justify-between gap-[8.2rem] ">
+                    <div className="flex fontTitle uppercase justify-between gap-[8.2rem] ">
                         <p className=''>
                            [ crafted by ]
                         </p>
@@ -102,7 +103,7 @@ const Contact = () => {
                 </div>  
                 
                 <div className="relative text-xl fontTitle uppercase">
-                    <Link to='hero'
+                    <Link to='home'
                         onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                         smooth={true}
                         duration={500}

@@ -13,18 +13,13 @@ const Hero = () => {
         const tl = gsap.timeline({
             defaults: {
                 ease: "power3.out", // This easing creates a more natural movement
-                duration: 1.2
+                duration: 1.8
             }
         });
 
         // Animating title1 and title2 with stagger
         tl.fromTo(".title", 
             { transformOrigin: "bottom", rotateX: 90, opacity: 0 },
-            { rotateX: 0, opacity: 1, stagger: 0.3 }
-        );
-        // Animating title1 and title2 with stagger
-        tl.fromTo(".title2", 
-            { transformOrigin: "left", rotateX: 90, opacity: 0 },
             { rotateX: 0, opacity: 1, stagger: 0.3 }
         );
 
@@ -35,14 +30,14 @@ const Hero = () => {
     return (
         <section data-cursor-color='#f9a8d4' id="home" className='w-full min-h-screen'>
             <Cursor isActive={isActive} />
-            <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-zinc-950 leading-[120px]
+            <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-violet-950 leading-[120px]
                 uppercase justify-center ml-20 pt-80 tracking-tighter relative">
                 <h1 className='title'>frontend </h1><br />
-                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem] text-zinc-200'>developer</span><br/>
-                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem]'>with an </span>
-                <span className='w-[20%] title2 absolute bottom-[11.1rem] text-zinc-200 left-[76.5rem] font-playfair italic 
+                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem] text-zinc-50'>developer</span><br/>
+                <span className='w-[60%] title ml-[33.6rem] mt-[-6.1rem]'>with an </span>
+                <span className='w-[20%] title absolute bottom-[11.1rem] text-zinc-50 left-[77rem] font-playfair italic 
                     lowercase 
-                    text-[12.5rem] font-[100]'>
+                    text-[12.48rem] font-[100]'>
                     eye</span>
                 <span className='w-[86%] ml-[48.08rem] mt-5 title'>for design_</span>                
             </article>
@@ -50,11 +45,11 @@ const Hero = () => {
             <div className="flex relative">               
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                    className='text-zinc-900 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
-                    absolute left-[38.5rem] -bottom-8 hover:text-zinc-200'>
+                    className='text-violet-950 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
+                    absolute left-[39rem] -bottom-8 hover:text-zinc-50'>
                     [scroll] 
                 </Link>
-                <HiArrowDownLeft className='text-[8rem] text-zinc-200 mb-2 absolute -bottom-7 left-[44.5rem]'/>
+                <HiArrowDownLeft className='text-[8rem] text-zinc-50 mb-2 absolute -bottom-7 left-[45rem]'/>
             </div>
 
             <article className="w-[40%] flex flex-col justify-start items-start h-full  relative ">                                              
