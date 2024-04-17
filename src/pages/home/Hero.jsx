@@ -32,10 +32,10 @@ const Hero = () => {
             <Cursor isActive={isActive} />
             <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-violet-950 leading-[120px]
                 uppercase justify-center ml-20 pt-80 tracking-tighter relative">
-                <h1 className='title'>frontend </h1><br />
-                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem] text-zinc-50'>developer</span><br/>
+                <h1 className='title '>frontend </h1><br />
+                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem] text-pink-50'>developer</span><br/>
                 <span className='w-[60%] title ml-[33.6rem] mt-[-6.1rem]'>with an </span>
-                <span className='w-[20%] title absolute bottom-[11.1rem] text-zinc-50 left-[77rem] font-playfair italic 
+                <span className='w-[20%] title absolute bottom-[11.1rem] text-pink-50 left-[77rem] font-playfair italic 
                     lowercase 
                     text-[12.48rem] font-[100]'>
                     eye</span>
@@ -46,14 +46,14 @@ const Hero = () => {
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                     className='text-violet-950 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
-                    absolute left-[39rem] -bottom-8 hover:text-zinc-50'>
+                    absolute left-[39rem] -bottom-8 hover:text-pink-50'>
                     [scroll] 
                 </Link>
-                <HiArrowDownLeft className='text-[8rem] text-zinc-50 mb-2 absolute -bottom-7 left-[45rem]'/>
+                <HiArrowDownLeft className='text-[8rem] text-pink-50 mb-2 absolute -bottom-7 left-[45rem]'/>
             </div>
 
             <article className="w-[40%] flex flex-col justify-start items-start h-full  relative ">                                              
-                <div className="flex w-[500px] h-72 justify-center items-center bg-zinc-900 bg-opacity-30 absolute 
+                <div className="flex w-[500px] h-72 justify-center items-center bg-zinc-950 bg-opacity-30 absolute 
                     bottom-28"></div> 
                 <div className="flex w-[320px] h-[340px] z-20 absolute bottom-16 left-48 ">
                     <img src="/me-bn.png" alt="Trish Avatar"/>

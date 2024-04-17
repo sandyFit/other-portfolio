@@ -237,7 +237,12 @@
   mix-blend-mode: difference;
 }
 
-
+/* ========== TEXT OUTLINE ========== */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #2e1065;
+}
 
 
 @layer base {

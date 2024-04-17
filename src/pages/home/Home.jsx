@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
 import Contact from '../contact/Contact';
 import About from '../about/About';
 import WhaIDo from '../about/WhaIDo';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Projects from '../projects/Projects';
 
-const Home = () => {
+
+const Home = () => {    
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -37,7 +39,7 @@ const Home = () => {
                 scrollTrigger: {
                     trigger: section,
                     start: "top center",
-                    end: "bottom top",
+                    end: "-100px top",
                     toggleActions: "play none none none",
                     onEnterBack: () => console.log("Entering back:", section.id),
                     onLeaveBack: () => console.log("Leaving back:", section.id),
@@ -60,6 +62,9 @@ const Home = () => {
             </section>
             <section id='me' className='section'>
                 <WhaIDo />
+            </section>
+            <section id='projects' className='section'>
+                <Projects />
             </section>
             <section id='contact' className='section relative'>
                 <Contact/>

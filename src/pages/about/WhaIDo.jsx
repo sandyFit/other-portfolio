@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cursor from '../../components/ui/Cursor';
+import { HiArrowDownLeft } from 'react-icons/hi2';
 
 const WhaIDo = () => {
     
@@ -7,18 +8,18 @@ const WhaIDo = () => {
 
     return (
         <section data-cursor-color='#8b5cf6' id="about"
-            className='w-full min-h-screen relative bg-[#F54449] '>
+            className='w-full min-h-screen relative bg-hotpink-400 '>
             <Cursor isActive={isActive} />
 
             <article 
                 className="w-full flex flex-col items-center pt-40 mx-auto px-36">
                 <div className="w-[96%] flex justify-between ">
-                    <p className='text-[#FFD9EA] fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
+                    <p className='text-pink-100 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
                         [ what i do ]
                     </p>
 
                     <p onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                        className='about-text-mayus text-[#FFD9EA]  pr-12 title'>
+                        className='about-text-mayus text-pink-100  pr-12 title'>
                         I thrive 
                     </p>
 
@@ -26,21 +27,21 @@ const WhaIDo = () => {
 
                 <div className="w-[96%] h-full flex ml-8 flex-col px-12">
                     <p onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                        className='about-text-mayus text-[#FFD9EA]  title'>
+                        className='about-text-mayus text-pink-100  title'>
                         on crafting pixel-perfect 
                     </p>
                     <p onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                        className='about-text-mayus text-[#FFD9EA]  title'>
+                        className='about-text-mayus text-pink-100  title'>
                         digital products.
                     </p>
                 </div>
 
                 <div className="flex flex-col w-[58%] gap-8 mt-16 pb-28 ml-[35rem] ">                   
-                    <p className="text-3xl text-[#FFD9EA] font-[100]">
+                    <p className="text-3xl text-pink-100 font-[100]">
                         I enjoy creating fluid animations, engaging transitions and tackling complex layouts. 
                         
                     </p>
-                    <div className="text-3xl text-[#FFD9EA] font-[600] relative">
+                    <div className="text-3xl text-pink-100 font-[600] relative">
                         My Toolkit:
                         <ul className='text-2xl font-[100] mt-2'>
                             <li>HTML / CSS / JAVASCRIPT / TYPESCRIPT</li>
@@ -65,7 +66,9 @@ const WhaIDo = () => {
                     </div>
                 </div>
             </article>
-            
+            <div className="flex relative">
+                <HiArrowDownLeft className='text-[8rem] text-pink-200 mb-2 absolute -bottom-2'/>
+            </div>
         </section>
     )
 }

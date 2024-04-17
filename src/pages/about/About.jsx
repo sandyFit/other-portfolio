@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import Menu from '../../layout/Menu';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HiArrowDownLeft } from 'react-icons/hi2';
 
 const About = () => {
 
@@ -46,7 +47,7 @@ const About = () => {
 
     return (
         <section data-cursor-color='#8b5cf6' id="about"
-            className='w-full min-h-screen relative bg-[#FFD9EA]'>
+            className='w-full min-h-screen relative bg-pink-200'>
             <Cursor isActive={isActive} />
             <button
                 onMouseEnter={() => setIsActive(true)}
@@ -55,7 +56,7 @@ const About = () => {
                 className={`fixed left-[106rem] top-16 z-10 ${showFloatingBtn ? '' : 'invisible'}`}
             >
                     <span 
-                        className='text-[#F54449] fontTitle text-xl font-[500] uppercase tracking-wide pl-20 nav-link'>
+                        className='text-violet-950 fontTitle text-xl font-[500] uppercase tracking-wide pl-20 nav-link'>
                         [ menu ]
                     </span>
             </button>
@@ -68,30 +69,30 @@ const About = () => {
            
             <article className="w-full h-screen flex flex-col justify-start items-start relative pt-40 px-36 ">
                 <div className="w-[96%] flex justify-between relative">
-                    <p className='text-[#F54449] fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
+                    <p className='text-violet-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
                         [ who i am ]
                     </p>
 
-                    <p className='pr-8 about-text-mayus text-[#F54449]  title'>                       
+                    <p className='pr-8 about-text-mayus text-violet-900  title'>                       
                            a graphic 
                     </p>
                 </div>
                     
-                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus text-[#F54449]  title">                 
+                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus text-violet-900  title">                 
                     designer and self-taught        
                 </p>
-                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus text-[#F54449]  mt-[-3rem] title">                 
+                <p className="w-[96%] h-full flex ml-8 flex-col px-12 about-text-mayus text-violet-900  mt-[-3rem] title">                 
                     frontend developer.        
                 </p>
 
                 <div className="flex flex-col w-[58%] gap-8 pb-28 ml-[40rem]">                   
-                    <p className="text-3xl text-[#F54449] font-[100]">
+                    <p className="text-3xl text-violet-900 font-[100]">
                         
                         I went to school for graphic design, and, driven by my passion for all things digital,
                         embarked on a self-taught journey to broaden my expertise into web development, specializing
                         in frontend and motion graphics.
                     </p>
-                    <div className="text-3xl text-[#F54449] font-[100] relative">
+                    <div className="text-3xl text-violet-900 font-[100] relative">
                         I'm currently on the lookout for full-time roles or freelance gigs that challenge my skills and
                         stoke my passion for design and development. <br/>
                         For questions or opportunities contact me 
@@ -106,7 +107,9 @@ const About = () => {
                 </div>
             </article>
 
-            
+            <div className="flex relative">
+                <HiArrowDownLeft className='text-[8rem] text-violet-900 mb-2 absolute bottom-0'/>
+            </div>   
             
         </section>
     )

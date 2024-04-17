@@ -105,8 +105,6 @@ const Contact = () => {
                 <div className="relative text-xl fontTitle uppercase">
                     <Link to='home'
                         onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                        smooth={true}
-                        duration={500}
                         className='absolute left-[110.6rem] -top-8 hover:text-zinc-200'>
                         [go top]
                     </Link>
