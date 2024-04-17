@@ -20,32 +20,45 @@ const Hero = () => {
         // Animating title1 and title2 with stagger
         tl.fromTo(".title", 
             { transformOrigin: "bottom", rotateX: 90, opacity: 0 },
-            { rotateX: 0, opacity: 1, stagger: 0.3 }
+            {
+                rotateX: 0, opacity: 1, stagger:
+                {
+                    each: 0.4,
+
+                },
+                x: 100,
+                cycle: { y: [100, -100] ,
+                    rotation: [120, -120]
+                },
+                
+            }
         );
+        
+        
 
         // Return a function to kill the timeline to prevent memory leaks
         return () => tl.kill();
     }, []);
 
     return (
-        <section data-cursor-color='#f9a8d4' id="home" className='w-full min-h-screen'>
+        <section data-cursor-color='#f9a8d4' id="home"
+            className='w-full min-h-screen bg-skyIce-300'>
             <Cursor isActive={isActive} />
-            <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-violet-950 leading-[120px]
-                uppercase justify-center ml-20 pt-80 tracking-tighter relative">
+            <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-skyIce-900 leading-[120px]
+                uppercase justify-center  pt-80 tracking-tighter relative">
                 <h1 className='title '>frontend </h1><br />
-                <span className='w-[60%] title ml-[33rem] mt-[-6.1rem] text-pink-50'>developer</span><br/>
-                <span className='w-[60%] title ml-[33.6rem] mt-[-6.1rem]'>with an </span>
-                <span className='w-[20%] title absolute bottom-[11.1rem] text-pink-50 left-[77rem] font-playfair italic 
-                    lowercase 
-                    text-[12.48rem] font-[100]'>
+                <span className='w-[60%] title ml-[32rem] mt-[-6.1rem] text-pink-50'>developer</span><br/>
+                <span className='w-[60%] title ml-[32.8rem] mt-[-6.1rem]'>with an </span>
+                <span className='w-[20%] title absolute bottom-[11.1rem] text-pink-50 left-[76.5rem] font-playfair italic 
+                    lowercase text-[12.48rem] font-[100] z-10'>
                     eye</span>
-                <span className='w-[86%] ml-[48.08rem] mt-5 title'>for design_</span>                
+                <span className='w-[86%] ml-[47.08rem] mt-5 title'>for design_</span>                
             </article>
 
             <div className="flex relative">               
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                    className='text-violet-950 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
+                    className='text-skyIce-900 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
                     absolute left-[39rem] -bottom-8 hover:text-pink-50'>
                     [scroll] 
                 </Link>

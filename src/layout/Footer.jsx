@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <section id='contact'
             className='w-full h-20 flex justify-center items-center px-12 py-4'>        
-            <div className="flex w-full h-full justify-between text-violet-950 items-center">
+            <div className="flex w-full h-full justify-between text-skyIce-900 items-center">
                 <div className="flex text-[5rem] fontTitle uppercase">
                     <AiOutlineCopyright className='text-[4.8rem] mt-4'/>
                     {date.getFullYear()}

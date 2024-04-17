@@ -22,7 +22,7 @@ const Navbar = () => {
             className='w-full h-[90px] absolute top-0 z-20'>
             <Cursor isActive={ isActive }/>
             <div className="flex w-full h-full justify-between  pt-4">
-                <div className="w-full flex text-violet-950 text-[5rem] fontTitle uppercase pl-8">
+                <div className="w-full flex text-skyIce-900 text-[5rem] fontTitle uppercase pl-8">
                     <AiOutlineCopyright className='text-[4.8rem] mt-4'/>
                     {date.getFullYear()}
                     <span className='ml-6'>trish ramos</span>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
                    
                 <div className="flex flex-col justify-center items-center  w-[29%]">
-                    <p className='text-violet-950 fontTitle text-xl font-[500] uppercase'>
+                    <p className='text-skyIce-900 fontTitle text-xl font-[500] uppercase'>
                         open to full-time roles & gigs
                     </p>
                     <div className="flex items-end ml-12">
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <div className='flex w-full mt-20'>           
                         <ul className='w-full flex flex-col justify-between items-end bg-transparent gap-2 pr-8'>
                             {['about', 'projects', 'resume', 'contact'].map((item, index) => (
-                                <li className='text-violet-950 fontTitle text-xl font-[500] 
+                                <li className='text-skyIce-900 fontTitle text-xl font-[500] 
                                         px-2 uppercase tracking-wide nav-link' key={index}
                                     onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
                                     <Link to={item}>

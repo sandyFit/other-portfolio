@@ -48,12 +48,12 @@
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
 /* This will style the scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #606060;
+  background-color: #8d8ffc;
 }
 
 /* This will style the actual scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #323232;
+  background-color: #38296e;
 }
 
 /* This will change the scrollbar thumb on hover */
@@ -243,6 +243,23 @@
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #2e1065;
 }
+
+/* ============ HORIZONTAL SCROLL ============ */
+
+.section.horizontal {
+    width: 100vw;
+    overflow-x: hidden; /* This prevents horizontal scrollbars */
+    position: relative;
+}
+
+.horizontal-scroll {
+    display: flex;
+    width: 300vw; /* Example width; Adjust based on content */
+    position: relative;
+    white-space: nowrap;
+}
+
+
 
 
 @layer base {

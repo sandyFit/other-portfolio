@@ -27,20 +27,20 @@ const Contact = () => {
    
     return (
         <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-screen bg-violet-400'>
+            className='w-full h-screen bg-skyIce-300'>
             <Cursor isActive={ isActive }/>
              <article className="w-full flex flex-col relative pt-36 px-36">
                 <div className="w-[96%] flex justify-between relative">
-                    <p className='text-violet-950 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
+                    <p className='text-skyIce-900 fontTitle text-xl font-[500] uppercase tracking-wide pl-20'>
                         [ get in touch ]
                     </p>
-                    <p className='pr-8 text-violet-950 about-text-mayus'>                       
+                    <p className='pr-8 text-skyIce-900 about-text-mayus'>                       
                            you made it here,
                     </p>
                 </div>
 
                 <div className="w-[96%] flex ml-8 flex-col px-12 about-text-mayus">                 
-                    <p className='text-violet-950'>
+                    <p className='text-skyIce-900'>
                         good move :) feel free to
                     </p> 
 
@@ -57,7 +57,7 @@ const Contact = () => {
 
             <article className="w-[98%] flex flex-col relative">
                
-                <div className="flex flex-col w-[30%] justify-between items-start text-violet-950 text-xl
+                <div className="flex flex-col w-[30%] justify-between items-start text-skyIce-900 text-xl
                     ml-[48rem] mb-32 gap-10">
                     <div className="flex fontTitle justify-between mt-10 gap-[9.7rem]">
                         <p className='uppercase'>
@@ -102,7 +102,7 @@ const Contact = () => {
                     </div>
                 </div>  
                 
-                <div className="relative text-xl fontTitle uppercase">
+                <div className="relative text-xl fontTitle text-skyIce-900 uppercase">
                     <Link to='home'
                         onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                         className='absolute left-[110.6rem] -top-8 hover:text-zinc-200'>
