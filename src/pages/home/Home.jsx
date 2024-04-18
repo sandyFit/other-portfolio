@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import Hero from './Hero';
-import Contact from '../contact/Contact';
+//import Contact from '../contact/Contact';
 import About from '../about/About';
 import WhaIDo from '../about/WhaIDo';
 import Projects from '../projects/Projects';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Test from './Test';
 
 const Home = () => {    
 
@@ -55,20 +56,18 @@ const Home = () => {
 
     return (
         <div className='w-full'>
-            <section id='home' className=''>
+            <section id='index' className='section'>
                 <Hero />
             </section>
             <section id='about' className=''>
                 <About />
             </section>
-            {/* <section id='me' className='section'>
-                <WhaIDo />
-            </section> */}
-            <section id='projects' className=''>
+
+            <section id='projects' className='section'>
                 <Projects />
             </section>
             <section id='contact' className='section relative'>
-                <Contact/>
+                <Test/>
             </section>
         </div>
     );

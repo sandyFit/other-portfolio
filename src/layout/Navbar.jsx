@@ -33,7 +33,7 @@ const Navbar = () => {
                     <p className='text-skyIce-900 fontTitle text-xl font-[500] uppercase'>
                         open to full-time roles & gigs
                     </p>
-                    <div className="flex items-end ml-12">
+                    <div className="flex items-end ml-8">
                         <TimeZone/>
                     </div>
                 </div>

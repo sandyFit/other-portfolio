@@ -41,7 +41,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section data-cursor-color='#f9a8d4' id="home"
+        <section data-cursor-color='#f9a8d4' id="index"
             className='w-full min-h-screen bg-skyIce-300'>
             <Cursor isActive={isActive} />
             <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-skyIce-900 leading-[120px]
@@ -58,8 +58,7 @@ const Hero = () => {
             <div className="flex relative">               
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                    className='text-skyIce-900 fontTitle text-xl font-[500] pb-6 uppercase tracking-wide
-                    absolute left-[39rem] -bottom-8 hover:text-pink-50'>
+                    className='array-text pb-6 absolute left-[39rem] -bottom-8 hover:text-pink-50'>
                     [scroll] 
                 </Link>
                 <HiArrowDownLeft className='text-[8rem] text-pink-50 mb-2 absolute -bottom-7 left-[45rem]'/>
@@ -71,7 +70,11 @@ const Hero = () => {
                 <div className="flex w-[320px] h-[340px] z-20 absolute bottom-16 left-48 ">
                     <img src="/me-bn.png" alt="Trish Avatar"/>
                 </div>                       
-            </article>         
+            </article>    
+            
+            <span className='array-text ml-8'>
+                v.1.0
+            </span>
         </section>
     );
 };

@@ -9,7 +9,7 @@ export default {
       colors: {
         textLight: '#36332d',
         skyIce: {
-          100: '#fcb6c3',
+          100: '#9d9efc',
           200: '#8d8ffc',
           300: '#7c5dec',
           400: '#6148bd',

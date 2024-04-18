@@ -48,23 +48,24 @@
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
 /* This will style the scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #8d8ffc;
+  background-color: #000;
 }
 
 /* This will style the actual scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #38296e;
+  background-color: #8d8ffc;
 }
 
 /* This will change the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #000;
+  background-color: #9d9efc;
 }
 
 /* This styles the overall scrollbar (width, height) */
 ::-webkit-scrollbar {
   width: 10px;
-  height: 40px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 
@@ -306,6 +307,15 @@
     .custom-link {
       text-decoration: underline;
       text-underline-offset: 8px;
+    }
+
+    /* ========TEXT IN ARRAY======= */
+    .array-text {
+      @apply text-skyIce-900 fontTitle text-xl font-[500] uppercase tracking-wide 
+    }
+
+    .numbers {
+      @apply text-[20rem] text-skyIce-100 text-opacity-20 font-[700]
     }
 
 }
