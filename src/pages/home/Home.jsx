@@ -6,68 +6,83 @@ import WhaIDo from '../about/WhaIDo';
 import Projects from '../projects/Projects';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Test2 from './Test2';
 
-
-const Home = () => {    
-
+const Home = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        const sections = gsap.utils.toArray(".section");
-        console.log("Sections found:", sections.length); // Check how many sections are detected
+    const sections = gsap.utils.toArray(".section");
 
-        sections.forEach((section, i) => {
-            console.log("Animating section:", section.id); // Identify which section is being animated
+    sections.forEach((section) => {
+        console.log("Animating section:", section.id);
+        gsap.set(section, { opacity: 1 });
 
-            // Ensure initial visibility for Abouting
-            gsap.set(section, { opacity: 1 });
-
+        if (section.id === 'about') {
+            // Assuming you want 'About' to stay pinned until 'Contact' starts pushing it up
             ScrollTrigger.create({
                 trigger: section,
-                start: "top top",  
+                start: "top top",
+                end: () => {
+                    const contactSection = document.getElementById('contact');
+                    // Calculate the end position where 'Contact' starts affecting 'About'
+                    return `+=5000`;
+                },
+                pin: true,
+                scrub: true,
+                pinSpacing: false
+            });
+        } else if (section.id === 'me') {
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top top+=60",
+                end: () => `+=${section.nextElementSibling.offsetTop - section.offsetTop - 60}`,
+                pin: true,
+                scrub: true,
+                pinSpacing: false
+            });
+        } else {
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top top",
                 end: 'bottom top',
                 pin: true,
                 scrub: 1,
-                pinSpacing: false, // This adds space for the pinned section
-                
+                pinSpacing: false,
             });
+        }
 
-            gsap.fromTo(section.children, {
-                y: 50,
-                opacity: 0,
-            }, {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top center",
-                    end: "bottom top",
-                    toggleActions: "play none none none",
-                    
-                },
-            });
+        gsap.fromTo(section.children, {
+            y: 50,
+            opacity: 0,
+        }, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: section,
+                start: "top center",
+                end: "bottom top",
+                toggleActions: "play none none none",
+            },
         });
+    });
 
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
-    }, []);
+    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+}, []);
+
 
     return (
         <div className='w-full'>
-            <section id='index' className=''>
+            <section id='index' className='section'>
                 <Hero />
             </section>
-            <section id='about' className=''>
-                <Test2 />
+            <section id='about' className='section'>
+                <About />
             </section>
-
-            <section id='projects' className=''>
-                <Projects />
+            <section id='me' className='section'>
+                <WhaIDo />
             </section>
-            <section id='contact' className=' relative'>
+            <section id='contact' className='section relative'>
                 <Contact/>
             </section>
         </div>

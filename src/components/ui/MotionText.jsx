@@ -6,7 +6,7 @@ const MotionText = ({ icon, text1, text2, text3, className}) => {
   const repetitions = Array(20).fill(null);
 
   return (
-      <div className="w-full h-[50px] z-10 flex pt-3 bg-skyIce-900"
+      <div className="w-full h-[50px] z-10 flex pt-3 bg-skyIce-950"
             style={{ overflow: 'hidden'}}>
             <h2 className=' motion-text fontTitle text-xl font-[500] uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>

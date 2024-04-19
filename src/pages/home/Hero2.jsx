@@ -5,7 +5,9 @@ import { Link } from 'react-scroll';
 import gsap from 'gsap';
 import { BsAsterisk } from 'react-icons/bs';
 
-const Hero = () => {
+
+const Hero2 = () => {
+
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -52,8 +54,8 @@ const Hero = () => {
                 <h1 className=' ml-[3.5rem]'> frontend </h1><br />
                 <span className='w-[60%]  ml-[25.6rem] mt-[-8.3rem] text-pink-50'>developer</span><br/>
                 <span className='w-[80%]  ml-[26rem] mt-[-8.3rem]'>with an </span>
-                <span className='w-[20%]  absolute bottom-[7.8rem] text-pink-50 left-[60.5rem] font-playfair italic 
-                    lowercase text-[8rem] font-[100] z-10'>
+                <span className='w-[20%]  absolute bottom-[8.4rem] text-pink-50 left-[61rem] font-playfair italic 
+                    lowercase text-[9.5rem] font-[100] z-10'>
                     eye</span>
                 <span className='w-[96%] ml-[35rem] mt-[-.8rem] '>for design_</span>                
             </article>
@@ -83,4 +85,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default Hero2

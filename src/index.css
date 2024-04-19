@@ -297,7 +297,7 @@
     }
 
     .about-text-mayus {                             
-      @apply text-[6rem] fontTitle font-[600] leading-[90px] uppercase
+      @apply text-[5rem] fontTitle font-[600]  uppercase
     }
 
     .services-list {
@@ -306,16 +306,16 @@
     
     .custom-link {
       text-decoration: underline;
-      text-underline-offset: 8px;
+      text-underline-offset: 3px;
     }
 
     /* ========TEXT IN ARRAY======= */
     .array-text {
-      @apply  fontTitle text-xl font-[500] uppercase tracking-wide 
+      @apply  fontTitle font-[500] uppercase tracking-wide 
     }
 
     .array-text-light {
-      @apply  font-ibm text-xl font-[400] uppercase tracking-wide 
+      @apply  font-ibm text-base font-[400] uppercase tracking-wide 
     
     }
 
