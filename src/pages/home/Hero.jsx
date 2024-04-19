@@ -3,6 +3,7 @@ import { HiArrowDownLeft } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
+import { BsAsterisk } from 'react-icons/bs';
 
 const Hero = () => {
     const [isActive, setIsActive] = useState(false);
@@ -42,26 +43,29 @@ const Hero = () => {
 
     return (
         <section data-cursor-color='#f9a8d4' id="index"
-            className='w-full min-h-screen bg-skyIce-300'>
+            className='w-full min-h-screen'>
             <Cursor isActive={isActive} />
             <article className="w-[60%] flex flex-col text-[10rem] fontTitle font-[500] text-skyIce-900 leading-[120px]
-                uppercase justify-center  pt-80 tracking-tighter relative">
-                <h1 className='title '>frontend </h1><br />
+                uppercase justify-center pt-80 tracking-tighter relative">
+                <BsAsterisk className='absolute rotating-icon text-7xl bottom-[31rem] left-24' />
+                
+                <h1 className='title ml-[4.5rem]'> frontend </h1><br />
                 <span className='w-[60%] title ml-[32rem] mt-[-6.1rem] text-pink-50'>developer</span><br/>
                 <span className='w-[60%] title ml-[32.8rem] mt-[-6.1rem]'>with an </span>
                 <span className='w-[20%] title absolute bottom-[11.1rem] text-pink-50 left-[76.5rem] font-playfair italic 
                     lowercase text-[12.48rem] font-[100] z-10'>
                     eye</span>
-                <span className='w-[86%] ml-[47.08rem] mt-5 title'>for design_</span>                
+                <span className='w-[86%] ml-[45rem] mt-5 title'>for design_</span>                
             </article>
 
-            <div className="flex relative">               
+            <div className="flex relative">   
+                   
                 <Link to='about'
-                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                    className='array-text pb-6 absolute left-[39rem] -bottom-8 hover:text-pink-50'>
-                    [scroll] 
+                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
+                    <HiArrowDownLeft className='text-[8rem] text-pink-50 mb-2 absolute -bottom-7 left-[38rem]'/> 
+
                 </Link>
-                <HiArrowDownLeft className='text-[8rem] text-pink-50 mb-2 absolute -bottom-7 left-[45rem]'/>
+                
             </div>
 
             <article className="w-[40%] flex flex-col justify-start items-start h-full  relative ">                                              
@@ -72,8 +76,8 @@ const Hero = () => {
                 </div>                       
             </article>    
             
-            <span className='array-text ml-8'>
-                v.1.0
+            <span className='array-text ml-12'>
+                portfolio v.1.0
             </span>
         </section>
     );

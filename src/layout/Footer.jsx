@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
 
                     <p className='fontTitle text-xl font-[500] uppercase'>
-                        open to full-time roles & gigs
+                        open to full-time roles & collabs
                     </p>
                 </div>
 

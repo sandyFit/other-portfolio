@@ -265,7 +265,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-violet-400 fontTitle overflow-x-hidden
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-skyIce-300 fontTitle overflow-x-hidden
     }
 
     a {
@@ -311,11 +311,16 @@
 
     /* ========TEXT IN ARRAY======= */
     .array-text {
-      @apply text-skyIce-900 fontTitle text-xl font-[500] uppercase tracking-wide 
+      @apply  fontTitle text-xl font-[500] uppercase tracking-wide 
+    }
+
+    .array-text-light {
+      @apply  font-ibm text-xl font-[400] uppercase tracking-wide 
+    
     }
 
     .numbers {
-      @apply text-[20rem] text-skyIce-100 text-opacity-20 font-[700]
+      @apply text-[16rem] text-skyIce-100 text-opacity-20 font-[700]
     }
 
 }

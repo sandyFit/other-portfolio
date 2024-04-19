@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import Hero from './Hero';
-//import Contact from '../contact/Contact';
+import Contact from '../contact/Contact';
 import About from '../about/About';
 import WhaIDo from '../about/WhaIDo';
 import Projects from '../projects/Projects';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Test from './Test';
+import Test2 from './Test2';
+
 
 const Home = () => {    
 
@@ -19,7 +20,7 @@ const Home = () => {
         sections.forEach((section, i) => {
             console.log("Animating section:", section.id); // Identify which section is being animated
 
-            // Ensure initial visibility for testing
+            // Ensure initial visibility for Abouting
             gsap.set(section, { opacity: 1 });
 
             ScrollTrigger.create({
@@ -56,18 +57,18 @@ const Home = () => {
 
     return (
         <div className='w-full'>
-            <section id='index' className='section'>
+            <section id='index' className=''>
                 <Hero />
             </section>
             <section id='about' className=''>
-                <About />
+                <Test2 />
             </section>
 
-            <section id='projects' className='section'>
+            <section id='projects' className=''>
                 <Projects />
             </section>
-            <section id='contact' className='section relative'>
-                <Test/>
+            <section id='contact' className=' relative'>
+                <Contact/>
             </section>
         </div>
     );

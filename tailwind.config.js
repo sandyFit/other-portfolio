@@ -116,6 +116,10 @@ export default {
         playfair: ["Playfair Display", 'serif']
       },
 
+      gridTemplateColumns: {
+        '60/40': '60% 40%', // Custom grid-template-columns
+      },
+
       backgroundImage: {
         'circle-gradient': 'radial-gradient(circle, rgba(245,216,252,1) 0%, rgba(148,187,233,1) 100%);',
         'font-gradient': 'linear-gradient(135deg, rgba(6,147,227,1) 0%, rgb(155,81,224) 100%)'

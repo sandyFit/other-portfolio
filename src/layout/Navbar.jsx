@@ -31,7 +31,7 @@ const Navbar = () => {
                    
                 <div className="flex flex-col justify-center items-center  w-[29%]">
                     <p className='text-skyIce-900 fontTitle text-xl font-[500] uppercase'>
-                        open to full-time roles & gigs
+                        open to full-time roles & collabs
                     </p>
                     <div className="flex items-end ml-8">
                         <TimeZone/>
