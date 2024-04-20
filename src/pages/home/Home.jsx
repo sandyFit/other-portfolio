@@ -73,15 +73,13 @@ const Home = () => {
 
     return (
         <div className='w-full'>
-            <section id='index' className='section'>
+            <section id='index' className=''>
                 <Hero />
             </section>
-            <section id='about' className='section'>
+            <section id='about-me' className=''>
                 <About />
             </section>
-            <section id='me' className='section'>
-                <WhaIDo />
-            </section>
+
             <section id='contact' className='section relative'>
                 <Contact/>
             </section>

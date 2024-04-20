@@ -19,24 +19,14 @@ const Navbar = () => {
 
     return (
         <section data-cursor-color='#f9a8d4'
-            className='w-full h-[90px] absolute top-0 z-20'>
+            className='w-full h-[90px] absolute top-0 z-20 flex justify-between pt-4'>
             <Cursor isActive={ isActive }/>
-            <div className="flex w-full h-full justify-between  pt-4">
-                <div className="w-full flex text-skyIce-900 text-[4rem] fontTitle uppercase pl-8">
+            <div className="flex w-full h-full ">
+                <div className="w-full flex text-zinc-500 text-[4rem] fontTitle uppercase pl-8">
                     <AiOutlineCopyright className='text-[3.8rem] mt-4'/>
                     {date.getFullYear()}
                     <span className='ml-6'>trish ramos</span>
-                </div>
-
-                   
-                <div className="flex flex-col justify-center items-center pr-8 w-[29%]">
-                    <p className='text-skyIce-900 fontTitle font-[500] uppercase'>
-                        open to full-time roles & collabs
-                    </p>
-                    <div className="flex items-end ml-9">
-                        <TimeZone/>
-                    </div>
-                </div>
+                </div>                              
             </div>
 
             
@@ -44,9 +34,9 @@ const Navbar = () => {
                 <div className="flex w-full">
                     <div className='flex w-full mt-16'>           
                         <ul className='w-full flex flex-col justify-between items-end bg-transparent gap-2 pr-8'>
-                            {['about', 'projects', 'resume', 'contact'].map((item, index) => (
-                                <li className='text-skyIce-900 fontTitle font-[500] 
-                                        pr-1 uppercase tracking-wide nav-link' key={index}
+                            {['about-me', 'projects', 'contact'].map((item, index) => (
+                                <li className='text-skyIce-300 fontTitle font-[300] 
+                                        pr-1 uppercase tracking-wide hover:text-zinc-300 nav-link' key={index}
                                     onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
                                     <Link to={item}>
                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}

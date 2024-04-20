@@ -63,7 +63,7 @@ export default {
           400: '#E8464E'
         },
 
-        orangey: {
+        orangy: {
           100: '#fc9799',
           200: '#fa787a',
           300: '#fc686a',

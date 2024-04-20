@@ -265,7 +265,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-skyIce-300 fontTitle overflow-x-hidden
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-900 fontTitle overflow-x-hidden
     }
 
     a {
@@ -277,11 +277,11 @@
 
   /* ============== NAVBAR LINKS ANIMATION =============== */
   .nav-link {
-        @apply relative tracking-[1px] hover:text-zinc-50 font-[500]
+        @apply relative tracking-[1px]  font-[400]
     }
 
     .active-link {
-      @apply text-zinc-50;
+      @apply text-pink-50;
     }
     .active-link::before {
         @apply content-[''] bg-zinc-950 h-[2px] w-[0%] left-0 top-[50%] -rotate-[6deg] rounded-xl absolute duration-500
@@ -297,7 +297,7 @@
     }
 
     .about-text-mayus {                             
-      @apply text-[5rem] fontTitle font-[600]  uppercase
+      @apply text-[6rem] fontTitle font-[600] leading-[90px] uppercase
     }
 
     .services-list {
@@ -315,12 +315,20 @@
     }
 
     .array-text-light {
-      @apply  font-ibm text-base font-[400] uppercase tracking-wide 
+      @apply  font-ibm text-base text-[#fff] font-[400] uppercase tracking-wide 
     
     }
 
-    .numbers {
-      @apply text-[16rem] text-skyIce-100 text-opacity-20 font-[700]
+    .text-small {
+      @apply text-zinc-400 text-sm font-inter font-[300] uppercase tracking-wide
+    }
+
+    .text-small-min {
+      @apply text-zinc-400 text-[1rem] font-inter font-[300] tracking-wide
+    }
+
+    .text-small-bright {
+      @apply text-zinc-50 text-base font-inter font-[300] uppercase tracking-wider
     }
 
 }

@@ -58,15 +58,16 @@ const Cursor = ({ isActive }) => {
             <div 
                 ref={circle}
                 style={{
-                    width: isActive ? 200 : 25,
-                    height: isActive ? 200 : 25,
-                    backgroundColor: cursorColor,
+                    width: isActive ? 120 : 20,
+                    height: isActive ? 120 : 20,
+                    backgroundColor: 'transpatent',
+                    border: '3px solid #fff',
                     position: 'absolute', 
                     borderRadius: '50%',
                     filter: `opacity(${isActive ? 0.5 : 1}`,
                     transition: 'height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out, background-color 0.3s ease'
                 }}
-                className='top-0 left-0 fixed rounded-full mix-blend-difference pointer-events-none -z-10 opacity-65' 
+                className='top-0 left-0 fixed rounded-full  pointer-events-none ' 
             />
         </div>
     );

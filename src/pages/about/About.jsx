@@ -16,45 +16,38 @@ const About = () => {
 
 
     return (
-        <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-screen relative bg-skyIce-300'>
-            {/* <hr className='w-[84%] border-t-[1px] border-skyIce-900 absolute left-36 top-16'/> */}
-
-                <MotionText
-                    text1={'who i am'}
-                />
-            <div className="flex flex-col gap-7 items-start ml-36 mt-24 pb-12">
-
-                <div className='w-[70%] about-text-mayus leading-[75px] relative'>
+        <section data-cursor-color='#f9a8d4' id="about-me"
+            className='w-full min-h-screen relative bg-zinc-900'>
+            
+            <hr className='w-[86%] border-t-[1px] border-zinc-700 absolute -top-24 left-28'/>
+            <div className="flex justify-center items-end mt-52 mx-32">
+                <div className='w-[50%] about-text-mayus text-zinc-50 relative'>
                     graphic designer<br/>
-                    <span className='text-pink-50 font-playfair italic lowercase absolute bottom-[5.1rem]'>and</span>
-                    <span className='ml-40'>self-taught</span><br />
+                    <span className='text-skyIce-300 font-playfair italic lowercase absolute bottom-[17.5rem]'>and</span>
+                    <span className='ml-48'>self-<br/>taught</span><br/>
                     <span className=''>frontend developer</span> 
 
                 </div>
-                <p className='array-text-light text-sm w-[50%] ml-[30rem] mt-4'>
-                    Hello, I'm Trish, 
-                    I went to school for graphic design, and, driven by my passion for all things digital,
-                    embarked on a self-taught journey to broaden my expertise into web development, specializing
-                    in frontend and motion graphics.
-                </p>
-                <div className="array-text-light text-sm w-[50%] ml-[30rem] relative">
+                <div className="w-[80%] flex flex-col justify-start text-small-min items-end pl-48">
+                    <p className=''>
+                        Hello, I'm Trish, 
+                        I went to school for graphic design, and, driven by my passion for all things digital,
+                        embarked on a self-taught journey to broaden my expertise into web development, specializing
+                        in frontend and motion graphics.
+                    </p>
+                    <div className="mt-6 relative">
                         I'm currently on the lookout for full-time roles or project-based collaborations that
                         challenge my skills and stoke my passion for design and development. <br/>
-                        For questions or opportunities, please feel free to contact me
-                        <Link to='contact'
-
-                            className='hover:text-zinc-200'>
-                            <span className='ml-2 custom-link'>here</span>
-                            <BsArrowUpRight className='absolute top-[4.75rem] left-[41.8rem]' />
-                        </Link>
+                        For questions or opportunities, please feel free to reach me out at
+                        <span className='text-zinc-50 ml-1'>hello@trishramos.com</span>.
+                        
                     </div>
+                </div>
             </div>
-             <div className="relative">
+             {/* <div className="relative">
                 <HiArrowDownLeft className='text-[8rem] text-pink-50 absolute bottom-6 left-36'/>
-            </div>  
+            </div>   */}
 
-            <hr className='w-[80%] border-t-[1px] border-skyIce-900 absolute left-36'/>
             
         </section>
     )
