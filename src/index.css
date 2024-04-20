@@ -15,6 +15,18 @@
     height: var(--after-height); /* This dynamically adjusts based on the `height` prop */
 }
 
+/* =========== HERO TITLE EFFECT ============ */
+.title, .char {
+
+    opacity: 1; /* Ensure it's not transparent */
+}
+.title-scroll, .char {
+
+    opacity: 1; /* Ensure it's not transparent */
+}
+
+
+
 
 /* ============== DOWNLOADED FONTS ==============*/
 @font-face {

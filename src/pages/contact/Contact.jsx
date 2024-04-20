@@ -3,6 +3,7 @@ import Footer from '../../layout/Footer'
 import { BsCheck } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import Cursor from '../../components/ui/Cursor';
+import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 
 
 const Contact = () => {
@@ -41,7 +42,11 @@ const Contact = () => {
 
             <article className='grid grid-cols-1 '>                
                 <div className=" text-[12.3rem] fontTitle font-[600] text-skyIce-300 uppercase ">
-                    <p className='ml-10'>contact </p>
+                    <p className='ml-10'>
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='contact' />
+                    </p>
                 </div>
 
                 <div className=" w-[90%] grid grid-cols-3 align-content-center gap-10 space ml-64 mb-16 relative">
@@ -79,7 +84,7 @@ const Contact = () => {
                                 <p id='emailAddress'
                                     className='text-base font-ibm text-zinc-300 font-[300] hover:text-skyIce-300  
                                         mt-[-2px]'>
-                                    hello@trishramos.com
+                                    info@trishramos.com
                                 </p>
                                 {showCopiedText && (
                                     <h3 className={`flex font-ibm text-sm font-[300] gap-1 absolute left-[39.4rem]

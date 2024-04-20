@@ -80,7 +80,7 @@ const Home = () => {
                 <About />
             </section>
 
-            <section id='contact' className='section relative'>
+            <section id='contact' className=' relative'>
                 <Contact/>
             </section>
         </div>

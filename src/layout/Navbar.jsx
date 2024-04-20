@@ -43,6 +43,10 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             ))}
+
+                            {/* <li className='text-small text-base'>
+                                folio / v.1.0
+                            </li> */}
                         </ul>
                     </div>
                 </div>  

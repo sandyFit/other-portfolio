@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Cursor from '../../components/ui/Cursor';
-import { BsArrowUpRight } from 'react-icons/bs';
-import { Link } from 'react-scroll';
-import Menu from '../../layout/Menu';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HiArrowDownLeft } from 'react-icons/hi2';
-import MotionText from '../../components/ui/MotionText';
+import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 
 const About = () => {
 
@@ -21,11 +18,35 @@ const About = () => {
             
             <hr className='w-[86%] border-t-[1px] border-zinc-700 absolute -top-24 left-28'/>
             <div className="flex justify-center items-end mt-52 mx-32">
-                <div className='w-[50%] about-text-mayus text-zinc-50 relative'>
-                    graphic designer<br/>
-                    <span className='text-skyIce-300 font-playfair italic lowercase absolute bottom-[17.5rem]'>and</span>
-                    <span className='ml-48'>self-<br/>taught</span><br/>
-                    <span className=''>frontend developer</span> 
+                <div className='w-[70%] about-text-mayus text-zinc-50 relative'>
+                    <TextShimmerEffect
+                        triggerOnScroll={true}
+                        text='graphic'/>
+                    <TextShimmerEffect
+                        triggerOnScroll={true}
+                        text='designer'/>
+                    <span className='text-skyIce-300 font-playfair italic lowercase absolute bottom-[17.6rem]'>
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='and'/>
+                    </span>
+                    <span >
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='self-' style={ {marginLeft: '12rem'}} />
+                    </span><br />
+                    <span className=''>
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='taught' style={ {marginTop: '-5.5rem'}} />
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='frontend' />
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='developer' />
+                        
+                    </span> 
 
                 </div>
                 <div className="w-[80%] flex flex-col justify-start text-small-min items-end pl-48">
@@ -39,7 +60,7 @@ const About = () => {
                         I'm currently on the lookout for full-time roles or project-based collaborations that
                         challenge my skills and stoke my passion for design and development. <br/>
                         For questions or opportunities, please feel free to reach me out at
-                        <span className='text-zinc-50 ml-1'>hello@trishramos.com</span>.
+                        <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.
                         
                     </div>
                 </div>

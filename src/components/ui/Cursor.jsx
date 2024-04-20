@@ -58,10 +58,10 @@ const Cursor = ({ isActive }) => {
             <div 
                 ref={circle}
                 style={{
-                    width: isActive ? 120 : 20,
-                    height: isActive ? 120 : 20,
+                    width: isActive ? 120 : 5,
+                    height: isActive ? 120 : 5,
                     backgroundColor: 'transpatent',
-                    border: '3px solid #fff',
+                    border: '1px solid #fff',
                     position: 'absolute', 
                     borderRadius: '50%',
                     filter: `opacity(${isActive ? 0.5 : 1}`,
