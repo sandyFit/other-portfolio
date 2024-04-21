@@ -14,8 +14,8 @@ const Hero = () => {
         const tl = gsap.timeline({
             defaults: {
                 ease: "power3.out",
-                duration: 1.2, // slightly faster
-                delay: 3
+                duration: 1, // slightly faster
+                delay: 2
             }
         });
 
@@ -40,17 +40,18 @@ const Hero = () => {
                 folio / v.1.0
                 </span> */}
                 <BsAsterisk className='absolute text-zinc-500 rotating-icon text-5xl bottom-[12.8rem] left-[75.3rem]' />
-                <p className='w-[9.1%] text-left text-small absolute bottom-[17rem] left-[53.2rem] small-title'>
+                <p className='w-[9.1%] text-left text-small absolute bottom-[17rem] left-[53.7rem] small-title'>
                     based in colombia
                  </p>
-                <h1 className='w-full text-[10rem] fontTitle font-[500] text-zinc-50'> <TextShimmerHero text='frontend'/> </h1>
-                <span className='text-skyIce-300 '><TextShimmerHero text='developer'/></span>
-                <span className='w-[80%] ml-[20rem]  '><TextShimmerHero text='with an'/> </span>
+                <h1 className='w-full text-[10rem] fontTitle font-[500] text-zinc-50'>
+                    <TextShimmerHero text='frontend '/> </h1>
+                <span className='text-skyIce-300'><TextShimmerHero text='developer'/></span>
+                <span className='w-[80%] ml-[20rem] '><TextShimmerHero text='with an'/> </span>
                 <span className='w-[20%]  absolute bottom-[9.6rem] text-skyIce-300 left-[63rem] font-playfair italic 
-                    lowercase text-[10rem] font-[100] z-10 '>
+                    lowercase text-[10rem] font-[100] z-10'>
                     <TextShimmerHero text='eye' />
                 </span>
-                <span className='w-[96%] ml-[31rem] '><TextShimmerHero text='for design'/></span>                
+                <span className='w-[70%] ml-[31rem]'><TextShimmerHero text='for design'/></span>                
             </article>
 
             <p className='text-left text-small absolute bottom-[14.5rem] left-[3.8rem] small-title'>

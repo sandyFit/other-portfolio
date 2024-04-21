@@ -3,12 +3,12 @@ import React from 'react';
 
 
 const MotionText = ({ icon, text1, text2, text3, className}) => {
-  const repetitions = Array(20).fill(null);
+  const repetitions = Array(14).fill(null);
 
   return (
       <div className="w-full h-[50px] z-10 flex pt-3 "
             style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text fontTitle text-xl font-[500] uppercase'>
+            <h2 className=' motion-text fontTitle text-4xl font-[500] uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => (
                         <React.Fragment key={index}>

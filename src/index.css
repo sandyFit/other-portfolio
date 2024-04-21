@@ -15,15 +15,34 @@
     height: var(--after-height); /* This dynamically adjusts based on the `height` prop */
 }
 
-/* =========== HERO TITLE EFFECT ============ */
-.title, .char {
-
-    opacity: 1; /* Ensure it's not transparent */
+/* =========== ABOUT STICKY EFFECT ============ */
+.parent-container { /* Assuming this is your flex container */
+  position: relative;
+  overflow: visible;
+  align-items: flex-start;
+  min-height: 160vh; /* Temporarily make sure it’s tall enough */
+  /* border: 2px solid blue;  */
 }
-.title-scroll, .char {
 
-    opacity: 1; /* Ensure it's not transparent */
+.sticky-side {
+  position: sticky !important;
+  position: -webkit-sticky;
+  display: block; 
+  top: 100px; /* This is crucial for sticky positioning */
+  width: 70%;
+  color: #fafafa;
+  height: auto;
+  align-self: flex-start; 
+  /* border: 2px solid red; */
 }
+
+.animated-side {
+  width: 70%;
+  transform: translateY(90%);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
 
 
 
@@ -65,7 +84,9 @@
 
 /* This will style the actual scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #8d8ffc;
+  background-color: #7c5dec;
+  border-radius: 5px;
+  height: 20px;
 }
 
 /* This will change the scrollbar thumb on hover */
@@ -76,9 +97,9 @@
 /* This styles the overall scrollbar (width, height) */
 ::-webkit-scrollbar {
   width: 10px;
-  height: 30px;
-  border-radius: 50%;
 }
+
+
 
 
 /* =========== STICKY SECTIONS ============ */
@@ -277,8 +298,8 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-900 fontTitle overflow-x-hidden
-    }
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-900 fontTitle 
+      }
 
     a {
       @apply cursor-pointer;
@@ -336,7 +357,7 @@
     }
 
     .text-small-min {
-      @apply text-zinc-400 text-[1rem] font-inter font-[300] tracking-wide
+      @apply text-zinc-400 text-[1.1rem] font-inter font-[300] tracking-wide
     }
 
     .text-small-bright {

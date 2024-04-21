@@ -32,7 +32,7 @@ const TextShimmerHero = ({ text, style }) => {
                 { opacity: 0.2 },
                 {
                     opacity: 1,
-                    stagger: 0.08,
+                    stagger: 0.05,
                     repeat: 0,
                     yoyo: true,
                     onComplete: () => gsap.to(chars, { opacity: 1, duration: 0.5 })

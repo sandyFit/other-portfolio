@@ -28,7 +28,7 @@ const TextShimmerEffect = ({ text, style, triggerOnScroll = true }) => {
         const chars = ref.current.querySelectorAll(".char-scroll");
         if (chars.length > 0) {
             const timeline = gsap.timeline({
-                onComplete: () => gsap.to(chars, { opacity: 1, duration: 1 })
+                onComplete: () => gsap.to(chars, { opacity: 1, duration: 0.8 })
             });
 
             timeline.fromTo(chars, { opacity: 0.2 }, { opacity: 1, stagger: 0.1, repeat: 0, yoyo: true });
@@ -39,11 +39,13 @@ const TextShimmerEffect = ({ text, style, triggerOnScroll = true }) => {
                     trigger: ref.current,
                     start: "top 90%",
                     end: "bottom 10%",
-                    toggleActions: "restart none none reset",
+                    toggleActions: "play none none none",  // Only play the animation once when the trigger enters the viewport
+                    once: true,  // Ensures the trigger will not contribute to any ScrollTrigger related callbacks after it's triggered once
                 });
             }
         }
     }, [elements, triggerOnScroll]);
+
 
     return (
         <div ref={ref} className="title-scroll" style={style}>

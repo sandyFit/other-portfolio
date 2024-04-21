@@ -28,10 +28,10 @@ const Contact = () => {
 
     return (
         <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-screen bg-zinc-900'>
+            className='w-[98%] h-screen bg-zinc-900'>
             <Cursor isActive={isActive} />
 
-            <div className="flex justify-between text-small-bright pt-4 mx-10">
+            <div className="flex justify-between text-small-bright pt-4 ml-10 mr-2">
             <span className=' '>
                 folio /
             </span>
@@ -40,16 +40,16 @@ const Contact = () => {
             </span>
             </div>
 
-            <article className='grid grid-cols-1 '>                
-                <div className=" text-[12.3rem] fontTitle font-[600] text-skyIce-300 uppercase ">
-                    <p className='ml-10'>
+            <article className='w-[98%] grid grid-cols-1'>                
+                <div className=" text-[12.3rem] fontTitle font-[600] text-skyIce-300 uppercase">
+                    <div className='ml-10 w-[70%]'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
                             text='contact' />
-                    </p>
+                    </div>
                 </div>
 
-                <div className=" w-[90%] grid grid-cols-3 align-content-center gap-10 space ml-64 mb-16 relative">
+                <div className=" w-[86%] grid grid-cols-3 align-content-center space ml-64 mb-12 relative">
                     <div className="w-full flex text-small-min justify-center items-center">
                         <span className='w-full mb-36 tracking-wide'>
                             Thank you for dropping by!<br />
@@ -68,22 +68,19 @@ const Contact = () => {
                     </div>
 
                     <svg width="1.2" height="220" xmlns="http://www.w3.org/2000/svg" className='absolute left-[35rem]'>
-                        <line x1="1" y1="0" x2="1" y2="220" stroke="#fff" stroke-width="1.2" />
+                        <line x1="1" y1="0" x2="1" y2="220" stroke="#fff" strokeWidth="1.2" />
                     </svg>
 
 
-                    <div className="flex flex-col gap-8 ml-40">
+                    <div className="flex flex-col gap-9 ml-56">
                         <div className="flex flex-col justify-start items-start  text-zinc-50 font-[100] 
                             fontTitle text-xl">
-                            <span className=''>
-                                EMAIL
-                            </span>
+                            <TextShimmerEffect text='EMAIL'/>
                             <button onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className=''
                                 onClick={handleCopiedText}>
                                 <p id='emailAddress'
-                                    className='text-base font-ibm text-zinc-300 font-[300] hover:text-skyIce-300  
-                                        mt-[-2px]'>
+                                    className='text-small mt-[-2px] hover:text-skyIce-300'>
                                     info@trishramos.com
                                 </p>
                                 {showCopiedText && (
@@ -95,10 +92,8 @@ const Contact = () => {
                             </button>
                         </div>
 
-                        <div className="flex flex-col">
-                            <p className='uppercase fontTitle text-zinc-50 text-xl'>
-                                socials 
-                            </p>
+                        <div className="flex flex-col uppercase fontTitle text-zinc-50 text-xl">
+                            <TextShimmerEffect text='Socials'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-small space-y-1'>
                                 <li className="hover:text-skyIce-300 uppercase"><a href='#'>linkedin</a></li>
@@ -109,11 +104,9 @@ const Contact = () => {
                         </div>
                         
                     </div>
-                    <div className="flex flex-col text-xl text-zinc-50 font-[100] fontTitle gap-8">
-                        <div className="flex flex-col">
-                            <p className='uppercase'>
-                                links
-                            </p>
+                    <div className="w-[40%] flex flex-col text-xl text-zinc-50 font-[100] fontTitle ml-12 gap-9">
+                        <div className="flex flex-col boder">
+                            <TextShimmerEffect text='LINKS'/>
                             <div className='flex w-full '>           
                                 <ul className='w-full flex flex-col justify-between items-start bg-transparent gap-1'>
                                     {['index', 'about', 'projects', 'contact'].map((item, index) => (
@@ -129,10 +122,8 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col mb-8">                            
-                            <p className='uppercase'>
-                                resources 
-                            </p>
+                        <div className=" flex flex-col mb-8">                            
+                            <TextShimmerEffect text='RESOURCES'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-small space-y-1'>
                                 <li className="hover:text-skyIce-300 uppercase"><a href='#'>My resume</a></li>
