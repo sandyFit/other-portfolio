@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SectionBar from '../../layout/SectionBar';
+import FeatureParagraph from '../../components/featured/FeatureParagraph';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,23 +19,25 @@ const About = () => {
         duration: 1,  // Duration of the fade effect
         scrollTrigger: {
             trigger: ".scroll-content",
-            start: "top bottom-=140", 
+            start: "top center", 
             end: "bottom top",
             scrub: true,
+            //markers: true
         }
         });
     }, []);
 
     useEffect(() => {
         gsap.to(".animated-side", {
-        y: 0, // Ending Y position (original position)
+        y: -50, // Ending Y position (original position)
         opacity: 1,
         ease: "none",
         scrollTrigger: {
             trigger: ".animated-side",
-            start: "top bottom",
+            start: "top bottom-=50",
             end: "bottom top",
             scrub: true,
+            // markers: true
         }
         });
     }, []);
@@ -50,34 +53,33 @@ const About = () => {
             
             
             <div className="parent-container flex justify-center items-end  mx-32  relative">
-                <div className='about-text-mayus sticky-side w-[350px] h-[500px] bg-petal-200'>
+                <div className='about-text-mayus sticky-side w-[350px] h-[500px] bg-petal-100'>
                     <img src="/me-bn.png" alt="my pic"/>
                 </div>
                 <div className="animated-side scroll-content flex flex-col justify-start items-start pl-32">
                     <h3 className='title-small'>
                         <TextShimmerEffect text='who i am'/>
                     </h3>
-                    <p className='text-small-min'>
-                        Hello, I'm Trish, 
-                        a graphic designer who turned her enthusiasm for all things digital into a full-blown
+                    <div className='text-small-min text-zinc-100'>                        
+                        I'm a graphic design graduate who turned her enthusiasm for all things digital into a full-blown
                         love affair with web development.
                         <br/><br/>
-                        Self-taught and always curious, I've honed my skills to specialize in the art of frontend
-                        wizardry.
+                                      
+                        Self-taught and always curious, I've honed my skills to specialize in the art of frontend.
                         <br /><br />
+                   
                         Today, as a creative frontend developer, I focus on crafting fluid animations, engaging transitions,
                         and complex layouts that transform user experiences from meh to mesmerizing.
                         <br/><br/>
+                                
                         When I'm not coding up a storm, I'm ussually exploring the dynamic worlds of kinetic
                         typography, diving into motion graphics, or tinkering with the unpredictable art of generative
                         design.
                         <br /><br />
+
                         Off-duty, you might catch me pumping iron at the nearest gym, scribbling doodles
                         on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
-                        
-
-                    </p>
-                    <div className="text-small-min mt-6 relative">
+                        <br /><br />
                         I've been a freelance designer since 2019, now seeking full-time roles or project collaborations that
                         challenge my coding and design skills. I'm passionate about merging aesthetics with functionality
                         in my work. For inquiries or opportunities, contact me at 

@@ -34,7 +34,7 @@ const Navbar = () => {
                         <ul className='w-full flex justify-between items-center'>
                             {['projects', 'about', 'contact'].map((item, index) => (
                                 <li className='font-robotoCondensed text-zinc-50 font-[200]
-                                    uppercase tracking-wide hover:text-petal-200' key={index}
+                                    uppercase tracking-wide hover:text-petal-100' key={index}
                                     onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
                                     <Link to={item}>
                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')} 

@@ -45,7 +45,7 @@ const Contact = () => {
             </div> */}
 
             <article className='w-[98%] grid grid-cols-1 pt-20'>                
-                <div className="text-[8rem] font-[500] text-petal-200 uppercase py-7">
+                <div className="text-[8rem] font-[500] text-petal-100 uppercase py-7">
                     <div className='ml-16 w-[90%]'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
@@ -54,14 +54,14 @@ const Contact = () => {
                 </div>
 
                 <div className=" w-[86%] grid grid-cols-3 align-content-center space ml-64 relative">
-                    <div className="w-full flex text-small-min justify-center items-center">
+                    <div className="w-full flex text-small-min text-zinc-300 justify-center items-center">
                         <span className='w-full mb-28 tracking-wide'>
                             
                             Whether you're looking for someone to join your team full-time or just need an extra
                             pair of creative hands for a project, I'm your go-to.
 
                             <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-petal-200 font-[300]
+                                href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-petal-100 font-[300]
                                 after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[94%] 
                                 after:origin-bottom after:scale-x-0 after:bg-petal-100 after:transition-transform 
                                 after:duration-300 ml-2 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom

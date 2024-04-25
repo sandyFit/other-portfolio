@@ -76,7 +76,7 @@ const Test = () => {
 
                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
                     className="group relative w-36 h-12 rounded-full border border-zinc-500 bg-transparent px-8 
-                    text-petal-200">
+                    text-petal-100">
                     <Link to='projects'
                         className="relative inline-flex overflow-hidden font-robotoCondensed text-xl">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -100,38 +100,29 @@ const Test = () => {
             </p>
 
 
-            <article className="w-[80%] flex flex-col items-start text-zinc-400 uppercase pt-40 pl-16
+            <article className="w-[80%] flex flex-col items-start text-petal-100 uppercase pt-40 pl-16
                 relative text-title">
                 
                 <div className="flex flex-col">
 
                     <div className="w-full flex flex-col tracking-[-5px] ">
                           
-                        <div className="flex text-petal-200">
+                        <div className="flex text-petal-100">
                             <h1 className='mr-5 '>
-                                <TextShimmerHero text='crtv' /> </h1>
+                                <TextShimmerHero text='crtv frontend' /> </h1>
 
-                            <span className=''>
-                            <TextShimmerHero text= 'frontend' /></span>
                         </div>  
                         <div className="flex">
-                            <span className='text-petal-200 mr-5'>
-                            <TextShimmerHero text= 'developer' /></span>
-                            <span className=''>
-                            <TextShimmerHero text= 'with a' /></span>
+                            <span className='text-petal-100 mr-5'>
+                            <TextShimmerHero text= 'developer — with' /></span>
                         </div>
 
                     </div>
 
                     <div className="flex ">
                         <span className='flex '  >
-                            <TextShimmerHero text="keen" /></span>                           
-                            <span className='flex  pl-4 '  >
-                            <TextShimmerHero text="eye" /></span>
-                            <span className='flex  mx-4'  >
-                            <TextShimmerHero text="for" /></span>
-                        <span className='flex  '  >
-                            <TextShimmerHero text="design" /></span>
+                            <TextShimmerHero text="a keen eye for design" /></span>                           
+
                     </div>
                 </div>
                 

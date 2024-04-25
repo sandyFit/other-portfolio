@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex flex-col mb-4 relative mr-10">                  
-                    <div className="flex text-petal-200 text-[1rem] ml-auto">
+                    <div className="flex text-[1rem] ml-auto">
                         <TimeZone/>
                     </div>
 

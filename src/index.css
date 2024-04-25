@@ -13,9 +13,9 @@
 @tailwind utilities;
 
 /* ===== CUSTOM LINK HEIGHT ====== */
-.custom-link::after {
-    height: var(--after-height); /* This dynamically adjusts based on the `height` prop */
-}
+/* .custom-link::after {
+    height: var(--after-height); 
+} */
 
 
 /* =========== SWAP LINK =========== */
@@ -80,7 +80,7 @@
   position: relative;
   overflow: visible;
   align-items: flex-start;
-  min-height: 165vh; /* Temporarily make sure it’s tall enough */
+  min-height: 180vh; /* Temporarily make sure it’s tall enough */
   /* border: 2px solid blue;  */
 }
 
@@ -151,7 +151,7 @@
 
 /* This will change the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #D3A6C5;
+  background-color: #db7ebd;
 }
 
 /* This styles the overall scrollbar (width, height) */
@@ -413,15 +413,20 @@
     .text-xsmall {
       @apply font-inter text-zinc-400 text-base font-[300] uppercase tracking-wide
     }
+
+    .text-xsmall-dark {
+      @apply font-inter text-zinc-950 text-base font-[300] uppercase tracking-wide
+    }
+
     .text-small {
       @apply font-inter text-zinc-400 text-lg font-[300] uppercase tracking-wide
     }
 
     .text-small-min {
-      @apply font-inter text-zinc-300 text-[1.2rem] font-[200] tracking-wide
+      @apply font-inter  text-[1.2rem] font-[200] tracking-wide
     }
     .text-xsmall-min {
-      @apply font-inter text-zinc-500 text-sm font-[200] tracking-wide
+      @apply font-inter text-zinc-400 text-sm font-[200] tracking-wide
     }
 
     .text-small-bright {

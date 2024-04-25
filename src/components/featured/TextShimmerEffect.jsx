@@ -28,7 +28,7 @@ const TextShimmerEffect = ({ text, style, triggerOnScroll = true }) => {
         const chars = ref.current.querySelectorAll(".char-scroll");
         if (chars.length > 0) {
             const timeline = gsap.timeline({
-                onComplete: () => gsap.to(chars, { opacity: 1, duration: 0.8, delay: 0.5 })
+                onComplete: () => gsap.to(chars, { opacity: 1, duration: 0.5, delay: 0.5 })
             });
 
             timeline.fromTo(chars, { opacity: 0.2 }, { opacity: 1, stagger: 0.1, repeat: 0, yoyo: true });
