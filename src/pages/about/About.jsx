@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import gsap from 'gsap';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
-import MotionText from '../../components/ui/MotionText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SectionBar from '../../layout/SectionBar';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,48 +43,19 @@ const About = () => {
     return (
         <section id="about"
             className='w-full min-h-screen relative bg-zinc-900 py-40 '>          
-            {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-56 left-80' /> */}
-            <div className="flex w-full">
-                <MotionText
-                    text1={'Design + Technology = ∞'}
-                    // text2={'About Me'}
-                />
-            </div>
-            {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-40 left-80' /> */}
-            
-            <div className="parent-container flex justify-center items-end mt-52 mx-32  relative">
-                <div className='about-text-mayus sticky-side'>
-                    <TextShimmerEffect
-                        triggerOnScroll={true}
-                        text='graphic'/>
-                    <TextShimmerEffect
-                        triggerOnScroll={true}
-                        text='designer'/>
-                    <span className='text-petal-200 font-[400]'>
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='&'/>
-                    </span>
-                    <span >
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='self-taught'/>
-                    </span><br />
-                    <span className=''>
-                        
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='frontend' style={{marginTop: '-5.8rem'} }/>
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='developer' />
-                        
-                    </span> 
 
+            <div className="text-zinc-50">
+                <SectionBar section={'about me'}/>
+            </div>
+            
+            
+            <div className="parent-container flex justify-center items-end  mx-32  relative">
+                <div className='about-text-mayus sticky-side w-[350px] h-[500px] bg-petal-200'>
+                    <img src="/me-bn.png" alt="my pic"/>
                 </div>
-                <div className="animated-side scroll-content flex flex-col justify-start items-end pl-52">
+                <div className="animated-side scroll-content flex flex-col justify-start items-start pl-32">
                     <h3 className='title-small'>
-                        <TextShimmerEffect text='Design + Technology = ∞'/>
+                        <TextShimmerEffect text='who i am'/>
                     </h3>
                     <p className='text-small-min'>
                         Hello, I'm Trish, 

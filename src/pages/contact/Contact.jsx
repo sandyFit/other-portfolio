@@ -29,7 +29,7 @@ const Contact = () => {
 
     return (
         <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-[98%] h-screen bg-zinc-900'>
+            className='w-full h-screen bg-zinc-900 overflow-hidden'>
             <Cursor isActive={isActive} />
             <div className="text-zinc-50">
                 <SectionBar section={'contact'}/>
@@ -88,7 +88,7 @@ const Contact = () => {
                                     <BsCopy className='ml-3 mt-1'/>
                                 </div>
                                 {showCopiedText && (
-                                    <h3 className={`flex font-ibm text-sm font-[300] gap-1 absolute left-[38.4rem]
+                                    <h3 className={`flex font-ibm text-sm font-[300] gap-1 absolute left-[39rem]
                                         ${showCopiedText ? 'copiedTextVisible' : 'copiedTextHidden'}`}>
                                         Mail copied <BsCheck style={{fontSize: '1rem', color: '#fff', marginTop: '3px'}}/>
                                     </h3>

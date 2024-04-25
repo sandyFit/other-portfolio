@@ -80,7 +80,7 @@
   position: relative;
   overflow: visible;
   align-items: flex-start;
-  min-height: 220vh; /* Temporarily make sure it’s tall enough */
+  min-height: 165vh; /* Temporarily make sure it’s tall enough */
   /* border: 2px solid blue;  */
 }
 
@@ -419,6 +419,9 @@
 
     .text-small-min {
       @apply font-inter text-zinc-300 text-[1.2rem] font-[200] tracking-wide
+    }
+    .text-xsmall-min {
+      @apply font-inter text-zinc-500 text-sm font-[200] tracking-wide
     }
 
     .text-small-bright {

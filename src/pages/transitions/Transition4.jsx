@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const Transition3 = () => {
+const Transition4 = () => {
     const sectionRef = useRef(null);
     const textRef = useRef(null);
     const imageRef = useRef(null);
@@ -34,12 +34,13 @@ const Transition3 = () => {
             <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 transition-transform">
                 <h1 ref={textRef}
                     className='text-[12rem] text-petal-200 font-[700] uppercase text-center leading-[160px]'>
-                    Projects <br/>(23-24)
+                    My Skills 
                 </h1>
                 
             </div>
         </section>
     );
+        
 }
 
-export default Transition3;
+export default Transition4

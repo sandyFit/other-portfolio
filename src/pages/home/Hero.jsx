@@ -136,11 +136,12 @@ const Test = () => {
                 </div>
                 
             </article> 
-            <div className="flex relative">                      
+            <div className="flex flex-col relative">                      
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
                     <HiArrowDownRight className='text-[10rem] text-zinc-500 mb-2 absolute -bottom-6 right-[2rem]'/> 
-                </Link>                
+                </Link>  
+                <p className='text-xsmall-min absolute right-[3.4rem]'>scroll to explore</p>
             </div> 
            
         </section>

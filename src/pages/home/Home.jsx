@@ -7,6 +7,8 @@ import WhaIDo from '../about/WhaIDo';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Transition3 from '../transitions/Transition3';
+import Transition5 from '../transitions/Transition5';
+import Transition4 from '../transitions/Transition4';
 
 const Home = () => {
 
@@ -62,6 +64,15 @@ const Home = () => {
             </section>
             <section id='projects' className=''>
                 <Projects />
+            </section>
+            <section id='about' className=''>
+                <About />
+            </section>
+            <section id='t' className='section'>
+                <Transition4 />
+            </section>
+            <section id='t5' className='section'>
+                <Transition5 />
             </section>
             <section id='contact' className='relative'>
                 <Contact/>
