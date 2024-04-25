@@ -1,53 +1,119 @@
-import React, { useState } from 'react'
-import Footer from '../../layout/Footer'
-import { BsCheck } from 'react-icons/bs';
-
-import MotionText from '../../components/ui/MotionText';
-import { HiArrowDownLeft } from 'react-icons/hi2';
+import React, { useState, useEffect } from 'react';
+import { HiArrowDownLeft, HiArrowDownRight } from "react-icons/hi2";
+import Cursor from '../../components/ui/Cursor';
+import { Link } from 'react-scroll';
+import gsap from 'gsap';
+import { BsAsterisk } from 'react-icons/bs';
+import TextShimmerHero from '../../components/featured/TextShimmerHero';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Transition from '../transitions/Transition';
+import Transition2 from '../transitions/Transition2';
+import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Test = () => {
+    const [isActive, setIsActive] = useState(false);
 
+    useEffect(() => {
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power3.out",
+                duration: 1, // slightly faster
+                delay: 2
+            }
+        });
 
+            tl.fromTo('.small-title',
+                { opacity: 0 },
+                {opacity: 1, stagger: 0.5}
+            
+        )
+
+        return () => tl.kill();
+    }, []);
+    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+
+        tl.to('.overlay-first', { duration: 1, left: '-100%', ease: "power3.inOut" })
+          .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
+    }, []);
+
+    const date = new Date();
 
     return (
-        <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-[calc(100vh-60px)] relative'>
-            {/* <hr className='w-[84%] border-t-[1px] border-skyIce-900 absolute left-36 top-16'/> */}
-
-                <MotionText
-                    text1={'what i do'}
-                />
-            <div className="flex flex-col gap-7 items-start ml-36 mt-24 pb-12">
-
-                <div className='w-[80%] about-text-mayus leading-[75px] relative'>
-                    i thrive
-                    <span className='text-pink-50 font-playfair italic lowercase absolute bottom-[5.5rem] left-96'>
-                        on
-                    </span>
-                    <span className='ml-28'> crafting <br /> pixel-perfect websites  </span><br />
-    
-
-                </div>
-                <p className='array-text-light text-sm w-[50%] ml-[30rem] mt-4'>
-                    I enjoy creating fluid animations, engaging transitions and tackling complex layouts. 
-                </p>
-                <div className="text-xl text-skyIce-900 font-[600] ml-[30rem] relative">
-                        My Toolkit:
-                        <ul className='array-text-light text-xl font-[100] mt-2'>
-                            <li>HTML / CSS / JAVASCRIPT / TYPESCRIPT</li>
-                            <li>REACT.JS / GSAP / WEBGL / SASS / THREE.JS</li>
-                            <li>NODE.JS / EXPRESS / NEXT.JS / MYSQL / SUPABASE</li>
-                            <li>PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / FIGMA</li>
-                            <li>WEBFLOW / AWS / PRISMIC.IO / DATOCMS / STORYBOOK</li>
-                        </ul>
-                                             
+        <section data-cursor-color='#f9a8d4' id="index"
+            className='w-full min-h-screen flex flex-col items-center bg-zinc-900 relative'>
+            <Transition />
+            <Transition2/>
+            <Cursor isActive={isActive} />
+            <article className="w-[99%] flex flex-col  text-[10rem] fontTitle font-[500] 
+                text-zinc-50 leading-[160px] uppercase tracking-tighter relative ">
+                <div className="flex justify-between">
+                    <div className="flex ">
+                        <AiOutlineCopyrightCircle className='text-[8rem] mt-2'/>
+                        {new Date().getFullYear().toString().slice(-2)} 
                     </div>
-            </div>
-             <div className="relative">
-                <HiArrowDownLeft className='text-[8rem] text-pink-50 absolute bottom-6 left-36'/>
-            </div>  
+                    <span className='text-right ml-8'>trish ramos</span>
+                </div>
 
-            <hr className='w-[80%] border-t-[1px] border-skyIce-900 absolute left-36'/>
+                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-40 ' />
+                
+                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-80 ' />
+                <h1 className='flex justify-start text-petal-200'>frontend</h1>  
+                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-[30rem] ' />
+                <span className='text-right '>developer</span>
+                {/* <hr className='w-full border-t-[1px] border-zinc-600 absolute top-[40rem] ' /> */}
+                
+                 <img src="/me-bn.png" alt="" width={340} className='absolute top-[20rem] left-32'/>
+                
+                
+            </article> 
+            <div className="flex">
+
+               <span className='flex w-[30%] small-text uppercase text-zinc-50 mt-20 ml-[40rem]'>
+                    Hello, I'm Trish a creative frontend developer based in Colombia. Open to full-time Roles &
+                    projects collabs.
+                </span>
+
+                
+            </div>
+            <div className="flex relative">                      
+                <Link to='about'
+                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
+                    <HiArrowDownRight className='text-[10rem] text-petal-200 mb-2 absolute -top-20 left-[37rem]'/> 
+                </Link>                
+            </div>     
+
+            {/* <div className="w-full flex justify-between items-center px-6">
+                <p className=' text-left text-small '>
+                    based in colombia
+                </p>
+
+                <div className=' text-small '>
+                    say hello / 
+                    <a href='mailto:info@trishramos.com'
+                        onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
+                        className='custom-link'>
+                        info@trishramos.com
+                    </a>
+                </div>
+
+                
+            </div> */}
+
+            
+            {/* <div className="flex relative">   
+                   
+                <Link to='about'
+                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
+                    <HiArrowDownLeft className='text-[10rem] text-skyIce-300 mb-2 absolute -bottom-3 left-[2rem]'/> 
+
+                </Link>
+                
+            </div> */}
+
+            
             
         </section>
     )

@@ -79,6 +79,17 @@ export default {
         bluish: {
           300: '#2294A4',
           400: '#008791'
+        },
+
+        petal: {
+          50: '#ebcee2',
+          100: '#D3A6C5',
+          200: '#db8fc3',
+          300: '#c769aa',
+          400: '#b34f93',
+          500: '#913675',
+          600: '#7a235f',
+          700: '#5c1446'
         }
 
       },
@@ -113,7 +124,9 @@ export default {
         marckScript: ["Marck Script", 'cursive'],
         tangerine: ["Tangerine", 'cursive'],
         allura: ["Allura", ' cursive'],
-        playfair: ["Playfair Display", 'serif']
+        playfair: ["Playfair Display", 'serif'],
+        inspiration: ["Inspiration", 'cursive'],
+        robotoCondensed: ["Roboto Condensed", 'sans-serif']
       },
 
       gridTemplateColumns: {

@@ -8,26 +8,27 @@ const Footer = () => {
 
     return (
         <section id='contact'
-            className='w-full h-20 flex justify-center items-center pl-12 pr-2 py-4'>        
-            <div className="flex w-full h-full justify-between items-end text-zinc-50 text-[4rem] 
-                fontTitle uppercase">
+            className='w-full flex justify-center items-center '>        
+            <div className="flex w-full h-full justify-between items-end text-zinc-50 text-[3.8rem] ml-16 uppercase">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <AiOutlineCopyright className='text-[4rem] mt-4'/>
+                        <AiOutlineCopyright className='text-[3.8rem] mt-4'/>
                         {date.getFullYear()} 
                     </div> 
-                        <span className='h-20 mt-[-2rem]'>trish ramos</span>
+                    <div className="flex ">
+                        <span className='mt-[-2rem] font-[400]'>trish ramos</span>                     
+                    </div>
                 </div>
                 
-                <div className="flex flex-col mb-2 relative">                  
-                    <div className="flex text-skyIce-300 text-[1rem] ml-auto">
+                <div className="flex flex-col mb-4 relative mr-10">                  
+                    <div className="flex text-petal-200 text-[1rem] ml-auto">
                         <TimeZone/>
                     </div>
 
                     <p className='text-small-bright w-full inline-flex '>
                         made in colombia with 
-                        <BsHeart className='mx-2 mt-1'/>
-                        by yours truly
+                        <BsHeart className='ml-2 mt-1 text-petal-100'/>
+                        
                     </p>                   
                 </div>
 

@@ -1,14 +1,12 @@
 import React from 'react'
 
 const Transition = () => {
-    return (
-        <section>
-            <section id="t"
-                className='section-container bg-violet-500 '>
-                <p className='w-[90%] text-[20rem] fontTitle border'>Hey there</p>
-            </section>
-        </section>
+    return ( 
+        <section
+            className='w-full min-h-screen bg-petal-300 absolute top-0 left-0 overlay-first z-50'/>
+
     )
 }
 
 export default Transition;
+

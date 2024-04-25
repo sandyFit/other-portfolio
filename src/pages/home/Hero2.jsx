@@ -4,85 +4,100 @@ import Cursor from '../../components/ui/Cursor';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
 import { BsAsterisk } from 'react-icons/bs';
+import TextShimmerHero from '../../components/featured/TextShimmerHero';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Transition from '../transitions/Transition';
+import Transition2 from '../transitions/Transition2';
 
-
-const Hero2 = () => {
-
+const Hero = () => {
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
-        // Define the animation
         const tl = gsap.timeline({
             defaults: {
-                ease: "power3.out", // This easing creates a more natural movement
-                duration: 1.8
+                ease: "power3.out",
+                duration: 1, // slightly faster
+                delay: 2
             }
         });
 
-        // Animating title1 and title2 with stagger
-        tl.fromTo(".title", 
-            { transformOrigin: "bottom", rotateX: 90, opacity: 0 },
-            {
-                rotateX: 0, opacity: 1, stagger:
-                {
-                    each: 0.4,
+            tl.fromTo('.small-title',
+                { opacity: 0 },
+                {opacity: 1, stagger: 0.5}
+            
+        )
 
-                },
-                x: 100,
-                cycle: { y: [100, -100] ,
-                    rotation: [120, -120]
-                },
-                
-            }
-        );
-        
-        
-
-        // Return a function to kill the timeline to prevent memory leaks
         return () => tl.kill();
     }, []);
+    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+
+        tl.to('.overlay-first', { duration: 1, left: '-100%', ease: "power3.inOut" })
+          .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
+    }, []);
+
 
 
     return (
         <section data-cursor-color='#f9a8d4' id="index"
-            className='w-full min-h-screen bg-skyIce-300'>
+            className='w-full min-h-screen bg-zinc-900 relative'>
+            <Transition />
+            <Transition2/>
             <Cursor isActive={isActive} />
-            <article className="w-[60%] flex flex-col text-[8rem] fontTitle font-[500] text-skyIce-900 leading-[120px]
-                uppercase justify-center pt-60 ml-24 tracking-tighter relative">
-                <BsAsterisk className='absolute rotating-icon text-5xl bottom-[25.5rem] left-4' />
+            <article className="w-[99%] flex flex-col text-[10rem] fontTitle font-[500] text-zinc-50 leading-[130px]
+                uppercase pt-52 pl-12 tracking-tighter relative justify-start">
                 
-                <h1 className=' ml-[3.5rem]'> frontend </h1><br />
-                <span className='w-[60%]  ml-[25.6rem] mt-[-8.3rem] text-pink-50'>developer</span><br/>
-                <span className='w-[80%]  ml-[26rem] mt-[-8.3rem]'>with an </span>
-                <span className='w-[20%]  absolute bottom-[8.4rem] text-pink-50 left-[61rem] font-playfair italic 
-                    lowercase text-[9.5rem] font-[100] z-10'>
-                    eye</span>
-                <span className='w-[96%] ml-[35rem] mt-[-.8rem] '>for design_</span>                
+                <BsAsterisk className='absolute text-zinc-500 rotating-icon text-5xl bottom-[12.8rem] left-[75.3rem]' />
+                <p className='w-[9.1%] text-left text-small absolute bottom-[17rem] left-[68.8rem] small-title'>
+                    based in colombia
+                </p>
+                <div className="flex flex-col">
+
+                    <h1 className='w-full text-[10rem] fontTitle font-[500] text-zinc-50'>
+                        <TextShimmerHero text='frontend '/> </h1>
+                    <span className='ml-48 text-petal-200'><TextShimmerHero text='developer' /></span>
+                </div>
+                <div className="flex">
+                    <span className='ml-[20rem] '><TextShimmerHero text='with '/> </span>
+                    <span className=' text-petal-200 italic lowercase font-[100] z-10 mr-12'>
+                        <TextShimmerHero text='an' />
+                    </span>
+                    <span className=' '><TextShimmerHero text='eye'/> </span>
+                </div>
+                <div className="flex">
+                    <span className=' ml-[31rem] text-petal-200 italic lowercase'><TextShimmerHero text='for '/></span>   
+                    <span className=' '><TextShimmerHero text=' design_'/></span>   
+                </div>
+                                
             </article>
+
+            <div className='text-left text-small absolute bottom-[22.5rem] left-[3.8rem] '>
+                say hello / <br />
+                <a href='mailto:info@trishramos.com'
+                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
+                    className='custom-link'>
+                    info@trishramos.com
+                </a>
+            </div>
 
             <div className="flex relative">   
                    
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
-                    <HiArrowDownLeft className='text-[6rem] text-pink-50 mb-2 absolute -bottom-3 left-[31.4rem]'/> 
+                    <HiArrowDownLeft className='text-[10rem] text-petal-200 mb-2 absolute -bottom-3 left-[2rem]'/> 
 
                 </Link>
                 
             </div>
 
-            <article className="w-[40%] flex flex-col justify-start items-start h-full  relative ">                                              
-                <div className="flex w-[480px] h-56 justify-center items-center bg-zinc-950 bg-opacity-30 absolute 
-                    bottom-20"></div> 
-                <div className="flex w-[280px] h-[300px] z-20 absolute bottom-0 left-48 ">
-                    {/* <img src="/me-bn.png" alt="Trish Avatar"/> */}
-                </div>                       
-            </article>    
-            
-            <span className='array-text-light absolute left-10 bottom-4'>
-                portfolio v.1.0
+            <span className='text-center text-small text-base absolute left-[31rem] bottom-[1.4rem] '>
+                folio<br/> / V.1.0
             </span>
+            
         </section>
     )
 }
 
-export default Hero2
+export default Hero;

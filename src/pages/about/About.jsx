@@ -17,7 +17,7 @@ const About = () => {
         duration: 1,  // Duration of the fade effect
         scrollTrigger: {
             trigger: ".scroll-content",
-            start: "top bottom-=200", 
+            start: "top bottom-=140", 
             end: "bottom top",
             scrub: true,
         }
@@ -40,20 +40,16 @@ const About = () => {
 
 
     return (
-        <section data-cursor-color='#f9a8d4' id="about-me"
-            className='w-full min-h-screen relative bg-zinc-900 py-40 '>
-            
-            <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-56 left-80'/>
-
+        <section id="about"
+            className='w-full min-h-screen relative bg-zinc-900 py-40 '>          
+            {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-56 left-80' /> */}
             <div className="flex w-full">
-
                 <MotionText
-                    text1={'About Me'}
+                    text1={'Design + Technology = ∞'}
                     // text2={'About Me'}
                 />
             </div>
-
-            <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-40 left-80' />
+            {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-40 left-80' /> */}
             
             <div className="parent-container flex justify-center items-end mt-52 mx-32  relative">
                 <div className='about-text-mayus sticky-side'>
@@ -63,23 +59,21 @@ const About = () => {
                     <TextShimmerEffect
                         triggerOnScroll={true}
                         text='designer'/>
-                    <span className='text-skyIce-300 font-playfair italic lowercase absolute bottom-[17.6rem]'>
+                    <span className='text-petal-200 font-[400]'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
-                            text='and'/>
+                            text='&'/>
                     </span>
                     <span >
                         <TextShimmerEffect
                             triggerOnScroll={true}
-                            text='self-' style={ {marginLeft: '12rem'}} />
+                            text='self-taught'/>
                     </span><br />
                     <span className=''>
+                        
                         <TextShimmerEffect
                             triggerOnScroll={true}
-                            text='taught' style={ {marginTop: '-5.5rem'}} />
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='frontend' />
+                            text='frontend' style={{marginTop: '-5.8rem'} }/>
                         <TextShimmerEffect
                             triggerOnScroll={true}
                             text='developer' />
@@ -88,21 +82,33 @@ const About = () => {
 
                 </div>
                 <div className="animated-side scroll-content flex flex-col justify-start items-end pl-52">
+                    <h3 className='title-small'>
+                        <TextShimmerEffect text='Design + Technology = ∞'/>
+                    </h3>
                     <p className='text-small-min'>
                         Hello, I'm Trish, 
-                        I went to school for graphic design, and, driven by my passion for all things digital,
-                        embarked on a self-taught journey to broaden my expertise into web development, specializing
-                        in frontend and motion graphics.<br /><br />
-                        Today, as a creative developer, I focus on crafting fluid animations, engaging transitions,
-                        and complex layouts to enhance user experiences.
+                        a graphic designer who turned her enthusiasm for all things digital into a full-blown
+                        love affair with web development.
+                        <br/><br/>
+                        Self-taught and always curious, I've honed my skills to specialize in the art of frontend
+                        wizardry.
                         <br /><br />
-                        Away from the screen, I'm indulging in life's varied rhythms, be it engaging in gym workouts,
-                        mastering the craft of baking yum yums, or channeling my quirky side through drawing.
+                        Today, as a creative frontend developer, I focus on crafting fluid animations, engaging transitions,
+                        and complex layouts that transform user experiences from meh to mesmerizing.
+                        <br/><br/>
+                        When I'm not coding up a storm, I'm ussually exploring the dynamic worlds of kinetic
+                        typography, diving into motion graphics, or tinkering with the unpredictable art of generative
+                        design.
+                        <br /><br />
+                        Off-duty, you might catch me pumping iron at the nearest gym, scribbling doodles
+                        on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
+                        
+
                     </p>
                     <div className="text-small-min mt-6 relative">
-                        I'm currently on the lookout for full-time roles or project-based collaborations that
-                        challenge my skills and stoke my passion for design and development. <br/>
-                        For questions or opportunities, please feel free to reach me out at
+                        I've been a freelance designer since 2019, now seeking full-time roles or project collaborations that
+                        challenge my coding and design skills. I'm passionate about merging aesthetics with functionality
+                        in my work. For inquiries or opportunities, contact me at 
                         <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                     
                     </div>
                 </div>

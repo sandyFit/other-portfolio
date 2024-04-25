@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ContactBtn = () => {
+const ContactBtn = ({title}) => {
 
     const navigate = useNavigate();
 
@@ -9,10 +9,10 @@ const ContactBtn = () => {
     const handleNavigation = () => navigate('/contact');
 
     return (
-        <button className='button relative' onClick={handleNavigation}>
+        <a className='button relative' onClick={handleNavigation}>
             <div className="textContainer">
-                <span className="text firstText">Reach out</span>
-                <span className="text secondText">Reach out</span>
+                <span className="text firstText">{ title }</span>
+                <span className="text secondText">{ title }</span>
             </div>
             
             <span className="group inline-flex  items-center justify-center overflow-hidden rounded-full 
@@ -30,7 +30,7 @@ const ContactBtn = () => {
                     </svg>
                 </div>
             </span>
-        </button>
+        </a>
     )
 }
 
