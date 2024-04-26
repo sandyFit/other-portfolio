@@ -69,14 +69,14 @@ const Test = () => {
 
             <article className='flex justify-end items-center gap-5 pt-48 mr-24'>
                 <p className='w-[30%] font-[100] text-xsmall'>
-                    Hello, I'm Trish, a creative frontend developer based in Colombia.<br/>
-                    Eager for full-time roles or project collabs.<br/>
+                    Hello, I'm Trish, a creative frontend developer with a keen eye for design.<br/>
+                    Open to full-time roles or project collabs.<br/>
                     Feel free to dive into my portfolio of projects.
                 </p>
 
                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
                     className="group relative w-36 h-12 rounded-full border border-zinc-500 bg-transparent px-8 
-                    text-petal-100">
+                    text-cyan-400">
                     <Link to='projects'
                         className="relative inline-flex overflow-hidden font-robotoCondensed text-xl">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -100,39 +100,24 @@ const Test = () => {
             </p>
 
 
-            <article className="w-[80%] flex flex-col items-start text-petal-100 uppercase pt-40 pl-16
-                relative text-title">
-                
-                <div className="flex flex-col">
-
-                    <div className="w-full flex flex-col tracking-[-5px] ">
-                          
-                        <div className="flex text-petal-100">
-                            <h1 className='mr-5 '>
-                                <TextShimmerHero text='crtv frontend' /> </h1>
-
-                        </div>  
-                        <div className="flex">
-                            <span className='text-petal-100 mr-5'>
-                            <TextShimmerHero text= 'developer — with' /></span>
-                        </div>
-
-                    </div>
-
-                    <div className="flex ">
-                        <span className='flex '  >
-                            <TextShimmerHero text="a keen eye for design" /></span>                           
-
-                    </div>
+            <article className="w-[80%] flex flex-col items-start text-cyan-400 uppercase pt-32 pl-16
+                relative">                
+                <div className="w-full flex flex-col  ">                         
+                    <h1 className='mr-5 text-[7.5rem] font-[700]'>
+                        <TextShimmerHero text='frontend' />
+                    </h1>
+                                       
+                    <span className='text-[10.8rem] font-[800] leading-[60px] mr-5'>
+                    <TextShimmerHero text= 'developer' /></span>
                 </div>
                 
             </article> 
             <div className="flex flex-col relative">                      
                 <Link to='about'
                     onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
-                    <HiArrowDownRight className='text-[10rem] text-zinc-500 mb-2 absolute -bottom-6 right-[2rem]'/> 
+                    <HiArrowDownRight className='text-[10rem] text-zinc-500 mb-2 absolute -bottom-12 right-[2rem]'/> 
                 </Link>  
-                <p className='text-xsmall-min absolute right-[3.4rem]'>scroll to explore</p>
+                <p className='text-xsmall-min absolute -bottom-10 right-[3.4rem]'>scroll to explore</p>
             </div> 
            
         </section>

@@ -12,10 +12,10 @@ const MotionText = ({ icon, text1, text2, text3, className}) => {
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => ( 
                         <React.Fragment key={index}>
-                            <span className=' text-zinc-950 text-[10rem] mr-40 ml-8 mt-5'>
+                            <span className=' text-zinc-900 text-[10rem] mr-40 ml-8 mt-5'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-950 ' >{text1}</span>
+                            <span className='text-zinc-900 ' >{text1}</span>
 
                             
                         </React.Fragment>

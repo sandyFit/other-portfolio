@@ -33,7 +33,7 @@ const Transition4 = () => {
         <section ref={sectionRef} id="t3" className='w-full min-h-screen flex justify-center items-center relative'>
             <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 transition-transform">
                 <h1 ref={textRef}
-                    className='text-[12rem] text-petal-100 font-[700] uppercase text-center leading-[160px]'>
+                    className='text-[12rem] text-cyan-400 font-[700] uppercase text-center leading-[160px]'>
                     My Skills & Toolkit
                 </h1>
                 

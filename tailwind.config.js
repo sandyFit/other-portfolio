@@ -70,8 +70,12 @@ export default {
         orangy: {
           100: '#fc9799',
           200: '#fa787a',
-          300: '#fc686a',
+          300: '#f45A3F',
           400: '#fb4b4e',
+        },
+
+        peachyGreen: {
+          300: '#00cdc0'
         },
 
         electro: {

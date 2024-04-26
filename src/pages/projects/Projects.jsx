@@ -13,10 +13,10 @@ const Projects = () => {
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-petal-100 flex justify-center items-start relative pt-32'>
+            className='w-full min-h-screen bg-cyan-400 flex justify-center items-start relative pt-32'>
 
-            <div className="font-[500]">
-                <SectionBar section={'gallery (3)'}/>      
+            <div className="font-[500] text-zinc-900">
+                <SectionBar section={'gallery'}/>      
             </div>
             
             {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-20 left-80' /> */}
@@ -28,7 +28,7 @@ const Projects = () => {
                         <TextShimmerEffect text="Selected demo projects" />
 
                     </span>
-                    <p className='w-[30%] text-xsmall-dark text-zinc-950 ml-[50rem] mt-12'>
+                    <p className='w-[30%] text-xsmall-dark text-zinc-900 ml-[50rem] mt-12'>
                         I strive to ensure each project shines with design fidelity, optimized for peak performance and user
                         engagement, while pushing the boundaries of modern web development.
                     </p>
