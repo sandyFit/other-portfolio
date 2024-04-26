@@ -331,10 +331,12 @@
 
 /* ========== TEXT OUTLINE ========== */
 .text-outline {
-  font-size: 6rem; /* Adjust based on your design */
-  color: #18181b !important;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #D3A6C5;
+  font-size: 7.86rem;
+  font-weight: 700;
+  display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #22d3ee;
+
 }
 
 
@@ -342,18 +344,6 @@
 
 /* ============ HORIZONTAL SCROLL ============ */
 
-.section.horizontal {
-    width: 100vw;
-    overflow-x: hidden; /* This prevents horizontal scrollbars */
-    position: relative;
-}
-
-.horizontal-scroll {
-    display: flex;
-    width: 300vw; /* Example width; Adjust based on content */
-    position: relative;
-    white-space: nowrap;
-}
 
 
 
@@ -415,32 +405,32 @@
     }
 
     .text-xsmall {
-      @apply font-inter text-zinc-400 text-base font-[300] uppercase tracking-wide
+      @apply font-syne text-zinc-400 text-base font-[300] uppercase tracking-wide
     }
 
     .text-xsmall-dark {
-      @apply font-inter text-base font-[400] uppercase tracking-wide
+      @apply font-syne text-base font-[400] uppercase tracking-wide
     }
 
     .text-small {
-      @apply font-inter text-zinc-400 text-lg font-[300] uppercase tracking-wide
+      @apply font-syne text-zinc-400 text-lg font-[300] uppercase tracking-wide
     }
 
     .text-small-min {
-      @apply font-inter  text-[1.2rem] font-[200] tracking-wide
+      @apply font-syne  text-[1.2rem] font-[200] tracking-wide
     }
     .text-xsmall-min {
-      @apply font-inter text-zinc-400 text-sm font-[200] tracking-wide
+      @apply font-syne text-zinc-400 text-sm font-[200] tracking-wide
     }
 
     .text-small-bright {
-      @apply font-inter text-zinc-50 text-lg font-[200] uppercase tracking-widest
+      @apply font-syne text-zinc-50 text-lg font-[200] uppercase tracking-widest
     }
     .title-small {
-      @apply text-3xl font-[400] uppercase tracking-wider
+      @apply text-zinc-50 font-syne text-3xl font-[400] uppercase tracking-wider
     }
     .title-xsmall {
-      @apply text-zinc-50 text-2xl font-[400] uppercase tracking-wider
+      @apply text-zinc-50 font-syne text-xl font-[400] uppercase tracking-wider
     }
 
 }

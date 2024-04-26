@@ -57,33 +57,33 @@ const About = () => {
                     <img src="/me-bn.png" alt="my pic"/>
                 </div>
                 <div className="animated-side scroll-content flex flex-col justify-start items-start pl-32">
-                    <h3 className='title-small text-cyan-400'>
-                        <TextShimmerEffect text='who i am'/>
+                    <h3 className='title-small'>
+                        <TextShimmerEffect text='me'/>
                     </h3>
-                    <div className='text-2xl font-[200] text-zinc-100'>                        
-                        I'm a graphic design graduate who turned her enthusiasm for all things digital into a full-blown
+                    <div className='text-2xl font-syne font-[100] text-zinc-200'>                        
+                        Based in Colombia, I'm a graphic design graduate who turned her enthusiasm for all things digital into a full-blown
                         love affair with web development.
                         <br/><br/>
                                       
-                        Based in Colombia, self-taught and always curious, I've honed my skills to specialize in the art of frontend.
+                        Self-taught and always curious, I've honed my skills to specialize in the art of frontend.
                         <br /><br />
                    
                         Today, as a creative frontend developer, I focus on crafting fluid animations, engaging transitions,
                         and complex layouts that transform user experiences from meh to mesmerizing.
                         <br/><br/>
                                 
-                        When I'm not coding up a storm, I'm usually exploring the dynamic worlds of kinetic
-                        typography, diving into motion graphics, or tinkering with the unpredictable art of generative
-                        design.
+                        Off-duty, I'm usually exploring the dynamic worlds of kinetic
+                        typography, diving into motion graphics, or tinkering with the unpredictable art of AI prompting.
                         <br /><br />
 
-                        Off-duty, you might catch me pumping iron at the nearest gym, scribbling doodles
+                        Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
                         on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
                         <br /><br />
                         I've been a freelance designer since 2019, now seeking full-time roles or project collaborations that
-                        challenge my coding and design skills.<br/>
+                        challenge my coding and design skills.
+                        <br /><br />
                         I'm passionate about merging aesthetics with functionality
-                        in my work. For inquiries or opportunities, contact me at 
+                        in my work. For inquiries or opportunities, please contact me at 
                         <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                     
                     </div>
                 </div>

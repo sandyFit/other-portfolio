@@ -35,7 +35,7 @@ const Transition3 = () => {
             <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 transition-transform">
                 <div ref={textRef}
                     className='text-[12rem] text-cyan-400 font-[700] flex flex-col items-center uppercase leading-[90px]'>                    
-                    <h1 className='r'>Projects </h1><br />(3)
+                    <h1 className=''>Projects </h1><br />(3)
 
                 </div>
                 

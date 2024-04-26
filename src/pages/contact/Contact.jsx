@@ -11,16 +11,19 @@ const Contact = () => {
 
     const [isActive, setIsActive] = useState(false);
     const [showCopiedText, setShowCopiedText] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
 
     const handleCopiedText = () => {
         const emailAddress = 'hello@trishramos.com';
 
         navigator.clipboard.writeText(emailAddress).then(() => {
             console.log('Email address copied to clipboard!');
+            setIsCopied(true);
             setShowCopiedText(true); // Show "Copied" text
             setTimeout(() => {
+                setIsCopied(false);
                 setShowCopiedText(false); // Hide "Copied" text after 4 seconds to match the fade animation
-            }, 1200); // Adjust the timing based on your animation
+            }, 1500); // Adjust the timing based on your animation
         }).catch(err => {
             console.error('Failed to copy email address to clipboard:', err);
         });
@@ -54,17 +57,17 @@ const Contact = () => {
                 </div>
 
                 <div className=" w-[86%] grid grid-cols-3 align-content-center space ml-64 relative">
-                    <div className="w-full flex text-xsmall text-zinc-300 justify-center items-center">
+                    <div className="w-[28rem] flex text-xsmall text-zinc-300 justify-center items-center">
                         <span className='w-full mb-28 tracking-wide'>
                             
                             Whether you're looking for someone to join your team full-time or just need an extra
-                            pair of creative hands for a project, I'm your go-to.
+                            pair of creative hands for a project, I'm your go-to.<br/>
 
                             <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-cyan-400 font-[300]
                                 after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[94%] 
                                 after:origin-bottom after:scale-x-0 after:bg-cyan-400 after:transition-transform 
-                                after:duration-300 ml-2 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
+                                after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
                                 hover:after:scale-x-100">
                                     Let's connect
                             </a>!
@@ -85,12 +88,13 @@ const Contact = () => {
                                 <div id='emailAddress'
                                     className='text-xsmall mt-[-2px] hover:text-cyan-400 flex'>
                                     info@trishramos.com
-                                    <BsCopy className='ml-3 mt-1'/>
+                                    { isCopied ? <BsCheck className='text-cyan-400 ml-2 text-2xl'/>
+                                       : <BsCopy className='ml-3 mt-1' />}
                                 </div>
                                 {showCopiedText && (
                                     <h3 className={`flex font-ibm text-sm font-[300] gap-1 absolute left-[39rem]
                                         ${showCopiedText ? 'copiedTextVisible' : 'copiedTextHidden'}`}>
-                                        Mail copied <BsCheck style={{fontSize: '1rem', color: '#fff', marginTop: '3px'}}/>
+                                        Mail copied 
                                     </h3>
                                 )}
                             </button>

@@ -28,12 +28,12 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="flex w-[16%] ">
+            <div className="flex w-[20%] ">
                 <div className="flex w-full">
                     <div className='flex w-full '>           
                         <ul className='w-full flex justify-between items-center'>
                             {['projects', 'about', 'contact'].map((item, index) => (
-                                <li className='font-robotoCondensed text-zinc-50 font-[200]
+                                <li className='font-syne text-zinc-50 font-[200]
                                     uppercase tracking-wide hover:text-cyan-400' key={index}
                                     onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
                                     <Link to={item}>

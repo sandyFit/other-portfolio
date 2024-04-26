@@ -78,7 +78,7 @@ const Test = () => {
                     className="group relative w-36 h-12 rounded-full border border-zinc-500 bg-transparent px-8 
                     text-cyan-400">
                     <Link to='projects'
-                        className="relative inline-flex overflow-hidden font-robotoCondensed text-xl">
+                        className="relative inline-flex overflow-hidden font-syne text-lg">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
                             group-hover:skew-y-12">
                             My Work
@@ -103,7 +103,7 @@ const Test = () => {
             <article className="w-[80%] flex flex-col items-start text-cyan-400 uppercase pt-32 pl-16
                 relative">                
                 <div className="w-full flex flex-col  ">                         
-                    <h1 className='mr-5 text-[7.5rem] font-[700]'>
+                    <h1 className='mr-5 font-syne text-outline'>
                         <TextShimmerHero text='frontend' />
                     </h1>
                                        
