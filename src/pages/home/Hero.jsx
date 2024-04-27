@@ -9,9 +9,9 @@ import Transition from '../transitions/Transition';
 import Transition2 from '../transitions/Transition2';
 
 
-const Test = () => {
+const Hero = () => {
     const [isActive, setIsActive] = useState(false);
-    const date = new Date();
+    const [pageLoaded, setPageLoaded] = useState(false);
 
     
     useEffect(() => {
@@ -33,12 +33,20 @@ const Test = () => {
     }, []);
     
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        const tl = gsap.timeline();
-
-        tl.to('.overlay-first', { duration: 1.2, left: '-100%', ease: "power3.inOut" })
-          .to('.overlay-second', { duration: 1.2, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
+        const handleLoad = () => setPageLoaded(true);
+        window.addEventListener('load', handleLoad);
+        return () => window.removeEventListener('load', handleLoad);
     }, []);
+
+    useEffect(() => {
+        if (pageLoaded) {
+            gsap.registerPlugin(ScrollTrigger);
+            const tl = gsap.timeline();
+            tl.to('.overlay-first', { duration: 1.2, opacity: 0, ease: "power3.inOut" });
+        }
+    }, [pageLoaded]);
+
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
@@ -62,9 +70,9 @@ const Test = () => {
 
     return (
         <section id="index"
-            className='w-full min-h-screen flex flex-col  bg-zinc-900 relative hero-content'>
+            className='w-full min-h-screen flex flex-col relative bg-zinc-900 hero-content'>
             <Transition />
-            <Transition2/>
+
             <Cursor isActive={isActive} />
 
             <article className='flex justify-end items-center gap-5 pt-48 mr-24'>
@@ -124,5 +132,5 @@ const Test = () => {
     )
 }
 
-export default Test;
+export default Hero;
 

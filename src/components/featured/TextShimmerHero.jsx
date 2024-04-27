@@ -25,7 +25,7 @@ const TextShimmerHero = ({ text, style }) => {
                 defaults: {
                     ease: "power1.inOut",
                     duration: 0.5,
-                    delay: 1.2
+                    dalay: 1.5
                 }
             });
 

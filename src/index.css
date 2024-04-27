@@ -144,14 +144,14 @@
 
 /* This will style the actual scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #db8fc3;
+  background-color: #0891b2;
   border-radius: 5px;
   height: 20px;
 }
 
 /* This will change the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #db7ebd;
+  background-color: #13a4c9;
 }
 
 /* This styles the overall scrollbar (width, height) */
@@ -339,10 +339,29 @@
 
 }
 
+.text-outline-dark {
+  font-size: 7.86rem;
+  font-weight: 700;
+  display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #18181b;
+
+}
 
 
 
-/* ============ HORIZONTAL SCROLL ============ */
+
+/* ============ TRANSITION REVEAL ============ */
+.overlay-firs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; /* Start covering the whole screen */
+    left: 0;
+    z-index: 50; /* Ensure it's above other content but adjust as necessary */
+}
+
+
 
 
 
