@@ -24,8 +24,8 @@ const TextShimmerHero = ({ text, style }) => {
             const timeline = gsap.timeline({
                 defaults: {
                     ease: "power1.inOut",
-                    duration: 0.5,
-                    dalay: 1.5
+                    duration: 1,
+                    dalay: 5
                 }
             });
 
@@ -36,7 +36,7 @@ const TextShimmerHero = ({ text, style }) => {
                     stagger: 0.05,
                     repeat: 0,
                     yoyo: true,
-                    onComplete: () => gsap.to(chars, { opacity: 1, duration: 0.5 })
+                    onComplete: () => gsap.to(chars, { opacity: 1, duration: 1 })
                 }
             );
         }

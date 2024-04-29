@@ -25,17 +25,15 @@ const Projects = () => {
                     
                 <div className="flex flex-col">
                     <span className='' >
-                        <TextShimmerEffect text="Selected demo projects" />
-
+                        <TextShimmerEffect text="cool stuff i've done" />
                     </span>
-                    <p className='w-[30%] text-xsmall-dark text-zinc-900 ml-[50rem] mt-12'>
-                        I strive to ensure each project shines with design fidelity, optimized for peak performance and user
-                        engagement, while pushing the boundaries of modern web development.
+                    <p className='w-[44.5%] text-xsmall-dark text-zinc-900 ml-[47rem] mt-4 indent-40'>
+                        Here's a showcase of my favorite demo projects, each crafted to be responsive
+                        and optimized for peak performance and user engagement —
+                        Using technologies such as JavaScript, ReactJS, NextJS, and REST APIs,
+                        all deployed on AWS.
                     </p>
-
                 </div>
-                        
-                
             
             </article>
         </section>

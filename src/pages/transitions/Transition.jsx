@@ -1,31 +1,31 @@
-import React from 'react'
-import TextShimmerHero from '../../components/featured/TextShimmerHero';
+import React, {useState, useEffect} from "react";
 
-const Transition = () => {
-    return ( 
-        <section
-            className='w-full min-h-screen bg-cyan-400 absolute top-0 left-0 overlay-first z-50'>
-            
-            <article className="w-[80%] flex flex-col items-start text-zinc-950 uppercase pt-[26rem] pl-16
-                relative">                
-                <div className="w-full flex flex-col  ">                         
-                    <h1 className='mr-5 font-syne text-outline-dark'>
-                        {/* <TextShimmerHero text='frontend' /> */}
-                        frontend
-                    </h1>
-                                       
-                    <span className='text-[10.8rem] font-[800] leading-[60px] mr-5'>
-                        {/* <TextShimmerHero text= 'developer' /> */}
-                        developer
-                    </span>
-                </div>
-                
-            </article> 
+const Transition = ({ onLoadingComplete }) => {
+    const [counter, setCounter] = useState(0);
+
+    const startLoader = () => {
+        const updateCounter = () => {
+            setCounter(prevCounter => {
+                const increment = Math.floor(Math.random() * 10) + 1;
+                const newCounter = Math.min(prevCounter + increment, 100);
+                if (newCounter === 100) {
+                    setTimeout(onLoadingComplete, 500); // Delay to ensure the user sees '100'
+                }
+                return newCounter;
+            });
+        };
+
+        setTimeout(updateCounter, 50);
+    };
+
+    useEffect(() => {
+        startLoader();
+    }, []);
+
+    return (
+        <section className='w-full min-h-screen flex justify-end bg-zinc-950 absolute top-0 left-0 overlay-first z-50'>
+            <span className='counter text-[12rem] font-syne text-cyan-400 pr-12'>{counter}%</span>
         </section>
-
-    )
-}
-
+    );
+};
 export default Transition;
-
-

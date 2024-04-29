@@ -8,7 +8,8 @@ import TextNav from './layout/TextNav';
 const App = () => {
     return (
         <section>
-            <Navbar/>
+            {/* <Navbar/> */}
+            <TextNav/>
             <Home />
         </section>
     )

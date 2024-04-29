@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <section id='contact'
             className='w-full flex justify-center items-center '>        
-            <div className="flex w-full h-full justify-between items-end text-zinc-50 text-[3.8rem] ml-16 uppercase">
+            <div className="flex w-full h-full justify-between items-end text-zinc-50 text-[3.8rem] font-inter ml-16 uppercase">
                 <div className="flex flex-col">
                     <div className="flex">
                         <AiOutlineCopyright className='text-[3.8rem] mt-4'/>

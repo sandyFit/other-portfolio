@@ -12,7 +12,7 @@ import Transition2 from '../transitions/Transition2';
 const Hero = () => {
     const [isActive, setIsActive] = useState(false);
     const [pageLoaded, setPageLoaded] = useState(false);
-
+    
     
     useEffect(() => {
         const tl = gsap.timeline({
@@ -42,7 +42,9 @@ const Hero = () => {
         if (pageLoaded) {
             gsap.registerPlugin(ScrollTrigger);
             const tl = gsap.timeline();
-            tl.to('.overlay-first', { duration: 1.2, opacity: 0, ease: "power3.inOut" });
+
+           tl.to('.overlay-first', { duration: 1, top: '-100%', ease: "power3.inOut" })
+          .to('.overlay-second', { duration: 1, top: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
         }
     }, [pageLoaded]);
 
@@ -70,16 +72,15 @@ const Hero = () => {
 
     return (
         <section id="index"
-            className='w-full min-h-screen flex flex-col relative bg-zinc-900 hero-content'>
+            className='w-full min-h-screen flex flex-col relative bg-zinc-950 hero-content'>
             <Transition />
-
+            <Transition2/>
             <Cursor isActive={isActive} />
 
             <article className='flex justify-end items-center gap-5 pt-48 mr-24'>
                 <p className='w-[30%] font-[100] text-xsmall'>
                     Hello, I'm Trish, a creative frontend developer with a keen eye for design.<br/>
-                    Open to full-time roles or project collabs.<br/>
-                    Feel free to dive into my portfolio of projects.
+                    Currently seeking new dev opportunities to innovate and collaborate! 
                 </p>
 
                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
@@ -108,14 +109,14 @@ const Hero = () => {
             </p>
 
 
-            <article className="w-[80%] flex flex-col items-start text-cyan-400 uppercase pt-32 pl-16
+            <article className="w-[80%] flex flex-col items-start text-cyan-400 uppercase pt-36 pl-16
                 relative">                
                 <div className="w-full flex flex-col  ">                         
-                    <h1 className='mr-5 font-syne text-outline'>
+                    <h1 className='font-syne text-outline shine'>
                         <TextShimmerHero text='frontend' />
                     </h1>
                                        
-                    <span className='text-[10.8rem] font-[800] leading-[60px] mr-5'>
+                    <span className='text-[10.85rem] font-[500] tracking-[-.8rem] leading-[60px] shine'>
                     <TextShimmerHero text= 'developer' /></span>
                 </div>
                 

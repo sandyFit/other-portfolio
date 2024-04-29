@@ -1,16 +1,40 @@
 import React, { useEffect } from 'react';
 import Hero from './Hero';
+import Test from './Test';
 import Contact from '../contact/Contact';
 import Projects from '../projects/Projects'
 import About from '../about/About';
-import WhaIDo from '../about/WhaIDo';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Transition3 from '../transitions/Transition3';
 import Transition5 from '../transitions/Transition5';
 import Transition4 from '../transitions/Transition4';
+import Lenis from '@studio-freight/lenis';
 
 const Home = () => {
+
+    useEffect(() => {
+        //LENIS SMOOTH SCROLL
+        const lenis = new Lenis({
+            duration: 1.2
+        })
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf);
+
+        // Integration lenis on GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+
+    })
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +81,7 @@ const Home = () => {
     return (
         <div>
             <section id='home' className=''>
-                <Hero />
+                <Test />
             </section>
             <section id='t3' className='section'>
                 <Transition3 />

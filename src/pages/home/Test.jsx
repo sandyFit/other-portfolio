@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { HiArrowDownLeft, HiArrowDownRight } from "react-icons/hi2";
+import { HiArrowDownRight } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
-import { BsAsterisk } from 'react-icons/bs';
 import TextShimmerHero from '../../components/featured/TextShimmerHero';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Transition from '../transitions/Transition';
 import Transition2 from '../transitions/Transition2';
 import { AiOutlineCopyrightCircle } from 'react-icons/ai';
+import TimeZone from '../../components/ui/TimeZone';
 
 const Test = () => {
     const [isActive, setIsActive] = useState(false);
@@ -42,79 +42,91 @@ const Test = () => {
     const date = new Date();
 
     return (
-        <section data-cursor-color='#f9a8d4' id="index"
-            className='w-full min-h-screen flex flex-col items-center bg-zinc-900 relative'>
+        <section id="index"
+            className='w-full min-h-screen flex flex-col bg-zinc-950 relative'>
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
-            <article className="w-[99%] flex flex-col  text-[10rem] fontTitle font-[500] 
-                text-zinc-50 leading-[160px] uppercase tracking-tighter relative ">
-                <div className="flex justify-between">
-                    <div className="flex ">
-                        <AiOutlineCopyrightCircle className='text-[8rem] mt-2'/>
-                        {new Date().getFullYear().toString().slice(-2)} 
-                    </div>
-                    <span className='text-right ml-8'>trish ramos</span>
+            <div className="flex flex-col font-syne mt-6 ml-12 gap-6">
+                <div className="flex flex-col justify-start items-start relative">
+                    <p className='text-cyan-400 text-[3.2rem] font-[700] uppercase'>
+                        <TextShimmerHero text={'trish ramos'}/>
+                    </p>
+                     <p className='w-[30%] font-[100] text-xsmall indent-28'>
+                        Creative frontend developer with a keen eye for design —
+                        Currently seeking new dev opportunities to innovate and collaborate! 
+                    </p>
+
                 </div>
 
-                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-40 ' />
-                
-                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-80 ' />
-                <h1 className='flex justify-start text-petal-200'>frontend</h1>  
-                <hr className='w-full border-t-[1px] border-zinc-600 absolute top-[30rem] ' />
-                <span className='text-right '>developer</span>
-                {/* <hr className='w-full border-t-[1px] border-zinc-600 absolute top-[40rem] ' /> */}
-                
-                 <img src="/me-bn.png" alt="" width={340} className='absolute top-[20rem] left-32'/>
-                
+                <div className="flex gap-6">
+
+                <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                    className="group relative  h-12 rounded-full border border-zinc-500 bg-transparent px-12
+                    text-cyan-400">
+                    <a href='#'
+                        className="relative inline-flex overflow-hidden font-syne text-xl">
+                        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
+                            group-hover:skew-y-10">
+                            Resume
+                        </div>
+                        <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
+                            group-hover:skew-y-0 text-zinc-50 ">
+                            Resume
+                        </div>
+                    </a>
+                </button>               
+            </div>
+                           
+            </div>
+            <article className=" flex flex-col justify-end items-end font-syne text-[8rem] font-[600] pt-[8rem] pr-12
+                text-zinc-200 leading-[90px] uppercase tracking-tighter relative ">
+                <div className="flex flex-col gap-3">
+
+                    <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                    className="group relative text-zinc-50 flex justify-end">
+                        <div 
+                            className="relative inline-flex overflow-hidden font-syne text-[8rem] uppercase">
+                            <div className="translate-y-0  transition duration-500 group-hover:-translate-y-[110%] text-outline
+                                ">
+                                <TextShimmerHero text={'frontend'}/> 
+                            </div>
+                            <div className="absolute translate-y-[110%] transition duration-500 group-hover:translate-y-0 
+                                 text-zinc-50 left-24 text-outline">
+                               creative
+                            </div>
+                        </div>
+                    </button>
+
+                    <div className="flex relative ">
+                        <div className="w-[17%] px-6 absolute -bottom-1 left-[50rem] text-xsmall">
+                            <span className='flex text-left '>
+                                portfolio <br/>/&nbsp; &nbsp;issue 1.0
+                            </span>
+                        </div>
+
+                        <span className='pr-[7.8rem] text-cyan-400'>
+                            <TextShimmerHero text={'developer'}/>
+                        </span>
+                        <button className='absolute top-28 -right-4'><HiArrowDownRight/></button>
+                    </div>
+                    <div className="flex justify-end fontTitle font-[300] mt-1 mr-[8rem] textSlidingLeft">
+
+                        <AiOutlineCopyrightCircle className='text-[6.8rem] mt-[-1rem] font-[200]'/>
+                        {date.getFullYear()}
+                    </div>
+
+                </div>   
+
+                 <div className="w-full flex justify-between items-center pl-12 relative">
+                    <span className=' text-left text-small absolute -bottom-4'>
+                        based in colombia
+                        <TimeZone/>
+                    </span>
+                </div>
                 
             </article> 
-            <div className="flex">
-
-               <span className='flex w-[30%] small-text uppercase text-zinc-50 mt-20 ml-[40rem]'>
-                    Hello, I'm Trish a creative frontend developer based in Colombia. Open to full-time Roles &
-                    projects collabs.
-                </span>
-
-                
-            </div>
-            <div className="flex relative">                      
-                <Link to='about'
-                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
-                    <HiArrowDownRight className='text-[10rem] text-petal-200 mb-2 absolute -top-20 left-[37rem]'/> 
-                </Link>                
-            </div>     
-
-            {/* <div className="w-full flex justify-between items-center px-6">
-                <p className=' text-left text-small '>
-                    based in colombia
-                </p>
-
-                <div className=' text-small '>
-                    say hello / 
-                    <a href='mailto:info@trishramos.com'
-                        onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                        className='custom-link'>
-                        info@trishramos.com
-                    </a>
-                </div>
-
-                
-            </div> */}
-
-            
-            {/* <div className="flex relative">   
-                   
-                <Link to='about'
-                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
-                    <HiArrowDownLeft className='text-[10rem] text-skyIce-300 mb-2 absolute -bottom-3 left-[2rem]'/> 
-
-                </Link>
-                
-            </div> */}
-
-            
-            
+           
         </section>
     )
 }

@@ -32,23 +32,14 @@ const Contact = () => {
 
     return (
         <section data-cursor-color='#f9a8d4' id="contact"
-            className='w-full h-screen bg-zinc-900 overflow-hidden'>
+            className='w-full font-syne h-screen bg-zinc-950 overflow-hidden'>
             <Cursor isActive={isActive} />
-            <div className="text-zinc-50">
-                <SectionBar section={'contact'}/>
+            <div className="text-zinc-50 tracking-tight">
+                <SectionBar section={'say hello'}/>
             </div>
 
-            {/* <div className="flex justify-between text-xsmall pt-4 ml-16 mr-8">
-            <span className=' '>
-                (folio 
-            </span>
-            <span className=''>
-                / v.1.0)
-            </span>
-            </div> */}
-
             <article className='w-[98%] grid grid-cols-1 pt-20'>                
-                <div className="text-[8rem] font-[500] text-cyan-400 uppercase py-5">
+                <div className="text-[8rem] font-[600] text-cyan-400 tracking-tighter uppercase py-5">
                     <div className='ml-16 w-[90%]'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
@@ -58,19 +49,19 @@ const Contact = () => {
 
                 <div className=" w-[86%] grid grid-cols-3 align-content-center space ml-64 relative">
                     <div className="w-[28rem] flex text-xsmall text-zinc-300 justify-center items-center">
-                        <span className='w-full mb-28 tracking-wide'>
+                        <span className='w-full mb-28 tracking-wide indent-[6.5rem]'>
                             
                             Whether you're looking for someone to join your team full-time or just need an extra
-                            pair of creative hands for a project, I'm your go-to.<br/>
+                            pair of creative hands for a project, I'm all ears—and hands!.
 
                             <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-cyan-400 font-[300]
                                 after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[94%] 
                                 after:origin-bottom after:scale-x-0 after:bg-cyan-400 after:transition-transform 
                                 after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
-                                hover:after:scale-x-100">
-                                    Let's connect
-                            </a>!
+                                hover:after:scale-x-100 ml-2">
+                                    Let's connect.
+                            </a>
                         </span>
                     </div>
 
@@ -117,7 +108,7 @@ const Contact = () => {
                             <TextShimmerEffect text='LINKS'/>
                             <div className='flex w-full '>           
                                 <ul className='w-full flex flex-col justify-between items-start bg-transparent gap-1'>
-                                    {['index', 'projects', 'about-me', ].map((item, index) => (
+                                    {['index', 'projects', 'about', ].map((item, index) => (
                                         <li className='text-xsmall hover:text-cyan-400
                                             uppercase tracking-wide' key={index}
                                             onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>

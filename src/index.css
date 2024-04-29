@@ -169,7 +169,7 @@
     min-height: 100vh; /* Added a minimum height */
     position: relative;
     overflow: visible; /* This is crucial and should not be 'auto' or 'hidden' */
-    padding-bottom: 110vh; 
+    padding-bottom: 120vh; 
     margin-bottom: 5rem;
     z-index: 10;
 }
@@ -331,17 +331,16 @@
 
 /* ========== TEXT OUTLINE ========== */
 .text-outline {
-  font-size: 7.86rem;
-  font-weight: 700;
+  font-size: 8rem;
+  font-weight: 600;
   display: block;
     color: transparent;
-    -webkit-text-stroke: 1px #22d3ee;
-
+    -webkit-text-stroke: 1px #fafafa
 }
 
 .text-outline-dark {
-  font-size: 7.86rem;
-  font-weight: 700;
+  font-size: 8rem;
+  font-weight: 900;
   display: block;
     color: transparent;
     -webkit-text-stroke: 1px #18181b;
@@ -352,24 +351,19 @@
 
 
 /* ============ TRANSITION REVEAL ============ */
-.overlay-firs {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0; /* Start covering the whole screen */
-    left: 0;
-    z-index: 50; /* Ensure it's above other content but adjust as necessary */
+
+
+
+* {
+  font-feature-settings: "pnum" on, "lnum" on;
 }
-
-
-
 
 
 
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-900 font-robotoCondensed 
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-syne
       }
 
     a {
@@ -397,7 +391,7 @@
 
     /* ============================= */
     .text-title {                             
-      @apply w-full text-[6rem] font-[600] leading-[82px] uppercase
+      @apply w-full text-[4.6rem] font-[600] leading-[70px] uppercase tracking-tight
     }
 
     .about-text-mayus {                             
@@ -424,15 +418,18 @@
     }
 
     .text-xsmall {
-      @apply font-syne text-zinc-400 text-base font-[300] uppercase tracking-wide
+      @apply font-syne text-zinc-400 text-lg font-[100] tracking-wide
     }
 
     .text-xsmall-dark {
-      @apply font-syne text-base font-[400] uppercase tracking-wide
+      @apply font-syne text-base font-[100]  tracking-wide
     }
 
     .text-small {
       @apply font-syne text-zinc-400 text-lg font-[300] uppercase tracking-wide
+    }
+    .text-inter {
+      @apply font-inter text-zinc-400 text-base font-[300] uppercase tracking-wider
     }
 
     .text-small-min {
@@ -451,6 +448,8 @@
     .title-xsmall {
       @apply text-zinc-50 font-syne text-xl font-[400] uppercase tracking-wider
     }
+
+
 
 }
 
