@@ -30,12 +30,13 @@ const Transition4 = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} id="t3" className='w-full min-h-screen flex justify-center items-center relative'>
+       <section ref={sectionRef} id="t3" className='w-full min-h-screen flex justify-center items-center relative'>
             <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 transition-transform">
-                <h1 ref={textRef}
-                    className='text-[10rem] text-cyan-400 font-[700] uppercase text-center leading-[160px]'>
-                    My Toolkit
-                </h1>
+                <div ref={textRef}
+                    className='text-[10rem] text-cyan-400 font-[700] flex flex-col uppercase leading-[90px]'>                    
+                    <h1 className=''>My Toolkit </h1>
+
+                </div>
                 
             </div>
         </section>

@@ -39,20 +39,37 @@ const Test = () => {
           .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
     }, []);
 
-    const date = new Date();
+     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const heroTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#index",
+                start: "top top", // Triggering as soon as it enters the top of the viewport
+                end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+                scrub: true, // Smooth scrubbing
+                toggleActions: 'play none none reverse', // Reverse when scrolling back up
+            }
+        });
+
+        // Fade out the Hero content
+        heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
+
+    }, []);
+
 
     return (
         <section id="index"
-            className='w-full min-h-screen flex flex-col bg-zinc-950 relative'>
+            className='w-full min-h-screen flex flex-col bg-zinc-950 relative hero-content'>
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
             <div className="flex flex-col font-syne mt-6 ml-12 gap-6">
                 <div className="flex flex-col justify-start items-start relative">
-                    <p className='text-cyan-400 text-[3.2rem] font-[700] uppercase'>
+                    <p className='text-cyan-400 text-[3.3rem] font-[700] uppercase'>
                         <TextShimmerHero text={'trish ramos'}/>
                     </p>
-                     <p className='w-[30%] font-[100] text-xsmall indent-28'>
+                     <p className='w-[30%] font-[100] text-xsmall indent-32'>
                         Creative frontend developer with a keen eye for design —
                         Currently seeking new dev opportunities to innovate and collaborate! 
                     </p>
@@ -100,7 +117,7 @@ const Test = () => {
 
                     <div className="flex relative ">
                         <div className="w-[17%] px-6 absolute -bottom-1 left-[50rem] text-xsmall">
-                            <span className='flex text-left '>
+                            <span className='flex text-left leading-[24px]'>
                                 portfolio <br/>/&nbsp; &nbsp;issue 1.0
                             </span>
                         </div>
@@ -108,12 +125,12 @@ const Test = () => {
                         <span className='pr-[7.8rem] text-cyan-400'>
                             <TextShimmerHero text={'developer'}/>
                         </span>
-                        <button className='absolute top-28 -right-4'><HiArrowDownRight/></button>
+                        <button className='absolute top-28 -right-4 text-zinc-400'><HiArrowDownRight/></button>
                     </div>
-                    <div className="flex justify-end fontTitle font-[300] mt-1 mr-[8rem] textSlidingLeft">
+                    <div className="flex justify-end fontTitle font-[300] mt-1 mr-[8rem] text-zinc-400 textSlidingLeft">
 
                         <AiOutlineCopyrightCircle className='text-[6.8rem] mt-[-1rem] font-[200]'/>
-                        {date.getFullYear()}
+                        {new Date().getFullYear()}
                     </div>
 
                 </div>   

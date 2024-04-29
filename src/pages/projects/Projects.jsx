@@ -13,7 +13,7 @@ const Projects = () => {
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-cyan-400 flex justify-center items-start relative pt-32'>
+            className='w-full min-h-screen bg-cyan-400 flex relative '>
 
             <div className="font-[500] text-zinc-900">
                 <SectionBar section={'gallery'}/>      
@@ -21,16 +21,17 @@ const Projects = () => {
             
             {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-20 left-80' /> */}
             <Cursor isActive={isActive} />
-            <article className="w-[80%] text-left text-title text-zinc-900 pl-16  ">
-                    
-                <div className="flex flex-col">
-                    <span className='' >
+            <article className="w-[80%] pt-32 pl-16 mx-24 ">
+
+                <div className="flex flex-col relative">
+
+                    <span className='text-left text-title text-zinc-900' >
                         <TextShimmerEffect text="cool stuff i've done" />
                     </span>
-                    <p className='w-[44.5%] text-xsmall-dark text-zinc-900 ml-[47rem] mt-4 indent-40'>
+                    <p className='w-[48%] text-small-min-dark indent-48 absolute -right-16 top-24'>
                         Here's a showcase of my favorite demo projects, each crafted to be responsive
-                        and optimized for peak performance and user engagement —
-                        Using technologies such as JavaScript, ReactJS, NextJS, and REST APIs,
+                        and optimized for peak performance  —
+                        using technologies such as SCSS, JavaScript, ReactJS, NextJS, and REST APIs,
                         all deployed on AWS.
                     </p>
                 </div>

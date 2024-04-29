@@ -169,7 +169,7 @@
     min-height: 100vh; /* Added a minimum height */
     position: relative;
     overflow: visible; /* This is crucial and should not be 'auto' or 'hidden' */
-    padding-bottom: 120vh; 
+
     margin-bottom: 5rem;
     z-index: 10;
 }
@@ -418,7 +418,7 @@
     }
 
     .text-xsmall {
-      @apply font-syne text-zinc-400 text-lg font-[100] tracking-wide
+      @apply font-inter text-zinc-400 text-lg font-[200] tracking-wide
     }
 
     .text-xsmall-dark {
@@ -433,7 +433,10 @@
     }
 
     .text-small-min {
-      @apply font-syne  text-[1.2rem] font-[200] tracking-wide
+      @apply font-inter text-[1.2rem] font-[200] tracking-wide
+    }
+    .text-small-min-dark {
+      @apply font-inter text-[1.2rem] font-[300] text-zinc-950 tracking-wide
     }
     .text-xsmall-min {
       @apply font-syne text-zinc-400 text-sm font-[200] tracking-wide

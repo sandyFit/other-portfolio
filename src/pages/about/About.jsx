@@ -3,12 +3,15 @@ import gsap from 'gsap';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SectionBar from '../../layout/SectionBar';
+import Cursor from '../../components/ui/Cursor';
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         // Initialize your animation inside useEffect
@@ -42,46 +45,80 @@ const About = () => {
         });
     }, []);
 
+    useEffect(() => {
+        // Ensure the section is initially visible
+        gsap.set(".about-content", { opacity: 1 });
+
+        // Timeline for the about section fade out
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#about",
+                start: "bottom bottom",
+                end: "bottom center",
+                scrub: true,
+                //markers: true
+            }
+        });
+
+        tl.to(".about-content", { opacity: 0.2, duration: 0.5 });
+    }, []);
+
 
     return (
         <section id="about"
-            className='w-full min-h-screen relative bg-zinc-950 py-40 '>          
+            className='w-full min-h-screen relative bg-zinc-950 about-content'>    
+            <Cursor isActive={isActive}/>
 
             <div className="text-zinc-50">
-                <SectionBar section={"About Trish"}/>
+                <SectionBar section={"About me"}/>
             </div>
             
             
-            <div className=" flex justify-center relative pl-16">
+            <div className=" flex justify-center relative pl-16 pt-40 mx-24">
                 <div className="flex flex-col">
+                    
                     <span className='text-title text-cyan-400' >
-                        <TextShimmerEffect text="self-driven grafic designer" />
-                        <TextShimmerEffect text="& self-taught frontend " />
-                        <TextShimmerEffect text="developer" />
+                        <TextShimmerEffect text="designer & developer" />
                     </span>
-                    <p className='w-[44.5%] text-xsmall text-zinc-900 ml-[47rem] mt-4 indent-40'>
-                        Based in Colombia, I'm a graphic design graduate who turned my enthusiasm for all things digital 
-                        into a love  for web development, specializing in creating seamless experiences within
-                        the React ecosystem.
-                        <br/><br/>
-                        My focus? Safeguarding design integrity by honoring the vision while embracing the constraints.
-                        <br/><br/>
-                        I love working on fluid animations, engaging transitions, and complex layouts that transform
-                        user experiences from meh to mesmerizing ✨
-                        <br /><br />
-                        Off duty, I'm usually exploring the dynamic worlds of kinetic typography, diving into motion
-                        graphics, or tinkering with the unpredictable art of AI prompting.
-                        <br /><br />
 
-                        Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
-                        on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
-                        <br /><br />
-                        I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
-                        challenge my coding and design skills.
-                        <br /><br />
-                         For inquiries or opportunities, please contact me at 
-                        <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.   
-                    </p>
+                    <div className="flex justify-between gap-10 mt-10">
+
+                        <div className="w-[45%] flex">
+                            <img src="/me-bn.png" alt="" width={'450px'}/>
+                        </div>
+
+                        <div className="w-[48%] flex flex-col gap-6 justify-end">
+                            <p className='w-full flex items-end text-small-min text-zinc-400  mt-4 indent-40'>
+                                Based in Colombia, I'm a graphic designer who turned my enthusiasm for all things digital 
+                                into a love affair with web development.
+                                <br /><br />
+                                As a self-taught frontend developer specializing in the React ecosystem, I focus on
+                                creating seamless and unforgettable user experiences.
+                                <br /><br />
+                                My commitment? To maintain design integrity, honoring the original vision while navigating
+                                technical constraints.
+                            </p>
+
+                            <div className="flex justify-end">
+                                <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                                    className="group relative  h-12 rounded-full border border-zinc-500 bg-transparent px-12
+                                    text-cyan-400">
+                                    <a href='#'
+                                        className="relative inline-flex overflow-hidden font-syne text-xl">
+                                        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
+                                            group-hover:skew-y-10">
+                                            More About Me
+                                        </div>
+                                        <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
+                                            group-hover:skew-y-0 text-zinc-50 ">
+                                            More About Me
+                                        </div>
+                                    </a>
+                                </button>  
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
 
@@ -104,23 +141,22 @@ const About = () => {
                    
                         My focus? Safeguarding design integrity by honoring the vision while embracing the constraints.
                         <br/><br/>
-                        I love working on fluid animations, engaging transitions, and complex layouts that transform
-                        user experiences from meh to mesmerizing ✨
                         <br/><br/>
-                                
-                        Off duty, I'm usually exploring the dynamic worlds of kinetic typography, diving into motion
-                        graphics, or tinkering with the unpredictable art of AI prompting.
-                        <br /><br />
+                            I love working on fluid animations, engaging transitions, and complex layouts that transform
+                            user experiences from meh to mesmerizing ✨
+                            <br /><br />
+                            Off duty, I'm usually exploring the dynamic worlds of kinetic typography, diving into motion
+                            graphics, or tinkering with the unpredictable art of AI prompting.
+                            <br /><br />
 
-                        Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
-                        on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
-                        <br /><br />
-                        I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
-                        challenge my coding and design skills.
-                        <br /><br />
-                        I'm passionate about merging aesthetics with functionality
-                        in my work. For inquiries or opportunities, please contact me at 
-                        <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                     
+                            Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
+                            on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
+                            <br /><br />
+                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
+                            challenge my coding and design skills.
+                            <br /><br />
+                            For inquiries or opportunities, please contact me at 
+                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>. .                     
                     </div>
                 </div> */}
             </div>
