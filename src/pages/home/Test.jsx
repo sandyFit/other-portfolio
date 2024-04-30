@@ -7,7 +7,6 @@ import TextShimmerHero from '../../components/featured/TextShimmerHero';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Transition from '../transitions/Transition';
 import Transition2 from '../transitions/Transition2';
-import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import TimeZone from '../../components/ui/TimeZone';
 
 const Test = () => {
@@ -17,15 +16,20 @@ const Test = () => {
         const tl = gsap.timeline({
             defaults: {
                 ease: "power3.out",
-                duration: 1, // slightly faster
-                delay: 2
+                duration: 1, // slightly fasters
+                // delay: .5,
+               
             }
         });
 
             tl.fromTo('.small-title',
                 { opacity: 0 },
-                {opacity: 1, stagger: 0.5}
+                {opacity: 1, stagger: 0.5, delay: 2.5}
             
+        )
+        tl.fromTo('.sliding-text',
+            { translateX: '-100%', opacity: 0 },
+            {translateX: 0, opacity: 1,   ease: "power3.inOut"}
         )
 
         return () => tl.kill();
@@ -66,7 +70,7 @@ const Test = () => {
             <Cursor isActive={isActive} />
             <div className="flex flex-col font-syne mt-6 ml-12 gap-6">
                 <div className="flex flex-col justify-start items-start relative">
-                    <p className='text-cyan-400 text-[3.3rem] font-[700] uppercase'>
+                    <p className='text-purple-300 text-[3.3rem] font-[700] uppercase'>
                         <TextShimmerHero text={'trish ramos'}/>
                     </p>
                      <p className='w-[30%] font-[100] text-xsmall indent-32'>
@@ -79,8 +83,8 @@ const Test = () => {
                 <div className="flex gap-6">
 
                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                    className="group relative  h-12 rounded-full border border-zinc-500 bg-transparent px-12
-                    text-cyan-400">
+                    className="group relative  h-12 rounded-full border border-purple-300 bg-transparent px-12
+                    text-zinc-50">
                     <a href='#'
                         className="relative inline-flex overflow-hidden font-syne text-xl">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -88,7 +92,7 @@ const Test = () => {
                             Resume
                         </div>
                         <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
-                            group-hover:skew-y-0 text-zinc-50 ">
+                            group-hover:skew-y-0 text-purple-300 ">
                             Resume
                         </div>
                     </a>
@@ -96,41 +100,46 @@ const Test = () => {
             </div>
                            
             </div>
-            <article className=" flex flex-col justify-end items-end font-syne text-[8rem] font-[600] pt-[8rem] pr-12
-                text-zinc-200 leading-[90px] uppercase tracking-tighter relative ">
+            <article className="w-full flex flex-col justify-end items-end font-syne text-[8rem] font-[700] pt-[8rem] pr-12
+                text-purple-300 leading-[90px] uppercase tracking-tighter relative ">
                 <div className="flex flex-col gap-3">
 
                     <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                    className="group relative text-zinc-50 flex justify-end">
+                        className="group relative text-purple-300 flex justify-end ">
                         <div 
                             className="relative inline-flex overflow-hidden font-syne text-[8rem] uppercase">
-                            <div className="translate-y-0  transition duration-500 group-hover:-translate-y-[110%] text-outline
-                                ">
+                            <div className="translate-y-0  transition duration-500 group-hover:-translate-y-[110%] 
+                             ext-purple-300 ">
                                 <TextShimmerHero text={'frontend'}/> 
                             </div>
                             <div className="absolute translate-y-[110%] transition duration-500 group-hover:translate-y-0 
-                                 text-zinc-50 left-24 text-outline">
+                                 text-purple-300 left-24 ">
                                creative
                             </div>
                         </div>
                     </button>
 
                     <div className="flex relative ">
-                        <div className="w-[17%] px-6 absolute -bottom-1 left-[50rem] text-xsmall">
-                            <span className='flex text-left leading-[24px]'>
-                                portfolio <br/>/&nbsp; &nbsp;issue 1.0
+                        <div className="w-[27%] px-6 absolute bottom-[6rem] -left-3 text-xsmall-min">
+                            <span className='flex text-left leading-[24px] small-title'>
+                                folio &nbsp; / &nbsp; v. 1.0
                             </span>
                         </div>
 
-                        <span className='pr-[7.8rem] text-cyan-400'>
-                            <TextShimmerHero text={'developer'}/>
+                        <span className='flex text-purple-300 text-[9rem] text-outline'>
+                            
+                            <TextShimmerHero
+                                text={`developer`} />
                         </span>
-                        <button className='absolute top-28 -right-4 text-zinc-400'><HiArrowDownRight/></button>
+                        <button className='absolute top-28 -right-4 text-purple-300'>
+                            <HiArrowDownRight />
+                        </button>
                     </div>
-                    <div className="flex justify-end fontTitle font-[300] mt-1 mr-[8rem] text-zinc-400 textSlidingLeft">
-
-                        <AiOutlineCopyrightCircle className='text-[6.8rem] mt-[-1rem] font-[200]'/>
-                        {new Date().getFullYear()}
+                    <div className="flex justify-end font-syne text-[9rem] font-[700] leading-[100px] mr-[10rem]">    
+                        <TextShimmerHero
+                            text={`©${new Date().getFullYear()}`}
+                        />
+                        
                     </div>
 
                 </div>   

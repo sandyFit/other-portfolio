@@ -21,7 +21,7 @@ export default {
           950: '#151226'
         },
 
-        peach: {
+        peachy: {
           200: '#FEF6E5',
           500: '#FF4552'
         },
@@ -83,6 +83,10 @@ export default {
           300: '#00cdc0'
         },
 
+        redish: {
+          600: '#C82222'
+        },
+
         electro: {
           100: '#89fa8f',
           200: '#50fa59',
@@ -106,6 +110,7 @@ export default {
         },
 
         curuba: {
+          100: '#fee1dd',
           300: '#F3B2BA'
         },
 

@@ -31,15 +31,15 @@ const Contact = () => {
     }
 
     return (
-        <section data-cursor-color='#f9a8d4' id="contact"
+        <section id="contact"
             className='w-full font-syne h-screen bg-zinc-950 overflow-hidden'>
             <Cursor isActive={isActive} />
             <div className="text-zinc-50 tracking-tight">
-                <SectionBar section={'say hello'}/>
+                <SectionBar section={'say hey'}/>
             </div>
 
             <article className='w-[98%] grid grid-cols-1 pt-20'>                
-                <div className="text-[8rem] font-[600] text-cyan-400 tracking-tighter uppercase py-5">
+                <div className="text-[8rem] font-[600] text-purple-300 tracking-tighter uppercase py-5">
                     <div className='ml-16 w-[90%]'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
@@ -55,9 +55,9 @@ const Contact = () => {
                             pair of creative hands for a project, I'm all ears—and hands!.
 
                             <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-cyan-400 font-[300]
+                                href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-purple-300 font-[300]
                                 after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[94%] 
-                                after:origin-bottom after:scale-x-0 after:bg-cyan-400 after:transition-transform 
+                                after:origin-bottom after:scale-x-0 after:bg-purple-300 after:transition-transform 
                                 after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
                                 hover:after:scale-x-100 ml-2">
                                     Let's connect.
@@ -65,8 +65,8 @@ const Contact = () => {
                         </span>
                     </div>
 
-                    <svg width="1.2" height="220" xmlns="http://www.w3.org/2000/svg" className='absolute left-[35rem]'>
-                        <line x1="1" y1="0" x2="1" y2="220" stroke="#fff" strokeWidth="1.2" />
+                    <svg width="1.2" height="250" xmlns="http://www.w3.org/2000/svg" className='absolute left-[35rem]'>
+                        <line x1="1" y1="0" x2="1" y2="250" stroke="#D3A6C5" strokeWidth="1.2" />
                     </svg>
 
 
@@ -77,9 +77,9 @@ const Contact = () => {
                                 className=''
                                 onClick={handleCopiedText}>
                                 <div id='emailAddress'
-                                    className='text-xsmall mt-[-2px] hover:text-cyan-400 flex'>
+                                    className='text-xsmall mt-[-2px] hover:text-purple-300 flex'>
                                     info@trishramos.com
-                                    { isCopied ? <BsCheck className='text-cyan-400 ml-2 text-2xl'/>
+                                    { isCopied ? <BsCheck className='text-purple-300 ml-2 text-2xl'/>
                                        : <BsCopy className='ml-3 mt-1' />}
                                 </div>
                                 {showCopiedText && (
@@ -95,10 +95,10 @@ const Contact = () => {
                             <TextShimmerEffect text='Socials'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-xsmall space-y-1'>
-                                <li className="hover:text-cyan-400 text-xsmall"><a href='#'>linkedin</a></li>
-                                <li className="hover:text-cyan-400 text-xsmall"><a href='#'>github</a></li>
-                                <li className="hover:text-cyan-400 text-xsmall"><a href='#'>instagram</a></li>
-                                <li className="hover:text-cyan-400 text-xsmall"><a href='#'>behance</a></li>
+                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>linkedin</a></li>
+                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>github</a></li>
+                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>instagram</a></li>
+                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>behance</a></li>
                             </ul>
                         </div>
                         
@@ -109,7 +109,7 @@ const Contact = () => {
                             <div className='flex w-full '>           
                                 <ul className='w-full flex flex-col justify-between items-start bg-transparent gap-1'>
                                     {['index', 'projects', 'about', ].map((item, index) => (
-                                        <li className='text-xsmall hover:text-cyan-400
+                                        <li className='text-xsmall hover:text-purple-300
                                             uppercase tracking-wide' key={index}
                                             onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
                                             <Link to={item}>
@@ -125,8 +125,8 @@ const Contact = () => {
                             <TextShimmerEffect text='RESOURCES'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-xsmall space-y-1'>
-                                <li className="hover:text-cyan-400 uppercase"><a href='#'>My resume</a></li>
-                                <li className="hover:text-cyan-400 uppercase"><a href='#'>website info</a></li>                               
+                                <li className="hover:text-purple-300 uppercase"><a href='#'>My resume</a></li>
+                                <li className="hover:text-purple-300 uppercase"><a href='#'>website info</a></li>                               
                             </ul>
                         </div>
                     </div>

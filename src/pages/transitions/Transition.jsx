@@ -23,8 +23,8 @@ const Transition = ({ onLoadingComplete }) => {
     }, []);
 
     return (
-        <section className='w-full min-h-screen flex justify-end bg-zinc-950 absolute top-0 left-0 overlay-first z-50'>
-            <span className='counter text-[12rem] font-syne text-cyan-400 pr-12'>{counter}%</span>
+        <section className='w-full min-h-screen flex justify-end bg-zinc-900 absolute top-0 left-0 overlay-first z-50'>
+            <span className='counter text-[12rem] font-syne text-purple-300 pr-12'>{counter}%</span>
         </section>
     );
 };

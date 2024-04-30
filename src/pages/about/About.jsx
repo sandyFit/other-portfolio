@@ -77,7 +77,7 @@ const About = () => {
             <div className=" flex justify-center relative pl-16 pt-40 mx-24">
                 <div className="flex flex-col">
                     
-                    <span className='text-title text-cyan-400' >
+                    <span className='text-title text-purple-300' >
                         <TextShimmerEffect text="designer & developer" />
                     </span>
 
@@ -87,22 +87,22 @@ const About = () => {
                             <img src="/me-bn.png" alt="" width={'450px'}/>
                         </div>
 
-                        <div className="w-[48%] flex flex-col gap-6 justify-end">
-                            <p className='w-full flex items-end text-small-min text-zinc-400  mt-4 indent-40'>
+                        <div className="w-[48%] flex flex-col gap-6 justify-center">
+                            <p className='w-full flex text-small-min text-zinc-400 mt-4  indent-40'>
                                 Based in Colombia, I'm a graphic designer who turned my enthusiasm for all things digital 
                                 into a love affair with web development.
                                 <br /><br />
                                 As a self-taught frontend developer specializing in the React ecosystem, I focus on
                                 creating seamless and unforgettable user experiences.
                                 <br /><br />
-                                My commitment? To maintain design integrity, honoring the original vision while navigating
+                                My commitment? To maintain design integrity, honoring the vision of creative minds while navigating
                                 technical constraints.
                             </p>
 
                             <div className="flex justify-end">
                                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                    className="group relative  h-12 rounded-full border border-zinc-500 bg-transparent px-12
-                                    text-cyan-400">
+                                    className="group relative  h-12 rounded-full border border-purple-300 bg-transparent px-12
+                                    text-zinc-50">
                                     <a href='#'
                                         className="relative inline-flex overflow-hidden font-syne text-xl">
                                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -110,7 +110,7 @@ const About = () => {
                                             More About Me
                                         </div>
                                         <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
-                                            group-hover:skew-y-0 text-zinc-50 ">
+                                            group-hover:skew-y-0 text-purple-300 ">
                                             More About Me
                                         </div>
                                     </a>
@@ -142,7 +142,7 @@ const About = () => {
                         My focus? Safeguarding design integrity by honoring the vision while embracing the constraints.
                         <br/><br/>
                         <br/><br/>
-                            I love working on fluid animations, engaging transitions, and complex layouts that transform
+                            I love working on smooth animations, engaging transitions, and complex layouts that transform
                             user experiences from meh to mesmerizing ✨
                             <br /><br />
                             Off duty, I'm usually exploring the dynamic worlds of kinetic typography, diving into motion

@@ -27,7 +27,7 @@ const Footer = () => {
 
                     <p className='text-small-bright w-full inline-flex '>
                         made in colombia with 
-                        <BsHeart className='ml-2 mt-1 text-cyan-400'/>
+                        <BsHeart className='ml-2 mt-1 text-purple-300'/>
                         
                     </p>                   
                 </div>

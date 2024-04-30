@@ -22,9 +22,9 @@ const TextNav = () => {
                 <div className="flex w-full ">
 
                     <div className='flex w-full h-12'>           
-                        <ul className='w-full flex justify-between items-center rounded-full border border-zinc-500 px-8'>
+                        <ul className='w-full flex justify-between items-center rounded-full border border-purple-300 px-8'>
                             <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-cyan-400">
+                                className="group relative w-52 text-zinc-50">
                                 <Link to='projects'
                                     className="relative inline-flex overflow-hidden font-syne text-xl">
                                     <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -32,14 +32,14 @@ const TextNav = () => {
                                         Projects
                                     </div>
                                     <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-zinc-50 ">
+                                        group-hover:skew-y-0 text-purple-300 ">
                                         Projects
                                     </div>
                                 </Link>                              
                             </button>
 
                             <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-cyan-400">
+                                className="group relative w-52 text-zinc-50">
                                 <Link to='about'
                                     className="relative inline-flex overflow-hidden font-syne text-xl">
                                     <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
@@ -47,23 +47,23 @@ const TextNav = () => {
                                         About
                                     </div>
                                     <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-zinc-50 ">
+                                        group-hover:skew-y-0 text-purple-300 ">
                                         About
                                     </div>
                                 </Link>
                             </button>
 
                             <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-cyan-400">
+                                className="group relative w-52 text-zinc-50">
                                 <Link to='contact'
                                     className="relative inline-flex overflow-hidden font-syne text-xl">
                                     <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
                                         group-hover:skew-y-12">
-                                        Say Hello
+                                        Say Hey
                                     </div>
                                     <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-zinc-50 ">
-                                        Say Hello
+                                        group-hover:skew-y-0 text-purple-300 ">
+                                        Say Hey
                                     </div>
                                 </Link>
                             </button>

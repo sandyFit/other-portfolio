@@ -13,9 +13,9 @@ const Projects = () => {
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-cyan-400 flex relative '>
+            className='w-full min-h-screen bg-purple-200 flex relative '>
 
-            <div className="font-[500] text-zinc-900">
+            <div className="font-[500] text-violet-600">
                 <SectionBar section={'gallery'}/>      
             </div>
             
@@ -25,14 +25,13 @@ const Projects = () => {
 
                 <div className="flex flex-col relative">
 
-                    <span className='text-left text-title text-zinc-900' >
+                    <span className='text-left text-title text-violet-600' >
                         <TextShimmerEffect text="cool stuff i've done" />
                     </span>
-                    <p className='w-[48%] text-small-min-dark indent-48 absolute -right-16 top-24'>
-                        Here's a showcase of my favorite demo projects, each crafted to be responsive
-                        and optimized for peak performance  —
-                        using technologies such as SCSS, JavaScript, ReactJS, NextJS, and REST APIs,
-                        all deployed on AWS.
+                    <p className='w-[54%] text-small-min-red indent-48 absolute -right-16 top-24'>
+                        Here's a curated showcase of my favorite demo projects — only those worth seeing.<br/>
+                        Each is crafted to be responsive and optimized for peak performance,
+                        using technologies like SCSS, JavaScript, ReactJS, NextJS, and REST APIs, all deployed on AWS.
                     </p>
                 </div>
             
