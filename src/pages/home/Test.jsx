@@ -70,12 +70,12 @@ const Test = () => {
             <Cursor isActive={isActive} />
             <div className="flex flex-col font-syne mt-6 ml-12 gap-6">
                 <div className="flex flex-col justify-start items-start relative">
-                    <p className='text-purple-300 text-[3.3rem] font-[700] uppercase'>
+                    <p className='text-purple-300 text-[3.9rem] font-inter tracking-wider font-[400] uppercase'>
                         <TextShimmerHero text={'trish ramos'}/>
                     </p>
                      <p className='w-[30%] font-[100] text-xsmall indent-32'>
-                        Creative frontend developer with a keen eye for design —
-                        Currently seeking new dev opportunities to innovate and collaborate! 
+                        Self-driven designer and self-taught developer based in Colombia — Currently seeking
+                        opportunities in development where I can innovate and collaborate.
                     </p>
 
                 </div>
@@ -100,11 +100,58 @@ const Test = () => {
             </div>
                            
             </div>
-            <article className="w-full flex flex-col justify-end items-end font-syne text-[8rem] font-[700] pt-[8rem] pr-12
-                text-purple-300 leading-[90px] uppercase tracking-tighter relative ">
+            <article className="w-full flex flex-col justify-end items-end relative">
+                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-12 ">    
+                   
+                     <div className="w-[27%] px-6 absolute bottom-[14rem] left-[45rem] text-xxsmall">
+                            <span className='flex pl-2 leading-[24px] small-title'>
+                                &nbsp;  FOLIO  <br/>/ &nbsp; V. 1.0
+                            </span>
+                        </div>
+                    <div className="flex ">
+                        <span className='flex big-title text-purple-300 font-[500] uppercase'>
+                            <TextShimmerHero text={'crtv'}/>
+                        </span>
+                        <span className='flex big-title text-purple-300 italic font-[300] '>
+                            <TextShimmerHero text={' Frontend'}/>
+                        </span>
+                    </div>
+                    <div className="flex text-right">
+                        <span className='big-title font-[500] text-purple-300 uppercase'>
+                            <TextShimmerHero text={'developer with a'}/>
+                        </span>
+
+                    </div>
+                    <div className="flex text-right">
+                         <span className='big-title font-[500] text-purple-300 uppercase'>
+                            <TextShimmerHero text={'keen'}/>
+                        </span>
+                        <span className='big-title text-purple-300 font-[300] italic'>
+                            <TextShimmerHero text={' eye '}/>
+                        </span>
+                        <span className='big-title font-[500] text-purple-300 uppercase'>
+                            <TextShimmerHero text={'for'}/>
+                        </span>
+                        <span className='big-title text-purple-300 font-[300] italic mr-32'>
+                            <TextShimmerHero text={' design'}/>
+                        </span>
+
+                        <button className='text-[8rem] text-purple-300 absolute right-5 -bottom-10'>
+                            <HiArrowDownRight />
+                        </button>
+                    </div>
+                    
+                        
+                 </div>
+                <div className="w-full flex justify-start pl-12 relative">
+                    <span className=' text-left absolute'>
+
+                        <TimeZone/>
+                    </span>
+                </div> 
                 <div className="flex flex-col gap-3">
 
-                    <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                    {/* <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
                         className="group relative text-purple-300 flex justify-end ">
                         <div 
                             className="relative inline-flex overflow-hidden font-syne text-[8rem] uppercase">
@@ -117,39 +164,23 @@ const Test = () => {
                                creative
                             </div>
                         </div>
-                    </button>
+                    </button> */}
 
                     <div className="flex relative ">
-                        <div className="w-[27%] px-6 absolute bottom-[6rem] -left-3 text-xsmall-min">
-                            <span className='flex text-left leading-[24px] small-title'>
-                                folio &nbsp; / &nbsp; v. 1.0
-                            </span>
-                        </div>
+                       
 
-                        <span className='flex text-purple-300 text-[9rem] text-outline'>
+                        {/* <span className='flex text-purple-300 text-[9rem] text-outline'>
                             
                             <TextShimmerHero
                                 text={`developer`} />
-                        </span>
-                        <button className='absolute top-28 -right-4 text-purple-300'>
-                            <HiArrowDownRight />
-                        </button>
-                    </div>
-                    <div className="flex justify-end font-syne text-[9rem] font-[700] leading-[100px] mr-[10rem]">    
-                        <TextShimmerHero
-                            text={`©${new Date().getFullYear()}`}
-                        />
+                        </span> */}
                         
                     </div>
+                    
 
                 </div>   
 
-                 <div className="w-full flex justify-between items-center pl-12 relative">
-                    <span className=' text-left text-small absolute -bottom-4'>
-                        based in colombia
-                        <TimeZone/>
-                    </span>
-                </div>
+                 
                 
             </article> 
            

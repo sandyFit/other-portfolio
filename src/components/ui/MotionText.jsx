@@ -8,7 +8,7 @@ const MotionText = ({ icon, text1, text2, text3, className}) => {
   return (
       <div className="w-full  z-10 flex pt-3 "
             style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text text-[8rem] font-[600] uppercase'>
+            <h2 className=' motion-text text-[8rem] font-robotoCondensed font-[600] uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => ( 
                         <React.Fragment key={index}>

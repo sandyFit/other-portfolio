@@ -41,7 +41,7 @@ const TimeZone = () => {
     return (
         <article>
             
-            <div className='flex w-full font-syne tracking-[.1rem] text-lg text-purple-300 font-[300]  uppercase '
+            <div className='flex w-full text-xxsmall text-purple-300 '
                 id='currentTime'>
                 <p className='tracking-wider mr-2'>local time:</p>
                 <span className='font-inter'>{currentTime} gmt-5</span>

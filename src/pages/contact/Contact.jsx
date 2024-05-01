@@ -39,11 +39,20 @@ const Contact = () => {
             </div>
 
             <article className='w-[98%] grid grid-cols-1 pt-20'>                
-                <div className="text-[8rem] font-[600] text-purple-300 tracking-tighter uppercase py-5">
-                    <div className='ml-16 w-[90%]'>
+                <div className="text-[8rem] font-robotoCondensed font-[600] text-purple-300 tracking-tighter uppercase py-5">
+                    <div className='flex ml-16 w-[90%] gap-5'>
                         <TextShimmerEffect
                             triggerOnScroll={true}
-                            text='caught your eye?' />
+                            text='caught' />
+                        
+                        <span className="lowercase font-[300] italic text-[8.5rem] -mt-3">
+                            <TextShimmerEffect
+                                triggerOnScroll={true}
+                                text=' your ' />
+                        </span>
+                        <TextShimmerEffect
+                            triggerOnScroll={true}
+                            text='eye?' />
                     </div>
                 </div>
 
