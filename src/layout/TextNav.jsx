@@ -18,39 +18,24 @@ const TextNav = () => {
             
            
 
-            <div className="flex w-[28rem] ">
+            <div className="flex w-[24rem] ">
                 <div className="flex w-full ">
 
                     <div className='flex w-full h-12'>           
                         <ul className='w-full flex justify-between items-center rounded-full border border-purple-300 px-8'>
                             <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
                                 className="group relative w-52 text-zinc-50">
-                                <Link to='projects'
-                                    className="relative inline-flex overflow-hidden font-syne text-xl">
-                                    <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                                        group-hover:skew-y-12">
-                                        Projects
-                                    </div>
-                                    <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-purple-300 ">
-                                        Projects
-                                    </div>
-                                </Link>                              
-                            </button>
-
-                            <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-zinc-50">
                                 <Link to='about'
                                     className="relative inline-flex overflow-hidden font-syne text-xl">
                                     <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
                                         group-hover:skew-y-12">
-                                        About
+                                        Me
                                     </div>
                                     <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
                                         group-hover:skew-y-0 text-purple-300 ">
-                                        About
+                                        Me
                                     </div>
-                                </Link>
+                                </Link>                              
                             </button>
 
                             <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
@@ -66,6 +51,21 @@ const TextNav = () => {
                                         Say Hey
                                     </div>
                                 </Link>
+                            </button>
+
+                            <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                                className="group relative w-52 text-zinc-50">
+                                <a href='#'
+                                    className="relative inline-flex overflow-hidden font-syne text-xl">
+                                    <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
+                                        group-hover:skew-y-12">
+                                        CV
+                                    </div>
+                                    <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
+                                        group-hover:skew-y-0 text-purple-300 ">
+                                        CV
+                                    </div>
+                                </a>
                             </button>
                         </ul>
                     </div>

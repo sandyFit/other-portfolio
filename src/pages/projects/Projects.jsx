@@ -29,9 +29,10 @@ const Projects = () => {
                         <TextShimmerEffect text="cool stuff i've done" />
                     </span>
                     <p className='w-[54%] text-small-min-red indent-48 absolute -right-16 top-24'>
-                        Here's a curated showcase of my favorite demo projects — only those worth seeing.<br/>
-                        Each is crafted to be responsive and optimized for peak performance,
-                        using technologies like SCSS, JavaScript, ReactJS, NextJS, and REST APIs, all deployed on AWS.
+                        A selection of my favorite projects  —
+                        each is crafted to be responsive and optimized for peak performance and user engagement.
+                        Leveraging  technologies like SCSS, JavaScript, ReactJS, NextJS, and REST APIs, all deployed on AWS.
+                        These projects showcase my commitment to modern web standards and efficiency. 
                     </p>
                 </div>
             

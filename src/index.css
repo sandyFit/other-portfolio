@@ -469,10 +469,9 @@
     }
 
     .big-title {
-      @apply font-robotoCondensed text-[8rem] tracking-tighter leading-[110px]
+      @apply font-robotoCondensed text-[7.4rem] tracking-tighter 
+
     }
-
-
 }
 
 

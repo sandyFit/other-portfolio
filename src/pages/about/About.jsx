@@ -46,22 +46,22 @@ const About = () => {
     }, []);
 
     useEffect(() => {
-        // Ensure the section is initially visible
-        gsap.set(".about-content", { opacity: 1 });
+    // Ensure the section is initially visible
+    gsap.set(".about-content", { opacity: 1 });
 
-        // Timeline for the about section fade out
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#about",
-                start: "bottom bottom",
-                end: "bottom center",
-                scrub: true,
-                //markers: true
-            }
-        });
+    // Timeline for the about section fade out
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#about",
+            start: "center center-=200",  // Start animation when the center of "#about" hits the center of the viewport
+            end: "bottom center",    // End animation when the bottom of "#about" hits the center of the viewport
+            scrub: true,
+            //markers: true
+        }
+    });
 
-        tl.to(".about-content", { opacity: 0.2, duration: 0.5 });
-    }, []);
+    tl.to(".about-content", { opacity: 0.2, duration: 0.6 });
+}, []);
 
 
     return (
@@ -89,14 +89,16 @@ const About = () => {
 
                         <div className="w-[48%] flex flex-col gap-6 justify-center">
                             <p className='w-full flex text-small-min text-zinc-400 mt-4  indent-40'>
-                                Based in Colombia, I'm a graphic designer who turned my enthusiasm for all things digital 
+                                I'm a graphic designer from Colombia who turned my enthusiasm for all things digital 
                                 into a love affair with web development.
                                 <br /><br />
-                                As a self-taught frontend developer specializing in the React ecosystem, I focus on
-                                creating seamless and unforgettable user experiences.
+                                As a self-taught frontend developer specializing in the React ecosystem, my approach is
+                                to ensure both aesthetics and functionality in my work.
                                 <br /><br />
-                                My commitment? To maintain design integrity, honoring the vision of creative minds while navigating
-                                technical constraints.
+                                My commitments are twofold: To maintain design integrity by honoring the creative vision
+                                while skillfully navigating technical constraints, and to prioritize using the simplest,
+                                most effective language to efficiently accomplish each task.
+                                
                             </p>
 
                             <div className="flex justify-end">
@@ -142,21 +144,25 @@ const About = () => {
                         My focus? Safeguarding design integrity by honoring the vision while embracing the constraints.
                         <br/><br/>
                         <br/><br/>
-                            I love working on smooth animations, engaging transitions, and complex layouts that transform
-                            user experiences from meh to mesmerizing ✨
-                            <br /><br />
-                            Off duty, I'm usually exploring the dynamic worlds of kinetic typography, diving into motion
-                            graphics, or tinkering with the unpredictable art of AI prompting.
-                            <br /><br />
+                        I prioritize using the simplest, most effective language to accomplish each task, aiming for 
+                        efficiency and precision in execution. My approach is geared towards creating clean, maintainable, 
+                        and scalable code, as I continue to grow and refine my skills in the React ecosystem.
+                        I love working on smooth animations, engaging transitions, and complex layouts that transform
+                        user experiences from meh to mesmerizing ✨
+                        <br /><br />
+                        Off duty, my passion for creativity fuels my development work. I explore smartphone photography, 
+                        kinetic typography, motion graphics, and generative design, constantly expanding my technical 
+                        skills and integrating innovative visual and digital arts solutions into my coding projects.
+                        <br /><br />
 
-                            Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
-                            on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
-                            <br /><br />
-                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
-                            challenge my coding and design skills.
-                            <br /><br />
-                            For inquiries or opportunities, please contact me at 
-                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>. .                     
+                        Away from the screen, you might catch me pumping iron at the nearest gym, scribbling doodles
+                        on every scrap of paper, or ruling the kitchen as the supreme queen of baking yum yums 🧁.
+                        <br /><br />
+                        I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
+                        challenge my coding and design skills.
+                        <br /><br />
+                        For inquiries or opportunities, please contact me at 
+                        <span className='text-zinc-50 ml-1'>info@trishramos.com</span>. .                     
                     </div>
                 </div> */}
             </div>

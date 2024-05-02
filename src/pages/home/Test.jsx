@@ -85,54 +85,57 @@ const Test = () => {
                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
                     className="group relative  h-12 rounded-full border border-purple-300 bg-transparent px-12
                     text-zinc-50">
-                    <a href='#'
+                    <Link to='projects'
                         className="relative inline-flex overflow-hidden font-syne text-xl">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
                             group-hover:skew-y-10">
-                            Resume
+                            Get to Know My Work
                         </div>
                         <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
                             group-hover:skew-y-0 text-purple-300 ">
-                            Resume
+                            Get to Know My Work
                         </div>
-                    </a>
+                    </Link>
                 </button>               
             </div>
                            
             </div>
             <article className="w-full flex flex-col justify-end items-end relative">
-                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-12 ">    
+                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-16">    
                    
-                     <div className="w-[27%] px-6 absolute bottom-[14rem] left-[45rem] text-xxsmall">
-                            <span className='flex pl-2 leading-[24px] small-title'>
-                                &nbsp;  FOLIO  <br/>/ &nbsp; V. 1.0
-                            </span>
-                        </div>
-                    <div className="flex ">
-                        <span className='flex big-title text-purple-300 font-[500] uppercase'>
-                            <TextShimmerHero text={'crtv'}/>
-                        </span>
-                        <span className='flex big-title text-purple-300 italic font-[300] '>
-                            <TextShimmerHero text={' Frontend'}/>
+                     <div className="w-[27%] px-6 absolute bottom-[13.8rem] left-[28rem] text-xxsmall">
+                        <span className='flex pl-2 leading-[24px] small-title'>
+                            &nbsp;  FOLIO  <br/>/ &nbsp; V. 1.0
                         </span>
                     </div>
-                    <div className="flex text-right">
+                    <div className="flex leading-[106px]">
+                        <span className='flex big-title text-purple-300 font-[500] uppercase'>
+                            <TextShimmerHero text={'creative frontend'}/>
+                        </span>
+                    </div>
+                    <div className="flex text-righ leading-[106px]">
                         <span className='big-title font-[500] text-purple-300 uppercase'>
-                            <TextShimmerHero text={'developer with a'}/>
+                            <TextShimmerHero text={'developer'}/>
+                        </span>
+                       <span className='font-inter text-[8rem] text-purple-300 font-[300] italic'>
+                            <TextShimmerHero text={' with '}/>
+                        </span>
+                        <span className='big-title font-[500] text-purple-300 uppercase'>
+                            <TextShimmerHero text={'a keen'}/>
                         </span>
 
                     </div>
-                    <div className="flex text-right">
-                         <span className='big-title font-[500] text-purple-300 uppercase'>
+                    <div className="flex text-right leading-[106px]">
+                         {/* <span className='big-title font-[500] text-purple-300 uppercase'>
                             <TextShimmerHero text={'keen'}/>
-                        </span>
-                        <span className='big-title text-purple-300 font-[300] italic'>
+                        </span> */}
+                        <span className='font-inter text-[8rem] text-purple-300 font-[300] italic'>
                             <TextShimmerHero text={' eye '}/>
                         </span>
                         <span className='big-title font-[500] text-purple-300 uppercase'>
                             <TextShimmerHero text={'for'}/>
                         </span>
-                        <span className='big-title text-purple-300 font-[300] italic mr-32'>
+                        <span className='font-inter text-[8rem] text-purple-300 font-[300] italic mr-32'>
                             <TextShimmerHero text={' design'}/>
                         </span>
 
