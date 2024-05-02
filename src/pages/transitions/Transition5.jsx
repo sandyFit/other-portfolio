@@ -5,7 +5,7 @@ import { BsInfinity } from "react-icons/bs";
 const Transition5 = () => {
     return ( 
         <section id="t5"
-            className='w-full min-h-screen flex items-center relative bg-purple-200'>   
+            className='w-full min-h-screen flex items-start relative bg-purple-200'>   
             <div className="flex w-full justify-center items-center">
                 <MotionText
                     icon={<BsInfinity/>}

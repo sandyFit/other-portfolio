@@ -104,10 +104,22 @@ const Contact = () => {
                             <TextShimmerEffect text='Socials'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-xsmall space-y-1'>
-                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>linkedin</a></li>
-                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>github</a></li>
-                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>instagram</a></li>
-                                <li className="hover:text-purple-300 text-xsmall"><a href='#'>behance</a></li>
+                                {['linkedin', 'github', 'instagram', 'behance'].map((item, index) => (
+                                    <li  key={index}>
+                                        <a href='#' 
+                                            onMouseOver={() => { setIsActive(true) }} onMouseOut={() => { setIsActive(false) }}
+                                            className="group relative inline-flex items-center justify-center overflow-hidden 
+                                            hover:text-purple-300 text-xsmall">
+                                            <div className="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 
+                                            group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100">
+                                                <div className="flex w-3 h-3 bg-purple-300"></div>
+                                            </div>
+                                            <span>
+                                                {item}
+                                            </span>
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         
@@ -120,22 +132,45 @@ const Contact = () => {
                                     {['index', 'projects', 'about', ].map((item, index) => (
                                         <li className='text-xsmall hover:text-purple-300
                                             uppercase tracking-wide' key={index}
-                                            onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}>
-                                            <Link to={item}>
-                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
-                                            </Link>
+                                            onMouseOver={() => { setIsActive(true) }} 
+                                            onMouseLeave={() => { setIsActive(false) }}>
+                                            <div key={index} href='#'                                            
+                                            className="group relative inline-flex items-center justify-center overflow-hidden 
+                                            hover:text-purple-300 text-xsmall">
+                                                <div className="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 
+                                                group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100">
+                                                    <div className="flex w-3 h-3 bg-purple-300"></div>
+                                                </div>
+                                                <Link to={item}>
+                                                    {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
+                                                </Link>
+                                            </div>                                          
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
 
-                        <div className=" flex flex-col mb-8 title-xsmall">                            
+                        <div className="flex flex-col mb-8 title-xsmall">
                             <TextShimmerEffect text='RESOURCES'/>
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className='text-xsmall space-y-1'>
-                                <li className="hover:text-purple-300 uppercase"><a href='#'>My resume</a></li>
-                                <li className="hover:text-purple-300 uppercase"><a href='#'>website info</a></li>                               
+                                {['My resume', 'website-info'].map((item, index) => (
+                                    <li key={index}> {/* Move the key prop here for correct usage */}
+                                        <a href='#' 
+                                            onMouseOver={() => { setIsActive(true) }} onMouseOut={() => { setIsActive(false) }}
+                                            className="group relative inline-flex items-center justify-center overflow-hidden 
+                                            hover:text-purple-300 text-xsmall">
+                                            <div className="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 
+                                            group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100">
+                                                <div className="flex w-3 h-3 bg-purple-300"></div>
+                                            </div>
+                                            <span>
+                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
+                                            </span>
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
