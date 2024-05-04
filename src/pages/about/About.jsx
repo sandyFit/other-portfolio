@@ -45,23 +45,23 @@ const About = () => {
         });
     }, []);
 
-    useEffect(() => {
-    // Ensure the section is initially visible
-    gsap.set(".about-content", { opacity: 1 });
+//     useEffect(() => {
+//     // Ensure the section is initially visible
+//     gsap.set(".about-content", { opacity: 1 });
 
-    // Timeline for the about section fade out
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#about",
-            start: "center center-=200",  // Start animation when the center of "#about" hits the center of the viewport
-            end: "bottom center",    // End animation when the bottom of "#about" hits the center of the viewport
-            scrub: true,
-            //markers: true
-        }
-    });
+//     // Timeline for the about section fade out
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: "#about",
+//             start: "center center-=200",  // Start animation when the center of "#about" hits the center of the viewport
+//             end: "bottom center",    // End animation when the bottom of "#about" hits the center of the viewport
+//             scrub: true,
+//             //markers: true
+//         }
+//     });
 
-    tl.to(".about-content", { opacity: 0.2, duration: 0.6 });
-}, []);
+//     tl.to(".about-content", { opacity: 0.2, duration: 0.6 });
+// }, []);
 
 
     return (
@@ -74,30 +74,40 @@ const About = () => {
             </div>
             
             
-            <div className=" flex justify-center relative  pt-32 mx-24">
+            <div className=" flex justify-center relative pt-32 mx-24">
                 <div className="flex flex-col">
                     
-                    <span className='med-title ' >
-                        <TextShimmerEffect text="My Journey as a Frontend Developer" />
+                    <span className='reg-title ' >
+                        <TextShimmerEffect text="from Pixels to code" />
                     </span>
 
                     <div className="flex justify-between gap-10 mt-10">
 
                         <div className="w-[45%] flex">
-                            <img src="/me-bn.png" alt="" width={'450px'}/>
+                            <img src="/me-bn.png" alt="" width={'400px'}/>
                         </div>
 
                         <div className="w-[48%] flex flex-col gap-6 justify-end relative">
-                            <div className='w-3 h-3 bg-violet-500 absolute top-[1.4rem] left-0'></div>
+                            <div className='w-3 h-3 bg-violet-500 absolute top-[5.3rem] left-0'></div>
                             <p className='w-full flex text-small  text-zinc-400  indent-8'>
-                                I'm a graphic designer from Colombia who turned my enthusiasm for all things digital 
+                                I'm a Colombian graphic designer who turned my enthusiasm for all things digital 
+                                into a love affair with web development.
+                                <br /><br />
+                                In my journey as a self-taught frontend developer especializing in the React ecosystem, my
+                                approach involves a careful balance between code functionality and visual aesthetics,
+                                striving to respect the vision behind each design.
+                                {/* <br /><br />
+                                My commitment? to preserve the integrity of the original design while embracing the inherent 
+                                technical challenges that come with web development. */}
+
+                                {/* I'm a Colombian graphic designer who turned my enthusiasm for all things digital 
                                 into a love affair with web development.
                                 <br /><br />
                                 In my role as a self-taught frontend developer specializing in the React ecosystem, my approach is
                                 to ensure that every line of code not only supports but enhances the visual story being told.
                                 <br /><br />
                                 My work revolves around a commitment to preserving the integrity of the original design
-                                while embracing the inherent technical challenges that come with web development.
+                                while embracing the inherent technical challenges that come with web development. */}
                                 
                                 
                             </p>

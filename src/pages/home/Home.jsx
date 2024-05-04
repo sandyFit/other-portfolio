@@ -92,13 +92,13 @@ const Home = () => {
             <section id='about' className=''>
                 <About />
             </section>
-            <section id='t' className='section'>
+            {/* <section id='t' className='section'>
                 <Transition4 />
-            </section>
+            </section> */}
             <section id='t5' className='section'>
                 <Transition5 />
             </section>
-            <section id='contact' className='relative'>
+            <section id='contact' className='section relative'>
                 <Contact/>
             </section>
         </div>

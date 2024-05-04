@@ -70,9 +70,9 @@ const Test = () => {
             <Cursor isActive={isActive} />
             <div className="flex flex-col font-syne mt-6 ml-12">
                 <div className="flex flex-col justify-start items-start relative">
-                    <p className='text-logo'>
+                    <div className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>
-                    </p>
+                    </div>
                     <div className='w-3 h-3 bg-violet-500 absolute bottom-16 left-0'></div>
                      <p className='w-[29%] font-[100] text-small indent-8 mt-[-.5rem] '>
                         Colombia-based frontend developer. Currently seeking 
@@ -100,35 +100,32 @@ const Test = () => {
             </div>
 
             <article className="w-full flex flex-col justify-end items-end relative">
-                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-32">                      
-                     <div className="w-[11%] absolute bottom-[19.6rem] right-12 text-xxsmall">
+                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-24">                      
+                     <div className="w-[11%] absolute bottom-[21.4rem] right-12 text-xxsmall">
                         <span className='flex pl-2 leading-[24px] small-title'>
                             portfolio  2024
                         </span>
                     </div>
 
+                    
+
                     <div className="flex">                        
-                        <span className='big-title'>
-                            <TextShimmerHero text={'crtv '}/>
-                        </span>
-                        <span className='big-title text-outline'>
-                            <TextShimmerHero text={'frontend '}/>
-                        </span>
-                        <span className='big-title'>
-                            <TextShimmerHero text={'developer'}/>
-                        </span>
-                    </div>
-                       
-                    <div className="w-[94%] flex mr-[5.5rem]">
+
                         <span className='big-title '>
-                            <TextShimmerHero text={'with a keen eye for '}/>
-                        </span>                                                           
-                        <span className='big-title text-outline'>
-                            <TextShimmerHero text={'design'}/>
-                        </span>                                                           
+                            <TextShimmerHero text={'frontend developer'}/>
+                        </span>
+
                     </div>
 
-                    <button className='text-[5rem] text-violet-500 absolute right-10 -bottom-3'>
+                       
+                    <div className="w-[94%] flex mr-12">
+                        <span className='big-title '>
+                            <TextShimmerHero text={"with a designer's eye"}/>
+                        </span>                                                           
+                                                       
+                    </div>
+
+                    <button className='text-[8rem] text-violet-500 absolute right-10 -bottom-3'>
                         <HiArrowDownRight />
                     </button>
                </div>

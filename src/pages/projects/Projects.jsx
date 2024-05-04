@@ -2,45 +2,72 @@ import React, { useState, useEffect } from 'react';
 import Cursor from '../../components/ui/Cursor';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import SectionBar from '../../layout/SectionBar';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Projects = () => {
 
     const [isActive, setIsActive] = useState(false);
+    const [showButton, setShowButton] = useState(false);
+
+    const handleScroll = () => {
+        const show = window.scrollY > 700;
+        setShowButton(show);
+    };
+
+    useEffect(() => {
+        // Add event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove event listener when the component unmounts
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-purple-200 flex relative '>
+            className='w-full min-h-screen bg-purple-200 flex relative'>
 
             <div className="font-[500] text-violet-600">
                 <SectionBar section={'gallery'}/>      
             </div>
             
-            {/* <hr className='w-[60%] border-t-[1px] border-zinc-600 absolute top-20 left-80' /> */}
             <Cursor isActive={isActive} />
-            <article className="w-[80%] pt-32 pl-16 mx-24 ">
+            <article className="flex justify-center relative pt-32 mx-24">
 
                 <div className="flex flex-col relative">
 
-                    <span className='text-left med-title ' >
+                    <span className='text-left reg-title'>
                         <TextShimmerEffect text="A Glimpse into my projects" />
                     </span>
-                    <div className='w-3 h-3 bg-violet-500 absolute top-[10.6rem] right-[34rem]'></div>
-                    <p className='w-[54%] text-small-purple indent-8 absolute -right-16 top-40'>
 
-                        Each crafted for optimal performance and user engagement using technologies like
-                        SCSS, JavaScript, ReactJS, NextJS, and REST APIs, hosted on AWS and Vercel.<br/>
-                        My focus on design fidelity and technical precision ensures each project is visually appealing
-                        and functionally robust.
-                    </p>
+                    <div className="flex justify-between gap-10 mt-10">
+                        <div className="w-[45%] flex">
+                            <div className="flexw-40 w-72 h-96 bg-zinc-900 "></div>
+                        </div>
+                        <div className="w-[48%] flex flex-col gap-6 justify-start relative">
+                            <div className='w-3 h-3 bg-violet-500 absolute top-[.6rem] right-[39.2rem]'></div>
+                            <p className='w-full flex text-small-purple  text-zinc-400  indent-8'>
+                                Each crafted for optimal performance and user engagement using technologies like
+                                SCSS, JavaScript, ReactJS, NextJS, and REST APIs, hosted on AWS and Vercel.<br/>
+                                My focus on design fidelity and technical precision ensures each project is visually appealing
+                                and functionally robust.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             
             </article>
 
-            <div className="up-button"
+            <button 
+                style={{ display: showButton ? 'block' : 'none' }}
+                className="up-button"
+                onClick={() => window.scrollTo(0, 0)}
             >
                 up
-            </div>    
+            </button>   
         </section>
     );
 }
