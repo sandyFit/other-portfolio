@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Transition3 = () => {
     const sectionRef = useRef(null);
@@ -31,20 +30,20 @@ const Transition3 = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} id="t3" className='w-full min-h-screen flex justify-center items-center relative'>
-            <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 
-                transition-transform">
-                <div ref={textRef}
-                    className='text-[10rem] text-purple-300 font-[700] flex flex-col items-center uppercase 
-                        leading-[130px]'>                    
-                    <h1 className='flex flex-col text-center'>
-                        <span className='lowercase font-[300] italic'>selected</span>
-                        works
-                    </h1>
-
+        <section id='t3'>          
+            <div ref={sectionRef} className='w-full min-h-screen flex justify-center items-center relative'>
+                <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 
+                    transition-transform">
+                    <div ref={textRef}
+                        className='flex bigger-text'>                    
+                        <h1 className='flex bigger-title text-center '>
+                            selected projects
+                        </h1>
+                        
+                    </div>
                 </div>
-                
             </div>
+                        
         </section>
     );
 }

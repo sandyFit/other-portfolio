@@ -74,11 +74,11 @@ const About = () => {
             </div>
             
             
-            <div className=" flex justify-center relative pl-16 pt-40 mx-24">
+            <div className=" flex justify-center relative  pt-32 mx-24">
                 <div className="flex flex-col">
                     
-                    <span className='text-title text-purple-300' >
-                        <TextShimmerEffect text="designer & developer" />
+                    <span className='med-title ' >
+                        <TextShimmerEffect text="My Journey as a Frontend Developer" />
                     </span>
 
                     <div className="flex justify-between gap-10 mt-10">
@@ -87,32 +87,32 @@ const About = () => {
                             <img src="/me-bn.png" alt="" width={'450px'}/>
                         </div>
 
-                        <div className="w-[48%] flex flex-col gap-6 justify-center">
-                            <p className='w-full flex text-small-min text-zinc-400 mt-4  indent-40'>
+                        <div className="w-[48%] flex flex-col gap-6 justify-end relative">
+                            <div className='w-3 h-3 bg-violet-500 absolute top-[1.4rem] left-0'></div>
+                            <p className='w-full flex text-small  text-zinc-400  indent-8'>
                                 I'm a graphic designer from Colombia who turned my enthusiasm for all things digital 
                                 into a love affair with web development.
                                 <br /><br />
-                                As a self-taught frontend developer specializing in the React ecosystem, my approach is
-                                to ensure both aesthetics and functionality in my work.
+                                In my role as a self-taught frontend developer specializing in the React ecosystem, my approach is
+                                to ensure that every line of code not only supports but enhances the visual story being told.
                                 <br /><br />
-                                My commitments are twofold: To maintain design integrity by honoring the creative vision
-                                while skillfully navigating technical constraints, and to prioritize using the simplest,
-                                most effective language to efficiently accomplish each task.
+                                My work revolves around a commitment to preserving the integrity of the original design
+                                while embracing the inherent technical challenges that come with web development.
+                                
                                 
                             </p>
 
                             <div className="flex justify-end">
                                 <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                    className="group relative  h-12 rounded-full border border-purple-300 bg-transparent px-12
-                                    text-zinc-50">
+                                    className="group relative  h-12 rounded-full border border-violet-500 bg-transparent px-12">
                                     <a href='#'
-                                        className="relative inline-flex overflow-hidden font-syne text-xl">
+                                        className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
                                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
                                             group-hover:skew-y-10">
                                             More About Me
                                         </div>
                                         <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
-                                            group-hover:skew-y-0 text-purple-300 ">
+                                            group-hover:skew-y-0 text-violet-500 ">
                                             More About Me
                                         </div>
                                     </a>

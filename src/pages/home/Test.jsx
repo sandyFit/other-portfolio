@@ -24,7 +24,7 @@ const Test = () => {
 
             tl.fromTo('.small-title',
                 { opacity: 0 },
-                {opacity: 1, stagger: 0.5, delay: 2.5}
+                {opacity: 1, stagger: 0.5, delay: 3.5}
             
         )
         tl.fromTo('.sliding-text',
@@ -68,125 +68,73 @@ const Test = () => {
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
-            <div className="flex flex-col font-syne mt-6 ml-12 gap-6">
+            <div className="flex flex-col font-syne mt-6 ml-12">
                 <div className="flex flex-col justify-start items-start relative">
-                    <p className='text-purple-300 text-[3.9rem] font-inter tracking-wider font-[400] uppercase'>
+                    <p className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>
                     </p>
-                     <p className='w-[30%] font-[100] text-xsmall indent-32'>
-                        Self-driven designer and self-taught developer based in Colombia — Currently seeking
-                        opportunities in development where I can innovate and collaborate.
+                    <div className='w-3 h-3 bg-violet-500 absolute bottom-16 left-0'></div>
+                     <p className='w-[29%] font-[100] text-small indent-8 mt-[-.5rem] '>
+                        Colombia-based frontend developer. Currently seeking 
+                        opportunities where I can innovate & collaborate.
                     </p>
 
                 </div>
 
-                <div className="flex gap-6">
+                <div className="flex mt-6">
+                    <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
+                        className="group relative h-12 rounded-full border border-violet-500 bg-transparent px-12">
+                        <Link to='projects'
+                            className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
+                            <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
+                                group-hover:skew-y-10">
+                                Work
+                            </div>
+                            <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
+                                group-hover:skew-y-0 text-violet-400 ">
+                                Work
+                            </div>
+                        </Link>
+                    </button>               
+                </div>                          
+            </div>
 
-                <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                    className="group relative  h-12 rounded-full border border-purple-300 bg-transparent px-12
-                    text-zinc-50">
-                    <Link to='projects'
-                        className="relative inline-flex overflow-hidden font-syne text-xl">
-                        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                            group-hover:skew-y-10">
-                            Get to Know My Work
-                        </div>
-                        <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
-                            group-hover:skew-y-0 text-purple-300 ">
-                            Get to Know My Work
-                        </div>
-                    </Link>
-                </button>               
-            </div>
-                           
-            </div>
             <article className="w-full flex flex-col justify-end items-end relative">
-                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-16">    
-                   
-                     <div className="w-[27%] px-6 absolute bottom-[13.8rem] left-[28rem] text-xxsmall">
+                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-32">                      
+                     <div className="w-[11%] absolute bottom-[19.6rem] right-12 text-xxsmall">
                         <span className='flex pl-2 leading-[24px] small-title'>
-                            &nbsp;  FOLIO  <br/>/ &nbsp; V. 1.0
+                            portfolio  2024
                         </span>
                     </div>
-                    <div className="flex leading-[106px]">
-                        <span className='flex big-title text-purple-300 font-[500] uppercase'>
-                            <TextShimmerHero text={'creative frontend'}/>
+
+                    <div className="flex">                        
+                        <span className='big-title'>
+                            <TextShimmerHero text={'crtv '}/>
                         </span>
-                    </div>
-                    <div className="flex text-righ leading-[106px]">
-                        <span className='big-title font-[500] text-purple-300 uppercase'>
+                        <span className='big-title text-outline'>
+                            <TextShimmerHero text={'frontend '}/>
+                        </span>
+                        <span className='big-title'>
                             <TextShimmerHero text={'developer'}/>
                         </span>
-                       <span className='font-inter text-[8rem] text-purple-300 font-[300] italic'>
-                            <TextShimmerHero text={' with '}/>
-                        </span>
-                        <span className='big-title font-[500] text-purple-300 uppercase'>
-                            <TextShimmerHero text={'a keen'}/>
-                        </span>
-
                     </div>
-                    <div className="flex text-right leading-[106px]">
-                         {/* <span className='big-title font-[500] text-purple-300 uppercase'>
-                            <TextShimmerHero text={'keen'}/>
-                        </span> */}
-                        <span className='font-inter text-[8rem] text-purple-300 font-[300] italic'>
-                            <TextShimmerHero text={' eye '}/>
-                        </span>
-                        <span className='big-title font-[500] text-purple-300 uppercase'>
-                            <TextShimmerHero text={'for'}/>
-                        </span>
-                        <span className='font-inter text-[8rem] text-purple-300 font-[300] italic mr-32'>
-                            <TextShimmerHero text={' design'}/>
-                        </span>
-
-                        <button className='text-[8rem] text-purple-300 absolute right-5 -bottom-10'>
-                            <HiArrowDownRight />
-                        </button>
-                    </div>
-                    
-                        
-                 </div>
-                <div className="w-full flex justify-start pl-12 relative">
-                    <span className=' text-left absolute'>
-
-                        <TimeZone/>
-                    </span>
-                </div> 
-                <div className="flex flex-col gap-3">
-
-                    {/* <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                        className="group relative text-purple-300 flex justify-end ">
-                        <div 
-                            className="relative inline-flex overflow-hidden font-syne text-[8rem] uppercase">
-                            <div className="translate-y-0  transition duration-500 group-hover:-translate-y-[110%] 
-                             ext-purple-300 ">
-                                <TextShimmerHero text={'frontend'}/> 
-                            </div>
-                            <div className="absolute translate-y-[110%] transition duration-500 group-hover:translate-y-0 
-                                 text-purple-300 left-24 ">
-                               creative
-                            </div>
-                        </div>
-                    </button> */}
-
-                    <div className="flex relative ">
                        
-
-                        {/* <span className='flex text-purple-300 text-[9rem] text-outline'>
-                            
-                            <TextShimmerHero
-                                text={`developer`} />
-                        </span> */}
-                        
+                    <div className="w-[94%] flex mr-[5.5rem]">
+                        <span className='big-title '>
+                            <TextShimmerHero text={'with a keen eye for '}/>
+                        </span>                                                           
+                        <span className='big-title text-outline'>
+                            <TextShimmerHero text={'design'}/>
+                        </span>                                                           
                     </div>
-                    
 
-                </div>   
-
-                 
-                
+                    <button className='text-[5rem] text-violet-500 absolute right-10 -bottom-3'>
+                        <HiArrowDownRight />
+                    </button>
+               </div>
+                                   
             </article> 
-           
+            
         </section>
     )
 }

@@ -14,15 +14,15 @@ const SectionBar = ({section}) => {
             className='w-full h-[60px] absolute top-6 z-20 flex justify-between pt-4 px-16'>
             
             <div className="flex">
-                <div className="flex text-3xl uppercase font-robotoCondensed ">
+                <div className="flex text-2xl uppercase font-ibm ">
                     <span className='h-20 font-[300]'>{ section }</span>
                 </div>
             </div>
 
             
-            <div className="flex flex-col text-3xl font-robotoCondensed font-[300]">
+            <div className="flex flex-col text-2xl font-ibm font-[300]">
                 <div className="flex">
-                    <AiOutlineCopyright className='text-3xl mt-[2px] font-[100]'/>
+                    <AiOutlineCopyright className='text-2xl mt-[4px] font-[100]'/>
                     {date.getFullYear()} 
                 </div>                   
             </div>

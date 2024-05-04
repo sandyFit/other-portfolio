@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Inspiration&family=Marck+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url(https://db.onlinewebfonts.com/c/851549fa2e5800ed4a219a044111a1f4?family=BitxMap+Font+tfb);
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +23,7 @@
 /* a, span {
     border: 1px solid red; 
 } */
+
 
 .container {
   display: flex;
@@ -131,6 +132,20 @@
           font-style: normal;
 }
 
+@font-face {
+    font-family: 'manuka';
+    src:  url('./assets/fonts/test-manuka-medium.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+}
+
+@font-face {
+    font-family: 'manuka-condensed';
+    src:  url('./assets/fonts/test-manuka-condensed-bold.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+}
+
 
 .title-font {
   font-family: 'doumbar';
@@ -145,8 +160,13 @@
   font-family: 'round_8four';
   transform: skewX(10deg);
 }
+.manuka {
+  font-family: 'manuka';
+}
 
-
+.manuka-condensed {
+  font-family: 'manuka-condensed';
+}
 
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
 /* This will style the scrollbar track */
@@ -343,21 +363,40 @@
 
 /* ========== TEXT OUTLINE ========== */
 .text-outline {
-  font-size: 8rem;
+  font-size: 11.5rem;
   font-weight: 500;
-  display: block;
-    color: transparent;
-    -webkit-text-stroke: 2px #d8b4fe
+  color: #1c294148;
+  display: block;  
+  -webkit-text-stroke: 2px #8b5cf6
 }
 
-.text-outline-dark {
-  font-size: 8rem;
+.text-outline-big {
+  font-size: 16rem;
   font-weight: 900;
   display: block;
     color: transparent;
-    -webkit-text-stroke: 1px #18181b;
+    -webkit-text-stroke: 2px #8b5cf6;
 
 }
+/* ============= FIXED ============== */
+.up-button {
+   position: fixed;
+   top: 1rem;
+   right: 1rem;
+   z-index: 1000; /* High enough to stay on top of other elements */
+   background-color: #8b5cf6; /* Example color */
+   border: 1px solid #fafafa;
+   color: #FFFFFF;
+   font-size: 2.5rem;
+   font-weight: 500;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   padding: 2px 8px;
+}
+
 
 
 
@@ -375,7 +414,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-inter
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-ibm
       }
 
     a {
@@ -402,74 +441,60 @@
     }
 
     /* ============================= */
-    .text-title {                             
-      @apply w-full text-[5.6rem] font-robotoCondensed font-[600] leading-[70px] uppercase 
-    }
-
-    .about-text-mayus {                             
-      @apply text-[7rem] font-[500] leading-[100px] uppercase
-    }
-
-    .services-list {
-      @apply flex font-ibm text-zinc-400 text-6xl capitalize font-[500] tracking-tighter
-    }
+    
     
     .custom-link {
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    /* ========TEXT IN ARRAY======= */
-    .array-text {
-      @apply   font-[500] uppercase tracking-wide 
+    .text-buttons {
+      @apply font-ibm text-xl
     }
 
-    .array-text-light {
-      @apply  font-ibm text-base text-[#fff] font-[400] uppercase tracking-wide 
-    
+    .text-logo {
+      @apply text-zinc-50 text-[3.88rem] font-ibm font-[400] uppercase
     }
 
     .text-xsmall {
-      @apply font-inter text-zinc-400 text-lg font-[200] tracking-wide
+      @apply font-ibm text-zinc-400 text-lg font-[200] tracking-wide
     }
 
     .text-xxsmall {
-      @apply font-inter text-zinc-400 text-[1rem] font-[200] tracking-wide uppercase
-    }
-
-    .text-xsmall-dark {
-      @apply font-inter text-base font-[100]  tracking-wide
+      @apply font-ibm text-zinc-400 text-[1rem] font-[200] tracking-wider uppercase
     }
 
     .text-small {
-      @apply font-inter text-zinc-400 text-lg font-[300] uppercase tracking-wide
-    }
-    .text-inter {
-      @apply font-inter text-zinc-400 text-base font-[300] uppercase tracking-wider
+      @apply font-ibm text-zinc-400 text-lg font-[300]  tracking-wide
     }
 
-    .text-small-min {
-      @apply font-inter text-[1.2rem] font-[200] tracking-wide
+    .text-small-purple {
+      @apply font-ibm text-violet-600 text-lg font-[400]  tracking-wide
     }
-    .text-small-min-red {
-      @apply font-inter text-[1.2rem] font-[400] text-violet-600 tracking-wide
-    }
-    .text-xsmall-min {
-      @apply font-inter text-zinc-400 text-sm font-[200] tracking-wide
-    }
+    
 
-    .text-small-bright {
-      @apply font-inter text-zinc-50 text-lg font-[200] uppercase tracking-widest
-    }
-    .title-small {
-      @apply text-zinc-50 font-inter text-3xl font-[400] uppercase tracking-wider
-    }
     .title-xsmall {
-      @apply text-zinc-50 font-inter text-xl font-[400] uppercase tracking-wider
+      @apply text-zinc-50 font-ibm text-xl font-[200] uppercase tracking-wider
     }
 
+    .sm-title {
+      @apply manuka text-[3rem]  leading-[140px] uppercase 
+
+    }
+    .med-title {
+      @apply manuka text-[7rem]  leading-[140px] uppercase text-violet-500
+
+    }
+    .reg-title {
+      @apply manuka text-[9rem]  leading-[140px] uppercase text-violet-500
+
+    }
     .big-title {
-      @apply font-robotoCondensed text-[7.4rem] tracking-tighter 
+      @apply manuka text-[11.5rem] font-[500] leading-[155px] tracking-[3px] uppercase text-violet-500
+
+    }
+    .bigger-title {
+      @apply manuka text-[16rem]  uppercase text-violet-500
 
     }
 }

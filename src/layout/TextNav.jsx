@@ -14,75 +14,42 @@ const TextNav = () => {
     return (
         <section 
             className='w-full h-[60px] absolute top-0 z-20 flex justify-end mt-10 pr-12'>
-            <Cursor isActive={isActive} />
-            
-           
+            <Cursor isActive={isActive} />          
 
-            <div className="flex w-[24rem] ">
+            <div className="flex ">
                 <div className="flex w-full ">
 
-                    <div className='flex w-full h-12'>           
-                        <ul className='w-full flex justify-between items-center rounded-full border border-purple-300 px-8'>
-                            <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-zinc-50">
-                                <Link to='about'
-                                    className="relative inline-flex overflow-hidden font-syne text-xl">
-                                    <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                                        group-hover:skew-y-12">
-                                        Me
-                                    </div>
-                                    <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-purple-300 ">
-                                        Me
-                                    </div>
-                                </Link>                              
-                            </button>
-
-                            <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-zinc-50">
-                                <Link to='contact'
-                                    className="relative inline-flex overflow-hidden font-syne text-xl">
-                                    <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                                        group-hover:skew-y-12">
-                                        Say Hey
-                                    </div>
-                                    <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-purple-300 ">
-                                        Say Hey
-                                    </div>
-                                </Link>
-                            </button>
-
-                            <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                                className="group relative w-52 text-zinc-50">
-                                <a href='#'
-                                    className="relative inline-flex overflow-hidden font-syne text-xl">
-                                    <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                                        group-hover:skew-y-12">
-                                        CV
-                                    </div>
-                                    <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                                        group-hover:skew-y-0 text-purple-300 ">
-                                        CV
-                                    </div>
-                                </a>
-                            </button>
+                    <div className='flex w-[26rem] h-12'>       
+                        <ul className='w-full flex justify-between items-center rounded-full border 
+                        border-violet-500 px-12'>
+                            {['about', 'contacts', 'resume'].map((item, index) => (
+                                <li key={index}>               
+                                    <button onMouseOver={() => { setIsActive(true) }}
+                                        onMouseLeave={() => { setIsActive(false) }}
+                                        className="group relative capitalize">
+                                    
+                                        <Link to={`/${item}`}
+                                            className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
+                                            <div className="translate-y-0 skew-y-0 transition duration-500 
+                                            group-hover:-translate-y-[110%] 
+                                                group-hover:skew-y-12">
+                                                {item}
+                                            </div>
+                                            <div className="absolute translate-y-[110%] skew-y-12 transition 
+                                            duration-500 group-hover:translate-y-0 
+                                                group-hover:skew-y-0 text-violet-400">
+                                                {item}
+                                            </div>
+                                        </Link>                              
+                                    </button>
+                                </li>
+                            ))}                           
                         </ul>
                     </div>
-
                 </div>  
-            </div>
-
-            {/* <div className="flex flex-col text-3xl fontTitle text-zinc-500">
-                    <div className="flex">
-                        <AiOutlineCopyright className='text-3xl mt-[2px]'/>
-                        {date.getFullYear()} 
-                    </div>                   
-                </div> */}
-            
-           
+            </div>      
         </section>
     )
 }
 
-export default TextNav
+export default TextNav;

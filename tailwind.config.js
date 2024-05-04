@@ -148,7 +148,8 @@ export default {
         allura: ["Allura", ' cursive'],
         playfair: ["Playfair Display", 'serif'],
         inspiration: ["Inspiration", 'cursive'],
-        robotoCondensed: ["Roboto Condensed", 'sans-serif']
+        robotoCondensed: ["Roboto Condensed", 'sans-serif'],
+        bitmap: ['BitxMap Font tfb', 'monospace']
       },
 
       gridTemplateColumns: {

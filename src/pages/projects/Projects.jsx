@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Cursor from '../../components/ui/Cursor';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import SectionBar from '../../layout/SectionBar';
-import { AiOutlineCopyrightCircle } from 'react-icons/ai';
-
-
 
 
 const Projects = () => {
@@ -25,18 +22,25 @@ const Projects = () => {
 
                 <div className="flex flex-col relative">
 
-                    <span className='text-left text-title text-violet-600' >
-                        <TextShimmerEffect text="cool stuff i've done" />
+                    <span className='text-left med-title ' >
+                        <TextShimmerEffect text="A Glimpse into my projects" />
                     </span>
-                    <p className='w-[54%] text-small-min-red indent-48 absolute -right-16 top-24'>
-                        A selection of my favorite projects  —
-                        each is crafted to be responsive and optimized for peak performance and user engagement.
-                        Leveraging  technologies like SCSS, JavaScript, ReactJS, NextJS, and REST APIs, all deployed on AWS.
-                        These projects showcase my commitment to modern web standards and efficiency. 
+                    <div className='w-3 h-3 bg-violet-500 absolute top-[10.6rem] right-[34rem]'></div>
+                    <p className='w-[54%] text-small-purple indent-8 absolute -right-16 top-40'>
+
+                        Each crafted for optimal performance and user engagement using technologies like
+                        SCSS, JavaScript, ReactJS, NextJS, and REST APIs, hosted on AWS and Vercel.<br/>
+                        My focus on design fidelity and technical precision ensures each project is visually appealing
+                        and functionally robust.
                     </p>
                 </div>
             
             </article>
+
+            <div className="up-button"
+            >
+                up
+            </div>    
         </section>
     );
 }
