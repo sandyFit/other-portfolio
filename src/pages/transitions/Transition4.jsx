@@ -31,12 +31,14 @@ const Transition4 = () => {
 
     return (
        <section ref={sectionRef} id="t3" className='w-full min-h-screen flex justify-center items-center relative'>
-            <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 transition-transform">
+            <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center transition-transform">
                 <div ref={textRef}
                     className='text-[10rem] flex flex-col'>                    
                     <h1 className='flex flex-col text-center bigger-title'>                       
-                        preferred tools
+                        my journey
                     </h1>
+                    <hr className='w-full border-[1px] border-zinc-500 mt-[-3rem]' />
+                    <p className='med-title text-center'>from pixels to code</p>
 
                 </div>
                 

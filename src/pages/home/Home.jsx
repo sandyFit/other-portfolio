@@ -10,6 +10,7 @@ import Transition3 from '../transitions/Transition3';
 import Transition5 from '../transitions/Transition5';
 import Transition4 from '../transitions/Transition4';
 import Lenis from '@studio-freight/lenis';
+import Test2 from './Test2';
 
 const Home = () => {
 
@@ -83,22 +84,25 @@ const Home = () => {
             <section id='home' className=''>
                 <Test />
             </section>
+            <section id='subject' className=''>
+                <Test2 />
+            </section>
             <section id='t3' className='section'>
                 <Transition3 />
             </section>
             <section id='projects' className=''>
                 <Projects />
             </section>
-            <section id='about' className=''>
-                <About />
-            </section>
             {/* <section id='t' className='section'>
                 <Transition4 />
+            </section>
+            <section id='about' className=''>
+                <About />
             </section> */}
-            <section id='t5' className='section'>
+            <section id='t5' className='section relative'>
                 <Transition5 />
             </section>
-            <section id='contact' className='section relative'>
+            <section id='contact' className='relative'>
                 <Contact/>
             </section>
         </div>

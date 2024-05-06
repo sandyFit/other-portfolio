@@ -13,8 +13,8 @@ const TextNav = () => {
             <Cursor isActive={isActive} />          
             <div className="flex ">
                 <div className="flex w-full ">
-                    <div className='flex w-[26rem] h-12'>       
-                        <ul className='w-full flex justify-between items-center rounded-full border 
+                    <div className='flex w-[25rem] h-12'>       
+                        <ul className='w-full flex justify-between items-center rounded border 
                         border-violet-500 px-12'>
                             {['about', 'contacts', 'resume'].map((item, index) => (
                                 <li key={index}>               

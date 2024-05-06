@@ -1,129 +1,97 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { HiArrowDownLeft} from "react-icons/hi2";
-import Cursor from '../../components/ui/Cursor';
-import { Link } from 'react-scroll';
+import React, { useState, useEffect } from 'react'
+import TextShimmerEffect from '../../components/featured/TextShimmerEffect'
 import gsap from 'gsap';
-import { BsAsterisk } from 'react-icons/bs';
-import TextShimmerHero from '../../components/featured/TextShimmerHero';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import Transition from '../transitions/Transition';
-import Transition2 from '../transitions/Transition2';
-import { AiOutlineCopyrightCircle } from 'react-icons/ai';
+import SectionBar from '../../layout/SectionBar';
 
-const Test = () => {
-    const [isActive, setIsActive] = useState(false);
-    const frontendRef = useRef(null);
-    const developerRef = useRef(null);
-    const date = new Date();
-
-    // useEffect(() => {
-        
-    //     if (typeof window !== "undefined" && !gsap.globalTimeline) {
-    //         gsap.registerPlugin(ScrollTrigger);
-    //     }
-
-        
-    //     gsap.fromTo(frontendRef.current, { x: '-100%', opacity: 0 }, 
-    //     { x: '0%', opacity: 1, duration: 1,  delay: .8, ease: "power3.out" });
-    //     gsap.fromTo(developerRef.current, { x: '100%', opacity: 0 }, 
-    //     { x: '0%', opacity: 1, duration: 1, delay: .8,  ease: "power3.out" });
-
-        
-    //     const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
-    //     tl.fromTo('.small-title', { opacity: 0 }, { opacity: 1, delay: 2, stagger: 0.8 });
-    // }, []);
-    
+const Test2 = () => {
 
     useEffect(() => {
         const tl = gsap.timeline({
-            defaults: {
-                ease: "power3.out",
-                duration: 1, // slightly faster
-                delay: 3
-            }
+            repeat: -1, // Infinite loop
+            defaults: { ease: "none" },
         });
 
-            tl.fromTo('.small-title',
-                { opacity: 0 },
-                {opacity: 1, stagger: 0.5}
-            
-        )
+        // Ensure you calculate the actual width of the content to scroll correctly
+        const slideContainer = document.querySelector('.slide-container');
+        const slideWidth = slideContainer.scrollWidth / 2; // Divide by 2 because we have duplicated content
 
-        return () => tl.kill();
+        tl.to('.slide-container', {
+            x: -slideWidth, // Move by the width of one set of content
+            duration: 300, // Control the speed of the scroll
+            ease: "linear",
+        });
     }, []);
-    
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        const tl = gsap.timeline();
-
-        tl.to('.overlay-first', { duration: 1.2, left: '-100%', ease: "power3.inOut" })
-          .to('.overlay-second', { duration: 1.2, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
-    }, []);
-
-
 
 
     return (
-        <section id="index"
-            className='w-full min-h-screen flex justify-center flex-col items-center bg-zinc-900 relative'>
-            <Transition />
-            <Transition2/>
-            <Cursor isActive={isActive} />
-            <article className="w-[99%] h-full flex flex-col justify-center items-center text-zinc-50 uppercase pt-52 
-                leading-[140px] tracking-tighter relative text-start text-[8rem] fontTitle font-[500]">
-                {/* <span className='text-small text-base text-right absolute  top-[17.5rem] right-[17rem]'>
-                    folio <br/> / V.1.0
-                </span>    */}
-                <div className="flex flex-col justify-center items-center font-robotoCondensed leading-[120px] text-zinc-50 z-20">
-                    <div className="flex">
-                        <span className='ml-48'>
-                            <TextShimmerHero text={'crtve developer'}/>
-                        </span>
-                        {/* <span className='text-petal-200 ml-6'>developer</span> */}
-                    </div>
-                    <div className="flex ml-[16.8rem]">
-                        <span><TextShimmerHero text={'based'}/> </span>
-                        <span className='italic lowercase ml-6 mr-4 text-petal-200'>
-                            <TextShimmerHero text={'in'}/>
-                        </span>
-                        <span>
-                             <TextShimmerHero text={'colombia,'}/>
-                        </span>
-                    </div>
+        <section id="about"
+            className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative about-content'>
+            <div className="text-zinc-50" >
+                <SectionBar section={"About me"} />
+            </div>
 
-                    <div className="flex absolute left-[11rem] bottom-64">
-                        <button class="group relative rounded-full border border-neutral-200 bg-transparent px-4 
-                        text-zinc-50 text-2xl w-[12.8rem] h-[12.8rem]"> SAY HI
+            <div className="flex flex-col  items-center ">                        
+
+
+                <div className="flex flex-col items-center mt-56">
+                    <div className='title-h2'>
+                        <TextShimmerEffect text={"I'm a Colombian graphic designer "}/>
+                        <TextShimmerEffect text={"who turned frontend developer,"}/>
+                        <TextShimmerEffect text={"keenly focused on balancing code"}/>
+                        <TextShimmerEffect text={"functionality & visual aesthetics."}/>
+
+                    </div>
+                    <div className="flex mt-40 gap-32">
+
+                        <div className="flex gap-12 ml-32 ">
+                            <img src="/me-bn.png" alt="" style={{ width: '400px', height: '420px' }} />
                             
-                            
-                        </button>
-                    </div>
+                        </div>
 
-                     
+                        <div className='text-medium w-[44%] space-y-10 mr-40' >
+                            In my journey as a self-taught frontend developer specializing in the React ecosystem, I'm
+                            passionate about designing smooth animations, crafting engaging transitions, and resolving
+                            complex layouts.
+                            <br /><br />
+                            I aim for a holistic approach, dedicated to preserving the original design's integrity while
+                            navigating the inherent constraints and challenges of web development.
+                            <br /><br />
+                            Off duty, I delve into kinetic typography, motion graphics, and generative design. Offline,
+                            I'm often doodling, baking yum yums or pumping iron at the gym. 
+                            <br /><br />
+                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
+                            challenge my coding and design skills.
+                            <br />
+                            For inquiries or opportunities, please contact me at 
+                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                           
+                        </div>
+                    
+                    </div>
+                </div>                
+            </div>
 
-                    <div className="flex">
-                        <span>
-                             <TextShimmerHero text={'especializing'}/>
-                        </span>
-                        <span className='italic lowercase ml-6 mr-3 text-petal-200'>
-                             <TextShimmerHero text={'in'}/>
-                        </span>
-                        <span>
-                             <TextShimmerHero text={'the'}/>
-                        </span>
-                        <span className='italic lowercase ml-6  text-petal-200'>
-                             <TextShimmerHero text={'art'}/>
-                        </span>
-                    </div>
-                    <div className="flex ">
-                        <span className='italic lowercase mr-8 text-petal-200'>of</span>
-                        <span> <TextShimmerHero text={'frontend wizandry'}/></span> 
-                    </div>
-                </div>
-                
-            </article>
+            <div className="flex w-[92%] h-60 bg-purple-200 rounded-[10px] mx-12 mt-28 flex-col items-center 
+                overflow-hidden">
+                <h4 className='text-xxsmall-black mt-6'>My toolkit includes:</h4>
+                <div className="slide-container flex items-center" style={{ width: '200%' }}>
+                    {/* Repeat the list twice for seamless looping */}
+                    {[...Array(3)].map((_, index) => (
+                        <div key={index} className="slide flex items-center justify-start h-20 bg-violet-500 mt-10">
+                            <p className='title-small uppercase rounded text-zinc-50'>
+                                html &nbsp; &nbsp; | &nbsp; &nbsp; scss &nbsp; &nbsp; | &nbsp; &nbsp; javascript &nbsp; &nbsp;
+                                | &nbsp; &nbsp; React &nbsp; &nbsp; | &nbsp; &nbsp; Node js &nbsp; &nbsp;
+                                | &nbsp; &nbsp; webgl &nbsp; &nbsp; | &nbsp; &nbsp; next js &nbsp; &nbsp;
+                                | &nbsp; &nbsp; gsap &nbsp; &nbsp; | &nbsp; &nbsp; Typescript &nbsp; &nbsp;
+                                | &nbsp; &nbsp; Figma &nbsp; &nbsp; | &nbsp; &nbsp; after effects &nbsp; &nbsp;
+                                | &nbsp; &nbsp; prismic cms &nbsp; &nbsp; | &nbsp; &nbsp; aws &nbsp; &nbsp;
+                                | &nbsp; &nbsp; storybook &nbsp; &nbsp; |
+                            </p>                                                   
+                        </div>
+                    ))}
+                </div>                
+            </div>
         </section>
     )
 }
 
-export default Test;
+export default Test2;

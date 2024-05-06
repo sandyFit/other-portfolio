@@ -23,9 +23,9 @@ const Footer = () => {
                         <TimeZone/>
                     </div>
 
-                    <p className='text-small uppercase w-full inline-flex '>
+                    <p className='text-xsmall uppercase tracking-wider w-full inline-flex ml-2'>
                         made in colombia with 
-                        <BsHeart className='ml-4 mt-2 text-base text-violet-400'/>
+                        <BsHeart className='ml-2 mt-1 text-base text-violet-400'/>
                         
                     </p>                   
                 </div>

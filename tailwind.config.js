@@ -149,7 +149,8 @@ export default {
         playfair: ["Playfair Display", 'serif'],
         inspiration: ["Inspiration", 'cursive'],
         robotoCondensed: ["Roboto Condensed", 'sans-serif'],
-        bitmap: ['BitxMap Font tfb', 'monospace']
+        bitmap: ['BitxMap Font tfb', 'monospace'],
+        roboto: ["Roboto", 'sans-serif']
       },
 
       gridTemplateColumns: {

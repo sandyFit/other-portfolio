@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HiArrowDownRight } from "react-icons/hi2";
+import { HiArrowDown, HiArrowDownRight } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
@@ -43,23 +43,23 @@ const Test = () => {
           .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
     }, []);
 
-     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    //  useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#index",
-                start: "top top", // Triggering as soon as it enters the top of the viewport
-                end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
-                scrub: true, // Smooth scrubbing
-                toggleActions: 'play none none reverse', // Reverse when scrolling back up
-            }
-        });
+    //     const heroTimeline = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: "#index",
+    //             start: "top top", // Triggering as soon as it enters the top of the viewport
+    //             end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+    //             scrub: true, // Smooth scrubbing
+    //             toggleActions: 'play none none reverse', // Reverse when scrolling back up
+    //         }
+    //     });
 
-        // Fade out the Hero content
-        heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
+    //     // Fade out the Hero content
+    //     heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
 
-    }, []);
+    // }, []);
 
 
     return (
@@ -73,61 +73,65 @@ const Test = () => {
                     <div className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>
                     </div>
-                    <div className='w-3 h-3 bg-violet-500 absolute bottom-16 left-0'></div>
-                     <p className='w-[29%] font-[100] text-small indent-8 mt-[-.5rem] '>
-                        Colombia-based frontend developer. Currently seeking 
-                        opportunities where I can innovate & collaborate.
-                    </p>
-
+                    <div className='w-3 h-3 bg-violet-500 absolute bottom-[3.4rem] left-0'></div> 
+                        <p className='w-[27.1%] font-[100] indent-7 text-xsmall mt-[-.5rem] uppercase'>
+                            Frontend developer with a designer's eye. currently seeking 
+                            opportunities where I can innovate & collaborate.
+                        </p>
                 </div>
+                 <button className='text-[2rem] text-violet-500 absolute right-10 top-28'>
+                        <HiArrowDown/>
+                    </button>
 
                 <div className="flex mt-6">
-                    <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                        className="group relative h-12 rounded-full border border-violet-500 bg-transparent px-12">
+                    <button onMouseOver={() => { setIsActive(true) }}
+                        onMouseLeave={() => { setIsActive(false) }}
+                        className="group relative capitalize px-11 border-[1px] rounded border-violet-500 h-12">
+                    
                         <Link to='projects'
                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
-                            <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                                group-hover:skew-y-10">
-                                Work
+                            <div className="translate-y-0 skew-y-0 transition duration-500 
+                            group-hover:-translate-y-[110%] group-hover:skew-y-6">
+                                see my work
                             </div>
-                            <div className="absolute translate-y-[110%] skew-y-10 transition duration-500 group-hover:translate-y-0 
-                                group-hover:skew-y-0 text-violet-400 ">
-                                Work
+                            <div className="absolute translate-y-[110%] skew-y-6 transition 
+                            duration-500 group-hover:translate-y-0 
+                                group-hover:skew-y-0 text-violet-400">
+                                see my work
                             </div>
-                        </Link>
+                        </Link>                              
                     </button>               
                 </div>                          
             </div>
 
-            <article className="w-full flex flex-col justify-end items-end relative">
-                <div className="w-[90%] flex flex-col justify-end items-end pr-12 pt-24">                      
-                     <div className="w-[11%] absolute bottom-[21.4rem] right-12 text-xxsmall">
-                        <span className='flex pl-2 leading-[24px] small-title'>
-                            portfolio  2024
+            <article className="w-full flex flex-col justify-center items-center relative">
+                <div className="w-full flex flex-col justify-center items-center relative pt-10">                      
+                     <div className="w-[7%] absolute bottom-[26.5rem] right-16 text-small uppercase">
+                        <span className='flex pl-2 leading-[24px] '>
+                            portfolio  <br/>/ &nbsp; &nbsp; &nbsp;©2024
                         </span>
                     </div>
 
                     
 
-                    <div className="flex">                        
+                    <div className="flex justify-center">                        
 
-                        <span className='big-title '>
+                        <span className='xl-title ml-4'>
                             <TextShimmerHero text={'frontend developer'}/>
                         </span>
+                        
 
                     </div>
 
                        
-                    <div className="w-[94%] flex mr-12">
+                    {/* <div className="w-full flex mr-24">
                         <span className='big-title '>
                             <TextShimmerHero text={"with a designer's eye"}/>
                         </span>                                                           
                                                        
-                    </div>
+                    </div> */}
 
-                    <button className='text-[8rem] text-violet-500 absolute right-10 -bottom-3'>
-                        <HiArrowDownRight />
-                    </button>
+                   
                </div>
                                    
             </article> 

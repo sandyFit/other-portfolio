@@ -1,47 +1,36 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsInfinity } from "react-icons/bs";
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Transition5 = () => {
-    const sectionRef = useRef(null);
+    const [slides, setSlides] = useState([1, 2]); // State to handle slides
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline({
+            repeat: -1, // Infinite loop
+            defaults: { ease: "none" },
+        });
 
-        const element = sectionRef.current;
-        if (!element) return;
-
-        // Ensure the container is fully loaded
-        const slides = gsap.utils.toArray('.slide', element);
-        if (slides.length < 1) return;
-
-        // Clone and append for continuous effect
-        element.firstChild.appendChild(slides[0].cloneNode(true));
-
-        gsap.to('.slide-container', {
-            xPercent: -40,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: element,
-                pin: true,
-                scrub: 1,
-                end: () => `+=${element.offsetWidth}`
-            }
+        tl.to('.slide-container', {
+            xPercent: -50, // Move by 50% of the container width
+            duration: 10, // Duration of the loop in seconds
+            ease: "linear",
         });
     }, []);
 
     return (
-        <section ref={sectionRef} id="t5" className='flex justify-start w-full min-h-screen overflow-hidden
+        <section id="t5" className='flex justify-start w-full min-h-screen overflow-hidden
             relative bg-zinc-950'>
-            <div className="slide-container flex justify-start pb-[30rem]">
-                <div className="slide flex w-full bg-violet-500 py-6 justify-start">
-                    <p className='big-title2 text-zinc-50 mr-6'>design + technology =</p>
-                    <div className="flex text-[8rem] w-60 h-60 bg-zinc-50 rounded-[50px] justify-center items-center">
-                        <BsInfinity />
+            <div className="slide-container flex items-start mt-28 ml-12">
+                {slides.map((slide, index) => (
+                    <div key={index} className="slide flex w-full bg-violet-500 h-80 items-center">
+                        <p className='big-title2 text-zinc-50 mr-6'>design + technology =</p>
+                        <div className="flex text-[8rem] w-60 h-60 bg-zinc-50 rounded-[50px] text-violet-500
+                            justify-center items-center">
+                            <BsInfinity />
+                        </div>
                     </div>
-                </div>
-                {/* Clone of the first slide is appended in useEffect */}
+                ))}
             </div>
         </section>
     );

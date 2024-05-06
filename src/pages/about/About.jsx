@@ -77,8 +77,9 @@ const About = () => {
             <div className=" flex justify-center relative pt-32 mx-24">
                 <div className="flex flex-col">
                     
-                    <span className='reg-title ' >
-                        <TextShimmerEffect text="from Pixels to code" />
+                    <span className='text-about w-[60%]' >
+                        I'm a Colombian graphic designer who turned my enthusiasm for all things digital 
+                        into a love affair with web development.
                     </span>
 
                     <div className="flex justify-between gap-10 mt-10">
@@ -93,9 +94,9 @@ const About = () => {
                                 I'm a Colombian graphic designer who turned my enthusiasm for all things digital 
                                 into a love affair with web development.
                                 <br /><br />
-                                In my journey as a self-taught frontend developer especializing in the React ecosystem, my
+                                {/* In my journey as a self-taught frontend developer especializing in the React ecosystem, my
                                 approach involves a careful balance between code functionality and visual aesthetics,
-                                striving to respect the vision behind each design.
+                                striving to respect the vision behind each design. */}
                                 {/* <br /><br />
                                 My commitment? to preserve the integrity of the original design while embracing the inherent 
                                 technical challenges that come with web development. */}

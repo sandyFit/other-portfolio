@@ -31,7 +31,7 @@ const Transition3 = () => {
 
     return (
         <section id='t3'>          
-            <div ref={sectionRef} className='w-full min-h-screen flex justify-center items-center relative'>
+            <div ref={sectionRef} className='w-full min-h-screen flex justify-center items-center  relative'>
                 <div className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 
                     transition-transform">
                     <div ref={textRef}

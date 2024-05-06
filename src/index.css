@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Inspiration&family=Marck+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url(https://db.onlinewebfonts.com/c/851549fa2e5800ed4a219a044111a1f4?family=BitxMap+Font+tfb);
 
 @tailwind base;
@@ -146,6 +146,13 @@
           font-style: normal;
 }
 
+@font-face {
+    font-family: 'Outward';
+    src: url('./assets/fonts/outward-block-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 .title-font {
   font-family: 'doumbar';
@@ -166,6 +173,10 @@
 
 .manuka-condensed {
   font-family: 'manuka-condensed';
+}
+
+.outward {
+  font-family: 'Outward';
 }
 
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
@@ -436,7 +447,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-ibm
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-roboto
       }
 
     a {
@@ -471,32 +482,46 @@
     }
 
     .text-buttons {
-      @apply font-ibm text-xl
+      @apply font-roboto text-xl
     }
 
     .text-logo {
-      @apply text-zinc-50 text-[3.88rem] font-ibm font-[400] uppercase
+      @apply text-zinc-50 text-[3.6rem] font-roboto font-[400] tracking-wide uppercase
     }
 
-    .text-xsmall {
-      @apply font-ibm text-zinc-400 text-lg font-[200] tracking-wide
-    }
-
-    .text-xxsmall {
-      @apply font-ibm text-zinc-400 text-[1rem] font-[200] tracking-wider uppercase
+    .text-medium {
+      @apply text-zinc-400 text-[1.3rem] font-roboto font-[300]  leading-[30px]
     }
 
     .text-small {
-      @apply font-ibm text-zinc-400 text-lg font-[300]  tracking-wide
+      @apply font-roboto text-zinc-400 text-[1.2rem] font-[300]  tracking-wide
     }
 
+    .text-xsmall {
+      @apply font-roboto text-zinc-400 text-[1rem] font-[300] 
+    }
+
+    .text-xxsmall {
+      @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider uppercase
+    }
+
+    .text-xxsmall-black {
+      @apply font-roboto text-zinc-950 text-[.8rem] font-[400] tracking-wider uppercase
+    }
+
+    
+
     .text-small-purple {
-      @apply font-ibm text-violet-600 text-lg font-[400]  tracking-wide
+      @apply font-roboto text-violet-600 text-lg font-[400]  tracking-wide
     }
     
 
+    .title-h2{
+      @apply text-zinc-50 font-roboto text-6xl font-[400] uppercase tracking-wider
+    }
+
     .title-xsmall {
-      @apply text-zinc-50 font-ibm text-xl font-[200] uppercase tracking-wider
+      @apply text-zinc-50 font-roboto text-[1.2rem] font-[300] uppercase tracking-wider
     }
 
     .sm-title {
@@ -512,7 +537,7 @@
 
     }
     .big-title {
-      @apply manuka text-[13rem] font-[500] leading-[170px] tracking-[3px] uppercase text-violet-500
+      @apply font-robotoCondensed text-[9.8rem] font-[400] leading-[130px] tracking-[-11px] uppercase text-zinc-50
 
     }
     .big-title2 {
@@ -520,7 +545,11 @@
 
     }
     .bigger-title {
-      @apply manuka text-[16rem]  uppercase text-violet-500
+      @apply  manuka-condensed text-[18rem]  uppercase text-violet-500 tracking-wide leading-[300px]
+
+    }
+    .xl-title {
+      @apply manuka-condensed text-[23.1rem]  uppercase text-violet-500 font-[500] 
 
     }
 }

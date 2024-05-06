@@ -28,9 +28,9 @@ const Projects = () => {
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-purple-200 flex relative'>
+            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px]'>
 
-            <div className="font-[500] text-violet-600">
+            <div className="font-[500] text-violet-600 pt-16">
                 <SectionBar section={'gallery'}/>      
             </div>
             
@@ -40,7 +40,7 @@ const Projects = () => {
                 <div className="flex flex-col relative">
 
                     <span className='text-left reg-title'>
-                        <TextShimmerEffect text="A Glimpse into my projects" />
+                        A Glimpse into my projects
                     </span>
 
                     <div className="flex justify-between gap-10 mt-10">

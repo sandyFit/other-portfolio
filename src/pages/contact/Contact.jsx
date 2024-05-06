@@ -51,7 +51,7 @@ const Contact = () => {
 
                 <div className=" w-[86%] grid grid-cols-3 align-content-center space ml-52 relative">
                     <div className="w-[32rem] flex text-small text-zinc-300 justify-center items-center">
-                        <div className='w-3 h-3 bg-violet-500 absolute bottom-[15.4rem] left-0'></div>
+                        <div className='w-3 h-3 bg-violet-500 absolute bottom-[14.68rem] left-0'></div>
                         <span className='w-full mb-16 tracking-wide indent-8'>
                             
                             Whether you're looking for someone to join your team full-time or just need an extra
@@ -75,7 +75,7 @@ const Contact = () => {
 
                     <div className="flex flex-col gap-9 ml-56 mt-10">
                         <div className="flex flex-col justify-start items-start title-xsmall">
-                            <TextShimmerEffect text='EMAIL'/>
+                            EMAIL
                             <button onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className=''
                                 onClick={handleCopiedText}>
@@ -95,9 +95,9 @@ const Contact = () => {
                         </div>
 
                         <div className="flex flex-col title-xsmall">
-                            <TextShimmerEffect text='Socials'/>
+                            Socials
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                className='text-xxsmall space-y-1'>
+                                className='text-xsmall space-y-1'>
                                 {['linkedin', 'github', 'instagram', 'behance'].map((item, index) => (
                                     <li  key={index}>
                                         <a href='#' 
@@ -120,11 +120,11 @@ const Contact = () => {
                     </div>
                     <div className="w-[40%] flex flex-col title-xsmall mt-9 ml-24 gap-9">
                         <div className="flex flex-col boder">
-                            <TextShimmerEffect text='LINKS'/>
+                            LINKS
                             <div className='flex w-full '>           
                                 <ul className='w-full flex flex-col justify-between items-start bg-transparent gap-1'>
                                     {['index', 'projects', 'about', ].map((item, index) => (
-                                        <li className='text-xxsmall hover:text-violet-400
+                                        <li className='text-xsmall hover:text-violet-400
                                             uppercase tracking-wide' key={index}
                                             onMouseOver={() => { setIsActive(true) }} 
                                             onMouseLeave={() => { setIsActive(false) }}>
@@ -145,10 +145,10 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col mb-20 title-xsmall">
-                            <TextShimmerEffect text='RESOURCES'/>
+                        <div className="flex flex-col mb-24 title-xsmall">
+                            RESOURCES
                             <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                className='text-xxsmall space-y-1'>
+                                className='text-xsmall space-y-1'>
                                 {['My resume', 'website-info'].map((item, index) => (
                                     <li key={index}> {/* Move the key prop here for correct usage */}
                                         <a href='#' 
