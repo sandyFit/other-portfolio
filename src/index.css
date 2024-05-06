@@ -441,6 +441,18 @@
     align-items: center;
 }
 
+.polygon-corners {
+
+    clip-path: polygon(3.4% 0, 96.6% 0, 100% 3.4%, 100% 96.6%, 96.6% 100%, 3.4% 100%, 0 96.6%, 0 3.4%);
+}
+
+.toolkit-box-corners {
+  clip-path: polygon(2% 0, 98% 0,  /* Top edge */
+        100% 2%, 100% 98%, /* Right edge */
+        98% 100%, 2% 100%, /* Bottom edge */
+        0 98%, 0 2% /* Left edge */);
+}
+
 
 
 
@@ -504,6 +516,9 @@
     .text-xxsmall {
       @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider uppercase
     }
+    .text-xxsmall-min {
+      @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider
+    }
 
     .text-xxsmall-black {
       @apply font-roboto text-zinc-950 text-[.8rem] font-[400] tracking-wider uppercase
@@ -549,7 +564,7 @@
 
     }
     .xl-title {
-      @apply manuka-condensed text-[23.1rem]  uppercase text-violet-500 font-[500] 
+      @apply manuka-condensed text-[22.8rem]  uppercase text-violet-500 font-[500] 
 
     }
 }

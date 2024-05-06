@@ -17,7 +17,7 @@ const Test2 = () => {
 
         tl.to('.slide-container', {
             x: -slideWidth, // Move by the width of one set of content
-            duration: 300, // Control the speed of the scroll
+            duration: 60, // Control the speed of the scroll
             ease: "linear",
         });
     }, []);
@@ -30,25 +30,26 @@ const Test2 = () => {
                 <SectionBar section={"About me"} />
             </div>
 
-            <div className="flex flex-col  items-center ">                        
+            <div className="flex flex-col  items-start mx-16">                        
 
-
-                <div className="flex flex-col items-center mt-56">
-                    <div className='title-h2'>
-                        <TextShimmerEffect text={"I'm a Colombian graphic designer "}/>
-                        <TextShimmerEffect text={"who turned frontend developer,"}/>
-                        <TextShimmerEffect text={"keenly focused on balancing code"}/>
-                        <TextShimmerEffect text={"functionality & visual aesthetics."}/>
-
-                    </div>
-                    <div className="flex mt-40 gap-32">
-
-                        <div className="flex gap-12 ml-32 ">
-                            <img src="/me-bn.png" alt="" style={{ width: '400px', height: '420px' }} />
-                            
+                <div className="flex flex-col items-start mt-48">
+                    <div className="flex justify-between ">
+                        <div className='title-h2'>
+                            <TextShimmerEffect text={"⋙ I'm a graphic designer"}/>
+                            <TextShimmerEffect text={"who turned frontend"}/>
+                            <TextShimmerEffect text={"developer. ∎ keenly"}/>
+                            <TextShimmerEffect text={"focused on balancing"}/>
+                            <TextShimmerEffect text={"code functionality &"}/>
+                            <TextShimmerEffect text={"visual aesthetics."}/>
                         </div>
 
-                        <div className='text-medium w-[44%] space-y-10 mr-40' >
+                        {/* <div className="flex flex-col ml-24">
+                            <img src="/me-bn.png" alt="" style={{ width: '330px', height: '360px' }} />                           
+                        </div> */}
+                    </div>
+                    <div className="flex gap-32 justify-end mt-24">
+
+                        <div className='text-xsmall w-[55%] columns-2 gap-[2em]' >
                             In my journey as a self-taught frontend developer specializing in the React ecosystem, I'm
                             passionate about designing smooth animations, crafting engaging transitions, and resolving
                             complex layouts.
@@ -56,21 +57,22 @@ const Test2 = () => {
                             I aim for a holistic approach, dedicated to preserving the original design's integrity while
                             navigating the inherent constraints and challenges of web development.
                             <br /><br />
-                            Off duty, I delve into kinetic typography, motion graphics, and generative design. Offline,
-                            I'm often doodling, baking yum yums or pumping iron at the gym. 
-                            <br /><br />
-                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations that
-                            challenge my coding and design skills.
+                            Off duty,  I delve into kinetic typography, motion graphics, and generative design.
                             <br />
+                            Offline, I'm often doodling, baking yum yums or pumping iron at the gym.
+                            <br /><br />
+                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations.
+                            <br /><br />
                             For inquiries or opportunities, please contact me at 
-                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                           
+                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.
+                                                  
                         </div>
                     
                     </div>
                 </div>                
             </div>
 
-            <div className="flex w-[92%] h-60 bg-purple-200 rounded-[10px] mx-12 mt-28 flex-col items-center 
+            <div className="flex w-[92%] h-60 bg-purple-200 rounded-[5px] mx-16 mt-28 flex-col items-center 
                 overflow-hidden">
                 <h4 className='text-xxsmall-black mt-6'>My toolkit includes:</h4>
                 <div className="slide-container flex items-center" style={{ width: '200%' }}>

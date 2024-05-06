@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Cursor from '../../components/ui/Cursor';
-import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import SectionBar from '../../layout/SectionBar';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 const Projects = () => {
 
@@ -28,14 +26,14 @@ const Projects = () => {
 
     return (
         <section id="projects"
-            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px]'>
+            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px] polygon-corners'>
 
             <div className="font-[500] text-violet-600 pt-16">
                 <SectionBar section={'gallery'}/>      
             </div>
             
             <Cursor isActive={isActive} />
-            <article className="flex justify-center relative pt-32 mx-24">
+            <article className="flex justify-center relative pt-32 ">
 
                 <div className="flex flex-col relative">
 

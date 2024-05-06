@@ -43,6 +43,9 @@ const Test = () => {
           .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
     }, []);
 
+    
+
+
     //  useEffect(() => {
     //     gsap.registerPlugin(ScrollTrigger);
 
@@ -114,13 +117,10 @@ const Test = () => {
 
                     
 
-                    <div className="flex justify-center">                        
-
-                        <span className='xl-title ml-4'>
+                    <div className="flex justify-center">                                            
+                        <span className='xl-title '>
                             <TextShimmerHero text={'frontend developer'}/>
-                        </span>
-                        
-
+                        </span>                       
                     </div>
 
                        

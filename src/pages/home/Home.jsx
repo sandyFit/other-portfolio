@@ -1,16 +1,14 @@
+
+
 import React, { useEffect } from 'react';
-import Hero from './Hero';
 import Test from './Test';
+import Test2 from './Test2';
+import Transition3 from '../transitions/Transition3';
+import Projects from '../projects/Projects';
 import Contact from '../contact/Contact';
-import Projects from '../projects/Projects'
-import About from '../about/About';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Transition3 from '../transitions/Transition3';
-import Transition5 from '../transitions/Transition5';
-import Transition4 from '../transitions/Transition4';
 import Lenis from '@studio-freight/lenis';
-import Test2 from './Test2';
 
 const Home = () => {
 
@@ -79,6 +77,8 @@ const Home = () => {
         };
     }, []);
 
+
+
     return (
         <div>
             <section id='home' className=''>
@@ -90,18 +90,10 @@ const Home = () => {
             <section id='t3' className='section'>
                 <Transition3 />
             </section>
-            <section id='projects' className=''>
+            <section id='projects' >
                 <Projects />
             </section>
-            {/* <section id='t' className='section'>
-                <Transition4 />
-            </section>
-            <section id='about' className=''>
-                <About />
-            </section> */}
-            <section id='t5' className='section relative'>
-                <Transition5 />
-            </section>
+
             <section id='contact' className='relative'>
                 <Contact/>
             </section>
