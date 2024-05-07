@@ -12,6 +12,7 @@ const TextNav = () => {
             className='w-full h-[60px] absolute top-0 z-20 flex justify-end mt-10 pr-12'>
             <Cursor isActive={isActive} />          
             <div className="flex ">
+               
                 <div className="flex w-full ">
                     <div className='flex w-[25rem] h-12'>       
                         <ul className='w-full flex justify-between items-center rounded border 
@@ -20,8 +21,8 @@ const TextNav = () => {
                                 <li key={index}>               
                                     <button onMouseOver={() => { setIsActive(true) }}
                                         onMouseLeave={() => { setIsActive(false) }}
-                                        className="group relative capitalize">
-                                    
+                                        className="group relative capitalize"
+                                        >
                                         <Link to={item}
                                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
                                             <div className="translate-y-0 skew-y-0 transition duration-500 

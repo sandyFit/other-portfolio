@@ -25,8 +25,8 @@ const Projects = () => {
 
 
     return (
-        <section id="projects"
-            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px] polygon-corners'>
+        <section id="projects" corner-cut='all'
+            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px] '>
 
             <div className="font-[500] text-violet-600 pt-16">
                 <SectionBar section={'gallery'}/>      

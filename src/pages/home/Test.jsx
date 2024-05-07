@@ -66,12 +66,12 @@ const Test = () => {
 
 
     return (
-        <section id="index"
+        <section id="index" 
             className='w-full min-h-screen flex flex-col bg-zinc-950 relative hero-content'>
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
-            <div className="flex flex-col font-syne mt-6 ml-12">
+            <div border-cut="toolkit-box" className="flex flex-col font-syne mt-6 ml-12">
                 <div className="flex flex-col justify-start items-start relative">
                     <div className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>

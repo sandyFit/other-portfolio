@@ -378,7 +378,7 @@
   font-weight: 500;
   color: #1c294148;
   display: block;  
-  -webkit-text-stroke: 2px #8b5cf6
+  -webkit-text-stroke: 2px #8b5cf6;
 }
 
 .text-outline-big {
@@ -435,23 +435,98 @@
 
 .slide {
     flex-shrink: 0;
-    width: 100vw; /* Adjust based on your actual requirements */
+    width: 100%; /* Adjust based on your actual requirements */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.polygon-corners {
+[corner-cut='all'] {
 
-    clip-path: polygon(3.4% 0, 96.6% 0, 100% 3.4%, 100% 96.6%, 96.6% 100%, 3.4% 100%, 0 96.6%, 0 3.4%);
+    clip-path: polygon(
+      0 2.00em, 2.00em 0, 
+      calc(100% - 2.00em) 0, 
+      100% 2.00em, 100% 
+      calc(100% - 2.00em), 
+      calc(100% - 2.00em) 
+      100%, 2.00em 100%, 0 
+      calc(100% - 2.00em));
 }
 
-.toolkit-box-corners {
-  clip-path: polygon(2% 0, 98% 0,  /* Top edge */
-        100% 2%, 100% 98%, /* Right edge */
-        98% 100%, 2% 100%, /* Bottom edge */
-        0 98%, 0 2% /* Left edge */);
+[border-cut="top-right-black"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #8b5cf6;
+    clip-path: polygon(0 0, calc(100% - 2.00em) 0, 
+      100% 2.00em, 100% 100%, 0 100%, 0 0, 2px 2px, 2px 
+      calc(100% - 2px), 
+      calc(100% - 2px) 
+      calc(100% - 2px), 
+      calc(100% - 2px) 
+      calc(2.00em + 0.83px), 
+      calc(100% - 2.00em - 0.83px) 2px, 2px 2px);
 }
+
+[border-cut="footer-cta"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(0 1.00em, 1.00em 0, 100% 0, 100% 
+    calc(100% - 1.00em), calc(100% - 1.00em) 100%, 0 100%, 0 1.00em, 1px 
+    calc(1.00em + 0.41px), 1px 
+    calc(100% - 1px), 
+    calc(100% - 1.00em - 0.41px) calc(100% - 1px), 
+    calc(100% - 1px) calc(100% - 1.00em - 0.41px), 
+    calc(100% - 1px) 1px, calc(1.00em + 0.41px) 1px, 1px 
+    calc(1.00em + 0.41px));
+}
+
+[border-cut="toolkit-box"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(0 0, calc(100% - 1.00em) 0, 
+    100% 1.00em, 100% 100%, 1.00em 100%, 
+    0 calc(100% - 1.00em), 0 0, 1px 1px, 1px 
+    calc(100% - 1.00em - 0.41px), 
+    calc(1.00em + 0.41px) 
+    calc(100% - 1px), 
+    calc(100% - 1px) 
+    calc(100% - 1px), 
+    calc(100% - 1px) 
+    calc(1.00em + 0.41px), 
+    calc(100% - 1.00em - 0.41px) 1px, 1px 1px);
+}
+
+[border-cut="primary-box"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(
+        0 1.00em, /* Start at top left, move down by 1em */
+        1.00em 0, /* Move right by 1em and up to the very top */
+        100% 0, /* Continue to top right corner */
+        100% calc(100% - 1.00em), /* Move down leaving a space at the bottom */
+        calc(100% - 1.00em) 100%, /* Move left by 1em at the bottom */
+        0 100%, /* Continue to bottom left */
+        0 1.00em /* Close the polygon by going up to the starting point */
+    );
+}
+
+[border-cut="nav-window"]::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    right: 4rem;
+    width: 25rem;
+    background: #8b5cf6;
+    clip-path: polygon(0 0,calc(100% - 0.80em) 0,100% 0.80em,100% 100%,0.80em 100%,0 calc(100% - 0.80em),0 0,2px  2px ,2px calc(100% - 0.80em - 0.83px),calc(0.80em + 0.83px) calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(0.80em + 0.83px),calc(100% - 0.80em - 0.83px) 2px,2px 2px);
+
+	}
 
 
 
@@ -516,12 +591,16 @@
     .text-xxsmall {
       @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider uppercase
     }
+   
     .text-xxsmall-min {
       @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider
     }
 
     .text-xxsmall-black {
       @apply font-roboto text-zinc-950 text-[.8rem] font-[400] tracking-wider uppercase
+    }
+    .text-xxxsmall {
+      @apply font-roboto text-zinc-50 text-[.7rem] font-[400] tracking-wider uppercase
     }
 
     
