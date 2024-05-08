@@ -7,7 +7,7 @@ import TextShimmerHero from '../../components/featured/TextShimmerHero';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Transition from '../transitions/Transition';
 import Transition2 from '../transitions/Transition2';
-import TimeZone from '../../components/ui/TimeZone';
+import '../../assets/css/borders.css';
 
 const Test = () => {
     const [isActive, setIsActive] = useState(false);
@@ -71,7 +71,8 @@ const Test = () => {
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
-            <div border-cut="toolkit-box" className="flex flex-col font-syne mt-6 ml-12">
+            <div border-cut="bottom-left-black"
+                className="flex flex-col font-syne mt-6 ml-12">
                 <div className="flex flex-col justify-start items-start relative">
                     <div className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>
@@ -86,10 +87,11 @@ const Test = () => {
                         <HiArrowDown/>
                     </button>
 
-                <div className="flex mt-6">
+                <div className="flex mt-6 relative">
                     <button onMouseOver={() => { setIsActive(true) }}
                         onMouseLeave={() => { setIsActive(false) }}
-                        className="group relative capitalize px-11 border-[1px] rounded border-violet-500 h-12">
+                        border-cut="bottom-left-purple"
+                        className="group relative capitalize px-11 h-12">
                     
                         <Link to='projects'
                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">

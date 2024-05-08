@@ -11,9 +11,12 @@ const Footer = () => {
             className='w-full flex justify-center items-center '>        
             <div className="flex w-full h-full justify-between items-end ml-16">
                 <div className="flex flex-col">
-                    <div className="flex text-logo">
-                        <AiOutlineCopyright className='text-logo mt-4'/>
-                        <span className='text-logo'>trish ramos</span>       
+                    <div className="flex flex-col text-logo">
+                        <div className="flex">
+                            <AiOutlineCopyright className='text-logo mt-4' />
+                            {date.getFullYear()}
+                        </div>
+                        <span className='text-logo mt-[-2rem]'>trish ramos</span>       
                     </div> 
 
                 </div>

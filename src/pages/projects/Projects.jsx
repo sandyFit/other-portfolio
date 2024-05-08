@@ -25,47 +25,39 @@ const Projects = () => {
 
 
     return (
-        <section id="projects" corner-cut='all'
-            className='w-full min-h-screen bg-purple-200 flex relative rounded-[10px] '>
-
-            <div className="font-[500] text-violet-600 pt-16">
-                <SectionBar section={'gallery'}/>      
-            </div>
+        <section id="projects" corner-cut="project-slide"
+            className='w-full min-h-screen bg-purple-200 flex relative'>
             
             <Cursor isActive={isActive} />
-            <article className="flex justify-center relative pt-32 ">
+            <article className="flex justify-center relative pt-12 ">
 
-                <div className="flex flex-col relative">
+                <div className="w-full h-[80%] flex flex-col relative">
 
-                    <span className='text-left reg-title'>
-                        A Glimpse into my projects
-                    </span>
-
-                    <div className="flex justify-between gap-10 mt-10">
-                        <div className="w-[45%] flex">
-                            <div className="flexw-40 w-72 h-96 bg-zinc-900 "></div>
+                    <div 
+                        className="flex w-full relative">
+                        <div border-cut="top-and-bottom-purple"
+                            className="flex w-full relative">
+                            <p className='med-title '>1</p>
+                            <p className='med-title -rotate-90'>Radiant </p>
                         </div>
-                        <div className="w-[48%] flex flex-col gap-6 justify-start relative">
-                            <div className='w-3 h-3 bg-violet-500 absolute top-[.6rem] right-[39.2rem]'></div>
-                            <p className='w-full flex text-small-purple  text-zinc-400  indent-8'>
-                                Each crafted for optimal performance and user engagement using technologies like
-                                SCSS, JavaScript, ReactJS, NextJS, and REST APIs, hosted on AWS and Vercel.<br/>
-                                My focus on design fidelity and technical precision ensures each project is visually appealing
-                                and functionally robust.
-                            </p>
-                        </div>
+                        <svg width="1.2" height="550" xmlns="http://www.w3.org/2000/svg" className='absolute left-40
+                            '>
+                            <line x1="1" y1="0" x2="1" y2="550" stroke="#8b5cf6" strokeWidth="1.2" />
+                        </svg>
                     </div>
+                    
                 </div>
+
             
             </article>
 
-            <button 
+            {/* <button 
                 style={{ display: showButton ? 'block' : 'none' }}
                 className="up-button"
                 onClick={() => window.scrollTo(0, 0)}
             >
                 up
-            </button>   
+            </button>    */}
         </section>
     );
 }

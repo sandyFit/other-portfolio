@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll';
 import Cursor from '../components/ui/Cursor';
+import '../assets/css/borders.css';
 
 const TextNav = () => {
 
@@ -13,10 +14,11 @@ const TextNav = () => {
             <Cursor isActive={isActive} />          
             <div className="flex ">
                
-                <div className="flex w-full ">
-                    <div className='flex w-[25rem] h-12'>       
-                        <ul className='w-full flex justify-between items-center rounded border 
-                        border-violet-500 px-12'>
+                <div className="flex w-full relative">
+                    <div 
+                        className='flex w-[25rem] h-12 relative'>       
+                        <ul border-cut="top-right"
+                            className='w-full flex justify-between items-center rounded px-12'>
                             {['about', 'contacts', 'resume'].map((item, index) => (
                                 <li key={index}>               
                                     <button onMouseOver={() => { setIsActive(true) }}
