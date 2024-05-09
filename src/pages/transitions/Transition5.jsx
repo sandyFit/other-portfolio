@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BsInfinity } from "react-icons/bs";
 import gsap from 'gsap';
 
 const Transition5 = () => {
@@ -21,14 +20,16 @@ const Transition5 = () => {
     return (
         <section id="t5" className='flex justify-start w-full min-h-screen overflow-hidden
             relative bg-zinc-950'>
-            <div className="slide-container flex items-start mt-28 ml-12">
-                {slides.map((slide, index) => (
-                    <div key={index} className="slide flex w-full bg-violet-500 h-80 items-center">
-                        <p className='big-title2 text-zinc-50 mr-6'>design + technology =</p>
-                        <div className="flex text-[8rem] w-60 h-60 bg-zinc-50 rounded-[50px] text-violet-500
-                            justify-center items-center">
-                            <BsInfinity />
-                        </div>
+            <div className="flex w-[66%] overflow-hidden slider-container relative pl-1 mt-6">
+                {slides.map((_, index) => (
+                    <div key={index} border-cut="bottom-left-bold-purple"
+                        className="slide flex w-full h-10 items-center ">
+                        <p className='flex flex-nowrap text-xxsmall-purple mr-6'>
+                            JavaScript &nbsp; / &nbsp; React &nbsp; / &nbsp; AOS JS &nbsp; / &nbsp;
+                            Tailwind CSS &nbsp; / &nbsp; Node JS &nbsp; / &nbsp; AWS
+
+                        </p>
+                        
                     </div>
                 ))}
             </div>

@@ -44,11 +44,11 @@ const Contact = () => {
                             text='you made it here,' />
                         <TextShimmerEffect
                             triggerOnScroll={true}
-                            text='good move!' />
+                            text='Thanks for dropping by!' />
                         
                     </div>
                     <div className="flex flex-col text-right manuka-condensed text-[20rem] font-[500] text-zinc-800
-                        text-opacity-40 absolute right-[2rem] -bottom-24">
+                        text-opacity-40 absolute right-[2rem] -bottom-[6.8rem]">
                         <span className=''>Contact</span>                      
                     </div>
                 </div>

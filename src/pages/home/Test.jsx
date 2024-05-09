@@ -124,16 +124,7 @@ const Test = () => {
                             <TextShimmerHero text={'frontend developer'}/>
                         </span>                       
                     </div>
-
-                       
-                    {/* <div className="w-full flex mr-24">
-                        <span className='big-title '>
-                            <TextShimmerHero text={"with a designer's eye"}/>
-                        </span>                                                           
-                                                       
-                    </div> */}
-
-                   
+                  
                </div>
                                    
             </article> 

@@ -76,6 +76,26 @@
     calc(100% - 0.80em - 0.83px),calc(0.80em + 0.83px) 
     calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) 1px,1px 1px);
 	} 
+  [border-cut="bottom-left-white"]::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fafafa;
+    clip-path: polygon(0 0,100% 0,100% 100%,0.80em 100%,0 
+    calc(100% - 0.80em),0 0,1px  1px ,1px 
+    calc(100% - 0.80em - 0.83px),calc(0.80em + 0.83px) 
+    calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) 1px,1px 1px);
+	} 
+  [border-cut="bottom-left-bold-purple"]::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #8b5cf6;
+    clip-path: polygon(0 0,100% 0,100% 100%,0.80em 100%,0 
+    calc(100% - 0.80em),0 0,2px  2px ,2px 
+    calc(100% - 0.80em - 0.83px),calc(0.80em + 0.83px) 
+    calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 2px,2px 2px);
+	} 
 
   [border-cut="top-and-bottom-about"]::before{
     content: "";
@@ -92,11 +112,11 @@
 
   }
 
-  [border-cut="top-and-bottom-purple"]::before{
+  [border-cut="top-and-bottom-white"]::before{
     content: "";
   	position: absolute;
   	inset: 0;
-  	background: #8b5cf6;
+  	background: #fafafa;
      clip-path: polygon(
         0 2.00em,2.00em 0,100% 0,100% calc(100% - 2.00em),
         calc(100% - 2.00em) 100%,0 100%,0 2.00em,1px  
@@ -158,11 +178,11 @@
 	} 
   
   [corner-cut="top-right"]{
-  	clip-path: polygon(0 0,calc(100% - 0.80em) 0,100% 0.80em,100% 100%,0 100%);
+  	clip-path: polygon(0 0,calc(100% - 0.10em) 0,100% 0.10em,100% 100%,0 100%);
   }
   
   [corner-cut="bottom-right"]{
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 0.80em),calc(100% - 0.80em) 100%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 0.10em),calc(100% - 0.80em) 100%,0 100%);
   }  
   
   [corner-cut="top"]{
@@ -228,3 +248,75 @@
     calc(2.00em + 0.41px),calc(100% - 2.00em - 0.41px) 1px,1px 1px);
 
   }
+
+  [border-cut="footer-btm-white"]::before{
+    content: "";
+  	position: absolute;
+  	inset: 0;
+  	background: #e9d5ff;
+    clip-path: polygon(0 0,calc(100% - 2.00em) 
+    0,100% 2.00em,100% 100%,2.00em 100%,0 
+    calc(100% - 2.00em),0 0,2px  2px ,2px 
+    calc(100% - 2.00em - 0.41px),calc(2.00em + 0.41px) 
+    calc(100% - 2px),calc(100% - 2px) 
+    calc(100% - 2px),calc(100% - 2px) 
+    calc(2.00em + 0.41px),calc(100% - 2.00em - 0.41px) 2px,2px 2px);
+
+  }
+  [border-cut="footer-btm-dark"]::before{
+    content: "";
+  	position: absolute;
+  	inset: 0;
+  	background: #6d28d9;
+    clip-path: polygon(0 0,calc(100% - 2.00em) 
+    0,100% 2.00em,100% 100%,2.00em 100%,0 
+    calc(100% - 2.00em),0 0,2px  2px ,2px 
+    calc(100% - 2.00em - 0.41px),calc(2.00em + 0.41px) 
+    calc(100% - 2px),calc(100% - 2px) 
+    calc(100% - 2px),calc(100% - 2px) 
+    calc(2.00em + 0.41px),calc(100% - 2.00em - 0.41px) 2px,2px 2px);
+    
+  }
+
+  .border-cut-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #e9d5ff; /* White background */
+    z-index: -1;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 1.86em) 0, 
+        100% 1.86em, 
+        100% 100%, 
+        1.86em 100%, 
+        0 calc(100% - 1.86em)
+    );
+}
+
+.main-btn {
+    /*-webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 0.80em),calc(100% - 0.80em) 100%,0 100%);*/
+    -webkit-clip-path: polygon(0 0em,0em 0,100% 0,100% calc(100% - 0.80em),calc(100% - 0.80em) 100%,0 100%);
+    transition: 0.6s cubic-bezier(.19, 1, .22, 1);
+  }
+  
+  .main-btn:hover {
+    -webkit-clip-path: polygon(0 0.80em,0.80em 0,100% 0,100% calc(100% - 0.80em),calc(100% - 0.80em) 100%,0 100%);
+  }
+
+.next-btn {
+    /* Simple rectangle by default */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0.80em 100%, 0 calc(100% - 0.80em));
+    transition: -webkit-clip-path 0.6s cubic-bezier(.19, 1, .22, 1);
+}
+
+.next-btn:hover {
+    /* Angled bottom-left and top-right corners on hover */
+    -webkit-clip-path: polygon(0 0, calc(100% - 0.80em) 0, 100% 0.80em, 100% 100%, 0.80em 100%, 0 calc(100% - 0.80em));
+}
+
+
+
+
+
+

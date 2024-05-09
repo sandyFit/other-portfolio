@@ -507,6 +507,10 @@
       @apply font-roboto text-zinc-50 text-[1rem] font-[300] uppercase
     }
 
+    .text-xsmall-purple {
+      @apply font-roboto text-violet-600 text-[1rem] font-[400] uppercase
+    }
+
     .text-xxsmall {
       @apply font-roboto text-zinc-400 text-[.8rem] font-[300] tracking-wider uppercase
     }
@@ -517,6 +521,10 @@
 
     .text-xxsmall-black {
       @apply font-roboto text-zinc-950 text-[.8rem] font-[400] tracking-wider uppercase
+    }
+    
+    .text-xxsmall-purple {
+      @apply font-roboto text-violet-600 text-[.8rem] font-[400] tracking-wider uppercase
     }
 
 
@@ -540,23 +548,28 @@
     }
 
     .sm-title {
-      @apply manuka text-[3rem]  leading-[140px] uppercase 
+      @apply manuka-condensed text-[6.2rem]  leading-[120px] uppercase text-violet-500
+
+    }
+
+    .sm-title-white {
+      @apply manuka-condensed text-[6rem]  leading-[140px] uppercase text-zinc-50
 
     }
     .med-title {
-      @apply manuka text-[7rem]  leading-[140px] uppercase text-violet-500
+      @apply manuka-condensed text-[7.4rem]  leading-[140px] uppercase text-violet-500
 
     }
     .reg-title {
-      @apply manuka text-[9rem]  leading-[100px] uppercase text-violet-500
+      @apply manuka-condensed text-[9rem]  leading-[100px] uppercase text-violet-500
 
     }
     .big-title {
-      @apply font-robotoCondensed text-[9.8rem] font-[400] leading-[130px] tracking-[-11px] uppercase text-zinc-50
+      @apply  manuka-condensed text-[15rem] font-[400] leading-[130px]  uppercase text-zinc-50
 
     }
     .big-title2 {
-      @apply manuka text-[12rem] font-[500] leading-[170px] tracking-[3px] uppercase text-zinc-50
+      @apply manuka-condensed text-[12rem] font-[500] leading-[170px] tracking-[3px] uppercase text-zinc-50
 
     }
     .bigger-title {
