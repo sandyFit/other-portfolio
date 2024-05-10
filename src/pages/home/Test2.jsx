@@ -41,7 +41,7 @@ const Test2 = () => {
                             <TextShimmerEffect text={"visual aesthetics."}/>
                         </div>
 
-                        <div className="flex flex-col text-right manuka-condensed text-[24rem] font-[500] text-zinc-800
+                        <div className="flex flex-col text-right manuka-condensed text-[24rem] font-[500] text-zinc-700
                             text-opacity-40 absolute -right-[34rem] -bottom-32">
                             <span className=''>About</span>                      
                         </div>
@@ -49,14 +49,14 @@ const Test2 = () => {
                     <div className="flex gap-32 justify-end mt-16">
 
                         <div className='text-xsmall w-[55%] columns-2 gap-[2em]' >
+                            My love for the craft of design drives me to adopt a holistic approach, striving to preserve the
+                            original creative vision while navigating the unique constraints and challenges of web development.
+                            <br /><br />
                             In my journey as a self-taught frontend developer specializing in the React ecosystem, I'm
                             passionate about designing smooth animations, crafting engaging transitions, and resolving
                             complex layouts.
                             <br /><br />
-                            I aim for a holistic approach, dedicated to preserving the original design's integrity while
-                            navigating the inherent constraints and challenges of web development.
-                            <br /><br />
-                            Off duty,  I delve into kinetic typography, motion graphics, and generative design.
+                            Off duty,  I enjoy working on kinetic typography, motion graphics, and generative design.
                             <br />
                             Offline, I'm often doodling, baking yum yums or pumping iron at the gym.
                             <br /><br />
@@ -70,16 +70,18 @@ const Test2 = () => {
             </div>
 
             <div className="flex flex-col w-[51%] justify-end ml-[43rem] mt-12 relative">
-                <div border-cut="top-left-bottom-right"
+                <div border-cut="frame-toolkit"
                     className="flex justify-center w-full h-[8%]  px-12 py-4">
                     <p className='font-roboto text-6xl font-[900] text-zinc-50  tracking-widest uppercase'>
                         core tools
                     </p>
                 </div>
                 <div className="flex w-full border-[1px] border-violet-500 bg-violet-500">
-                    <p className='text-xxsmall-black pl-8 py-4'>
-                        Eager to master new tools, I always embrace fundamental web development principles,
-                        knowing that while tools may change, the basics remain. My current toolkit includes: 
+                    <p className='text-xxxsmall-black px-8 py-3'>
+                      
+                        While I value the fundamentals of web development, I'm always open to exploring new processes
+                        and tools that can enhance efficiency and productivity.<br/>
+                        My current toolkit is centered around the JAMstack architecture and includes:
                             
                     </p>
                 </div>

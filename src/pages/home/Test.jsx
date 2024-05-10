@@ -109,17 +109,20 @@ const Test = () => {
                 </div>                          
             </div>
 
-            <article className="w-full flex flex-col justify-center items-center relative">
-                <div className="w-full flex flex-col justify-center items-center relative pt-10">                      
-                     <div className="w-[7%] absolute bottom-[26.5rem] right-16 text-small uppercase">
-                        <span className='flex pl-2 leading-[24px] '>
-                            portfolio  <br/>/ &nbsp; &nbsp; &nbsp;©2024
+            <article className="w-full flex flex-col justify-center items-center relative mt-36">
+                <div className="w-full flex flex-col justify-center items-center relative ">                      
+                     <div className="w-full flex justify-between text-xsmall uppercase px-16">
+                        <span className='flex'>
+                            based in colombia
+                        </span>
+                        <span className='flex '>
+                            ©2024 folio
                         </span>
                     </div>
 
                     
 
-                    <div className="flex justify-center">                                            
+                    <div className="flex justify-center mt-[-8rem]">                                            
                         <span className='xl-title '>
                             <TextShimmerHero text={'frontend developer'}/>
                         </span>                       

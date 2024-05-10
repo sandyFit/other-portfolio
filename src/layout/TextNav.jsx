@@ -19,7 +19,7 @@ const TextNav = () => {
                         className='flex w-[25rem] h-12 relative'>       
                         <ul border-cut="top-right"
                             className='w-full flex justify-between items-center rounded px-12'>
-                            {['about', 'contacts', 'resume'].map((item, index) => (
+                            {['about', 'contact', 'resume'].map((item, index) => (
                                 <li key={index}>               
                                     <button onMouseOver={() => { setIsActive(true) }}
                                         onMouseLeave={() => { setIsActive(false) }}

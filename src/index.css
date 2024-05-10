@@ -531,6 +531,9 @@
     .text-xxxsmall {
       @apply font-roboto text-zinc-50 text-[.7rem] font-[400] tracking-wider uppercase
     }
+    .text-xxxsmall-black {
+      @apply font-roboto text-zinc-950 text-[.75rem] font-[500] tracking-wider uppercase
+    }
 
     
 
@@ -544,7 +547,7 @@
     }
 
     .title-xsmall {
-      @apply text-zinc-50 font-roboto text-[1.2rem] font-[300] uppercase tracking-wider
+      @apply text-zinc-50 font-roboto text-[1rem] font-[300] uppercase tracking-wider
     }
 
     .sm-title {
@@ -557,11 +560,11 @@
 
     }
     .med-title {
-      @apply manuka-condensed text-[7.4rem]  leading-[140px] uppercase text-violet-500
+      @apply manuka-condensed text-[7.4rem]  leading-[120px] uppercase text-violet-500
 
     }
     .reg-title {
-      @apply manuka-condensed text-[9rem]  leading-[100px] uppercase text-violet-500
+      @apply manuka-condensed text-[10rem]  leading-[180px] uppercase text-violet-500
 
     }
     .big-title {
@@ -573,7 +576,7 @@
 
     }
     .bigger-title {
-      @apply  manuka-condensed text-[18rem]  uppercase text-violet-500 tracking-wide leading-[300px]
+      @apply  manuka-condensed text-[18rem]  uppercase text-violet-500 leading-[300px]
 
     }
     .xl-title {

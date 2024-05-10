@@ -20,6 +20,8 @@ const Footer = () => {
                     </div> 
 
                 </div>
+
+                <hr className='border-t-[1px] border-zinc-400 w-[78%] absolute bottom-[5.5rem] right-16'/>
                 
                 <div className="flex flex-col mb-4 relative mr-16">                  
                     <div className="flex text-[1rem] ml-auto">

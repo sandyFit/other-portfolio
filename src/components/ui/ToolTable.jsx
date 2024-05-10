@@ -2,11 +2,12 @@ import React from 'react';
 
 function ToolTable() {
   const tools = [
-    { name: 'SCSS', description: 'A Powerful CSS extension that helps write clean, efficient, and reusable styles.' },
+    { name: 'SaaS / SCSS', description: 'Powerful CSS extensions that help write clean, efficient, and reusable styles.' },
     { name: 'JavaScript', description: 'A crucial language for adding interactivity, enabling dynamic features in web apps.' },
     { name: 'React.js', description: 'A library for building user interfaces with component-based architecture.' },
-    { name: 'TypeScript', description: 'A typed superset of JavaScript that enhances code quality and maintainability.' },
-    { name: 'GSAP', description: 'High-performance JavaScript library for complex, flexible web animations.' },
+    { name: 'Next js', description: 'A React framework for building efficient, scalable web applications..' },
+    { name: 'GSAP', description: 'A High-performance JavaScript library for complex, flexible web animations.' },
+    { name: 'prismic', description: 'A headless CMS that enables content management via APIs.' },
     
   ];
 

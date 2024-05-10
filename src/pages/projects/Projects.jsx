@@ -62,35 +62,24 @@ const Projects = () => {
                                     <TextShimmerEffect text={'Radiant dental studio'}/>
                                 </span>
 
-                                
+                                <p className='text-sm text-violet-600'>
+                                    Demo Project
+                                </p>
                             </div>
-                            <p className='text-xxsmall-purple w-[66%] mt-40 '>
+                            <p className='text-xxsmall-purple w-[66%] mt-44 '>
                                 Designed and developed a responsive dental studio website. <br/>
                                 Features include an online booking system, real-time appointment updates, and a user-friendly interface,
                                 ensuring seamless integration of design and functionality.
                             </p>
 
                             <div border-cut="bottom-left-bold-purple"
-                                className="flex w-[64%] overflow-hidden slider-container relative pl-7 py-2 mt-6">
-                                <p className='text-sm text-purple-500 flex-shrink-0 whitespace-nowrap mr-6'>
-                                    JavaScript &nbsp; / &nbsp; React &nbsp; / &nbsp;
-                                    AOS JS &nbsp; / &nbsp; Tailwind CSS &nbsp; / &nbsp; Node JS &nbsp; / &nbsp; AWS
+                                className="flex w-[64%] overflow-hidden slider-container relative pl-7 py-2 mt-8">
+                                <p className='text-sm text-violet-600 flex-shrink-0 whitespace-nowrap mr-6'>
+                                    JS &nbsp; / &nbsp; React &nbsp; / &nbsp;
+                                    AOS JS &nbsp; / &nbsp; Tailwind CSS &nbsp; / &nbsp; Node JS
+                                    &nbsp; / &nbsp; Unit  &nbsp; / &nbsp; AWS
                                 </p>
             
-                                {/* <div border-cut="bottom-left-bold-purple"
-                                    className="w-full flex px-1 mt-6 relative overflow-hidden">
-                                    <MotionText
-                                        text1={'JavaScript /'}
-                                        text2={'React /'}
-                                        text3={'AOS.JS /'}
-                                        text4={'Tailwind CSS /'}
-                                        text5={'Node JS /'}
-                                        text6={'Express /'}
-                                        text7={'Prismic  /'}
-                                        text8={'AWS  /'}
-                                    />
-
-                                </div>   */}
                             </div>
                         </div>
                         
