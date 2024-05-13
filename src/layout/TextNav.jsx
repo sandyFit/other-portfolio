@@ -10,16 +10,16 @@ const TextNav = () => {
 
     return (
         <section 
-            className='w-full h-[60px] absolute top-0 z-20 flex justify-end mt-10 pr-12'>
+            className='w-full h-[60px] absolute top-0 z-20 flex justify-end mt-10 pr-16'>
             <Cursor isActive={isActive} />          
             <div className="flex ">
                
                 <div className="flex w-full relative">
                     <div 
-                        className='flex w-[25rem] h-12 relative'>       
+                        className='flex w-[28rem] h-12 relative'>       
                         <ul border-cut="top-right"
                             className='w-full flex justify-between items-center rounded px-12'>
-                            {['about', 'contact', 'resume'].map((item, index) => (
+                            {["who's-this", 'say-hey', 'read-CV'].map((item, index) => (
                                 <li key={index}>               
                                     <button onMouseOver={() => { setIsActive(true) }}
                                         onMouseLeave={() => { setIsActive(false) }}
@@ -30,12 +30,12 @@ const TextNav = () => {
                                             <div className="translate-y-0 skew-y-0 transition duration-500 
                                             group-hover:-translate-y-[110%] 
                                                 group-hover:skew-y-12">
-                                                {item}
+                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                             </div>
                                             <div className="absolute translate-y-[110%] skew-y-12 transition 
                                             duration-500 group-hover:translate-y-0 
                                                 group-hover:skew-y-0 text-violet-400">
-                                                {item}
+                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                             </div>
                                         </Link>                              
                                     </button>

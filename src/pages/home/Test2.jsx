@@ -25,7 +25,7 @@ const Test2 = () => {
 
 
     return (
-        <section id="about"
+        <section id="who's-this"
             className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative overflow-hidde
                 pb-20 about-content'>
             <div className="flex flex-col  items-start mx-16" border-cut="top-and-bottom-about">                        
@@ -41,9 +41,10 @@ const Test2 = () => {
                             <TextShimmerEffect text={"visual aesthetics."}/>
                         </div>
 
-                        <div className="flex flex-col text-right manuka-condensed text-[24rem] font-[500] text-zinc-700
-                            text-opacity-40 absolute -right-[34rem] -bottom-32">
-                            <span className=''>About</span>                      
+                        <div className="flex flex-col text-right morganite-extra-bold text-[18rem] font-[500]
+                            leading-[210px] text-zinc-700
+                            text-opacity-40 absolute -right-[34rem] -bottom-6">
+                            <span className=''>Who's <br/> this</span>                      
                         </div>
                     </div>
                     <div className="flex gap-32 justify-end mt-16">
@@ -79,9 +80,9 @@ const Test2 = () => {
                 <div className="flex w-full border-[1px] border-violet-500 bg-violet-500">
                     <p className='text-xxxsmall-black px-8 py-3'>
                       
-                        While I value the fundamentals of web development, I'm always open to exploring new processes
-                        and tools that can enhance efficiency and productivity.<br/>
-                        My current toolkit is centered around the JAMstack architecture and includes:
+                        Yes, I value the fundamentals of web development, yet I remain eager to explore new
+                        processes and tools that can boost efficiency and productivity. <br />
+                        My current toolkit, which is centered around the JAMstack architecture, includes:
                             
                     </p>
                 </div>

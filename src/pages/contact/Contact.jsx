@@ -31,7 +31,7 @@ const Contact = () => {
     }
 
     return (
-        <section id="contacts"
+        <section id="say-hey"
             className='w-full font-syne h-screen bg-zinc-950 overflow-hidden relative'>
             <Cursor isActive={isActive} />
 
@@ -41,16 +41,26 @@ const Contact = () => {
 
                     <div className="flex flex-col">
 
-                    <div className='flex flex-col reg-title ml-16 w-[90%] gap-5'>
-                        <TextShimmerEffect
-                            triggerOnScroll={true}
-                            text='Thanks for dropping by!' />
+                        <div className='flex reg-title ml-16 w-[90%] gap-4'>
+                             <h2 className=''>
+                                <TextShimmerEffect text={'Thanks'}/>
+                            </h2>
+                             <span className=''>
+                                <TextShimmerEffect text={'for'}/>
+                            </span>
+                             <span className=''>
+                                <TextShimmerEffect text={'dropping'}/>
+                            </span>
+                             <span className=''>
+                                <TextShimmerEffect text={'by!'}/>
+                            </span>
+                       
                         
                         </div>
                         
-                         <div className="w-[30rem] flex flex-col text-xsmall text-zinc-300 ml-96">
-                            <div className='w-3 h-3 bg-violet-500 absolute bottom-[4.6rem] left-[24rem]'></div>
-                            <span className='w-full  indent-8 '>
+                         <div className="w-[30rem] flex flex-col text-xsmall text-zinc-300 ml-[30.5rem]">
+                            <div className='w-3 h-3 bg-violet-500 absolute bottom-[4.6rem] left-[30.5rem]'></div>
+                            <span className='w-full indent-8 '>
                                 
                                 Whether you're looking for someone to join your team full-time or just need an extra
                                 pair of creative hands for a project, I'm all ears and hands!.
@@ -66,15 +76,16 @@ const Contact = () => {
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-col text-right manuka-condensed text-[18rem] font-[500] text-zinc-700
-                        text-opacity-40 absolute right-[1.4rem] -bottom-[3.8rem]">
-                        <span className=''>Contact</span>                      
-                    </div>
+                    <div className="flex flex-col text-right morganite-extra-bold text-[22rem] font-[500]
+                            leading-[260px] text-zinc-700
+                            text-opacity-40 absolute right-8 -top-4">
+                            <span className=''>Say <br/> Hey</span>                      
+                        </div>
 
                     
                 </div>
 
-                <div className=" w-[40%] grid grid-cols-2 py-3 justify-self-center ml-[30rem] relative">
+                <div className=" w-[40%] grid grid-cols-2 py-3 justify-self-center ml-[20rem] relative">
                    
                     <div className="flex gap-24 ">
                        <div className="w-full flex flex-col justify-start items-start title-xsmall ml-28">

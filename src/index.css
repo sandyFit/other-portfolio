@@ -133,6 +133,33 @@
 }
 
 @font-face {
+    font-family: 'morganite-med';
+    src:  url('./assets/fonts/Morganite-Medium.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+}
+
+@font-face {
+    font-family: 'morganite-semibold';
+    src:  url('./assets/fonts/Morganite-SemiBold.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+}
+
+@font-face {
+    font-family: 'morganite-bold';
+    src:  url('./assets/fonts/Morganite-Bold.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+}
+@font-face {
+    font-family: 'morganite-ExtraBold';
+    src:  url('./assets/fonts/Morganite-ExtraBold.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+}
+
+@font-face {
     font-family: 'manuka';
     src:  url('./assets/fonts/test-manuka-medium.woff2') format('woff2');
           font-weight: normal;
@@ -177,6 +204,19 @@
 
 .outward {
   font-family: 'Outward';
+}
+
+.morganite {
+  font-family: 'morganite';
+}
+.morganite-semibold {
+  font-family: 'morganite-semibold';
+}
+.morganite-bold {
+  font-family: 'morganite-bold';
+}
+.morganite-extra-bold {
+   font-family: 'morganite-ExtraBold';
 }
 
 /* ============= SCROLL BAR CUSTOMIZATION ============== */
@@ -551,36 +591,36 @@
     }
 
     .sm-title {
-      @apply manuka-condensed text-[6.2rem]  leading-[120px] uppercase text-violet-500
+      @apply morganite-bold text-[6.2rem]  leading-[120px] uppercase text-violet-500
 
     }
 
     .sm-title-white {
-      @apply manuka-condensed text-[6rem]  leading-[140px] uppercase text-zinc-50
+      @apply morganite-bold text-[6rem]  leading-[140px] uppercase text-zinc-50
 
     }
     .med-title {
-      @apply manuka-condensed text-[7.4rem]  leading-[120px] uppercase text-violet-500
+      @apply morganite-bold text-[7.6rem]  leading-[120px] uppercase text-violet-500
 
     }
     .reg-title {
-      @apply manuka-condensed text-[10rem]  leading-[180px] uppercase text-violet-500
+      @apply morganite-bold text-[10.8rem] font-[600] leading-[180px] uppercase text-violet-500
 
     }
     .big-title {
-      @apply  manuka-condensed text-[15rem] font-[400] leading-[130px]  uppercase text-zinc-50
+      @apply  morganite-bold text-[15rem] font-[400] leading-[130px]  uppercase text-zinc-50
 
     }
     .big-title2 {
-      @apply manuka-condensed text-[12rem] font-[500] leading-[170px] tracking-[3px] uppercase text-zinc-50
+      @apply morganite-bold text-[12rem] font-[500] leading-[170px] tracking-[3px] uppercase text-zinc-50
 
     }
     .bigger-title {
-      @apply  manuka-condensed text-[18rem]  uppercase text-violet-500 leading-[300px]
+      @apply  morganite-bold text-[20rem]  uppercase text-violet-500 leading-[300px]
 
     }
     .xl-title {
-      @apply manuka-condensed text-[22.8rem]  uppercase text-violet-500 font-[500] 
+      @apply morganite-bold  text-[22.5rem]  uppercase text-violet-500 font-[100] 
 
     }
 }

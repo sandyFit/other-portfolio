@@ -72,7 +72,7 @@ const Test = () => {
             <Transition2/>
             <Cursor isActive={isActive} />
             <div border-cut="bottom-left-black"
-                className="flex flex-col font-syne mt-6 ml-12">
+                className="flex flex-col font-syne mt-6 ml-16">
                 <div className="flex flex-col justify-start items-start relative">
                     <div className='text-logo'>
                         <TextShimmerHero text={'trish ramos'}/>
@@ -83,7 +83,7 @@ const Test = () => {
                             opportunities where I can innovate & collaborate.
                         </p>
                 </div>
-                 <button className='text-[2rem] text-violet-500 absolute right-10 top-28'>
+                 <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
                         <HiArrowDown/>
                     </button>
 
@@ -97,19 +97,19 @@ const Test = () => {
                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
                             <div className="translate-y-0 skew-y-0 transition duration-500 
                             group-hover:-translate-y-[110%] group-hover:skew-y-6">
-                                see my work
+                                peek inside
                             </div>
                             <div className="absolute translate-y-[110%] skew-y-6 transition 
                             duration-500 group-hover:translate-y-0 
                                 group-hover:skew-y-0 text-violet-400">
-                                see my work
+                                peek inside
                             </div>
                         </Link>                              
                     </button>               
                 </div>                          
             </div>
 
-            <article className="w-full flex flex-col justify-center items-center relative mt-36">
+            <article className="w-full flex flex-col justify-center items-center relative mt-40">
                 <div className="w-full flex flex-col justify-center items-center relative ">                      
                      <div className="w-full flex justify-between text-xsmall uppercase px-16">
                         <span className='flex'>
@@ -123,8 +123,11 @@ const Test = () => {
                     
 
                     <div className="flex justify-center mt-[-8rem]">                                            
+                        <h1 className='xl-title mr-10'>
+                            <TextShimmerHero text={'frontend  '}/>
+                        </h1>                       
                         <span className='xl-title '>
-                            <TextShimmerHero text={'frontend developer'}/>
+                            <TextShimmerHero text={'developer'}/>
                         </span>                       
                     </div>
                   

@@ -57,10 +57,18 @@ const Projects = () => {
 
                     <div className="flex w-full relative p-12  border-cut-projects ">
                         <div className="flex flex-col">
-                            <div className="flex flex-col w-full relative">                           
-                                <span className='med-title '>
-                                    <TextShimmerEffect text={'Radiant dental studio'}/>
-                                </span>
+                            <div className="flex flex-col w-full relative">       
+                                <div className="flex">
+                                    <h2 className='med-title mr-2'>
+                                        <TextShimmerEffect text={'Radiant'}/>
+                                    </h2>
+                                    <span className='med-title mr-2'>
+                                        <TextShimmerEffect text={'dental'}/>
+                                    </span>
+                                    <span className='med-title '>
+                                        <TextShimmerEffect text={'studio'}/>
+                                    </span>
+                                </div>    
 
                                 <p className='text-sm text-violet-600'>
                                     Demo Project
