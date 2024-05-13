@@ -78,8 +78,9 @@ const Contact = () => {
                     </div>
                     <div className="flex flex-col text-right morganite-extra-bold text-[22rem] font-[500]
                             leading-[260px] text-zinc-700
-                            text-opacity-40 absolute right-8 -top-4">
-                            <span className=''>Say <br/> Hey</span>                      
+                            text-opacity-40 relative ">
+                            <span className='absolute right-28 bottom-10'>Say </span>                      
+                            <span className='absolute right-8 -top-10'>Hey </span>                      
                         </div>
 
                     
