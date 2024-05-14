@@ -29,12 +29,12 @@ const TextNav = () => {
                                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
                                             <div className="translate-y-0 skew-y-0 transition duration-500 
                                             group-hover:-translate-y-[110%] 
-                                                group-hover:skew-y-12">
+                                                group-hover:skew-y-[11deg]">
                                                 {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                             </div>
-                                            <div className="absolute translate-y-[110%] skew-y-12 transition 
+                                            <div className="absolute translate-y-[110%] skew-y-[11deg] transition 
                                             duration-500 group-hover:translate-y-0 
-                                                group-hover:skew-y-0 text-violet-400">
+                                                group-hover:skew-y-0 text-violet-500">
                                                 {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                             </div>
                                         </Link>                              

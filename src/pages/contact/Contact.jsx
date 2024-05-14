@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import Cursor from '../../components/ui/Cursor';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import SectionBar from '../../layout/SectionBar';
+import SocialLinks from '../../components/ui/SocialLinks';
 
 
 const Contact = () => {
@@ -43,16 +44,22 @@ const Contact = () => {
 
                         <div className='flex reg-title ml-16 w-[90%] gap-4'>
                              <h2 className=''>
-                                <TextShimmerEffect text={'Thanks'}/>
+                                <TextShimmerEffect text={'now'}/>
                             </h2>
                              <span className=''>
-                                <TextShimmerEffect text={'for'}/>
+                                <TextShimmerEffect text={'that'}/>
                             </span>
                              <span className=''>
-                                <TextShimmerEffect text={'dropping'}/>
+                                <TextShimmerEffect text={'you'}/>
                             </span>
                              <span className=''>
-                                <TextShimmerEffect text={'by!'}/>
+                                <TextShimmerEffect text={'made'}/>
+                            </span>
+                             <span className=''>
+                                <TextShimmerEffect text={'it '}/>
+                            </span>
+                             <span className=''>
+                                <TextShimmerEffect text={'here,'}/>
                             </span>
                        
                         
@@ -95,7 +102,7 @@ const Contact = () => {
                                 className=''
                                 onClick={handleCopiedText}>
                                 <div id='emailAddress'
-                                    className='text-xxsmall  hover:text-violet-400 flex'>                                   
+                                    className='text-xxsmall  hover:text-violet-500 flex'>                                   
                                     <BsCopy className='mr-2 mt-1' />
                                     info@trishramos.com
                                 </div>
@@ -107,32 +114,7 @@ const Contact = () => {
                                 )}
                             </button>
 
-                            <div className="flex flex-col title-xsmall mt-8">
-                                <div className="title-xsmall pb-1">Socials</div> 
-                                <ul onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                    className='text-xxsmall space-y-2'>
-                                    {['linkedin', 'github', 'instagram', 'behance'].map((item, index) => (
-                                        <div onMouseOver={() => { setIsActive(true) }}
-                                            onMouseLeave={() => { setIsActive(false) }}                                       
-                                            className="group relative ">
-                                        
-                                            <a href='#'
-                                                className="relative inline-flex overflow-hidden text-xxsmall 
-                                                    uppercase tracking-wide">
-                                                <div className="translate-y-0 skew-y-0 transition duration-500 
-                                                group-hover:-translate-y-[110%] group-hover:skew-y-6">
-                                                    {item}
-                                                </div>
-                                                <div className="absolute translate-y-[110%] skew-y-6 transition 
-                                                duration-500 group-hover:translate-y-0 
-                                                    group-hover:skew-y-0 text-violet-400">
-                                                        {item}
-                                                </div>
-                                            </a>                              
-                                        </div>   
-                                    ))}
-                                </ul>
-                            </div>
+                            <SocialLinks/>
                         </div>
                                                                   
                         <div className="w-[40%] flex title-xsmall  gap-9">
@@ -141,7 +123,8 @@ const Contact = () => {
                                 <div className='flex w-full '>           
                                     <ul className='w-full flex flex-col justify-between items-start bg-transparent gap-1'>
                                         {['index', 'projects', 'about',].map((item, index) => (
-                                             <div onMouseOver={() => { setIsActive(true) }}
+                                            <div key={index}
+                                                onMouseOver={() => { setIsActive(true) }}
                                                 onMouseLeave={() => { setIsActive(false) }}                                       
                                                 className="group relative ">
                                             
@@ -149,12 +132,12 @@ const Contact = () => {
                                                     className="relative inline-flex overflow-hidden text-xxsmall space-y-1
                                                         uppercase tracking-wide">
                                                     <div className="translate-y-0 skew-y-0 transition duration-500 
-                                                    group-hover:-translate-y-[110%] group-hover:skew-y-6">
+                                                    group-hover:-translate-y-[110%] group-hover:skew-y-[12deg]">
                                                         
                                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                                     
                                                     </div>
-                                                    <div className="absolute translate-y-[110%] skew-y-6 transition 
+                                                    <div className="absolute translate-y-[110%] skew-y-[12deg] transition 
                                                     duration-500 group-hover:translate-y-0 
                                                         group-hover:skew-y-0 text-violet-400">
                                                             {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
@@ -178,10 +161,10 @@ const Contact = () => {
                                                     className="relative inline-flex overflow-hidden text-xxsmall space-y-1
                                                         uppercase tracking-wide">
                                                     <div className="translate-y-0 skew-y-0 transition duration-500 
-                                                        group-hover:-translate-y-[110%] group-hover:skew-y-6">
+                                                        group-hover:-translate-y-[110%] group-hover:skew-y-[10deg]">
                                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                                     </div>
-                                                    <div className="absolute translate-y-[110%] skew-y-6 transition 
+                                                    <div className="absolute translate-y-[110%] skew-y-[10deg] transition 
                                                     duration-500 group-hover:translate-y-0 
                                                         group-hover:skew-y-0 text-violet-400">
                                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
