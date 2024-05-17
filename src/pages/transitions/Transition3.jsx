@@ -13,9 +13,9 @@ const Transition3 = () => {
                     className="w-[90%] h-[40rem] rounded flex flex-col justify-center items-center pb-24 
                     transition-transform">
                     <div className='flex flex-col items-center'>                    
-                        <span className='flex bigger-title text-center gap-8'>
-                            <TextShimmerEffect text={'selected'}/>
-                            <TextShimmerEffect text={'projects'}/>
+                        <span className='flex bigger-title text-center gap-8 [word-spacing:0.1em]'>
+                            <TextShimmerEffect text={'selected projects'}/>
+
                         </span>
 
                         <div className="w-[48%] flex flex-col gap-6 justify-start ml-[32rem] relative">

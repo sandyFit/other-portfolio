@@ -10,6 +10,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from '@studio-freight/lenis';
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -84,19 +85,21 @@ const Home = () => {
             <section id='home' className=''>
                 <Test />
             </section>
-            <section id='subject' className=''>
-                <Test2 />
-            </section>
+            
             <section id='t3' className='section'>
                 <Transition3 />
             </section>
             <section id='projects' >
                 <Projects />
             </section>
+            <section id='subject' className=''>
+                <Test2 />
+            </section>
 
             <section id='contact' className='relative'>
                 <Contact/>
             </section>
+
         </div>
     );
 }

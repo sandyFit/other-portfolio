@@ -36,33 +36,18 @@ const Contact = () => {
             className='w-full font-syne h-screen bg-zinc-950 overflow-hidden relative'>
             <Cursor isActive={isActive} />
 
-            <article border-cut="top-left-angled"
+            <article border-cut="top-right-black"
                 className='w-[98%] grid grid-cols-1 pt-16'>                
                 <div className="relative py-5">
 
                     <div className="flex flex-col">
 
                         <div className='flex reg-title ml-16 w-[90%] gap-4'>
-                             <h2 className=''>
-                                <TextShimmerEffect text={'now'}/>
+                             <h2 className='[word-spacing:0.1em]'>
+                                <TextShimmerEffect text={'now that you made it here,'}/>
                             </h2>
-                             <span className=''>
-                                <TextShimmerEffect text={'that'}/>
-                            </span>
-                             <span className=''>
-                                <TextShimmerEffect text={'you'}/>
-                            </span>
-                             <span className=''>
-                                <TextShimmerEffect text={'made'}/>
-                            </span>
-                             <span className=''>
-                                <TextShimmerEffect text={'it '}/>
-                            </span>
-                             <span className=''>
-                                <TextShimmerEffect text={'here,'}/>
-                            </span>
+                             
                        
-                        
                         </div>
                         
                          <div className="w-[30rem] flex flex-col text-xsmall text-zinc-300 ml-[30.5rem]">
@@ -93,7 +78,7 @@ const Contact = () => {
                     
                 </div>
 
-                <div className=" w-[40%] grid grid-cols-2 py-3 justify-self-center ml-[20rem] relative">
+                <div className=" w-[40%] grid grid-cols-2 py-3 justify-self-center mr-[12rem] relative">—
                    
                     <div className="flex gap-24 ">
                        <div className="w-full flex flex-col justify-start items-start title-xsmall ml-28">

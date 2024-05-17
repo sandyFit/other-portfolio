@@ -62,8 +62,12 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(9, 7, 6, 0.2);
-  	clip-path: polygon(0 0,100% 0,100% calc(100% - 2.00em),calc(100% - 2.00em) 100%,0 100%,0 0,2px  2px ,2px calc(100% - 2px),calc(100% - 2.00em - 0.83px) calc(100% - 2px),calc(100% - 2px) calc(100% - 2.00em - 0.83px),calc(100% - 2px) 2px,2px 2px);
+    background: rgba(255, 255, 255, 0.5);
+  	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.00em),
+    calc(100% - 2.00em) 100%, 0 100%, 0 0, 1px  1px ,1px 
+    calc(100% - 1px), calc(100% - 2.00em - 0.83px) 
+    calc(100% - 1px), calc(100% - 2px) calc(100% - 2.00em - 0.83px),
+    calc(100% - 1px) 1px, 1px 1px);
 	} 
   
   [border-cut="bottom-left"]::before{

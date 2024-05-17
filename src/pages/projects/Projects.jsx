@@ -59,15 +59,9 @@ const Projects = () => {
                         <div className="flex flex-col">
                             <div className="flex flex-col w-full relative">       
                                 <div className="flex">
-                                    <h2 className='med-title mr-2'>
-                                        <TextShimmerEffect text={'Radiant'}/>
+                                    <h2 className='med-title mr-2 [word-spacing:0.1em]'>
+                                        <TextShimmerEffect text={'Radiant dental studio'}/>
                                     </h2>
-                                    <span className='med-title mr-2'>
-                                        <TextShimmerEffect text={'dental'}/>
-                                    </span>
-                                    <span className='med-title '>
-                                        <TextShimmerEffect text={'studio'}/>
-                                    </span>
                                 </div>    
 
                                 <p className='text-sm text-violet-600'>

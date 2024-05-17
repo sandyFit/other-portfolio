@@ -71,7 +71,7 @@ const Test = () => {
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
-            <div border-cut="bottom-left-black"
+            <div border-cut="bottom-right-black"
                 className="flex flex-col font-syne mt-6 ml-16">
                 <div className="flex flex-col justify-start items-start relative">
                     <div className='text-logo'>
@@ -122,13 +122,11 @@ const Test = () => {
 
                     
 
-                    <div className="flex justify-center mt-[-8rem]">                                            
-                        <h1 className='xl-title mr-10'>
-                            <TextShimmerHero text={'frontend  '}/>
+                    <div className="flex justify-center mt-20 px-[3.6rem]">                                            
+                        <h1 className='xl-title [word-spacing:0.1em]'>
+                            <TextShimmerHero text={'frontend developer '}/>
                         </h1>                       
-                        <span className='xl-title '>
-                            <TextShimmerHero text={'developer'}/>
-                        </span>                       
+                
                     </div>
                   
                </div>
