@@ -616,11 +616,11 @@
 
     }
     .bigger-title {
-      @apply  morganite-bold text-[20rem]  uppercase text-violet-500 leading-[300px]
+      @apply  morganite-bold text-[21vw]  uppercase text-violet-500 leading-[300px]
 
     }
     .xl-title {
-      @apply morganite-bold  text-[22.5rem]  uppercase text-violet-500 font-[100] p-0 leading-[140px]
+      @apply morganite-bold  text-[23.52vw]  uppercase text-violet-500 font-[100] p-0 leading-[140px]
 
     }
 }

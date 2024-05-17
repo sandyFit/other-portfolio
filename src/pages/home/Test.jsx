@@ -91,7 +91,7 @@ const Test = () => {
                     <button onMouseOver={() => { setIsActive(true) }}
                         onMouseLeave={() => { setIsActive(false) }}
                         border-cut="bottom-left-purple"
-                        className="group relative capitalize px-11 h-12">
+                        className="group relative capitalize px-12 h-12">
                     
                         <Link to='projects'
                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">

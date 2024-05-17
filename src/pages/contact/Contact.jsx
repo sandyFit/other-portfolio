@@ -50,7 +50,7 @@ const Contact = () => {
                        
                         </div>
                         
-                         <div className="w-[30rem] flex flex-col text-xsmall text-zinc-300 ml-[30.5rem]">
+                         <div className="w-[38rem] flex flex-col text-xsmall uppercase text-zinc-300 ml-[30.5rem]">
                             <div className='w-3 h-3 bg-violet-500 absolute bottom-[4.6rem] left-[30.5rem]'></div>
                             <span className='w-full indent-8 '>
                                 
@@ -68,20 +68,20 @@ const Contact = () => {
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-col text-right morganite-extra-bold text-[22rem] font-[500]
-                            leading-[260px] text-zinc-700
-                            text-opacity-40 relative ">
-                            <span className='absolute right-28 bottom-10'>Say </span>                      
-                            <span className='absolute right-8 -top-10'>Hey </span>                      
-                        </div>
 
+                    <div className="flex flex-col text-right morganite-extra-bold text-[22rem] font-[500]
+                        leading-[260px] text-zinc-700
+                        text-opacity-40 relative ">
+                        <span className='absolute right-28 bottom-10'>Say </span>                      
+                        <span className='absolute right-8 -top-10'>Hey </span>                      
+                    </div>
                     
                 </div>
 
                 <div className=" w-[40%] grid grid-cols-2 py-3 justify-self-center mr-[12rem] relative">—
                    
                     <div className="flex gap-24 ">
-                       <div className="w-full flex flex-col justify-start items-start title-xsmall ml-28">
+                       <div className="w-full flex flex-col justify-start items-start title-xsmall ml-16">
                             <div className="title-xsmall pb-1">copy email</div> 
                             <button onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                 className=''

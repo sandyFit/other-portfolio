@@ -47,8 +47,8 @@ const Test2 = () => {
                             <span className=''>Who's <br/> this</span>                      
                         </div>
                     </div>
-                    <div className="flex gap-32 justify-end mt-16">
 
+                    <div className="flex gap-32 justify-end mt-16">
                         <div className='text-xsmall w-[55%] columns-2 gap-[2em]' >
                             My love for the craft of design drives me to adopt a holistic approach, striving to preserve the
                             original creative vision while navigating the unique constraints and challenges of web development.
