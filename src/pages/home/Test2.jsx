@@ -58,7 +58,7 @@ const Test2 = () => {
                             passionate about designing smooth animations, crafting engaging transitions, and resolving
                             complex layouts.
                             <br /><br />
-                            Off duty,  I enjoy working on kinetic typography, motion graphics, and generative design.
+                            Off duty, I'm enthusiastic about bringing dynamic visuals to life with kinetic typography and web animations.
                             <br />
                             Offline, I'm often doodling, baking yum yums or pumping iron at the gym.
                             <br /><br />
