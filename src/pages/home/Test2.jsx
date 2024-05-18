@@ -42,9 +42,10 @@ const Test2 = () => {
                         </div>
 
                         <div className="flex flex-col text-right morganite-extra-bold text-[18rem] font-[500]
-                            leading-[210px] text-zinc-700
-                            text-opacity-40 absolute -right-[34rem] -bottom-6">
-                            <span className=''>Who's <br/> this</span>                      
+                           leading-[220px] text-zinc-700
+                            text-opacity-40 absolute -right-[34rem] bottom-12">
+                            <span className=''>Who I</span>                      
+                            <span className='leading-[100px]'> am</span>                      
                         </div>
                     </div>
 

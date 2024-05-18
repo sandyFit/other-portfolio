@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
+import { HiArrowDown } from 'react-icons/hi2';
 
 const Transition3 = () => {
     
@@ -23,13 +24,17 @@ const Transition3 = () => {
                     </div>
                     
                     <div className="flex flex-col text-right morganite-extra-bold text-[24rem] font-[500]
-                        text-zinc-700 text-opacity-40 absolute -bottom-44 -right-[35.5rem]">
+                        text-zinc-700 text-opacity-40 absolute -bottom-[9.2rem] -right-[35.5rem]">
                         <span className=''>Work</span>                      
                     </div>
+
+                    <button className='text-[2rem] text-violet-500 absolute -right-[22.8rem] -bottom-[10.8rem]'>
+                    <HiArrowDown/>
+                </button>
                         
                 </div>
                 
-                <div className="flex gap-32 justify-end mt-20">
+                <div className="flex gap-32 justify-end mt-[2.9rem]">
                     {/* <div className='w-3 h-3 bg-violet-500 absolute top-[.4rem] left-0'></div> */}
                     <div className='text-xsmall w-[28%]' >
                         Each project is crafted for optimal performance and user engagement using technologies like

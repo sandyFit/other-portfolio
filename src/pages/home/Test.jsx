@@ -83,9 +83,9 @@ const Test = () => {
                             opportunities where I can innovate & collaborate.
                         </p>
                 </div>
-                 <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
-                        <HiArrowDown/>
-                    </button>
+                <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
+                    <HiArrowDown/>
+                </button>
 
                 <div className="flex mt-6 relative">
                     <button onMouseOver={() => { setIsActive(true) }}
