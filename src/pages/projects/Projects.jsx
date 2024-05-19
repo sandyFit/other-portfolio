@@ -53,10 +53,10 @@ const Projects = () => {
                 className="flex relative justify-center items-center ">
 
                 <div border-cut="footer-btm-white"
-                    className="w-[85%] h-[80%] flex relative p-1">
+                    className="w-[85vw] h-[80%] flex relative p-1">
 
-                    <div className="flex w-full relative p-12  border-cut-projects ">
-                        <div className="flex flex-col">
+                    <div className="flex w-full  justify-between relative p-12 border-cut-projects ">
+                        <div className="w-[50%] flex flex-col">
                             <div className="flex flex-col w-full relative">       
                                 <div className="flex">
                                     <h2 className='med-title mr-2 [word-spacing:0.1em]'>
@@ -68,15 +68,15 @@ const Projects = () => {
                                     Demo Project
                                 </p>
                             </div>
-                            <p className='text-xxsmall-purple w-[66%] mt-44 '>
+                            <p className='text-xsmall-purple w-[90%] mt-44 '>
                                 Designed and developed a responsive dental studio website. <br/>
                                 Features include an online booking system, real-time appointment updates, and a user-friendly interface,
                                 ensuring seamless integration of design and functionality.
                             </p>
 
                             <div border-cut="bottom-left-bold-purple"
-                                className="flex w-[64%] overflow-hidden slider-container relative pl-7 py-2 mt-8">
-                                <p className='text-sm text-violet-600 flex-shrink-0 whitespace-nowrap mr-6'>
+                                className="flex w-[90%] justify-center items-center overflow-hidden slider-container relative py-2 mt-8">
+                                <p className='text-xxsmall-purple uppercase flex-shrink-0 whitespace-nowrap'>
                                     JS &nbsp; / &nbsp; React &nbsp; / &nbsp;
                                     AOS JS &nbsp; / &nbsp; Tailwind CSS &nbsp; / &nbsp; Node JS
                                     &nbsp; / &nbsp; Unit  &nbsp; / &nbsp; AWS
@@ -86,7 +86,7 @@ const Projects = () => {
                         </div>
                         
                         <div corner-cut="top-right"
-                            className="flex h-full w-[50%] bg-violet-500 big-title ">
+                            className="flex h-full w-[46%] bg-violet-500 big-title ">
                             pic
                         </div>
                     </div>   

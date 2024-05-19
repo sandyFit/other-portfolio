@@ -58,9 +58,9 @@ const Contact = () => {
                                 pair of creative hands for a project, I'm all ears and hands!.
 
                                 <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                                    href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-zinc-100 font-[300]
-                                    after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[94%] 
-                                    after:origin-bottom after:scale-x-0 after:bg-zinc-100 after:transition-transform 
+                                    href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-zinc-50 font-[300]
+                                    after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-[98%] 
+                                    after:origin-bottom after:scale-x-0 after:bg-zinc-50 after:transition-transform 
                                     after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
                                     hover:after:scale-x-100 ml-2">
                                         Let's connect.

@@ -548,7 +548,7 @@
     }
 
     .text-xsmall-purple {
-      @apply font-roboto text-violet-600 text-[1rem] font-[400] uppercase
+      @apply font-roboto text-violet-600 text-[1rem] font-[400] leading-[18px]
     }
 
     .text-xxsmall {
@@ -564,7 +564,7 @@
     }
     
     .text-xxsmall-purple {
-      @apply font-roboto text-violet-600 text-[.8rem] font-[400] tracking-wider uppercase
+      @apply font-roboto text-violet-600 text-[.8rem] font-[400] tracking-wider
     }
 
 
@@ -600,7 +600,7 @@
 
     }
     .med-title {
-      @apply morganite-bold text-[7.6rem]  leading-[120px] uppercase text-violet-500
+      @apply morganite-bold text-[8rem]  leading-[120px] uppercase text-violet-500
 
     }
     .reg-title {

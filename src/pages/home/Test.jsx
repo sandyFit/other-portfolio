@@ -79,7 +79,7 @@ const Test = () => {
                     </div>
                     <div className='w-3 h-3 bg-violet-500 absolute bottom-[3.4rem] left-0'></div> 
                         <p className='w-[27.1%] font-[100] indent-7 text-xsmall mt-[-.5rem] uppercase'>
-                            Frontend developer with a designer's eye. currently seeking 
+                            Frontend developer with a designer's eye. currently seeking job
                             opportunities where I can innovate & collaborate.
                         </p>
                 </div>
@@ -96,13 +96,13 @@ const Test = () => {
                         <Link to='projects'
                             className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
                             <div className="translate-y-0 skew-y-0 transition duration-500 
-                            group-hover:-translate-y-[110%] group-hover:skew-y-[10deg]">
-                                peek inside
+                            group-hover:-translate-y-[110%] group-hover:skew-y-[8deg]">
+                                check my work
                             </div>
-                            <div className="absolute translate-y-[110%] skew-y-[10deg] transition 
+                            <div className="absolute translate-y-[110%] skew-y-[8deg] transition 
                             duration-500 group-hover:translate-y-0 
                                 group-hover:skew-y-0 text-violet-500">
-                                peek inside
+                                check my work
                             </div>
                         </Link>                              
                     </button>               
