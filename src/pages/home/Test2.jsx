@@ -26,9 +26,9 @@ const Test2 = () => {
 
     return (
         <section id="who's-this"
-            className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative overflow-hidde
+            className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative 
                 pb-20 about-content'>
-            <div className="flex flex-col  items-start mx-16" border-cut="top-and-bottom-about">                        
+            <div className="flex flex-col items-start mx-16" border-cut="top-and-bottom-about">                        
 
                 <div className="flex flex-col items-start mt-32">
                     <div className="flex justify-between relative">
@@ -65,7 +65,7 @@ const Test2 = () => {
                             I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations.
                             <br />
                             For inquiries or opportunities, please contact me at 
-                            <span className='text-zinc-50 ml-1'>info@trishramos.com</span>.                                                  
+                            <a href='mailto:sandy07r@gmail.com' className='text-zinc-50 ml-1'>info@trishramos.com</a>.                                                  
                         </div>                  
                     </div>
                 </div>                

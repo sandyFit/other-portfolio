@@ -6,13 +6,13 @@ import MotionText2 from '../../components/ui/MotionText2';
 const WhaIDo = () => {
     
     return (
-        <section data-cursor-color='#f9a8d4' id="contact"
+        <section  id="contact"
             className='w-full h-[calc(100vh-60px)] bg-zinc-900 relative'>
             {/* <hr className='w-[84%] border-t-[1px] border-skyIce-900 absolute left-36 top-16'/> */}
 
                 <MotionText2
                     text1={'what i do'}
-                />
+                />data-cursor-color='#f9a8d4'
             <div className="flex flex-col text-zinc-50 gap-7 items-start ml-36 mt-24 pb-12">
 
                 <div className='w-[80%] about-text-mayus leading-[75px] relative'>

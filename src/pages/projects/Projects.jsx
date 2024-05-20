@@ -63,10 +63,12 @@ const Projects = () => {
                                         <TextShimmerEffect text={'Radiant dental studio'}/>
                                     </h2>
                                 </div>    
-
-                                <p className='text-sm text-violet-600'>
-                                    Demo Project
-                                </p>
+                                
+                                <a href='#'
+                                    className='text-sm text-violet-600'>
+                                    Visit Demo Project  &#129125;
+                                </a>
+                                                                 
                             </div>
                             <p className='text-xsmall-purple w-[90%] mt-44 '>
                                 Designed and developed a responsive dental studio website. <br/>

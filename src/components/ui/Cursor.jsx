@@ -21,6 +21,8 @@ const Cursor = ({ isActive }) => {
         const hoveredSection = elements.find(el => el.dataset.cursorColor);
         if (hoveredSection) {
             setCursorColor(hoveredSection.dataset.cursorColor);
+        } else {
+            setCursorColor('#f9a8d4'); // Default color if no section is found
         }
     };
 
@@ -58,16 +60,15 @@ const Cursor = ({ isActive }) => {
             <div 
                 ref={circle}
                 style={{
-                    width: isActive ? 120 : 5,
-                    height: isActive ? 120 : 5,
-                    backgroundColor: 'transpatent',
-                    border: '1px solid #fff',
+                    width: isActive ? 120 : 15,
+                    height: isActive ? 120 : 15,
+                    backgroundColor: `rgba(217, 70, 239, ${isActive ? 0.2 : 1})`, // Use RGBA for background opacity
+                    border: `1px solid ${cursorColor}`,
                     position: 'absolute', 
                     borderRadius: '50%',
-                    filter: `opacity(${isActive ? 0.5 : 1}`,
-                    transition: 'height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out, background-color 0.3s ease'
+                    transition: 'height 0.3s ease-out, width 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease'
                 }}
-                className='top-0 left-0 fixed rounded-full  pointer-events-none ' 
+                className='top-0 left-0 fixed rounded-full pointer-events-none' 
             />
         </div>
     );

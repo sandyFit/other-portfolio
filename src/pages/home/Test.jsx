@@ -66,7 +66,7 @@ const Test = () => {
 
 
     return (
-        <section id="index" 
+        <section id="index" data-cursor-color='#d946ef'
             className='w-full min-h-screen flex flex-col bg-zinc-950 relative hero-content'>
             <Transition />
             <Transition2/>
