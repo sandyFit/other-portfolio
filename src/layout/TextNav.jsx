@@ -3,6 +3,24 @@ import { Link } from 'react-scroll';
 import Cursor from '../components/ui/Cursor';
 import '../assets/css/borders.css';
 
+
+const links = [
+    { name: "who's-this" },
+    { name: 'say-hey' },
+    { name: 'read-cv' },
+];
+
+const NavLink = ({ name }) => (
+    <Link
+        to={name}
+        smooth={true}
+        duration={500}
+        className="group relative overflow-hidden text-zinc-400 cursor-pointer"
+    >
+        {name.replace(/-/g, ' ')}
+    </Link>
+);
+
 const TextNav = () => {
 
     const [isActive, setIsActive] = useState(false);
@@ -15,32 +33,122 @@ const TextNav = () => {
             <div className="flex ">
                
                 <div className="flex w-full relative">
-                    <div 
-                        className='flex w-[28rem] h-12 relative'>       
-                        <ul border-cut="top-right"
-                            className='w-full flex justify-between items-center rounded px-12'>
-                            {["who's-this", 'say-hey', 'read-CV'].map((item, index) => (
-                                <li key={index}>               
-                                    <button onMouseOver={() => { setIsActive(true) }}
-                                        onMouseLeave={() => { setIsActive(false) }}
-                                        className="group relative capitalize"
-                                        >
-                                        <Link to={item}
-                                            className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
-                                            <div className="translate-y-0 skew-y-0 transition duration-500 
-                                            group-hover:-translate-y-[110%] 
-                                                group-hover:skew-y-[11deg]">
-                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
-                                            </div>
-                                            <div className="absolute translate-y-[110%] skew-y-[11deg] transition 
-                                            duration-500 group-hover:translate-y-0 
-                                                group-hover:skew-y-0 text-violet-500">
-                                                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
-                                            </div>
-                                        </Link>                              
-                                    </button>
-                                </li>
-                            ))}                           
+                    <div border-cut="top-right"
+                        className='flex w-[30rem] h-12 relative justify-center items-center px-[4.2rem]'>       
+                        <ul 
+                            onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
+                            className='w-full flex justify-between items-start text-xsmall-white gap-1'>
+                
+                            <Link to={"who's-this"} class="group relative overflow-hidden ">
+                                <span class="relative inline-flex">
+                                    <span class="duration-700 [transition-delay:0.02s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        W
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.04s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        h
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.06s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        o
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.08s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        '
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.10s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        s
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.12s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        &nbsp;
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.14s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        t
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.16s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        h
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.14s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        i
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.16s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        s
+                                    </span>
+                                </span>
+                            </Link>
+                                        
+                            <Link to={"say-hey"} class="group relative overflow-hidden">
+                                <span class="relative inline-flex">
+                                    <span class="duration-700 [transition-delay:0.02s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        S
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.04s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        a
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.06s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        y
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.08s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        &nbsp;
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.10s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        H
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.12s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        e
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.14s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        y
+                                    </span>                       
+                                </span>
+                            </Link>
+                                        
+                            <Link to={"say-hey"} class="group relative overflow-hidden">
+                                <span class="relative inline-flex">
+                                    <span class="duration-700 [transition-delay:0.02s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        R
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.04s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        e
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.06s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        a
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.08s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        d
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.10s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        &nbsp;
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.12s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        C
+                                    </span>
+                                    <span class="duration-700 [transition-delay:0.14s] 
+                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                        V
+                                    </span>                       
+                                </span>
+                            </Link>
                         </ul>
                     </div>
                 </div>  

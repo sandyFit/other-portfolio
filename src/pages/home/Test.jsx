@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HiArrowDown, HiArrowDownRight } from "react-icons/hi2";
+import { HiArrowDown, HiArrowDownRight, HiOutlineChevronDoubleDown } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
@@ -46,28 +46,28 @@ const Test = () => {
     
 
 
-    //  useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    //     const heroTimeline = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: "#index",
-    //             start: "top top", // Triggering as soon as it enters the top of the viewport
-    //             end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
-    //             scrub: true, // Smooth scrubbing
-    //             toggleActions: 'play none none reverse', // Reverse when scrolling back up
-    //         }
-    //     });
+        const heroTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#index",
+                start: "top top", // Triggering as soon as it enters the top of the viewport
+                end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+                scrub: true, // Smooth scrubbing
+                toggleActions: 'play none none reverse', // Reverse when scrolling back up
+            }
+        });
 
-    //     // Fade out the Hero content
-    //     heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
+        // Fade out the Hero content
+        heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
 
-    // }, []);
+    }, []);
 
 
     return (
         <section id="index" data-cursor-color='#d946ef'
-            className='w-full min-h-screen flex flex-col bg-zinc-950 relative hero-content'>
+            className='w-full min-h-screen flex flex-col bg-zinc-950 relative'>
             <Transition />
             <Transition2/>
             <Cursor isActive={isActive} />
@@ -84,39 +84,76 @@ const Test = () => {
                         </p>
                 </div>
                 <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
-                    <HiArrowDown/>
+                    <HiOutlineChevronDoubleDown/>
                 </button>
 
                 <div className="flex mt-6 relative">
                     <button onMouseOver={() => { setIsActive(true) }}
                         onMouseLeave={() => { setIsActive(false) }}
                         border-cut="bottom-left-purple"
-                        className="group relative capitalize px-12 h-12">
+                        className="group relative px-[4.2rem] h-12">
                     
-                        <Link to='projects'
-                            className="relative inline-flex overflow-hidden text-buttons text-zinc-50">
-                            <div className="translate-y-0 skew-y-0 transition duration-500 
-                            group-hover:-translate-y-[110%] group-hover:skew-y-[8deg]">
-                                check my work
-                            </div>
-                            <div className="absolute translate-y-[110%] skew-y-[8deg] transition 
-                            duration-500 group-hover:translate-y-0 
-                                group-hover:skew-y-0 text-violet-500">
-                                check my work
-                            </div>
+                        <Link to={"my-work"} class="group relative overflow-hidden text-xsmall-white">
+                            <span class="relative inline-flex">
+                                <span class="duration-700 [transition-delay:0.02s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    s
+                                </span>
+                                <span class="duration-700 [transition-delay:0.04s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    e
+                                </span>
+                                <span class="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    e
+                                </span>
+                                
+                                <span class="duration-700 [transition-delay:0.12s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    &nbsp;
+                                </span>
+                                <span class="duration-700 [transition-delay:0.14s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    m
+                                </span>
+                                <span class="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    y
+                                </span>                                    
+                                <span class="duration-700 [transition-delay:0.12s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    &nbsp;
+                                </span>
+                                <span class="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    W
+                                </span>
+                                <span class="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    o
+                                </span>
+                                <span class="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    r
+                                </span>
+                                <span class="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    k
+                                </span>
+                            </span>
                         </Link>                              
                     </button>               
                 </div>                          
             </div>
 
-            <article className="w-full flex flex-col justify-center items-center relative mt-40">
+            <article className="w-full flex flex-col justify-center items-center relative mt-40  hero-content">
                 <div className="w-full flex flex-col justify-center items-center relative ">                      
                      <div className="w-full flex justify-between text-xsmall uppercase px-16">
                         <span className='flex'>
-                            based in colombia
+                            based in <span className='text-zinc-50 ml-1.5'> colombia</span>
                         </span>
-                        <span className='flex '>
-                            ©2024 folio
+                        <span className='flex text-zinc-50'>
+                            ©2024 <span className='text-zinc-400 ml-1.5'>folio</span>
                         </span>
                     </div>
 

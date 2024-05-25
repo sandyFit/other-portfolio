@@ -29,9 +29,9 @@ const Footer = () => {
                     </div>
 
                     <p className='text-xsmall uppercase tracking-wider w-full inline-flex ml-2'>
-                        made in colombia with 
-                        <BsHeart className='ml-2 mt-1 text-base text-violet-400'/>
-                        
+                        made with 
+                        <BsHeart className='mx-2 mt-1 text-base text-violet-400'/>
+                        in <span className='text-zinc-50 ml-1.5'> colombia</span>
                     </p>                   
                 </div>
 

@@ -524,7 +524,7 @@
     }
 
     .text-buttons {
-      @apply font-roboto text-xl
+      @apply font-roboto text-xl  text-zinc-50
     }
 
     .text-logo {
