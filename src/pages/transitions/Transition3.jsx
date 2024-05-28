@@ -43,10 +43,12 @@ const Transition3 = () => {
                 <div className="flex  justify-end">
                     <div className="flex gap-32 justify-end mt-16">
                         <div className='text-xsmall w-[55%] columns-2 gap-[2em]'>
-                            Each project is responsive, visually appealing, and SEO optimazed, built with the latest web
+                            Each project is responsive, visually appealing, and optimized for SEO, performance and
+                            reliability. <br/>
+                            Built with the latest web
                             technologies like CSS, JavaScript, ReactJS, NextJS, and APIs.
-                            <br/>
-                            Hosted on AWS and Vercel, these projects are optimized for performance and reliability.
+                            
+                            Hosted on AWS and Vercel.
                             <br/>
                             While I'm still early in my career journey, I'm excited to share what I've built so far and
                             can't wait to grow even more.
