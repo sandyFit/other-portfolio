@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import { HiArrowDown, HiChevronDoubleDown, HiOutlineChevronDoubleDown } from 'react-icons/hi2';
 import Cursor from '../../components/ui/Cursor';
+import HappyFace from '../../components/ui/HappyFace';
 
 const Transition3 = () => {
     
@@ -15,18 +16,25 @@ const Transition3 = () => {
                 pb-20 about-content'>
             <Cursor isActive={isActive}/>
             <div className="w-full flex flex-col items-start px-16" border-cut="footer-btm">                    
-                <div className="flex justify-between relative mt-12">
-                    <div className='title-h2'>
-                            <TextShimmerEffect text={"⋙ explore my projects:"}/>
-                            <TextShimmerEffect text={"Crafted with Care & a"}/>
-                            <TextShimmerEffect text={"Dash of Flair."}/>
-                            <TextShimmerEffect text={"My aim is to design"}/>
-                            <TextShimmerEffect text={"every detail to function"}/>
-                            <TextShimmerEffect text={"smootly & leave"}/>
-                            <TextShimmerEffect text={"a lasting impression."}/>
-                                                   
+               <div className="flex justify-between relative mt-12">
+                    <div className='title-h2 relative'>
+                        <TextShimmerEffect text={"⋙ explore my projects:"}/>
+                        <TextShimmerEffect text={"Crafted with Care & a"}/>
+                        <TextShimmerEffect text={"Dash of Flair. "} />                     
+                        <TextShimmerEffect text={"∎ My aim is to design"}/>
+                        <TextShimmerEffect text={"every detail to function"}/>
+                        <TextShimmerEffect text={"smootly & leave a"}/>
+                        <TextShimmerEffect text={"lasting impression."}/>
                     </div>
-                        
+
+                    <div className="absolute top-[7.8rem] left-[30rem]">
+                        <HappyFace />
+                    </div>
+                    
+                    <span className="absolute top-[6.2rem] left-[33.8rem] text-zinc-50 text-8xl rotating-icon">
+                        ⁕
+                    </span>
+                    
                     <div className="flex flex-col text-right morganite-extra-bold text-[23rem] font-[500] leading-[130px]
                         text-zinc-700 text-opacity-40 relative">                   
                         <span className='absolute bottom-[4.4rem] -right-[33.5rem]'>
@@ -36,8 +44,9 @@ const Transition3 = () => {
 
                     <button className='text-[2rem] text-violet-500 absolute -right-[34rem] -bottom-[11.4rem] '>
                         <HiOutlineChevronDoubleDown/>
-                    </button>                       
+                    </button>                        
                 </div>
+
 
                 {/* <hr className='w-[91vw] border-t-[1px] border-violet-500 absolute bottom-64' /> */}
                 <div className="flex  justify-end">

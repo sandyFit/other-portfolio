@@ -75,12 +75,16 @@ const Test = () => {
                 className="flex flex-col font-syne mt-6 ml-16">
                 <div className="flex flex-col justify-start items-start relative">
                     <div className='text-logo'>
-                        <TextShimmerHero text={'trish ramos'}/>
+                        trish ramos
+                        <span className=" text-zinc-50 text-6xl mr-2 rotating-icon absolute">
+                            ⁕
+                        </span>
                     </div>
                     <div className='w-3 h-3 bg-violet-500 absolute bottom-[3.4rem] left-0'></div> 
                         <p className='w-[27.1%] font-[100] indent-7 text-xsmall mt-[-.5rem] uppercase'>
-                            Frontend developer with a designer's eye. currently seeking job
-                            opportunities where I can innovate & collaborate.
+                            <span className='text-xsmall-white ml-1'>Frontend developer</span> with a <span className='text-xsmall-white'>designer's eye</span>. currently seeking 
+                        <span className='text-xsmall-white ml-1'>job opportunities</span> where I can
+                        <span className='text-xsmall-white ml-1'>innovate</span> & <span className='text-xsmall-white ml-1'>collaborate</span>.
                         </p>
                 </div>
                 <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
@@ -91,17 +95,33 @@ const Test = () => {
                     <button onMouseOver={() => { setIsActive(true) }}
                         onMouseLeave={() => { setIsActive(false) }}
                         border-cut="bottom-left-purple"
-                        className="group relative px-[4.2rem] h-12">
+                        className="group relative px-[2.9rem] h-12">
                     
                         <Link to={"my-work"} class="group relative overflow-hidden text-xsmall-white">
                             <span class="relative inline-flex">
                                 <span class="duration-700 [transition-delay:0.02s] 
                                 group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    s
+                                    e
                                 </span>
                                 <span class="duration-700 [transition-delay:0.04s] 
                                 group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    e
+                                    x
+                                </span>
+                                <span class="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    p
+                                </span>
+                                <span class="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    l
+                                </span>
+                                <span class="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    o
+                                </span>
+                                <span class="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    r
                                 </span>
                                 <span class="duration-700 [transition-delay:0.06s] 
                                 group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">

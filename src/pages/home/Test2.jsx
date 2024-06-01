@@ -3,6 +3,7 @@ import TextShimmerEffect from '../../components/featured/TextShimmerEffect'
 import gsap from 'gsap';
 import '../../assets/css/borders.css';
 import ToolTable from '../../components/ui/ToolTable';
+import CodeIcon from '../../components/ui/CodeIcon';
 
 const Test2 = () => {
 
@@ -32,20 +33,27 @@ const Test2 = () => {
 
                 <div className="flex flex-col items-start mt-32">
                     <div className="flex justify-between relative">
-                        <div className='title-h2'>
+                        <div className='title-h2 relative'>
                             <TextShimmerEffect text={"⋙ I'm a graphic designer"}/>
                             <TextShimmerEffect text={"who turned frontend"}/>
-                            <TextShimmerEffect text={"developer. ∎ keenly"}/>
-                            <TextShimmerEffect text={"focused on balancing"}/>
-                            <TextShimmerEffect text={"code functionality &"}/>
-                            <TextShimmerEffect text={"visual aesthetics."}/>
+                            <TextShimmerEffect text={"developer. "}/>
+                            <TextShimmerEffect text={"∎ keenly focused on "}/>
+                            <TextShimmerEffect text={"balancing code"}/>
+                            <TextShimmerEffect text={"functionality & visual"}/>
+                            <TextShimmerEffect text={"aesthetics."}/>
                         </div>
 
-                        <div className="flex flex-col text-right morganite-extra-bold text-[18rem] font-[500]
-                           leading-[220px] text-zinc-700
-                            text-opacity-40 absolute -right-[34rem] bottom-12">
+                        <span className="absolute top-[8.2rem] left-[24rem] text-zinc-50 text-8xl">
+                            <CodeIcon/>
+                        </span>
+                        <span className="absolute top-[6.4rem] left-[26.8rem] text-zinc-50 text-8xl rotating-icon">
+                            ⁕
+                        </span>
+                        
+                        <div className="flex flex-col text-right morganite-extra-bold text-[21rem] font-[500]
+                           leading-[260px] text-zinc-700 text-opacity-40 absolute -right-[34rem] bottom-16">
                             <span className=''>Who I</span>                      
-                            <span className='leading-[100px]'> am</span>                      
+                            <span className=' leading-[100px]'>am</span>                      
                         </div>
                     </div>
 

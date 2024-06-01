@@ -1,5 +1,4 @@
 import React from 'react';
-import { AiOutlineCopyright } from "react-icons/ai";
 import TimeZone from '../components/ui/TimeZone';
 import { BsHeart } from 'react-icons/bs';
 
@@ -10,13 +9,23 @@ const Footer = () => {
         <section id='contact'
             className='w-full flex justify-center items-center '>        
             <div className="flex w-full h-full justify-between items-end ml-16">
-                <div className="flex flex-col">
-                    <div className="flex flex-col text-logo">
-                        <div className="flex">
-                            <AiOutlineCopyright className='text-logo mt-4' />
-                            {date.getFullYear()}
+                <div className="'w-1/2 flex flex-col">
+                    <div className="w-full flex flex-col">
+                        <div className="'w-full text-logo flex">
+                            <span className=" text-zinc-50 text-8xl mr-2 rotating-icon">
+                                ⁕
+                            </span>
+                            <span className='mt-1'>{date.getFullYear()}</span>
+                            
                         </div>
-                        <span className='text-logo mt-[-2rem]'>trish ramos</span>       
+                        <div className="w-full flex relative">
+                            <span className='flex w-full text-logo mt-[-2rem]'>                        
+                                trish ramos                        
+                            </span>       
+                            <span className='flex w-full text-zinc-50 text-4xl absolute left-[24.5rem] bottom-8'>                        
+                                &copy;                           
+                            </span>       
+                        </div>
                     </div> 
 
                 </div>

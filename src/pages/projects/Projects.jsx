@@ -71,9 +71,9 @@ const Projects = () => {
                                                                  
                             </div>
                             <p className='text-xsmall-purple w-[90%] mt-44 '>
-                                Designed and developed a responsive dental studio website. <br/>
-                                Features include an online booking system, real-time appointment updates, and a user-friendly interface,
-                                ensuring seamless integration of design and functionality.
+                                Designed and developed a clean, responsive website for a dental boutique studio. <br/>
+                                Features include an online booking system, real-time appointment updates, and a user-friendly
+                                interface, that ensures seamless integration of design and functionality.
                             </p>
 
                             <div border-cut="bottom-left-bold-purple"

@@ -56,7 +56,7 @@ const Contact = () => {
                             <span className='w-full indent-8 '>
                                 
                                 Whether you're looking for someone to join your team full-time or just need an extra
-                                pair of creative hands for a project, I'm all ears and hands!.
+                                pair of creative hands for a project — I'm all ears and hands!.
 
                                 <a onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                                     href='mailto:sandy07r@gmail.com' className="w-[39.055%] relative text-zinc-50 font-[300]
@@ -93,7 +93,7 @@ const Contact = () => {
                                     info@trishramos.com
                                 </div>
                                 {showCopiedText && (
-                                    <h3 className={`flex font-roboto text-[.7rem] font-[300] absolute left-[8.3rem] 
+                                    <h3 className={`flex font-roboto text-[.7rem] font-[300] absolute right-[7.8rem] 
                                         ${showCopiedText ? 'copiedTextVisible' : 'copiedTextHidden'}`}>
                                         Mail copied <BsCheck className='text-violet-500 ml-1 text-xl'/>
                                     </h3>

@@ -34,7 +34,7 @@ const TextNav = () => {
                
                 <div className="flex w-full relative">
                     <div border-cut="top-right"
-                        className='flex w-[30rem] h-12 relative justify-center items-center px-[4.2rem]'>       
+                        className='flex w-[26rem] h-12 relative justify-center items-center px-[2.9rem]'>       
                         <ul 
                             onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
                             className='w-full flex justify-between items-start text-xsmall-white gap-1'>
