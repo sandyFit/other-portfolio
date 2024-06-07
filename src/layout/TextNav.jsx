@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import Cursor from '../components/ui/Cursor';
 import '../assets/css/borders.css';
-
+import Footer from './Footer';
+import TextShimmerEffect from '../components/featured/TextShimmerEffect';
+import Socials from '../components/ui/Socials';
+import { BsCheck, BsCopy, BsHeart } from 'react-icons/bs';
+import Sitemap from '../components/ui/Sitemap';
+import TimeZone from '../components/ui/TimeZone';
+import MotionText from '../components/ui/MotionText';
 
 const links = [
-    { name: "who's-this" },
-    { name: 'say-hey' },
+    { name: "about" },
+    { name: 'get in touch' },
     { name: 'read-cv' },
 ];
 
@@ -23,138 +28,99 @@ const NavLink = ({ name }) => (
 
 const TextNav = () => {
 
-    const [isActive, setIsActive] = useState(false);
+    const [showCopiedText, setShowCopiedText] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
 
+    const handleCopiedText = () => {
+        const emailAddress = 'hello@trishramos.com';
+
+        navigator.clipboard.writeText(emailAddress).then(() => {
+            console.log('Email address copied to clipboard!');
+            setIsCopied(true);
+            setShowCopiedText(true); // Show "Copied" text
+            setTimeout(() => {
+                setIsCopied(false);
+                setShowCopiedText(false); // Hide "Copied" text after 4 seconds to match the fade animation
+            }, 1500); // Adjust the timing based on your animation
+        }).catch(err => {
+            console.error('Failed to copy email address to clipboard:', err);
+        });
+
+    }
 
     return (
-        <section 
-            className='w-full h-[60px] absolute top-0 z-20 flex justify-end mt-10 pr-16'>
-            <Cursor isActive={isActive} />          
-            <div className="flex ">
-               
-                <div className="flex w-full relative">
-                    <div border-cut="top-right"
-                        className='flex w-[26rem] h-12 relative justify-center items-center px-[2.9rem]'>       
-                        <ul 
-                            onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}
-                            className='w-full flex justify-between items-start text-xsmall-white gap-1'>
+        <section id="reach-out" border-cut="top-right-black"
+            className='w-full min-h-screen bg-zinc-950 relative flex flex-col pt-2'>
+            <div className="flex flex-col px-16">             
+                <div className="flex mt-8">
+                    <Footer />
+                </div>
                 
-                            <Link to={"who's-this"} class="group relative overflow-hidden ">
-                                <span class="relative inline-flex">
-                                    <span class="duration-700 [transition-delay:0.02s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        W
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.04s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        h
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.06s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        o
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.08s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        '
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.10s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        s
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.12s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        &nbsp;
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.14s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        t
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.16s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        h
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.14s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        i
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.16s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        s
-                                    </span>
-                                </span>
-                            </Link>
-                                        
-                            <Link to={"say-hey"} class="group relative overflow-hidden">
-                                <span class="relative inline-flex">
-                                    <span class="duration-700 [transition-delay:0.02s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        S
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.04s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        a
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.06s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        y
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.08s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        &nbsp;
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.10s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        H
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.12s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        e
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.14s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        y
-                                    </span>                       
-                                </span>
-                            </Link>
-                                        
-                            <Link to={"say-hey"} class="group relative overflow-hidden">
-                                <span class="relative inline-flex">
-                                    <span class="duration-700 [transition-delay:0.02s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        R
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.04s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        e
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.06s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        a
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.08s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        d
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.10s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        &nbsp;
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.12s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        C
-                                    </span>
-                                    <span class="duration-700 [transition-delay:0.14s] 
-                                    group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                        V
-                                    </span>                       
-                                </span>
-                            </Link>
-                        </ul>
+                <div className="flex flex-col mt-10 relative flex-grow">
+                    <div className="absolute left-0 -top-[2.8rem] w-full h-[2px] bg-zinc-800 transition-all 
+                        duration-[var(--duration)] ease-[var(--ease)]"></div>
+                    
+                    <div className="w-full flex justify-between mt-[-1.8rem]">
+                        <article className="w-[27vw] flex flex-col items-start text-xsmall uppercase text-zinc-300 
+                            mt-">
+                            
+                            <span className='w-full'>
+                                Whether you're looking for someone to join your team full-time or just need an extra
+                                pair of creative hands for a project — I'm all ears and hands!
+
+                                <a href='mailto:sandy07r@gmail.com' className="relative text-zinc-50 font-[400]
+                                    after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[1px] after:w-full 
+                                    after:origin-bottom after:scale-x-0 after:bg-zinc-50 after:transition-transform 
+                                    after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom
+                                    hover:after:scale-x-100 ml-2">
+                                    Let's connect
+                                </a>.
+                            </span>
+                        </article>
+                        <Socials />
                     </div>
-                </div>  
-            </div>      
+                    <button className="relative">
+                        <img src="/square-brackets.svg" alt="" className='absolute right-0 bottom-8' />
+                        <span className='w-[.9rem] h-[1rem] rounded bg-violet-500 absolute right-[.376rem]
+                            bottom-9'></span>
+                    </button>
+
+                    <div className="flex flex-col items-start ">                       
+                        <article className='w-[91.5vw] mt-60'>
+                            <button  onClick={handleCopiedText}>
+                                <div id='emailAddress'
+                                    className='big-title flex'>    
+                                    info@trishramos.com
+                                    {isCopied ?                                   
+                                        <BsCheck className='text-violet-500 ml-1 mt-5 text-[8rem]' />
+                                        :
+                                        <BsCopy className='ml-5 mt-10 text-[6rem]' />
+                                    }                               
+                                </div>
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="flex mx-1 mt-auto">
+                 
+            </div>
+
+            <div className="mt-auto w-full flex justify-between items-center h-[40px] bg-zinc-900 px-16">
+                <div className="flex w-[18%]">
+                    <TimeZone />
+                </div>
+                <div className="w-[30%] flex justify-center items-center">
+                    <MotionText text={'feel free to reach out'} />
+                </div>
+                <div className="flex w-[14%] justify-end">
+                    <Sitemap />
+                </div>
+            </div>
+            
         </section>
-    )
+    );
 }
 
 export default TextNav;

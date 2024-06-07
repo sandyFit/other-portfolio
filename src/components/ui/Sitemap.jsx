@@ -4,8 +4,10 @@ import { Link } from 'react-scroll';
 
 const links = [
     { name: 'index' },
-    { name: 'my-work' },
-    { name: "who's-this" },
+    { name: 'work' },
+    { name: "info" },
+    { name: "cv" },
+    
 ];
 
 const formatLinkName = (name) => name.replace(/-/g, ' ');
@@ -15,13 +17,14 @@ const SiteLink = ({ name }) => (
         to={name}
         smooth={true}
         duration={500}
-        className="group relative overflow-hidden text-zinc-400 cursor-pointer"
+        className="group relative overflow-hidden text-xxsmall-white cursor-pointer"
     >
         <span className="relative inline-flex">
             {formatLinkName(name).split('').map((char, index) => (
                 <span
                     key={index}
-                    className={`duration-700 [transition-delay:${index * 0.02}s] group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500`}
+                    className={`duration-700 [transition-delay:${index * 0.02}s] group-hover:[transform:rotateY(360deg)] 
+                    group-hover:text-violet-500`}
                 >
                     {char === ' ' ? '\u00A0' : char}
                 </span>
@@ -31,19 +34,14 @@ const SiteLink = ({ name }) => (
 );
 
 const Sitemap = () => {
-    const [isActive, setIsActive] = useState(false);
+
 
     return (
-        <div className="flex flex-col w-full">
-            <Cursor isActive={isActive} />
-            <div className="title-xsmall pb-1">links</div>
-            <ul
-                onMouseEnter={() => setIsActive(true)}
-                onMouseLeave={() => setIsActive(false)}
-                className="w-full flex flex-col text-xxsmall justify-between items-start bg-transparent gap-2"
+        <div className="flex w-full">
+            <ul className="w-full flex uppercase justify-between items-start  gap-2"
             >
                 {links.map(({ name }) => (
-                    <li key={name}>
+                    <li key={name} className=''>
                         <SiteLink name={name} />
                     </li>
                 ))}

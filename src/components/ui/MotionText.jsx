@@ -1,46 +1,20 @@
 
 import React from 'react';
 
+const MotionText = ({ text }) => {
+    const repetitions = Array(3).fill(null);
 
-const MotionText = ({  text1, text2, text3, text4, text5, text6, text7, text8, text9, text10}) => {
-  const repetitions = Array(2).fill(null);
-
-  return (
-      <div className="w-full z-10 flex py-2 items-center"
-            style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text '>
-                <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
-                    {repetitions.map((_, index) => ( 
-                        <React.Fragment key={index}>
-                            
-                            <span className='text-xsmall-purple mx-' >{text1}</span>
-                            
-                            <span className='text-xsmall-purple mx-1' >{text2}</span>
-                            
-                            <span className='text-xsmall-purple mx-1' >{text3}</span>
-                            
-                            <span className='text-xsmall-purple mx-1' >{text4}</span>
-                            
-                            <span className='text-xsmall-purple mx-1' >{text5}</span>
-                                                       
-                            <span className='text-xsmall-purple mx-1' >{text6}</span>
-                                                       
-                            <span className='text-xsmall-purple mx-1' >{text7}</span>
-                                                      
-                            <span className='text-xsmall-purple mx-1' >{text8}</span>
-                                                      
-                            <span className='text-xsmall-purple mx-1' >{text9}</span>
-                                                      
-                            <span className='text-xsmall-purple mx-1' >{text10}</span>
-
-                            
-                        </React.Fragment>
-                    ))}
-                </div>
+    return (
+        <div className="w-full h-3 z-10 flex justify-center items-center overflow-hidden">
+            <h2 className="motion-text w-full">
+                {repetitions.map((_, index) => (
+                <span key={index} className="text-xxsmall-white mx-3">
+                    {text}
+                </span>
+                ))}
             </h2>
-    </div>
-  )
+        </div>
+    );
 };
 
 export default MotionText;
-

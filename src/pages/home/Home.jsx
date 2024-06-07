@@ -1,14 +1,16 @@
 
 
 import React, { useEffect } from 'react';
-import Test from './Test';
-import Test2 from './Test2';
+import TextNav from '../../layout/TextNav';
+// import Test2 from './Test2';
 import Transition3 from '../transitions/Transition3';
 import Projects from '../projects/Projects';
 import Contact from '../contact/Contact';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from '@studio-freight/lenis';
+import About from '../about/About';
+import Hero2 from './Hero2';
 
 
 const Home = () => {
@@ -79,25 +81,24 @@ const Home = () => {
     }, []);
 
 
-
     return (
         <div>
             <section id='home' className=''>
-                <Test />
+                <Hero2 />
             </section>
-            
-            <section id='t3' className='section'>
-                <Transition3 />
-            </section>
+
             <section id='projects' >
                 <Projects />
             </section>
             <section id='subject' className=''>
-                <Test2 />
+                <About />
             </section>
 
-            <section id='contact' className='relative'>
+            {/* <section id='contact' className='relative'>
                 <Contact/>
+            </section> */}
+            <section id='contact' className='relative'>
+                <TextNav/>
             </section>
 
         </div>

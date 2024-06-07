@@ -1,55 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { HiArrowDownRight} from "react-icons/hi2";
-import Cursor from '../../components/ui/Cursor';
+import React, { useEffect } from 'react';
 import { Link } from 'react-scroll';
 import gsap from 'gsap';
 import TextShimmerHero from '../../components/featured/TextShimmerHero';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Transition from '../transitions/Transition';
 import Transition2 from '../transitions/Transition2';
-
+import '../../assets/css/borders.css';
 
 const Hero = () => {
-    const [isActive, setIsActive] = useState(false);
-    const [pageLoaded, setPageLoaded] = useState(false);
-    
-    
+
     useEffect(() => {
         const tl = gsap.timeline({
             defaults: {
                 ease: "power3.out",
-                duration: 1, // slightly faster
-                delay: 3
+                duration: 1, // slightly fasters
+                // delay: .5,
+               
             }
         });
 
             tl.fromTo('.small-title',
                 { opacity: 0 },
-                {opacity: 1, stagger: 0.5}
+                {opacity: 1, stagger: 0.5, delay: 3.5}
             
+        )
+        tl.fromTo('.sliding-text',
+            { translateX: '-100%', opacity: 0 },
+            {translateX: 0, opacity: 1,   ease: "power3.inOut"}
         )
 
         return () => tl.kill();
     }, []);
     
     useEffect(() => {
-        const handleLoad = () => setPageLoaded(true);
-        window.addEventListener('load', handleLoad);
-        return () => window.removeEventListener('load', handleLoad);
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+
+        tl.to('.overlay-first', { duration: 1, left: '-100%', ease: "power3.inOut" })
+          .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
     }, []);
 
-    useEffect(() => {
-        if (pageLoaded) {
-            gsap.registerPlugin(ScrollTrigger);
-            const tl = gsap.timeline();
-
-           tl.to('.overlay-first', { duration: 1, top: '-100%', ease: "power3.inOut" })
-          .to('.overlay-second', { duration: 1, top: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
-        }
-    }, [pageLoaded]);
+    
 
 
-    useEffect(() => {
+     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const heroTimeline = gsap.timeline({
@@ -68,70 +62,134 @@ const Hero = () => {
     }, []);
 
 
-
-
     return (
-        <section id="index"
-            className='w-full min-h-screen flex flex-col relative bg-zinc-950 hero-content'>
+        <section id="index" 
+            className='w-full min-h-screen flex flex-col bg-zinc-950 relative'>
             <Transition />
             <Transition2/>
-            <Cursor isActive={isActive} />
 
-            <article className='flex justify-end items-center gap-5 pt-48 mr-24'>
-                <p className='w-[30%] font-[100] text-xsmall'>
-                    Hello, I'm Trish, a creative frontend developer with a keen eye for design.<br/>
-                    Currently seeking new dev opportunities to innovate and collaborate! 
-                </p>
-
-                <button onMouseOver={() => { setIsActive(true) }} onMouseLeave={() => { setIsActive(false) }}
-                    className="group relative w-36 h-12 rounded-full border border-zinc-500 bg-transparent px-8 
-                    text-cyan-400">
-                    <Link to='projects'
-                        className="relative inline-flex overflow-hidden font-syne text-lg">
-                        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] 
-                            group-hover:skew-y-12">
-                            My Work
-                        </div>
-                        <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 
-                            group-hover:skew-y-0 text-zinc-50 ">
-                            My Work
-                        </div>
-                    </Link>
-                </button>
-            </article>            
-            <hr className='w-[92%] border-t-[1px] border-zinc-600 absolute top-[25rem] left-16' /> 
-
-            <p className='text-xsmall absolute top-[23rem] left-16'>
-                (folio
-            </p>
-            <p className='text-xsmall absolute top-[23rem] right-16'>
-                / v.1.0 )
-            </p>
-
-
-            <article className="w-[80%] flex flex-col items-start text-cyan-400 uppercase pt-36 pl-16
-                relative">                
-                <div className="w-full flex flex-col  ">                         
-                    <h1 className='font-syne text-outline shine'>
-                        <TextShimmerHero text='frontend' />
-                    </h1>
-                                       
-                    <span className='text-[10.85rem] font-[500] tracking-[-.8rem] leading-[60px] shine'>
-                    <TextShimmerHero text= 'developer' /></span>
+            <div border-cut="bottom-right-black"
+                className="flex flex-col font-syne mt-6 ml-16">
+                <div className="flex flex-col justify-start items-start relative">
+                    <div className='text-logo'>
+                        trish ramos                     
+                    </div>
+                    <div className='w-3 h-3 bg-violet-500 absolute bottom-[3.4rem] left-0'></div> 
+                    <div className='w-[28%] font-[100] indent-8 text-xsmall mt-[-.5rem] uppercase'>
+                        Designer & developer — currently seeking 
+                        job opportunities where I can innovate & collaborate.
+                        
+                    </div>
                 </div>
+                <button className="relative">
+                    <img src="/square-brackets.svg" alt="" className='absolute right-16 bottom-8' />
+                    <span className='w-[1.2rem] h-[1.2rem] rounded bg-violet-500 absolute right-[4.53rem] bottom-10'></span>
+                </button>
+
+                {/* <button className='text-[2rem] text-violet-500 space-y-20 absolute right-16 top-48'>
+                    
+                    <HiOutlineChevronDoubleDown className='ml-1'/>
+                </button> */}
+
+                <div className="flex mt-6 relative">
+                    <button border-cut="bottom-left-purple"
+                        className="group relative px-[2.9rem] h-12">
+                    
+                        <Link to={"work"} className="group relative overflow-hidden text-xsmall-white">
+                            <span className="relative inline-flex">
+                                <span className="duration-700 [transition-delay:0.02s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    e
+                                </span>
+                                <span className="duration-700 [transition-delay:0.04s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    x
+                                </span>
+                                <span className="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    p
+                                </span>
+                                <span className="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    l
+                                </span>
+                                <span className="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    o
+                                </span>
+                                <span className="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    r
+                                </span>
+                                <span className="duration-700 [transition-delay:0.06s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    e
+                                </span>
+                                
+                                <span className="duration-700 [transition-delay:0.12s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    &nbsp;
+                                </span>
+                                <span className="duration-700 [transition-delay:0.14s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    m
+                                </span>
+                                <span className="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    y
+                                </span>                                    
+                                <span className="duration-700 [transition-delay:0.12s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    &nbsp;
+                                </span>
+                                <span className="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    W
+                                </span>
+                                <span className="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    o
+                                </span>
+                                <span className="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    r
+                                </span>
+                                <span className="duration-700 [transition-delay:0.16s] 
+                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
+                                    k
+                                </span>
+                            </span>
+                        </Link>                              
+                    </button>               
+                </div>                          
+            </div>
+
+            <article className="w-full flex flex-col justify-center items-center relative mt-40  hero-content">
+                <div className="w-full flex flex-col justify-center items-center relative ">                      
+                     <div className="w-full flex justify-between text-xsmall uppercase px-16">
+                        <span className='flex'>
+                            based in <span className='text-zinc-50 ml-1.5'> colombia</span>
+                        </span>
+                        <span className='flex text-zinc-50'>
+                            ©2024 <span className='text-zinc-400 ml-1.5'>folio</span>
+                        </span>
+                    </div>
+
+                    
+
+                    <div className="flex justify-center mt-20 px-[3.6rem]">                                            
+                        <h1 className='xl-title [word-spacing:0.1em]'>
+                            <TextShimmerHero text={'frontend developer '}/>
+                        </h1>                       
                 
+                    </div>
+                  
+               </div>
+                                   
             </article> 
-            <div className="flex flex-col relative">                      
-                <Link to='about'
-                    onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}> 
-                    <HiArrowDownRight className='text-[10rem] text-zinc-500 mb-2 absolute -bottom-12 right-[2rem]'/> 
-                </Link>  
-                <p className='text-xsmall-min absolute -bottom-10 right-[3.4rem]'>scroll to explore</p>
-            </div> 
-           
+            
         </section>
     )
 }
 
 export default Hero;
-

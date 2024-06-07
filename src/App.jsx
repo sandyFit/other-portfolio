@@ -11,18 +11,8 @@ import * as fiber from '@react-three/fiber'
 
 const App = () => {
     return (
-        <section>
-            {/* <ShaderGradientCanvas
-                importedFiber={{ ...fiber, ...drei, ...reactSpring }}
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                }}
-            >
-                <ShaderGradient cDistance={32} cPolarAngle={125} />
-            </ShaderGradientCanvas> */}
-            {/* <Navbar/> */}
-            <TextNav/>
+        <section>           
+            <Navbar/>
             <Home />
         </section>
     )

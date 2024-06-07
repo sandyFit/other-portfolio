@@ -1,109 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import Cursor from '../../components/ui/Cursor';
-import MotionText from '../../components/ui/MotionText';
+import React, { useState } from 'react';
 import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
-import gsap from 'gsap';
-
+import HappyFace from '../../components/ui/HappyFace';
+import ProjectsList from '../../layout/ProjectsList';
 
 const Projects = () => {
-
-    const [isActive, setIsActive] = useState(false);
-    const [showButton, setShowButton] = useState(false);
     
-
-    const handleScroll = () => {
-        const show = window.scrollY > 700;
-        setShowButton(show);
-    };
-
-    useEffect(() => {
-        // Add event listener when the component mounts
-        window.addEventListener('scroll', handleScroll);
-
-        // Remove event listener when the component unmounts
-        return () => {
-        window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
-    const [slides, setSlides] = useState([1, 2, 1]); // Duplicate the first slide for seamless looping
-
-    useEffect(() => {
-        const tl = gsap.timeline({
-            repeat: -1, // Infinite loop
-            defaults: { ease: "linear" }
-        });
-
-        // Target each slide for transformation
-        tl.to('.slide', {
-            xPercent: -100 * (slides.length - 1), // Move left by the width of all slides except one
-            duration: 10,
-            ease: "linear"
-        });
-    }, [slides.length]);
 
 
     return (
-        <section id="projects" corner-cut="project-slide" border-cut="footer-btm-light"
-            className='w-full min-h-screen bg-violet-500 flex justify-center items-center relative '>
-            
-            <Cursor isActive={isActive} />
-            <article 
-                className="flex relative justify-center items-center ">
+        <section id='work' data-cursor-color='#d946ef'         
+            className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative'>
+            <div className="w-full flex flex-col items-start px-16" border-cut="footer-btm">                    
+               <div className="flex justify-between relative mt-32">
+                    <div className='title-h2 relative'>
+                        <TextShimmerEffect text={"⋙ explore my projects:"}/>
+                        <TextShimmerEffect text={"Crafted with Care & a"}/>
+                        <TextShimmerEffect text={"Dash of Flair. "} />                     
+                        <TextShimmerEffect text={"∎ My aim is to design"}/>
+                        <TextShimmerEffect text={"every detail to function"}/>
+                        <TextShimmerEffect text={"smootly & leave a"}/>
+                        <TextShimmerEffect text={"lasting impression."}/>
+                    </div>
 
-                <div border-cut="footer-btm-white"
-                    className="w-[85vw] h-[80%] flex relative p-1">
-
-                    <div className="flex w-full  justify-between relative p-12 border-cut-projects ">
-                        <div className="w-[50%] flex flex-col">
-                            <div className="flex flex-col w-full relative">       
-                                <div className="flex">
-                                    <h2 className='med-title mr-2 [word-spacing:0.1em]'>
-                                        <TextShimmerEffect text={'Radiant dental studio'}/>
-                                    </h2>
-                                </div>    
-                                
-                                <a href='#'
-                                    className='text-sm text-violet-600'>
-                                    Visit Demo Project  &#129125;
-                                </a>
-                                                                 
-                            </div>
-                            <p className='text-xsmall-purple w-[90%] mt-44 '>
-                                Designed and developed a clean, responsive website for a dental boutique studio. <br/>
-                                Features include an online booking system, real-time appointment updates, and a user-friendly
-                                interface, that ensures seamless integration of design and functionality.
-                            </p>
-
-                            <div border-cut="bottom-left-bold-purple"
-                                className="flex w-[90%] justify-center items-center overflow-hidden slider-container relative py-2 mt-8">
-                                <p className='text-xxsmall-purple uppercase flex-shrink-0 whitespace-nowrap'>
-                                    JS &nbsp; / &nbsp; React &nbsp; / &nbsp;
-                                    AOS JS &nbsp; / &nbsp; Tailwind CSS &nbsp; / &nbsp; Node JS
-                                    &nbsp; / &nbsp; Unit  &nbsp; / &nbsp; AWS
-                                </p>
-            
-                            </div>
-                        </div>
-                        
-                        <div corner-cut="top-right"
-                            className="flex h-full w-[46%] bg-violet-500 big-title ">
-                            pic
-                        </div>
-                    </div>   
+                    <div className="absolute top-[7.8rem] left-[30rem]">
+                        <HappyFace />
+                    </div>
                     
-                    <div className="flex"></div>
-                </div>            
-            </article>
+                    <span className="absolute top-[6.2rem] left-[33.8rem] text-zinc-50 text-8xl rotating-icon">
+                        ⁕
+                    </span>
+                    
+                    <div className="flex flex-col text-right morganite-extra-bold text-[26rem] font-[500] leading-[130px]
+                        text-zinc-700 text-opacity-40 relative">                   
+                        <span className='absolute bottom-[4.4rem] -right-[36rem]'>
+                            Work
+                        </span>                      
+                    </div>
 
-            {/* <button 
-                style={{ display: showButton ? 'block' : 'none' }}
-                className="up-button"
-                onClick={() => window.scrollTo(0, 0)}
-            >
-                up
-            </button>    */}
+                    {/* <button className='text-[2rem] text-violet-500 absolute -right-[34rem] -bottom-[11.4rem] '>
+                        <HiOutlineChevronDoubleDown/>
+                    </button>                         */}
+                </div>
+
+                <div className="flex  justify-end">
+                    <div className="flex gap-32 justify-end mt-16">
+                        <p className='text-xsmall w-[56%] columns-2 gap-[2em]'>
+                            Each project is responsive, visually appealing, and optimized for SEO, performance and
+                            reliability. <br/>
+                            Built with the latest web
+                            technologies like CSS, JavaScript, ReactJS, NextJS, and APIs.
+                            
+                            Hosted on AWS and Vercel.
+                            <br/>
+                            While I'm still early in my career journey, I'm eager to share what I've built so far
+                            and continue growing in the field.
+                            <br/>
+                            Check out what I can do.
+                        </p>                  
+                    </div>
+
+                </div>
+                <ProjectsList/>
+            </div>                                   
         </section>
     );
 }

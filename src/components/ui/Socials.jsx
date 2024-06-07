@@ -13,7 +13,7 @@ const SocialLink = ({ name, url }) => {
     // Check if name is a string and not undefined or null
     const splitName = typeof name === 'string' ? name.split('') : [];
     return (
-        <a href={url} className="group relative overflow-hidden text-zinc-400">
+        <a href={url} className="group relative w-full overflow-hidden text-zinc-400">
             <span className="relative inline-flex">
                 {splitName.map((char, index) => (
                     <span
@@ -35,20 +35,14 @@ SocialLink.propTypes = {
 };
 
 const Socials = () => {
-    const [isActive, setIsActive] = useState(false);
 
     return (
-        <div className="flex flex-col title-xsmall mt-8">
-            <Cursor isActive={isActive} />
-            <div className="title-xsmall pb-1">Socials</div>
-            <ul
-                onMouseEnter={() => setIsActive(true)}
-                onMouseLeave={() => setIsActive(false)}
-                className="w-full flex flex-col text-xxsmall justify-between items-start bg-transparent gap-2"
+        <div className="w-[26vw] flex title-small">
+            <ul className="w-full flex text-xsmall-white uppercase justify-between"
             >
                 {socialLinks.map(({ name, url }) => (
-                    <li key={name}>
-                        <SocialLink name={name} url={url} />
+                    <li key={name} className=''>
+                        <SocialLink name={name} url={url}/>
                     </li>
                 ))}
             </ul>

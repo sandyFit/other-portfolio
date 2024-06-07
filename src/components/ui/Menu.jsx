@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Cursor from '../components/ui/Cursor'
+import Cursor from './Cursor'
 import { Link } from 'react-scroll';
 
 const Menu = ({ isOpen, onClose }) => {

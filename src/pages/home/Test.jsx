@@ -1,197 +1,112 @@
 import React, { useState, useEffect } from 'react';
-import { HiArrowDown, HiArrowDownRight, HiOutlineChevronDoubleDown } from "react-icons/hi2";
 import Cursor from '../../components/ui/Cursor';
-import { Link } from 'react-scroll';
+import MotionText from '../../components/ui/MotionText';
+import TextShimmerEffect from '../../components/featured/TextShimmerEffect';
 import gsap from 'gsap';
-import TextShimmerHero from '../../components/featured/TextShimmerHero';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import Transition from '../transitions/Transition';
-import Transition2 from '../transitions/Transition2';
-import '../../assets/css/borders.css';
+
 
 const Test = () => {
+
     const [isActive, setIsActive] = useState(false);
+    const [showButton, setShowButton] = useState(false);
+    
+
+    const handleScroll = () => {
+        const show = window.scrollY > 700;
+        setShowButton(show);
+    };
+
+    useEffect(() => {
+        // Add event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove event listener when the component unmounts
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+    const [slides, setSlides] = useState([1, 2, 1]); // Duplicate the first slide for seamless looping
 
     useEffect(() => {
         const tl = gsap.timeline({
-            defaults: {
-                ease: "power3.out",
-                duration: 1, // slightly fasters
-                // delay: .5,
-               
-            }
+            repeat: -1, // Infinite loop
+            defaults: { ease: "linear" }
         });
 
-            tl.fromTo('.small-title',
-                { opacity: 0 },
-                {opacity: 1, stagger: 0.5, delay: 3.5}
-            
-        )
-        tl.fromTo('.sliding-text',
-            { translateX: '-100%', opacity: 0 },
-            {translateX: 0, opacity: 1,   ease: "power3.inOut"}
-        )
-
-        return () => tl.kill();
-    }, []);
-    
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        const tl = gsap.timeline();
-
-        tl.to('.overlay-first', { duration: 1, left: '-100%', ease: "power3.inOut" })
-          .to('.overlay-second', { duration: 1, left: '-100%', ease: "power3.inOut", immediateRender: false }, "-=0.8");
-    }, []);
-
-    
-
-
-     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#index",
-                start: "top top", // Triggering as soon as it enters the top of the viewport
-                end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
-                scrub: true, // Smooth scrubbing
-                toggleActions: 'play none none reverse', // Reverse when scrolling back up
-            }
+        // Target each slide for transformation
+        tl.to('.slide', {
+            xPercent: -100 * (slides.length - 1), // Move left by the width of all slides except one
+            duration: 10,
+            ease: "linear"
         });
-
-        // Fade out the Hero content
-        heroTimeline.to('.hero-content', { opacity: 0, duration: 0.5 });
-
-    }, []);
+    }, [slides.length]);
 
 
     return (
-        <section id="index" data-cursor-color='#d946ef'
-            className='w-full min-h-screen flex flex-col bg-zinc-950 relative'>
-            <Transition />
-            <Transition2/>
-            <Cursor isActive={isActive} />
-            <div border-cut="bottom-right-black"
-                className="flex flex-col font-syne mt-6 ml-16">
-                <div className="flex flex-col justify-start items-start relative">
-                    <div className='text-logo'>
-                        trish ramos
-                        <span className=" text-zinc-50 text-6xl mr-2 rotating-icon absolute">
-                            ⁕
-                        </span>
-                    </div>
-                    <div className='w-3 h-3 bg-violet-500 absolute bottom-[3.4rem] left-0'></div> 
-                        <p className='w-[27.1%] font-[100] indent-7 text-xsmall mt-[-.5rem] uppercase'>
-                            <span className='text-xsmall-white ml-1'>Frontend developer</span> with a <span className='text-xsmall-white'>designer's eye</span>. currently seeking 
-                        <span className='text-xsmall-white ml-1'>job opportunities</span> where I can
-                        <span className='text-xsmall-white ml-1'>innovate</span> & <span className='text-xsmall-white ml-1'>collaborate</span>.
-                        </p>
-                </div>
-                <button className='text-[2rem] text-violet-500 absolute right-16 top-28'>
-                    <HiOutlineChevronDoubleDown/>
-                </button>
-
-                <div className="flex mt-6 relative">
-                    <button onMouseOver={() => { setIsActive(true) }}
-                        onMouseLeave={() => { setIsActive(false) }}
-                        border-cut="bottom-left-purple"
-                        className="group relative px-[2.9rem] h-12">
-                    
-                        <Link to={"my-work"} class="group relative overflow-hidden text-xsmall-white">
-                            <span class="relative inline-flex">
-                                <span class="duration-700 [transition-delay:0.02s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    e
-                                </span>
-                                <span class="duration-700 [transition-delay:0.04s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    x
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    p
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    l
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    o
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    r
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    e
-                                </span>
-                                
-                                <span class="duration-700 [transition-delay:0.12s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    &nbsp;
-                                </span>
-                                <span class="duration-700 [transition-delay:0.14s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    m
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    y
-                                </span>                                    
-                                <span class="duration-700 [transition-delay:0.12s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    &nbsp;
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    W
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    o
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    r
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] 
-                                group-hover:[transform:rotateY(360deg)] group-hover:text-violet-500">
-                                    k
-                                </span>
-                            </span>
-                        </Link>                              
-                    </button>               
-                </div>                          
-            </div>
-
-            <article className="w-full flex flex-col justify-center items-center relative mt-40  hero-content">
-                <div className="w-full flex flex-col justify-center items-center relative ">                      
-                     <div className="w-full flex justify-between text-xsmall uppercase px-16">
-                        <span className='flex'>
-                            based in <span className='text-zinc-50 ml-1.5'> colombia</span>
-                        </span>
-                        <span className='flex text-zinc-50'>
-                            ©2024 <span className='text-zinc-400 ml-1.5'>folio</span>
-                        </span>
-                    </div>
-
-                    
-
-                    <div className="flex justify-center mt-20 px-[3.6rem]">                                            
-                        <h1 className='xl-title [word-spacing:0.1em]'>
-                            <TextShimmerHero text={'frontend developer '}/>
-                        </h1>                       
-                
-                    </div>
-                  
-               </div>
-                                   
-            </article> 
+        <section id="test" corner-cut="project-slide" border-cut="footer-btm-light"
+            className='w-full min-h-screen bg-violet-500 flex justify-center items-center relative '>
             
+            <Cursor isActive={isActive} />
+            <article 
+                className="flex relative justify-center items-center ">
+
+                <div border-cut="footer-btm-white"
+                    className="w-[85vw] h-[80%] flex relative p-1">
+
+                    <div className="flex w-full  justify-between relative p-12 border-cut-Test ">
+                        <div className="w-[50%] flex flex-col">
+                            <div className="flex flex-col w-full relative">       
+                                <div className="flex">
+                                    <h2 className='med-title mr-2 [word-spacing:0.1em]'>
+                                        <TextShimmerEffect text={'Radiant dental studio'}/>
+                                    </h2>
+                                </div>    
+                                
+                                <a href='#'
+                                    className='text-sm text-violet-600'>
+                                    Visit Demo Project  &#129125;
+                                </a>
+                                                                 
+                            </div>
+                            <p className='text-xsmall-purple w-[90%] mt-44 '>
+                                Designed and developed a clean, responsive website for a dental boutique studio. <br/>
+                                Features include an online booking system, real-time appointment updates, and a user-friendly
+                                interface, that ensures seamless integration of design and functionality.
+                            </p>
+
+                            <div border-cut="bottom-left-bold-purple"
+                                className="flex w-[90%] justify-center items-center overflow-hidden slider-container relative py-2 mt-8">
+                                <p className='text-xxsmall-purple uppercase flex-shrink-0 whitespace-nowrap'>
+                                    JS &nbsp; / &nbsp; React &nbsp; / &nbsp;
+                                    AOS JS &nbsp; / &nbsp; Tailwind CSS &nbsp; / &nbsp; Node JS
+                                    &nbsp; / &nbsp; Unit  &nbsp; / &nbsp; AWS
+                                </p>
+            
+                            </div>
+                        </div>
+                        
+                        <div corner-cut="top-right"
+                            className="flex h-full w-[46%] bg-violet-500 big-title ">
+                            pic
+                        </div>
+                    </div>   
+                    
+                    <div className="flex"></div>
+                </div>            
+            </article>
+
+            {/* <button 
+                style={{ display: showButton ? 'block' : 'none' }}
+                className="up-button"
+                onClick={() => window.scrollTo(0, 0)}
+            >
+                up
+            </button>    */}
         </section>
-    )
+    );
 }
 
 export default Test;
+

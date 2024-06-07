@@ -34,24 +34,25 @@ const Test2 = () => {
                 <div className="flex flex-col items-start mt-32">
                     <div className="flex justify-between relative">
                         <div className='title-h2 relative'>
-                            <TextShimmerEffect text={"⋙ I'm a graphic designer"}/>
-                            <TextShimmerEffect text={"who turned frontend"}/>
+                            <TextShimmerEffect text={"⋙ I'm a detail-oriented"}/>
+                            <TextShimmerEffect text={"graphic designer who"}/>
+                            <TextShimmerEffect text={"turned frontend"}/>
                             <TextShimmerEffect text={"developer. "}/>
                             <TextShimmerEffect text={"∎ keenly focused on "}/>
-                            <TextShimmerEffect text={"balancing code"}/>
-                            <TextShimmerEffect text={"functionality & visual"}/>
-                            <TextShimmerEffect text={"aesthetics."}/>
+                            <TextShimmerEffect text={"translating design "}/>
+                            <TextShimmerEffect text={"into code."}/>
+                            
                         </div>
 
-                        <span className="absolute top-[8.2rem] left-[24rem] text-zinc-50 text-8xl">
+                        <span className="absolute top-[12rem] left-[24rem] text-zinc-50 text-8xl">
                             <CodeIcon/>
                         </span>
-                        <span className="absolute top-[6.4rem] left-[26.8rem] text-zinc-50 text-8xl rotating-icon">
+                        <span className="absolute top-[10.2rem] left-[26.8rem] text-zinc-50 text-8xl rotating-icon">
                             ⁕
                         </span>
                         
                         <div className="flex flex-col text-right morganite-extra-bold text-[21rem] font-[500]
-                           leading-[260px] text-zinc-700 text-opacity-40 absolute -right-[34rem] bottom-16">
+                           leading-[260px] text-zinc-700 text-opacity-40 absolute -right-[37rem] bottom-16">
                             <span className=''>Who I</span>                      
                             <span className=' leading-[100px]'>am</span>                      
                         </div>
@@ -59,14 +60,15 @@ const Test2 = () => {
 
                     <div className="flex gap-32 justify-end mt-16">
                         <div className='text-xsmall w-[55%] columns-2 gap-[2em]' >
-                            My love for the craft of design drives me to adopt a holistic approach, striving to preserve the
-                            original creative vision while navigating the unique constraints and challenges of web development.
+                            My appreciation for the craft of design drives me to adopt a holistic approach,
+                            aiming to preserve its thoughtfulness while navigating the intricacies of
+                            web development.
                             <br /><br />
-                            In my journey as a self-taught frontend developer specializing in the React ecosystem, I'm
-                            passionate about designing smooth animations, crafting engaging transitions, and resolving
-                            complex layouts.
+                            As a dedicated and self-taught frontend developer in the React ecosystem,
+                            I'm passionate about designing smooth animations, creating engaging transitions,
+                            and tackling complex layouts.
                             <br /><br />
-                            Off duty, I'm enthusiastic about bringing dynamic visuals to life with kinetic typography and web animations.
+                            Off duty, bringing dynamic visuals to life with kinetic typography and web animations is my jam.
                             <br />
                             Offline, I'm often doodling, baking yum yums or pumping iron at the gym.
                             <br /><br />
@@ -90,7 +92,7 @@ const Test2 = () => {
                     <p className='text-xxxsmall-black px-8 py-3'>
                       
                         Yes, I value the fundamentals of web development, yet I remain eager to explore new
-                        processes and tools that can boost efficiency and productivity. <br />
+                        frameworks and solutions that can boost efficiency and productivity. <br />
                         My current toolkit, which is centered around the JAMstack architecture, includes:
                             
                     </p>
