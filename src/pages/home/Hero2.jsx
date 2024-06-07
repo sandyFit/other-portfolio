@@ -80,14 +80,11 @@ const Hero = () => {
                     </h1>
 
                     <div className='w-full flex justify-center mt-8 hero-content'>
-                        <p className="title-h3 uppercase w-full ml-3">
+                        <p className="title-h3 uppercase w-full ml-5">
                             Frontend developer with a designer's eye. Currently seeking job   
-                            opportunities where I can innovate & collaborate.  
-
-                                
-                                
-                            </p>                                            
-                        </div>
+                            opportunities where I can innovate & collaborate.                             
+                        </p>                                            
+                    </div>
 
                     <div className="w-full flex justify-end mt-4 px-2 relative hero-content">
                         <HeroBtn/>                                  

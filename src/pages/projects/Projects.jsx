@@ -13,7 +13,7 @@ const Projects = () => {
             <div className="w-full flex flex-col items-start px-16" border-cut="footer-btm">                    
                <div className="flex justify-between relative mt-32">
                     <div className='title-h2 relative'>
-                        <TextShimmerEffect text={"⋙ explore my projects:"}/>
+                        <TextShimmerEffect text={"⋙ These projects are"}/>
                         <TextShimmerEffect text={"Crafted with Care & a"}/>
                         <TextShimmerEffect text={"Dash of Flair. "} />                     
                         <TextShimmerEffect text={"∎ My aim is to design"}/>
@@ -22,13 +22,14 @@ const Projects = () => {
                         <TextShimmerEffect text={"lasting impression."}/>
                     </div>
 
-                    <div className="absolute top-[7.8rem] left-[30rem]">
+                    <div className="absolute top-[8.2rem] left-[28.5rem]">
                         <HappyFace />
                     </div>
                     
-                    <span className="absolute top-[6.2rem] left-[33.8rem] text-zinc-50 text-8xl rotating-icon">
-                        ⁕
-                    </span>
+                    
+                    <span className='absolute top-[6.5rem] left-[32rem] text-zinc-50 text-8xl rotating-icon'>⁕</span>
+                        
+                    
                     
                     <div className="flex flex-col text-right morganite-extra-bold text-[26rem] font-[500] leading-[130px]
                         text-zinc-700 text-opacity-40 relative">                   

@@ -1,113 +1,120 @@
-import React, { useState, useEffect } from 'react'
-import TextShimmerEffect from '../../components/featured/TextShimmerEffect'
+import React, { useEffect } from 'react';
+import projects from '../data/projects';
 import gsap from 'gsap';
-import '../../assets/css/borders.css';
-import ToolTable from '../../components/ui/ToolTable';
-import CodeIcon from '../../components/ui/CodeIcon';
+import { ScrollTrigger } from 'gsap/all';
 
-const Test2 = () => {
+const ProjectsList = () => {
 
-    // useEffect(() => {
-    //     const tl = gsap.timeline({
-    //         repeat: -1, // Infinite loop
-    //         defaults: { ease: "none" },
-    //     });
+    gsap.registerPlugin(ScrollTrigger);
 
-    //     // Ensure you calculate the actual width of the content to scroll correctly
-    //     const slideContainer = document.querySelector('.slide-container');
-    //     const slideWidth = slideContainer.scrollWidth / 2; // Divide by 2 because we have duplicated content
+    useEffect(() => {
+        const projectsContainer = document.querySelector('.projects');
+        const preview = document.querySelector('.preview');
+        const previewImg = document.querySelector('.preview-img');
 
-    //     tl.to('.slide-container', {
-    //         x: -slideWidth, // Move by the width of one set of content
-    //         duration: 60, // Control the speed of the scroll
-    //         ease: "linear",
-    //     });
-    // }, []);
+        let isInside = false;
 
+        const bgPositions = {
+            p1: '0 0',
+            p2: '0 25%',
+            p3: '0 50%'
+        };
+
+        const moveStuff = e => {
+            const mouseInside = isMouseInsideContainer(e);
+
+            if (mouseInside !== isInside) {
+                isInside = mouseInside;
+                if (isInside) {
+                    gsap.to(preview, { scale: 1, duration: 0.3 });
+                } else {
+                    gsap.to(preview, { scale: 0, duration: 0.3 });
+                }
+            }
+        };
+
+        const moveProject = e => {
+            const previewRect = preview.getBoundingClientRect();
+            const offsetX = previewRect.width / 2;
+            const offsetY = previewRect.height / 2;
+
+            preview.style.left = `${e.pageX - offsetX}px`;
+            preview.style.top = `${e.pageY - offsetY}px`;
+        };
+
+        const moveProjectImg = project => {
+            const projectId = project.id;
+            gsap.to(previewImg, { backgroundPosition: bgPositions[projectId] || '0 0', duration: 0.4 });
+        };
+
+        const isMouseInsideContainer = e => {
+            const containerRect = projectsContainer.getBoundingClientRect();
+
+            return (
+                e.pageX >= containerRect.left &&
+                e.pageX <= containerRect.right &&
+                e.pageY >= containerRect.top &&
+                e.pageY <= containerRect.bottom
+            );
+        };
+
+        window.addEventListener('mousemove', moveStuff);
+
+        Array.from(projectsContainer.children).forEach((project, index) => {
+            project.id = `p${index + 1}`;
+            project.addEventListener('mousemove', moveProject);
+            project.addEventListener('mouseenter', () => moveProjectImg(project));
+        });
+
+        return () => {
+            window.removeEventListener('mousemove', moveStuff);
+            Array.from(projectsContainer.children).forEach((project) => {
+                project.removeEventListener('mousemove', moveProject);
+                project.removeEventListener('mouseenter', () => moveProjectImg(project));
+            });
+        };
+    }, []);
 
     return (
-        <section id="who's-this"
-            className='w-full min-h-screen flex flex-col justify-center items-start bg-zinc-950 relative 
-                pb-20 about-content'>
-            <div className="flex flex-col items-start mx-16" border-cut="top-and-bottom-about">                        
-
-                <div className="flex flex-col items-start mt-32">
-                    <div className="flex justify-between relative">
-                        <div className='title-h2 relative'>
-                            <TextShimmerEffect text={"⋙ I'm a detail-oriented"}/>
-                            <TextShimmerEffect text={"graphic designer who"}/>
-                            <TextShimmerEffect text={"turned frontend"}/>
-                            <TextShimmerEffect text={"developer. "}/>
-                            <TextShimmerEffect text={"∎ keenly focused on "}/>
-                            <TextShimmerEffect text={"translating design "}/>
-                            <TextShimmerEffect text={"into code."}/>
-                            
+        <section
+            id="projects-list"
+            data-cursor-color="#d946ef"
+            className="w-full mt-20 flex flex-col justify-center items-start bg-zinc-950 relative"
+        >
+            <article className="preview">
+                <div className="preview-img"></div>
+            </article>
+            <ul className="flex flex-col relative w-full projects">
+                {projects.map((project, index) => (
+                    <li key={index} className="relative pb-16">
+                        <div className="absolute left-0 top-0 w-full h-[1px] bg-violet-500 transition-all duration-[var(--duration)] ease-[var(--ease)]"></div>
+                        <div className="flex w-full cursor-pointer">
+                            <div className="flex relative">
+                                <svg width="6rem" height="5rem" viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="0,0 60,0 60,50 15,50 0,34" style={{ fill: '#8b5cf6', stroke: 'none', strokeWidth: 1 }} />
+                                </svg>
+                                <div className="flex xsm-title-w absolute left-[2.4rem] top-2">
+                                    {`00${index + 1}`}
+                                </div>
+                            </div>
+                            <div className="w-full flex justify-between pt-[1.375rem]">
+                                <div className="w-[50vw] flex justify-start">
+                                    <div className="flex w-full pl-5 pr-[9.5rem] xsm-title">
+                                        {project.title}
+                                    </div>
+                                </div>
+                                <div className="flex flex-col justify-end w-full max-w-[42vw]">
+                                    <p className="w-full text-xsmall" dangerouslySetInnerHTML={{ __html: project.description }} />
+                                    <h4 className="text-xsmall-white mt-6">Technologies:</h4>
+                                    <p className="text-xsmall" dangerouslySetInnerHTML={{ __html: project.technologies }} />
+                                </div>
+                            </div>
                         </div>
-
-                        <span className="absolute top-[12rem] left-[24rem] text-zinc-50 text-8xl">
-                            <CodeIcon/>
-                        </span>
-                        <span className="absolute top-[10.2rem] left-[26.8rem] text-zinc-50 text-8xl rotating-icon">
-                            ⁕
-                        </span>
-                        
-                        <div className="flex flex-col text-right morganite-extra-bold text-[21rem] font-[500]
-                           leading-[260px] text-zinc-700 text-opacity-40 absolute -right-[37rem] bottom-16">
-                            <span className=''>Who I</span>                      
-                            <span className=' leading-[100px]'>am</span>                      
-                        </div>
-                    </div>
-
-                    <div className="flex gap-32 justify-end mt-16">
-                        <div className='text-xsmall w-[55%] columns-2 gap-[2em]' >
-                            My appreciation for the craft of design drives me to adopt a holistic approach,
-                            aiming to preserve its thoughtfulness while navigating the intricacies of
-                            web development.
-                            <br /><br />
-                            As a dedicated and self-taught frontend developer in the React ecosystem,
-                            I'm passionate about designing smooth animations, creating engaging transitions,
-                            and tackling complex layouts.
-                            <br /><br />
-                            Off duty, bringing dynamic visuals to life with kinetic typography and web animations is my jam.
-                            <br />
-                            Offline, I'm often doodling, baking yum yums or pumping iron at the gym.
-                            <br /><br />
-                            I've been a freelance designer since 2019, now seeking full-time dev roles or project collaborations.
-                            <br />
-                            For inquiries or opportunities, please contact me at 
-                            <a href='mailto:sandy07r@gmail.com' className='text-zinc-50 ml-1'>info@trishramos.com</a>.                                                  
-                        </div>                  
-                    </div>
-                </div>                
-            </div>
-
-            <div className="flex flex-col w-[51%] justify-end ml-[43rem] mt-12 relative">
-                <div border-cut="frame-toolkit"
-                    className="flex justify-center w-full h-[8%]  px-12 py-4">
-                    <p className='font-roboto text-6xl font-[900] text-zinc-50  tracking-widest uppercase'>
-                        core tools
-                    </p>
-                </div>
-                <div className="flex w-full border-[1px] border-violet-500 bg-violet-500">
-                    <p className='text-xxxsmall-black px-8 py-3'>
-                      
-                        Yes, I value the fundamentals of web development, yet I remain eager to explore new
-                        frameworks and solutions that can boost efficiency and productivity. <br />
-                        My current toolkit, which is centered around the JAMstack architecture, includes:
-                            
-                    </p>
-                </div>
-
-                <div className="flex ">
-                    <ToolTable/>
-                </div>
-
-                
-            </div>     
-               
+                    </li>
+                ))}
+            </ul>
         </section>
+    );
+};
 
-    )
-}
-
-export default Test2;
+export default ProjectsList;
