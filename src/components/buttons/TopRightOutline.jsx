@@ -1,20 +1,39 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React from 'react'
 
-const HeroBtn = () => {
+const TopRightOutline = () => {
     return (
-         <button border-cut="bottom-right-purple"
-            className="w-[18vw] group relative  h-12 ">
-            <Link to={"work"}
+        <button border-cut="bottom-right-purple"
+            className="group relative px-10 py-1 text-xxsmall-white mt-6 ">
+            <a to={"work"}
                 className="group relative overflow-hidden text-xsmall-purple tracking-widest">
                 <span className="relative inline-flex">
                     <span className="duration-700 [transition-delay:0.02s] 
                     group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        c
+                        v
                     </span>
                     <span className="duration-700 [transition-delay:0.04s] 
                     group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        h
+                        i
+                    </span>
+                    <span className="duration-700 [transition-delay:0.06s] 
+                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
+                        s
+                    </span>
+                    <span className="duration-700 [transition-delay:0.06s] 
+                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
+                        i
+                    </span>
+                    <span className="duration-700 [transition-delay:0.06s] 
+                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
+                        t
+                    </span>
+                    <span className="duration-700 [transition-delay:0.06s] 
+                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
+                        &nbsp;
+                    </span>
+                    <span className="duration-700 [transition-delay:0.06s] 
+                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
+                        d
                     </span>
                     <span className="duration-700 [transition-delay:0.06s] 
                     group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
@@ -22,66 +41,18 @@ const HeroBtn = () => {
                     </span>
                     <span className="duration-700 [transition-delay:0.06s] 
                     group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        c
-                    </span>
-                    <span className="duration-700 [transition-delay:0.06s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        k
-                    </span>
-                    <span className="duration-700 [transition-delay:0.06s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        &nbsp;
-                    </span>
-                    <span className="duration-700 [transition-delay:0.06s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        o
-                    </span>
-                    <span className="duration-700 [transition-delay:0.06s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        u
-                    </span>
-                    <span className="duration-700 [transition-delay:0.06s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        t
+                        m
                     </span>
                     
                     <span className="duration-700 [transition-delay:0.12s] 
                     group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        &nbsp;
-                    </span>
-                    <span className="duration-700 [transition-delay:0.14s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        m
-                    </span>
-                    <span className="duration-700 [transition-delay:0.16s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        y
-                    </span>                                    
-                    <span className="duration-700 [transition-delay:0.12s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        &nbsp;
-                    </span>
-                    <span className="duration-700 [transition-delay:0.16s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        W
-                    </span>
-                    <span className="duration-700 [transition-delay:0.16s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
                         o
-                    </span>
-                    <span className="duration-700 [transition-delay:0.16s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        r
-                    </span>
-                    <span className="duration-700 [transition-delay:0.16s] 
-                    group-hover:[transform:rotateY(360deg)] group-hover:text-zinc-300">
-                        k
-                    </span>
+                    </span>                    
                 </span>
-            </Link>                  
+            </a>                  
 
         </button>
     )
 }
 
-export default HeroBtn
+export default TopRightOutline

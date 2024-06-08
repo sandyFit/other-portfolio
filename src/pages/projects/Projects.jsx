@@ -33,18 +33,14 @@ const Projects = () => {
                     
                     <div className="flex flex-col text-right morganite-extra-bold text-[26rem] font-[500] leading-[130px]
                         text-zinc-700 text-opacity-40 relative">                   
-                        <span className='absolute bottom-[4.4rem] -right-[36rem]'>
+                        <span className='absolute bottom-[5.4rem] -right-[36rem]'>
                             Work
                         </span>                      
                     </div>
-
-                    {/* <button className='text-[2rem] text-violet-500 absolute -right-[34rem] -bottom-[11.4rem] '>
-                        <HiOutlineChevronDoubleDown/>
-                    </button>                         */}
                 </div>
 
                 <div className="flex  justify-end">
-                    <div className="flex gap-32 justify-end mt-16">
+                    <div className="flex gap-32 justify-end mt-12">
                         <p className='text-xsmall w-[56%] columns-2 gap-[2em]'>
                             Each project is responsive, visually appealing, and optimized for SEO, performance and
                             reliability. <br/>
@@ -61,7 +57,10 @@ const Projects = () => {
                     </div>
 
                 </div>
-                <ProjectsList/>
+
+                <div className="w-full flex justify-end">
+                    <ProjectsList/>
+                </div>
             </div>                                   
         </section>
     );

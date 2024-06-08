@@ -40,7 +40,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="flex gap-32 justify-end mt-16">
+                    <div className="flex gap-32 justify-end mt-12">
                         <div className='text-xsmall w-[56%] columns-2 gap-[2em]' >
                             My love for design fuels my holistic approach, ensuring creativity and precision shine
                             through every project, while navigating the complexities of web development.
