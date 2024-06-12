@@ -52,7 +52,8 @@ const Hero = () => {
                 <img src="/square-brackets.svg" alt="" className='absolute top-7 right-16' />
                 <span className='w-[.9rem] h-[1rem] rounded bg-violet-500 absolute right-[4.376rem] top-[2rem]'></span>
             </button>
-            <div border-cut="bottom-right-black" className="flex flex-col mt-6 justify-center items-center">
+            <div border-cut="bottom-right-black"
+                className="flex flex-col mt-6 justify-center items-center">
                 <div className="w-full flex flex-col justify-center items-center mt-48 ">
                     <h1 className='big-title2 [word-spacing:0.1em] hero-content hero-title'
                         style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%);' }}>
@@ -72,7 +73,7 @@ const Hero = () => {
             <article className="w-full flex flex-col justify-center items-center relative mt-36 hero-content">
                 <div className="w-full flex flex-col justify-center items-center relative ">
                     <div className="w-full flex justify-between text-xxsmall uppercase px-16">
-                        <span className='flex'>
+                        <span className='gris whitespace-nowrap'>
                             based in <span className='text-xxsmall-white ml-1.5'> colombia</span>
                         </span>
                         <span className='flex text-xxsmall-white'>

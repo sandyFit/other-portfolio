@@ -520,7 +520,7 @@
 
 @layer base {
     body {
-        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-roboto
+        @apply w-full m-0 p-0 box-border rounded-2xl bg-zinc-950 font-grotesk
       }
 
     a {
@@ -639,6 +639,10 @@
       @apply font-roboto text-violet-500 text-lg font-[500]  tracking-wide uppercase
     }
     
+
+    .title-h1 {
+      @apply text-zinc-50 font-grotesk text-[7rem] font-[400] uppercase tracking-wider
+    }
 
     .title-h2{
       @apply text-zinc-50 font-grotesk text-6xl font-[400] uppercase tracking-wider
